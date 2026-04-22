@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1776333923981
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1776334233140
+    },
+    "nano-banana-pro-2": {
+      "version": "0.1.0",
+      "installedAt": 1776334288678
+    },
+    "xiaoding-skill-vetter": {
+      "version": "1.0.3",
+      "installedAt": 1776334329741
+    },
+    "summarize-pro": {
+      "version": "1.0.0",
+      "installedAt": 1776334391469
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1776334601551
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1776334764272
+    }
+  }
+}

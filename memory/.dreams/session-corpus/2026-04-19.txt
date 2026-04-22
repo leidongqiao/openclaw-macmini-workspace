@@ -1,0 +1,9 @@
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L5] User: Conversation info (untrusted metadata): ```json { "message_id": "om_x100b5173520f98a8b36b8d6880a98ee", "sender_id": "ou_a2b39c0d5d8d4e778ce5f51ff91b2af2", "sender": "雷东桥", "timestamp": "Sun 2026-04-19 14:10 GMT+8" } ``` Sender (untrusted metadata): ```json { "label": "雷东桥 (
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L6] Assistant: 在的，Joe！有什么需要帮忙的吗？🦾
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L8] User: Conversation info (untrusted metadata): ```json { "message_id": "om_x100b5173b9bf00a8c427507d97d0acb", "sender_id": "ou_a2b39c0d5d8d4e778ce5f51ff91b2af2", "sender": "雷东桥", "timestamp": "Sun 2026-04-19 15:08 GMT+8" } ``` Sender (untrusted metadata): ```json { "label": "雷东桥 (
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L17] Assistant: Feishu 已经在运行了！✅ 当前状态： - **Feishu default**: 已启用、已配置、运行中 你现在可以直接在飞书上和我对话了。有什么需要帮忙的吗？🦾
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L19] User: Conversation info (untrusted metadata): ```json { "message_id": "om_x100b5173b208d4a0c2c6d411d8b1d68", "sender_id": "ou_a2b39c0d5d8d4e778ce5f51ff91b2af2", "sender": "雷东桥", "timestamp": "Sun 2026-04-19 15:10 GMT+8" } ``` Sender (untrusted metadata): ```json { "label": "雷东桥 (
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl#L22] Assistant: 飞书插件版本：**2026.4.14** 🦾 这是 OpenClaw 自带的 Feishu/Lark 频道插件（由 @m1heng 社区维护），和 OpenClaw 主程序版本一致。
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl.reset.2026-04-21T06-27-03.716Z#L5] User: [message_id: om_x100b5173520f98a8b36b8d6880a98ee] 雷东桥: 在不
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl.reset.2026-04-21T06-27-03.716Z#L8] User: [message_id: om_x100b5173b9bf00a8c427507d97d0acb] 雷东桥: /feishu start
+[main/sessions/789845e0-0d27-49e0-ac6e-52e148529a5f.jsonl.reset.2026-04-21T06-27-03.716Z#L19] User: [message_id: om_x100b5173b208d4a0c2c6d411d8b1d68] 雷东桥: 你的飞书版本是多少
