@@ -17,11 +17,11 @@ lark-cli auth login --recommend
 
 # 2. 添加机器人到知识库
 lark-cli wiki members create --as user \
-  --params '{"space_id":"7631092179137579973"}' \
-  --data '{"member_id":"ou_89e1f41a6cb21a4a8203a50dcff87515","member_type":"openid","member_role":"admin"}'
+  --params '{"space_id":""}' \
+  --data '{"member_id":"","member_type":"openid","member_role":"admin"}'
 
 # 3. 验证结果
-lark-cli wiki members list --params '{"space_id":"7631092179137579973"}'
+lark-cli wiki members list --params '{"space_id":""}'
 ```
 
 ## 完整流程
