@@ -1,0 +1,5 @@
+[airesearcher/sessions/af5d137b-3e74-4202-9c98-d48ea96f7672.jsonl#L5] User: [cron:f042314d-6118-48d2-abbe-393a68ad48c5 ai-daily-report] 请生成今天的 AI 行业日报：1) 抓取 The Verge、TechCrunch 等网站的最新 AI 新闻 2) 生成结构化 Markdown 内容 3) 以机器人身份在'AI 行研'知识库创建文档节点（标题：AI 日报 - YYYYMMDD）4) 使用 feishu_update_doc 填充文档内容 5) 输出文档链接 Current time: Saturday, April 25th, 2026 - 1
+[airesearcher/sessions/af5d137b-3e74-4202-9c98-d48ea96f7672.jsonl#L12] Assistant: Now let me fetch more news sources and find the knowledge base:
+[airesearcher/sessions/af5d137b-3e74-4202-9c98-d48ea96f7672.jsonl#L19] Assistant: Now I have all the news data and the knowledge base info. Let me create the document:
+[airesearcher/sessions/af5d137b-3e74-4202-9c98-d48ea96f7672.jsonl#L21] Assistant: 文档已创建。现在填充内容：
+[airesearcher/sessions/af5d137b-3e74-4202-9c98-d48ea96f7672.jsonl#L23] Assistant: ✅ **AI 日报 - 20260425 已生成并写入知识库** 📄 **文档链接**：https://www.feishu.cn/wiki/XBU7dweu5oLdGUxSDf7c8yxhn8f --- **今日 12 条要闻速览：** 🔥 **头条** - **OpenAI 发布 GPT-5.5** — 最智能模型，代码/研究/文档能力全面升级 - **Google 投资 Anthropic 最高 400 亿美元** — Amazon 同步追加至 250 亿 🏛️ **政策监管** - **DOJ 加入 Mu

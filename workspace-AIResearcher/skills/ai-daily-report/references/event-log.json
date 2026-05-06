@@ -1,0 +1,305 @@
+{
+  "_meta": {
+    "description": "事件去重日志，key格式：企业名|事件类型",
+    "status_values": "new=新事件, ongoing=持续跟进, closed=已完结",
+    "last_updated": "2026-04-27"
+  },
+  "2026-04-27": {
+    "发改委|Manus收购禁止": {
+      "summary": "依法依规对外资收购Manus项目作出禁止投资决定，要求撤销该收购交易",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 5,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "DeepSeek|V4降价": {
+      "summary": "两天两次大幅降价，百万token仅2分钱，调用量飙升近4倍。华为昇腾/海光/寒武纪集体响应V4芯片朋友圈",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 5,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "工信部|未来产业布局": {
+      "summary": "部署上百项揭榜挂帅攻关任务，具身智能/脑机接口/6G列入十五五新增长点",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 5,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "国家数据集平台|发布": {
+      "summary": "国家数据集管理服务平台近期正式发布",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "OpenAI|手机计划": {
+      "summary": "联手联发科/高通，预计2028年量产，国产供应链代工",
+      "date": "2026-04-27",
+      "region": "全球",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "国产算力|6万张卡训练万亿模型": {
+      "summary": "LongCat与DeepSeek验证国产算力通过第一场大考",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "浙江史河科技|具身智能机器人": {
+      "summary": "国内首个投入高危场景应用的具身智能特种机器人亮相，船舶除锈市占率70%+",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "剑桥科技|Q1业绩": {
+      "summary": "Q1净利润1.18亿，同比+276.44%",
+      "date": "2026-04-27",
+      "region": "上海",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "紫光国微|Q1业绩": {
+      "summary": "Q1净利润3.34亿，同比+180%，特种集成电路销量大增",
+      "date": "2026-04-27",
+      "region": "上海",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "海康机器人|具身智造": {
+      "summary": "定义具身智造新范式，助推制造业全面升维",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "蚂蚁灵光|HappyHorse": {
+      "summary": "4月27日开放测试",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 2,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "浙江龙盛|Q1业绩": {
+      "summary": "Q1净利润5.37亿，同比+35.67%",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 2,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "杭氧股份|Q1业绩": {
+      "summary": "Q1净利润2.65亿，同比+17.26%",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 2,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "均胜电子|Q1业绩": {
+      "summary": "Q1净利润4.02亿，同比+18.11%，智能驾驶研发投入加大",
+      "date": "2026-04-27",
+      "region": "江苏",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "AI4S|科学仪器融合": {
+      "summary": "AI与科学仪器融合到关键节点，从概念走向落地",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "马斯克vsOpenAI|诉讼": {
+      "summary": "AI行业安全风险加剧，CEO成情绪靶心",
+      "date": "2026-04-27",
+      "region": "全球",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "企业AI战事|智能体平台": {
+      "summary": "OpenAI进攻，钉钉/飞书/企微守擂，AI智能体平台竞争白热化",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "赛力斯|AI定义汽车": {
+      "summary": "魔方技术平台向整车L4级具身智能演进",
+      "date": "2026-04-27",
+      "region": "其他",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "曹操出行|Robotaxi": {
+      "summary": "中国首台原生开发Robotaxi亮相，终结后装车时代",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "华为智擎|新品牌": {
+      "summary": "华为超充战略及系列新品重磅发布",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "摩尔线程|业绩": {
+      "summary": "国产GPU赛道跑出快马，业绩狂飙",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "海量数据+龙芯中科|tpmC破百万": {
+      "summary": "全国产化方案刷新国产数据库与自主指令集芯片协同优化纪录",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "商务部|欧盟工业加速器法案": {
+      "summary": "贸易环境变化影响产业链",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "扬杰科技|欧盟制裁": {
+      "summary": "被列入欧盟制裁名单，需关注供应链风险",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "科创50|半导体大涨": {
+      "summary": "科创50涨3.76%，半导体产业链集体走强，芯源微20cm涨停",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "腾讯云|产品提价": {
+      "summary": "5月9日起上调产品目录价格5%",
+      "date": "2026-05-09",
+      "region": "全国",
+      "importance": 2,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "阿里云|短信提价": {
+      "summary": "5月20日起调整国内短信服务产品价格",
+      "date": "2026-05-20",
+      "region": "全国",
+      "importance": 2,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "捷捷微电|IGBT涨价": {
+      "summary": "IGBT成品价格预计5月1日起上调10%-20%",
+      "date": "2026-05-01",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "国家电网|具身智能采购": {
+      "summary": "国网印发2026年具身智能发展规划，集中采购约8500台，投资约68亿元",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 5,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "立讯精密|CPO产品": {
+      "summary": "CPC铜连接产品预计2027年Q3-Q4批量交付，800G/1.6T光模块进展顺利",
+      "date": "2026-04-27",
+      "region": "其他",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "三星电子|存储芯片涨价": {
+      "summary": "SSD产品调涨逾10%，金士顿同步跟进全系列SSD至少涨价10%",
+      "date": "2026-04-27",
+      "region": "全球",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "中控技术|机器人概念": {
+      "summary": "涨超10%，受国网具身智能采购计划催化",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "申昊科技|机器人概念": {
+      "summary": "涨超10%，受国网具身智能采购计划催化",
+      "date": "2026-04-27",
+      "region": "浙江",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "new"
+    },
+    "星思半导体|融资": {
+      "summary": "2月完成近15亿元战略融资，3月与中兴战略合作，6G卫星互联网基带芯片",
+      "date": "2026-04-27",
+      "region": "上海",
+      "importance": 4,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "银河航天|卫星制造": {
+      "summary": "南通卫星智慧工厂规模化生产，累计发射40余颗自主研制卫星",
+      "date": "2026-04-27",
+      "region": "江苏",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "ongoing"
+    },
+    "汉诺威工博会|AI工业": {
+      "summary": "AI成为工业转型关键驱动力，首次设立人形机器人专区，多家中国企业亮相",
+      "date": "2026-04-27",
+      "region": "全球",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    },
+    "AI4S|科学仪器": {
+      "summary": "AI与科学仪器融合到关键节点，从概念走向落地",
+      "date": "2026-04-27",
+      "region": "全国",
+      "importance": 3,
+      "reported": "2026-04-27",
+      "status": "closed"
+    }
+  }
+}
