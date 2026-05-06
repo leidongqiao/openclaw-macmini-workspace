@@ -36,7 +36,7 @@ description: |
    echo "🤖 机器人 OpenID: ${BOT_OPENID}"
 
    # 获取知识库 Space ID(按名称匹配)
-   SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')
+   SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')
    echo "📚 知识库 Space ID: ${SPACE_ID}"
    ```
 
@@ -61,7 +61,7 @@ echo "✅ 机器人 OpenID: ${BOT_OPENID}"
 
 # 2. 自动获取知识库 Space ID(按名称匹配)
 echo "📌 获取知识库 Space ID..."
-SPACE_NAME="AI 行研"  # 修改为你的知识库名称
+SPACE_NAME="${SPACE_NAME}'"  # 修改为你的知识库名称
 SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="'${SPACE_NAME}'") | .space_id')
 if [ -z "${SPACE_ID}" ] || [ "${SPACE_ID}" == "null" ]; then
   echo "❌ 未找到知识库:${SPACE_NAME}"
@@ -99,7 +99,7 @@ lark-cli wiki members list --params '{"space_id":"'${SPACE_ID}'"}' | \
 ```bash
 # 一行命令完成(自动获取所有参数)
 lark-cli wiki members create --as user \
-  --params '{"space_id":"'$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')'"}' \
+  --params '{"space_id":"'$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')'"}' \
   --data '{"member_id":"'$(lark-cli api GET /open-apis/bot/v3/info --as bot | jq -r '.bot.open_id')'","member_type":"openid","member_role":"admin"}'
 ```
 
@@ -107,7 +107,7 @@ lark-cli wiki members create --as user \
 
 在 OpenClaw 会话中描述需求,AI 会自动获取参数并执行:
 ```
-将机器人添加为"AI 行研"知识库的管理员
+将机器人添加为"${SPACE_NAME}'"知识库的管理员
 ```
 
 AI 会自动:
@@ -136,7 +136,7 @@ AI 会自动:
 lark-cli wiki spaces list
 
 # 按名称过滤(推荐)
-SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')
+SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')
 echo "${SPACE_ID}"
 ```
 
@@ -169,7 +169,7 @@ curl -s -X GET "https://open.feishu.cn/open-apis/bot/v3/info" \
 
 ```bash
 # 1. 自动获取 space_id
-SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')
+SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')
 
 # 2. 获取机器人 OpenID
 BOT_OPENID=$(lark-cli api GET /open-apis/bot/v3/info --as bot | jq -r '.bot.open_id')
@@ -194,7 +194,7 @@ lark-cli wiki members list --params '{"space_id":"'${SPACE_ID}'"}' | \
 
 ```bash
 # 自动获取 space_id
-SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')
+SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')
 
 # 以机器人身份创建文档
 lark-cli wiki +node-create --as bot \
@@ -217,7 +217,7 @@ lark-cli wiki +node-create --as bot \
 lark-cli auth list
 
 # 2. 检查当前用户是否是知识库管理员
-SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="AI 行研") | .space_id')
+SPACE_ID=$(lark-cli wiki spaces list | jq -r '.spaces[] | select(.name=="${SPACE_NAME}'") | .space_id')
 lark-cli wiki members list --params '{"space_id":"'${SPACE_ID}'"}' | jq '.data.members[] | select(.member_role=="admin")'
 
 # 3. 如未登录,先授权
@@ -276,7 +276,7 @@ lark-cli wiki spaces list | jq -r '.spaces[].name'
 # 将机器人添加为知识库管理员（完整自动化脚本）
 set -e
 
-SPACE_NAME="AI 行研"  # 修改为你的知识库名称
+SPACE_NAME="${SPACE_NAME}'"  # 修改为你的知识库名称
 
 echo "🔧 开始添加机器人到知识库管理员..."
 
