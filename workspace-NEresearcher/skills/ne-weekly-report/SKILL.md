@@ -21,10 +21,10 @@ description: |
 | `BOT_PROFILE` | lark-cli profile 名称（对应 agent 自己的 bot） | `lark-cli config init --name <bot_name> --app-id <app_id>` 创建 |
 | `WIKI_SPACE_ID` | 飞书知识库 space_id | `lark-cli wiki spaces list` |
 | `WIKI_SPACE_NAME` | 知识库名称（用于去重搜索） | 从 wiki spaces list 确认 |
-| `SPREADSHEET_TOKEN` | 商机挖掘表格的 spreadsheet_token | 从飞书表格 URL 提取 |
-| `SHEET_ID` | 商机挖掘表格的 sheet_id | 从飞书表格 URL 提取 |
 | `REGION` | 地域聚焦（如「浙江」「江苏」「广东」） | 根据 agent 定位 |
 | `REGION_CITIES` | 地域下属城市列表 | 根据 agent 定位 |
+| `SPREADSHEET_TOKEN` | 商机挖掘表格的 spreadsheet_token | 从飞书表格 URL 提取 |
+| `SHEET_ID` | 商机挖掘表格的 sheet_id | 从飞书表格 URL 提取 |
 | `WEEKLY_TITLE_PREFIX` | 周报文档标题前缀（如 `ne-weekly`） | 自定义 |
 
 ### 配置示例（在 agent 的 SKILL.md 同级创建 `config.json`）
@@ -34,10 +34,10 @@ description: |
   "bot_profile": "ne_bot",
   "wiki_space_id": "7637082931059706850",
   "wiki_space_name": "新能源行研",
-  "spreadsheet_token": "C5ZgwhqJciryiTkGLH0cvlXzn5b",
-  "sheet_id": "f2ad53",
   "region": "浙江",
   "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
+  "spreadsheet_token": "C5ZgwhqJciryiTkGLH0cvlXzn5b",
+  "sheet_id": "f2ad53",
   "weekly_title_prefix": "ne-weekly"
 }
 ```
@@ -69,7 +69,7 @@ description: |
 - **web_search 优先**：用关键词精准搜索新能源行业信息，比爬取大站再筛选高效得多
 - **web_fetch 用 text 模式**（`extractMode: "text"`），比 markdown 模式更精简
 - **maxChars=6000**，够提取文章摘要，不需要更大
-- **表格只查 A 列**去重，不查全表
+- **表格只查 A 列**（`f2ad53!A:A`）去重，不查全表
 - **lark-cli 命令按预定义参数执行**，不要反复试错
 - **正文点入按需**：只在搜索结果发现重要线索时点入正文（maxChars=4000）
 
@@ -238,8 +238,8 @@ XX光伏（<城市>）| 中标大单 | 订单融资 | P1
 周报中的商机数据写入「商机挖掘」电子表格。
 
 **🔴 关键规则（必须严格遵守）：**
-- **只写入「必访」名单中的企业**，「储备」类企业不写入表格，「预警」类不写入表格
-- **只写入目标区域本地企业**，非目标区域企业一律不写入表格
+- **只写入「🔴 必访」企业**：周报行动清单中标注为「🔴 必访」的浙江企业才写入表格，储备和预警企业一律不写入
+- **只写入浙江本地企业**，非浙江企业一律不写入表格
 - **写入前必须去重**：先读取 A 列，用「规范化核心简称精确匹配」判断是否已存在
 - **禁止重复写入同一企业**：同一核心简称只保留一行，已有行则更新，无则追加
 
@@ -276,39 +276,20 @@ XX光伏（<城市>）| 中标大单 | 订单融资 | P1
 
 **⚠️ 表格排序与清理（每次写入后必须执行）：**
 
-使用 Python 脚本完全读取表格数据、按日期倒序排序、写回并清理残留行：
+使用 Python 脚本完整读取表格数据、按日期倒序排序、写回并清理残留行：
 ```python
-import json, subprocess, urllib.request, urllib.error
+import json, subprocess
 
-SPREADSHEET_TOKEN = "C5ZgwhqJciryiTkGLH0cvlXzn5b"
-SHEET_ID = "f2ad53"
-APP_ID = "cli_a97152fac6b81bd4"
-APP_SECRET = subprocess.run(
-    ['bash', '-c', 'jq -r \'.channels.feishu.accounts.ne_bot.appSecret\' ~/.openclaw/openclaw.json'],
+# 1. 读取全表
+result = subprocess.run(
+    ['bash', '-c', '~/.npm-global/bin/lark-cli sheets +read --spreadsheet-token C5ZgwhqJciryiTkGLH0cvlXzn5b --range "f2ad53!A1:J100"'],
     capture_output=True, text=True
-).stdout.strip()
-
-def get_tenant_token():
-    data = json.dumps({"app_id": APP_ID, "app_secret": APP_SECRET}).encode()
-    req = urllib.request.Request(
-        "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal",
-        data=data, headers={"Content-Type": "application/json"}
-    )
-    resp = json.loads(urllib.request.urlopen(req).read())
-    return resp["tenant_access_token"]
-
-def api_call(token, method, path, body=None):
-    url = f"https://open.feishu.cn{path}"
-    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    data = json.dumps(body).encode() if body else None
-    req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    resp = json.loads(urllib.request.urlopen(req).read())
-    return resp
-
-# 1. 获取 token 并读取全表
-token = get_tenant_token()
-resp = api_call(token, "GET", f"/open-apis/sheets/v2/spreadsheets/{SPREADSHEET_TOKEN}/values/{SHEET_ID}!A1:J100")
-rows = resp["data"]["valueRange"]["values"]
+)
+raw = result.stdout
+start = raw.find('{')
+end = raw.rfind('}') + 1
+data = json.loads(raw[start:end])
+rows = data['data']['valueRange']['values']
 
 header = rows[0]
 data_rows = [r for r in rows[1:] if len(r) > 0 and r[0] and r[0].strip()]
@@ -317,20 +298,24 @@ data_rows = [r for r in rows[1:] if len(r) > 0 and r[0] and r[0].strip()]
 data_rows.sort(key=lambda x: x[8] if len(x) > 8 and x[8] else '', reverse=True)
 
 # 3. 写入排序后的数据
-end_row = 1 + len(data_rows)
-api_call(token, "PUT", f"/open-apis/sheets/v2/spreadsheets/{SPREADSHEET_TOKEN}/values/{SHEET_ID}!A2:J{end_row}", {
-    "valueRange": {"values": data_rows}
-})
+with open('/tmp/sheet_data.json', 'w') as f:
+    json.dump(data_rows, f)
 
-# 4. 清理 end_row+1 之后的残留空行
-api_call(token, "POST", f"/open-apis/sheets/v2/spreadsheets/{SPREADSHEET_TOKEN}/sheets/{SHEET_ID}/dimensionRanges/delete", {
-    "ranges": [{"dimension": "ROWS", "startIndex": end_row, "endIndex": 200}]
-})
+end_row = 1 + len(data_rows)
+subprocess.run(
+    ['bash', '-c', f'~/.npm-global/bin/lark-cli sheets +write --as bot --spreadsheet-token C5ZgwhqJciryiTkGLH0cvlXzn5b --range "f2ad53!A2:J{end_row}" --values "$(cat /tmp/sheet_data.json)"'],
+    capture_output=True, text=True
+)
+
+# 4. 清理 end_row+1 之后的残留空行（防止之前写入残留）
+subprocess.run(
+    ['bash', '-c', f'~/.npm-global/bin/lark-cli sheets +delete-dimension --as bot --spreadsheet-token C5ZgwhqJciryiTkGLH0cvlXzn5b --sheet-id "f2ad53" --dimension "ROWS" --start-index {end_row} --end-index 200'],
+    capture_output=True, text=True
+)
 ```
 
 ⚠️ **关键说明：**
-- 使用当前 bot 的 tenant_access_token 直接调 Sheets API，不依赖 lark-cli 配置
-- 排序后必须删除 end_row 之后的所有行，否则会残留空行和旧数据
+- 排序后必须用 `+delete-dimension` 删除 end_row 之后的所有行，否则会残留空行和旧数据
 - 如果之前写入范围小于实际数据量（如写了 A2:J26 但旧数据在 52-53 行），中间会留下大量空行，必须删除
 
 ### 第九步：生成周报
@@ -499,7 +484,7 @@ api_call(token, "POST", f"/open-apis/sheets/v2/spreadsheets/{SPREADSHEET_TOKEN}/
 💰 商机：必访 X 家 | 储备 X 家 | 预警 X 条
 
 📄 周报全文：<https://www.feishu.cn/wiki/XXXX>
-📊 商机表格：<https://xxx.feishu.cn/sheets/XXXX>
+📊 商机表格：<https://www.feishu.cn/sheets/C5ZgwhqJciryiTkGLH0cvlXzn5b>
 ```
 
 **推送内容要求：**
@@ -537,7 +522,7 @@ api_call(token, "POST", f"/open-apis/sheets/v2/spreadsheets/{SPREADSHEET_TOKEN}/
 6. **知识库写入**：必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
 7. **群聊推送**：推送概要 + 链接，不是全文
 8. **商机挖掘表格**：写入前必须去重，只写目标区域本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
-9. **⚠️ 表格写入用当前 bot 的 tenant_access_token 直接调 API**：lark-cli 默认配置的是 ai_bot，`--as bot` 会报 `91403 Forbidden`。正确做法：用 lark-cli profile（`--profile $BOT_PROFILE --as bot`）或直接通过 appId/appSecret 获取 tenant_access_token，调 Sheets API 写入。每个 agent 对应自己的 bot，不要混用。
+9. **⚠️ 表格写入用 lark-cli 命令**：使用 `lark-cli sheets +read/+write/+delete-dimension` 操作表格，不写独立脚本。每个 agent 对应自己的 bot，不要混用。
 10. **web_search 限流**：Brave 免费套餐限流 1 次/秒，多轮搜索需串行执行或混用 SearXNG skill（`SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`）
 11. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告，不影响功能
 
