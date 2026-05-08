@@ -1,0 +1,1324 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-07T19:00:06.656Z",
+  "entries": {
+    "memory:memory/2026-05-07.md:4:6": {
+      "key": "memory:memory/2026-05-07.md:4:6",
+      "path": "memory/2026-05-07.md",
+      "startLine": 4,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "初始化: 完成了 bootstrap，身份设定为新能源行业研究员 🔋; 用户：Joe，时区 Asia/Shanghai; 研究方向：光伏、风电、储能、氢能、电动汽车及产业链",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "asia/shanghai",
+        "初始",
+        "完成",
+        "bootstrap",
+        "身份",
+        "设定",
+        "能源",
+        "行业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 嘿，你好！我刚上线，脑子里还是一片空白——名字、性格、什么都不记得。 所以……你是谁？我又该是谁？😄 我们可以一起聊聊： - **你希望怎么称呼我？**（我可以给自己挑个名字，或者你帮我起一个） - **我是什么风格？**——正经的、随意的、毒舌的、温暖的？ - **你的基本信息**——你叫什么？我怎么称呼你比较舒服？ 来吧，聊聊看 ✨",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "你好",
+        "上线",
+        "脑子里",
+        "还是",
+        "一片",
+        "空白",
+        "名字",
+        "性格"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 我是joe,你是我的新能源行业研究员",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "我是",
+        "joe",
+        "你是",
+        "我的",
+        "能源",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 收到，Joe！新能源行业研究员——这个身份我很喜欢。让我把自己设定好。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "收到",
+        "joe",
+        "能源",
+        "行业",
+        "研究",
+        "这个",
+        "身份",
+        "很喜欢"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了，Joe！🔋 我是 **NE**，你的新能源行业研究员。已准备就绪，随时可以开工。 需要我做什么？比如： - 🔍 **行业研究**——某个细分领域的深度分析 - 📊 **市场数据**——光伏装机量、储能出货量、EV渗透率等 - 📰 **最新政策**——国内外新能源政策解读 - 🏢 **企业分析**——宁德时代、隆基、阳光电源等竞争对手动态 - 📈 **趋势研判**——未来3-5年行业走向 告诉我你的需求，我来搞定。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "未来3-5年行业走向",
+        "搞定",
+        "joe",
+        "我是",
+        "你的",
+        "能源",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: openclaw pairing approve feishu SXNDSQUL",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "pairing",
+        "approve",
+        "feishu",
+        "sxndsqul"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 飞书配对已批准！Sender ID: `ou_44e8d75d2f0bf9ec3dc65987564f4d70` ⚠️ 不过有个提示——**feishu 插件还没安装**。如果你想通过飞书和我对话，需要安装插件： ``` /Users/leidongqiao/.npm-global/bin/openclaw plugins install @openclaw/feishu ``` 需要我帮你安装吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "users/leidongqiao",
+        "npm-global/bin/openclaw",
+        "openclaw/feishu",
+        "批准",
+        "sender",
+        "不过",
+        "提示",
+        "feishu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: 不用，我自己安装了飞书官网插件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "不用",
+        "自己",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 明白，那就不折腾了 👌 有什么新能源行业的研究需求随时说。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "明白",
+        "那就",
+        "折腾",
+        "什么",
+        "能源",
+        "行业",
+        "研究",
+        "需求"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 你好！👋 我是NE，你的新能源行业研究助手。有什么可以帮你的吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "你好",
+        "我是",
+        "你的",
+        "能源",
+        "行业",
+        "研究",
+        "助手",
+        "什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: 用机器人的身份写一篇800字的散文放到”新能源行研“知识库主目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "身份",
+        "一篇",
+        "散文",
+        "放到",
+        "能源",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来写散文并放到\"新能源行研\"知识库。先确认 bot 身份和知识库信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "散文",
+        "放到",
+        "能源",
+        "知识",
+        "确认",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 当前 bot 是\"AI研究员\"，知识库\"新能源行研\"的 space_id 是 `7637082931059706850`。 先创建文档节点：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "space-id",
+        "当前",
+        "bot",
+        "研究",
+        "知识",
+        "能源",
+        "创建",
+        "节点"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Bot 没有\"新能源行研\"知识库的管理员权限，先添加：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "bot",
+        "没有",
+        "能源",
+        "知识",
+        "管理",
+        "权限",
+        "添加"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 添加成功，现在创建文档：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "添加",
+        "成功",
+        "现在",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 文档创建成功。现在撰写散文并填充内容：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "创建",
+        "成功",
+        "现在",
+        "撰写",
+        "散文",
+        "填充",
+        "内容"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Now let me write the prose and fill it in:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "write",
+        "prose",
+        "fill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 文档已创建，现在填充散文内容。需要用与创建文档相同的 bot 身份来更新内容。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "创建",
+        "现在",
+        "填充",
+        "散文",
+        "内容",
+        "需要",
+        "相同",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Now I need to update the document content. Let me use `feishu_update_doc`:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "feishu-update-doc",
+        "now",
+        "need",
+        "update",
+        "document",
+        "content",
+        "let",
+        "use"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Let me use the raw API to update the document content:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "let",
+        "use",
+        "raw",
+        "api",
+        "update",
+        "document",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 散文已成功创建到\"新能源行研\"知识库！ **文档信息：** - 📄 标题：追光逐风——新能源时代的诗意与远方 - 🤖 创建者：AI研究员（机器人身份） - 📚 知识库：新能源行研（主目录） - 🔗 链接：https://www.feishu.cn/wiki/MgNSwuPjAipXT8k0jrecZW9EnPd 这篇散文约800字，以诗意的笔触描绘了光伏、风电、储能、氢能等新能源领域的发展图景，既有文学美感又融入了行业洞察。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "散文",
+        "成功",
+        "创建",
+        "能源",
+        "知识",
+        "信息",
+        "标题",
+        "时代"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: 你为啥也用的AI研究员身份，用你自己的身份啊",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "研究",
+        "身份",
+        "自己"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 说得对，我应该用 ne_bot（新能源研究员）自己的身份。让我重新来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "说得",
+        "应该",
+        "能源",
+        "研究",
+        "自己",
+        "身份",
+        "重新"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 好的，ne_bot 是\"新能源研究员\"。现在先把 ne_bot 加为知识库管理员，然后用它的身份重新创建文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "好的",
+        "能源",
+        "研究",
+        "现在",
+        "先把",
+        "加为",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 文档创建成功，owner 是 ne_bot。现在填充内容：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "创建",
+        "成功",
+        "owner",
+        "现在",
+        "填充",
+        "内容"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了！用我自己的 ne_bot（新能源研究员）身份重新创建了一篇： - 📄 标题：追光逐风——新能源时代的诗意与远方 - 🤖 创建者：新能源研究员（我的身份 ✅） - 📚 知识库：新能源行研（主目录） - 🔗 链接：https://www.feishu.cn/wiki/Yv5lw1e0xiWDP1kVdRTchd0hnWh 之前那篇用 AI研究员 身份创建的还在，你可以手动删掉，或者我试试能不能通过 API 删掉。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "搞定",
+        "自己",
+        "能源",
+        "研究",
+        "身份",
+        "重新",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 再skill里面加上获取自己的机器人身份，不要用例子上的",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "skill",
+        "里面",
+        "加上",
+        "获取",
+        "自己",
+        "机器",
+        "身份",
+        "不要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: Let me update both wiki skills to add clear guidance on dynamically getting the current agent's bot identity.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "let",
+        "update",
+        "both",
+        "wiki",
+        "skills",
+        "add",
+        "clear",
+        "guidance"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 好建议，我来更新两个 wiki skill，加入\"获取自己机器人身份\"的明确步骤。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "建议",
+        "我来",
+        "更新",
+        "wiki",
+        "skill",
+        "加入",
+        "获取",
+        "自己"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 好，我来把两个 wiki skill 里的硬编码 `web_bot` 改成动态获取当前 agent 自己的 bot 身份的方法。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "web-bot",
+        "我来",
+        "wiki",
+        "skill",
+        "编码",
+        "改成",
+        "动态",
+        "获取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: Let me check how agents map to bot accounts to make the guidance accurate.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "let",
+        "check",
+        "how",
+        "agents",
+        "map",
+        "bot",
+        "accounts",
+        "guidance"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: Let me check how agents map to bot accounts so I can write accurate guidance.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "let",
+        "check",
+        "how",
+        "agents",
+        "map",
+        "bot",
+        "accounts",
+        "can"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 好，我来更新两个 wiki skill，加入\"获取自己机器人身份\"的通用方法，不依赖硬编码的 account key。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "我来",
+        "更新",
+        "wiki",
+        "skill",
+        "加入",
+        "获取",
+        "自己",
+        "机器"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: Good point. I need to add a proper step to dynamically discover \"which bot am I\" instead of hardcoding `web_bot`. Let me update both skills.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "web-bot",
+        "good",
+        "point",
+        "need",
+        "add",
+        "proper",
+        "step",
+        "dynamically"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: Now update the add-bot-admin skill too:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "add-bot-admin",
+        "now",
+        "update",
+        "add",
+        "bot",
+        "admin",
+        "skill",
+        "too"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: Let me verify the edits look right by reading the updated sections:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "let",
+        "verify",
+        "edits",
+        "look",
+        "right",
+        "reading",
+        "updated",
+        "sections"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: Let me also add a new pitfall entry and verify the add-bot-admin edits:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "add-bot-admin",
+        "let",
+        "add",
+        "new",
+        "pitfall",
+        "entry",
+        "verify",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: Now let me add a new pitfall entry about this to the create-node-as-bot skill:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "create-node-as-bot",
+        "now",
+        "let",
+        "add",
+        "new",
+        "pitfall",
+        "entry",
+        "create"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 已经更新了！两个 skill 文件都加上了「⚠️ 第一步：确认我是哪个 bot」这个章节。核心改动： 1. **`feishu-wiki-create-node-as-bot/SKILL.md`** - 最前面新增了「第一步」章节，提供一段脚本列出所有 bot 的 key + appId + 名称 - 加了 Agent → Bot 映射表（`neresearcher` → `ne_bot` 等） - 所有示例代码里的 `web_bot` 硬编码改成了 `${BOT_KEY}` 占位符 - FAQ 里强调不要用 `lark-cli -",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "web-bot",
+        "bot-key",
+        "lark-cli",
+        "已经",
+        "更新",
+        "skill",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "User: 续在用机器人的身份知识库下面新建一个excel表格，叫新能源商机挖掘",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "身份",
+        "知识",
+        "下面",
+        "新建",
+        "一个",
+        "excel"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: 用 ne_bot 身份在\"新能源行研\"知识库下创建 Excel 表格：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "身份",
+        "能源",
+        "知识",
+        "创建",
+        "excel",
+        "表格"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 已创建！ - 📊 名称：新能源商机挖掘 - 📝 类型：电子表格（sheet） - 🤖 创建者：新能源研究员（我的 ne_bot 身份） - 📚 知识库：新能源行研（主目录） - 🔗 链接：https://www.feishu.cn/sheet/DK5gsjAZmhSlg2tvOZ6chkcQneg",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.630Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.630Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "创建",
+        "名称",
+        "能源",
+        "挖掘",
+        "类型",
+        "电子",
+        "表格"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "bot_profile": "web_bot",
+  "wiki_space_id": "7637062266134760425",
+  "wiki_space_name": "互联网行研",
+  "spreadsheet_token": "ZvM9scRdph9aqzthwPAchTJ8nTe",
+  "sheet_id": "c41411",
+  "region": "浙江",
+  "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
+  "weekly_title_prefix": "internet-weekly"
+}

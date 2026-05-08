@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "files": {
+    "swyyresearcher:sessions/swyyresearcher/39bd645d-e8f6-4d65-b82b-beb8bc576a5f.jsonl": {
+      "mtimeMs": 1778120956817,
+      "size": 23455,
+      "contentHash": "5ae379b0c8d21da8ddbc40f6b59ecbd9ce4b16a3d830a6ae311c540aa8708e97",
+      "lineCount": 11,
+      "lastContentLine": 11
+    },
+    "swyyresearcher:sessions/swyyresearcher/fb46c025-abc6-481d-b109-9df832a57562.jsonl": {
+      "mtimeMs": 1778148403253,
+      "size": 125760,
+      "contentHash": "ba241a453910d384fd7befd1161419a4590623cf54f1285990ffe269e14c9e6b",
+      "lineCount": 14,
+      "lastContentLine": 14
+    }
+  },
+  "seenMessages": {
+    "swyyresearcher:39bd645d-e8f6-4d65-b82b-beb8bc576a5f": [
+      "0da73d45e427252040a0f2ce33409f34cf238729",
+      "4fa96db00ba1215504ac03c4f53071eb6d7d38c3",
+      "876a8dae2b5f8fae08891aa3cbeb98628c0858e4",
+      "42a17c6a90bbf8950b595882bccba688669cfd14",
+      "7fe06cd197e41a998da3426f453efc9b03c7639c",
+      "8844ddba5c18821a8d2a0e4f4eb3da260987a5ce",
+      "f7bf0ab7e4518b37ea06e9ca982f60760a8f3c09",
+      "93854f808af25413ec7ec631f81d1fdd18056c81",
+      "ccabf15eae79fb608482658e3d6c51fe95ced341",
+      "da84b2cd893fe238e4cfd22f45a8834cc39fb0ef"
+    ],
+    "swyyresearcher:fb46c025-abc6-481d-b109-9df832a57562": [
+      "b7a7072509cc782835d9f898b6fddbb64b359be6",
+      "a4268d469b706e16b7c3e02f61d2b6854465b4fd",
+      "312466b24d112f5946cc0f6a759a8e306c745703",
+      "463c317bfe84d02482bd73d8b9d6a961e02b1235",
+      "4a61797ef7b0d497046be831e8c122427cfd2df1",
+      "9f5798138b365eeafb52e9a8b51368068e14804b",
+      "981bd352858f3a7d0baff409bb8ca3d60549b41e",
+      "43bea9eceeaa1d5d269e98c57eed65b42e4820b7",
+      "56af24371b91e69af70c2bce4bf7d7d8e8aa00b5",
+      "6e116eaa8ce3d77d42b54b7aa676f4397a7be051",
+      "25c7443114ee1b5b78f14b5c28d2437c71d116bf",
+      "8835c9f4ef01a19990a605398321670c2b5996b7",
+      "5069f62f5c5c8187dc11ef0aff01dd9596808fe0"
+    ]
+  }
+}

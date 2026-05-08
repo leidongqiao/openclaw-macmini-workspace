@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "files": {
+    "imresearcher:sessions/imresearcher/e21fb2e2-ab87-43ce-b616-8c73c40d29c0.jsonl": {
+      "mtimeMs": 1778121322003,
+      "size": 32530,
+      "contentHash": "ec51d59a1013b4db620d0c7c866e2988764e8de83fad3cd3c591c900ecfd6f3f",
+      "lineCount": 15,
+      "lastContentLine": 15
+    },
+    "imresearcher:sessions/imresearcher/ffb06cd6-46db-4d52-9f5a-46e100d28ae6.jsonl": {
+      "mtimeMs": 1778148451346,
+      "size": 207089,
+      "contentHash": "0827d491ceba11ba0fdbd8b481cfd33cd48ea81b0f93e8a910af78501bd14aee",
+      "lineCount": 20,
+      "lastContentLine": 20
+    }
+  },
+  "seenMessages": {
+    "imresearcher:e21fb2e2-ab87-43ce-b616-8c73c40d29c0": [
+      "6bf4ea0ed33a8fd5f367dfa916660c263eccdc2e",
+      "8a621b093f60e8961bde99b3e158970d89138170",
+      "3b32cdf5ef1ea7367ebfe6a72c3c4ef7b7e981e8",
+      "755bcdf909ab625fd4a14c0a43e734a129040f18",
+      "c49c0633425867fac2d23bd6759ddea5e40963f9",
+      "059afbb96852e65374cdff089f7458b8f80595b3",
+      "4b41fface1f0beb2c9b09c89d727722dbe95f23b",
+      "30707e2359cfb417a4617b414dd52366ebb1d136",
+      "0c16dc8c7cc41ab26a4180adca54d0a223cde7ce",
+      "da32de23e4010bab84dcf3fe9feb2c8f2ad932cd",
+      "7efd3dfd3809224c3df6f7515a7755bc9a3b74a6",
+      "d1e0e9e4a3e06460684a3521bcf3a7c78db0f324",
+      "fd06cbd98ceece2bc963bad4e9686bdd159d2e73",
+      "aeee53991c6ec93733818059a95600949076ad2d"
+    ],
+    "imresearcher:ffb06cd6-46db-4d52-9f5a-46e100d28ae6": [
+      "96c62b5a10ac07b131ab6582d3ec7a1378edbab5",
+      "bc0651288310b324794fc4a73d9f273d886feb40",
+      "306ca8d814641bfb4be9528a53a8e58e81c50d9a",
+      "7d18d04e4f8de7e721c1fb72eb4f52566bd11c34",
+      "674c662c0bb3e30885d9a96717676528dcb84398",
+      "2afacaf491e909e925b0d82a486b6ec10808919d",
+      "fe5674f637c5a71c628fa7d8f68c6dde51f43244",
+      "17bd3c3e2348166759e3c6da8078f520c0b233ff",
+      "0c3e2a071c9a5b292e3ebe242d62166b13dee4f4",
+      "f1ad72e2f615ac81d85fac0ea1b3430e843cce35",
+      "01c19469c94f4b55ad57a1f585047834b931a921",
+      "ef16274c3175962e9385151dddea2ba343a87f08",
+      "ff48bd3338c67c4c3ff389ef10145af983bb98d7",
+      "701277353276f5758a53d255391d5243a532b084",
+      "22cb200864d0a3c3af93ae5589c5bffc615b6b03",
+      "c0a5801080f99bf338d1cee9236749cd08bb93f5",
+      "de3755a47700d4ec76b270de061127ed00415817",
+      "f1c6faffbedc04e1ff6034398313f04159cb1360",
+      "a4ea73e04864a703142493926498d5e45175c071"
+    ]
+  }
+}

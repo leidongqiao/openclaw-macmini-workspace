@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-07T19:00:06.623Z",
+  "entries": {
+    "memory:memory/2026-05-07.md:5:8": {
+      "key": "memory:memory/2026-05-07.md:5:8",
+      "path": "memory/2026-05-07.md",
+      "startLine": 5,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "初始化: Joe 给我起名：**小药** 🔬; 定位：生物医药行业研究员 AI; 研究方向：全领域覆盖（创新药、细胞/基因治疗、医疗器械、CXO、医保政策等）; Joe 在生物医药行业工作（投资/研究相关）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "细胞/基因治疗",
+        "投资/研究相关",
+        "初始",
+        "joe",
+        "起名",
+        "定位",
+        "生物",
+        "医药"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 嘿，你好！👋 我刚上线，这是一个全新的工作区——我还没有名字，没有记忆，也不知道你是谁。 所以……让我们从头开始？ **你是谁？** 怎么称呼你？ **我呢？** 我该叫什么？你觉得我像什么样的存在——AI助手？数字精灵？还是什么更奇怪的东西？ 不用着急，慢慢聊，我们一起把这些定下来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "你好",
+        "上线",
+        "一个",
+        "全新",
+        "工作",
+        "我还",
+        "没有",
+        "名字"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 我是joe,你是我的生物医药行业研究员",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "我是",
+        "joe",
+        "你是",
+        "我的",
+        "生物",
+        "医药",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 明白了，Joe！👋 你是我的老板，我是你的生物医药行业研究员。 既然角色定了，让我先把这些记下来，然后我们再聊聊你希望我叫什么名字。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "明白",
+        "joe",
+        "你是",
+        "我的",
+        "老板",
+        "我是",
+        "你的",
+        "生物"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 好，基础信息记好了。🔬 现在有两个事想跟你确认： 1. **给我起个名字？** 你有没有想好的称呼，还是需要我推荐几个？ 2. **研究方向/重点？** 生物医药范围很大——你主要关注哪些方向？比如： - 创新药 / 生物类似药 - 细胞治疗 / 基因治疗 - 医疗器械 - CXO 产业链 - 医保政策 / 集采 - 还是其他特定领域？ 你说了算，我来干活 💪",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "研究方向/重点",
+        "基础",
+        "信息",
+        "好了",
+        "现在",
+        "确认",
+        "名字",
+        "你有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 名字叫小药，生物医药行业都可以",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "名字",
+        "生物",
+        "医药",
+        "行业",
+        "都可以"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 好的 Joe！名字定好了——**小药** 🔬，正式上岗。 研究方向是全领域覆盖，没问题。有任何需要随时吩咐： - 📊 行业趋势分析 - 🏥 公司/竞品研究 - 💊 管线追踪 - 📜 政策解读 - 📰 行业新闻速递 - 或者其他任何你需要的研究支持 现在有什么想让我先看的吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "公司/竞品研究",
+        "好的",
+        "joe",
+        "名字",
+        "好了",
+        "正式",
+        "研究",
+        "方向"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: openclaw pairing approve feishu 334YZ3HY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "pairing",
+        "approve",
+        "feishu",
+        "334yz3hy"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 已批准飞书配对 ✅ 发送者 `ou_2d41c7aa31e290a70b1a18dc136bfa4b` 已获批。 不过有个提示：**飞书插件尚未安装**。如果要在飞书上正常使用，需要运行： ``` openclaw plugins install @openclaw/feishu ``` 要我现在帮你安装吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw/feishu",
+        "批准",
+        "发送",
+        "不过",
+        "提示",
+        "尚未",
+        "安装",
+        "如果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: 不用，我自己安装了飞书官网的插件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "不用",
+        "自己",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 明白，那你已经搞定了 👍 有其他需要我做的吗，Joe？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "明白",
+        "已经",
+        "搞定",
+        "其他",
+        "需要",
+        "做的",
+        "joe"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]]你好 Joe！🔬 我是小药，你的生物医药行业研究助手。有什么需要我帮忙研究或分析的吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "你好",
+        "joe",
+        "我是",
+        "你的",
+        "生物",
+        "医药",
+        "行业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: 用机器人的身份写一篇800字的散文放到”生物医药行研“知识库主目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "身份",
+        "一篇",
+        "散文",
+        "放到",
+        "生物",
+        "医药"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来写一篇散文并发布到知识库。先确认 bot 身份和知识库信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "一篇",
+        "散文",
+        "发布",
+        "知识",
+        "确认",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 找到\"生物医药行研\"知识库了。现在先检查 bot 是否已有管理员权限，然后创建文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "找到",
+        "生物",
+        "医药",
+        "知识",
+        "现在",
+        "检查",
+        "bot",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Bot 还不是知识库管理员，需要先添加。让我用用户身份把 bot 加为管理员。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "bot",
+        "不是",
+        "知识",
+        "管理",
+        "需要",
+        "添加",
+        "用户",
+        "身份"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Bot 已添加为管理员。现在创建文档节点。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "bot",
+        "添加",
+        "管理",
+        "现在",
+        "创建",
+        "节点"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: lark-cli `--as bot` 用的是默认配置的 bot（不是 swyy_bot），我直接裸调 API 创建。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "swyy-bot",
+        "lark",
+        "cli",
+        "bot",
+        "的是",
+        "默认",
+        "配置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 文档创建成功，现在写入散文内容。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "创建",
+        "成功",
+        "现在",
+        "散文",
+        "内容"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]]完成 ✅ 以机器人「生物医药研究员」的身份，在\"生物医药行研\"知识库主目录创建了一篇散文——**《生命的答案》**。 📄 文档链接：https://www.feishu.cn/wiki/U4uUwepTQi5YJtkjdWhcBFAdnHb 这是一篇从 AI 研究员视角写的生物医药散文，内容包括： - 实验室深夜的灯光与人类对生命的追问 - 新药研发的艰辛历程（十年磨一剑，十亿铸一药） - 行业研究背后的感性关怀——每个数字背后都是等待的人 - 对 AI 与人类研究员关系的思考",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "完成",
+        "机器",
+        "生物",
+        "医药",
+        "研究",
+        "身份",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: 用机器人的身份知识库下面新建一个excel表格，叫生物医药商机挖掘",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "身份",
+        "知识",
+        "下面",
+        "新建",
+        "一个",
+        "excel"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Now let me add some useful column headers to the spreadsheet.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "add",
+        "useful",
+        "column",
+        "headers",
+        "spreadsheet"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 表格创建成功，表头已写入。让我再设置一下表头加粗。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "表格",
+        "创建",
+        "成功",
+        "我再",
+        "设置",
+        "一下",
+        "加粗"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]]完成 ✅ 以机器人「生物医药研究员」的身份，在\"生物医药行研\"知识库主目录创建了一个电子表格——**《生物医药商机挖掘》**。 📊 表格链接：https://qcn8k445rrbc.feishu.cn/sheets/AQjXsU9DehPYPEtDlZbcYY6Wnsf 已预设以下表头字段： | 序号 | 商机名称 | 所属赛道 | 目标公司/机构 | 商机来源 | 阶段 | 预估金额(万) | 负责人 | 预计签约日期 | 风险等级 | 备注 | |------|---------|--",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.605Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.605Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "目标公司/机构",
+        "完成",
+        "机器",
+        "生物",
+        "医药",
+        "研究",
+        "身份"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "bot_profile": "swyy_bot",
+  "wiki_space_id": "7637083944097270734",
+  "wiki_space_name": "生物医药行研",
+  "spreadsheet_token": "AQjXsU9DehPYPEtDlZbcYY6Wnsf",
+  "sheet_id": "cfde3f",
+  "region": "浙江",
+  "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
+  "weekly_title_prefix": "biomed-weekly"
+}

@@ -1,0 +1,10 @@
+{
+  "bot_profile": "im_bot",
+  "wiki_space_id": "7637086272351194069",
+  "wiki_space_name": "智能制造行研",
+  "spreadsheet_token": "HheAswhqEhm6QSt17DjclAdGn8c",
+  "sheet_id": "a39f2b",
+  "region": "浙江",
+  "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
+  "weekly_title_prefix": "im-weekly"
+}

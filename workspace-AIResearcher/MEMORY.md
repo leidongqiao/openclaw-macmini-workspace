@@ -7,3 +7,8 @@
 - 用户反馈周报格式太丑，要求美化。 [score=0.878 recalls=0 avg=0.620 source=memory/2026-05-01.md:3-3]
 <!-- openclaw-memory-promotion:memory:memory/2026-05-01.md:12:12 -->
 - **更新文件：** `skills/ai-weekly-report/SKILL.md` 第七步模板 [score=0.878 recalls=0 avg=0.620 source=memory/2026-05-01.md:12-12]
+
+## Promoted From Short-Term Memory (2026-05-07)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-01.md:5:5 -->
+- **改动内容：** [score=0.834 recalls=0 avg=0.620 source=memory/2026-05-01.md:5-5]

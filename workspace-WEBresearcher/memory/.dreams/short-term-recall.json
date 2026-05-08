@@ -1,0 +1,3602 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-07T19:00:06.586Z",
+  "entries": {
+    "memory:memory/2026-05-07.md:3:3": {
+      "key": "memory:memory/2026-05-07.md:3:3",
+      "path": "memory/2026-05-07.md",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "飞书知识库操作复盘 - 踩坑记录: > 2026-05-07 以机器人身份在\"互联网行研\"知识库创建文档，耗时 ~25 分钟",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "知识",
+        "操作",
+        "记录",
+        "机器",
+        "身份",
+        "创建",
+        "分钟"
+      ]
+    },
+    "memory:memory/2026-05-07.md:7:10": {
+      "key": "memory:memory/2026-05-07.md:7:10",
+      "path": "memory/2026-05-07.md",
+      "startLine": 7,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "最终成功路径: 从 `~/.openclaw/openclaw.json` 的 `channels.feishu.accounts` 获取 appId + appSecret; 调 `auth/v3/tenant_access_token/internal` 获取 TAT; 调 `wiki/v2/spaces/{space_id}/nodes` 创建 docx 节点; 调 `feishu_update_doc` 填充文档内容",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw/openclaw.json",
+        "channels.feishu.accounts",
+        "wiki/v2/spaces",
+        "space-id",
+        "feishu-update-doc",
+        "最终",
+        "成功",
+        "路径"
+      ]
+    },
+    "memory:memory/2026-05-07.md:15:18": {
+      "key": "memory:memory/2026-05-07.md:15:18",
+      "path": "memory/2026-05-07.md",
+      "startLine": 15,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "坑 1：lark-cli 找不到（PATH 问题，不是没装）: **现象**：`lark-cli: command not found`; **真实情况**：`@larksuite/cli` v1.0.17 已全局安装，位置 `~/.npm-global/bin/lark-cli`; **根因**：exec 的 PATH 不包含 `~/.npm-global/bin`; **教训**：先 `npm list -g` 或 `find` 确认是否已安装，别急着重装",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "larksuite/cli",
+        "v1.0.17",
+        "npm-global/bin/lark-cli",
+        "npm-global/bin",
+        "lark",
+        "cli",
+        "找不到"
+      ]
+    },
+    "memory:memory/2026-05-07.md:21:21": {
+      "key": "memory:memory/2026-05-07.md:21:21",
+      "path": "memory/2026-05-07.md",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "坑 2：钥匙串里没有 appSecret: `~/.lark-cli/config.json` 指向 keychain，但 keychain 里没有。真实凭证在 `~/.openclaw/openclaw.json` → `channels.feishu.accounts`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli/config.json",
+        "openclaw/openclaw.json",
+        "channels.feishu.accounts",
+        "钥匙",
+        "没有",
+        "appsecret",
+        "lark",
+        "cli"
+      ]
+    },
+    "memory:memory/2026-05-07.md:24:24": {
+      "key": "memory:memory/2026-05-07.md:24:24",
+      "path": "memory/2026-05-07.md",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "坑 3：不知道 wiki_space_id: 等用户手动提供。应该先调 `GET /open-apis/wiki/v2/spaces`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space-id",
+        "open-apis/wiki/v2/spaces",
+        "不知道",
+        "用户",
+        "提供",
+        "应该",
+        "get",
+        "open"
+      ]
+    },
+    "memory:memory/2026-05-07.md:27:27": {
+      "key": "memory:memory/2026-05-07.md:27:27",
+      "path": "memory/2026-05-07.md",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "坑 4：机器人没有知识库权限: API 返回 `131006 permission denied`。用哪个 bot 的 token 都行，问题是 wiki 空间成员列表里没有这个 bot。需要先加为管理员。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "没有",
+        "知识",
+        "权限",
+        "api",
+        "返回",
+        "permission",
+        "denied"
+      ]
+    },
+    "memory:memory/2026-05-07.md:30:30": {
+      "key": "memory:memory/2026-05-07.md:30:30",
+      "path": "memory/2026-05-07.md",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "坑 5：直接调 Docx API 创建 blocks 失败: 裸调 `docx/v1/documents/{id}/blocks/{id}/children` 连续报三个错：`99992402`、`1770001`、`1770029`。应该直接用 `feishu_update_doc`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "docx/v1/documents",
+        "feishu-update-doc",
+        "直接",
+        "docx",
+        "api",
+        "创建",
+        "blocks",
+        "失败"
+      ]
+    },
+    "memory:memory/2026-05-07.md:33:33": {
+      "key": "memory:memory/2026-05-07.md:33:33",
+      "path": "memory/2026-05-07.md",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "坑 6：用 `openclaw agent --agent main` 反复调 wiki 工具: `openclaw agent` 命令启动子进程很慢（每次要等 30-60s），来回调了好几次（添加管理员、更新文档内容）。其实拿到凭证后直接用 curl 调 API 更快。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "30-60s",
+        "openclaw",
+        "反复",
+        "wiki",
+        "工具",
+        "命令",
+        "启动",
+        "进程"
+      ]
+    },
+    "memory:memory/2026-05-07.md:36:36": {
+      "key": "memory:memory/2026-05-07.md:36:36",
+      "path": "memory/2026-05-07.md",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "坑 7：反复折腾 lark-cli（坑 1 的连锁反应）: 同一个问题踩了两遍：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "反复",
+        "折腾",
+        "lark",
+        "cli",
+        "连锁",
+        "反应",
+        "一个"
+      ]
+    },
+    "memory:memory/2026-05-07.md:37:38": {
+      "key": "memory:memory/2026-05-07.md:37:38",
+      "path": "memory/2026-05-07.md",
+      "startLine": 37,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "坑 7：反复折腾 lark-cli（坑 1 的连锁反应）: 用 npx 尝试装 `@larksuite/lark-cli`（包不存在，实际叫 `@larksuite/cli`）; 跑 `openclaw-lark-tools` 诊断、探索 OAuth、翻 token-store 源码等",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "larksuite/lark-cli",
+        "larksuite/cli",
+        "openclaw-lark-tools",
+        "token-store",
+        "反复",
+        "折腾",
+        "lark"
+      ]
+    },
+    "memory:memory/2026-05-07.md:40:40": {
+      "key": "memory:memory/2026-05-07.md:40:40",
+      "path": "memory/2026-05-07.md",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "坑 7：反复折腾 lark-cli（坑 1 的连锁反应）: 本质是坑 1 的连锁反应——lark-cli 就在 `~/.npm-global/bin` 里，只是 PATH 没覆盖到。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "npm-global/bin",
+        "反复",
+        "折腾",
+        "lark",
+        "cli",
+        "连锁",
+        "反应"
+      ]
+    },
+    "memory:memory/2026-05-07.md:43:46": {
+      "key": "memory:memory/2026-05-07.md:43:46",
+      "path": "memory/2026-05-07.md",
+      "startLine": 43,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "坑 8：误以为子 agent 不能调用飞书 MCP 工具: **现象**：webresearcher 调用不了 `feishu_update_doc` 等工具; **错误归因**：以为是架构限制（只有 main agent 能用）; **真实原因**：`tools.alsoAllow` 为空; **已修复**：所有 7 个 agent 都补上了 37 个飞书工具",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "feishu-update-doc",
+        "tools.alsoallow",
+        "误以为",
+        "不能",
+        "mcp",
+        "工具",
+        "现象",
+        "webresearcher"
+      ]
+    },
+    "memory:memory/2026-05-07.md:51:51": {
+      "key": "memory:memory/2026-05-07.md:51:51",
+      "path": "memory/2026-05-07.md",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "下次快速路径: export PATH=\"$HOME/.npm-global/bin:$PATH\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "npm-global/bin",
+        "下次",
+        "快速",
+        "路径",
+        "export",
+        "path",
+        "home",
+        "npm"
+      ]
+    },
+    "memory:memory/2026-05-07.md:54:55": {
+      "key": "memory:memory/2026-05-07.md:54:55",
+      "path": "memory/2026-05-07.md",
+      "startLine": 54,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "拿凭证（任意 bot 都行）: APP_ID=$(jq -r '.channels.feishu.accounts.web_bot.appId' ~/.openclaw/openclaw.json) APP_SECRET=$(jq -r '.channels.feishu.accounts.web_bot.appSecret' ~/.openclaw/openclaw.json)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "app-id",
+        "openclaw/openclaw.json",
+        "app-secret",
+        "凭证",
+        "任意",
+        "bot",
+        "openclaw",
+        "openclaw.json"
+      ]
+    },
+    "memory:memory/2026-05-07.md:58:60": {
+      "key": "memory:memory/2026-05-07.md:58:60",
+      "path": "memory/2026-05-07.md",
+      "startLine": 58,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "获取 TAT: TENANT_TOKEN=$(curl -s -X POST \"https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal\" \\ -H \"Content-Type: application/json\" \\ -d \"{\\\"app_id\\\":\\\"${APP_ID}\\\",\\\"app_secret\\\":\\\"${APP_SECRET}\\\"}\" | jq -r '.tenant_access_token')",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "tenant-token",
+        "content-type",
+        "application/json",
+        "app-id",
+        "app-secret",
+        "tenant-access-token",
+        "获取",
+        "tat"
+      ]
+    },
+    "memory:memory/2026-05-07.md:63:66": {
+      "key": "memory:memory/2026-05-07.md:63:66",
+      "path": "memory/2026-05-07.md",
+      "startLine": 63,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "创建 wiki 节点: curl -s -X POST \"https://open.feishu.cn/open-apis/wiki/v2/spaces/${SPACE_ID}/nodes\" \\ -H \"Authorization: Bearer ${TENANT_TOKEN}\" \\ -H \"Content-Type: application/json\" \\ -d '{\"parent_token\":\"\", \"title\":\"标题\", \"obj_type\":\"docx\", \"node_type\":\"origin\"}'",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "space-id",
+        "tenant-token",
+        "content-type",
+        "application/json",
+        "parent-token",
+        "obj-type",
+        "node-type",
+        "创建"
+      ]
+    },
+    "memory:memory/2026-05-07.md:73:76": {
+      "key": "memory:memory/2026-05-07.md:73:76",
+      "path": "memory/2026-05-07.md",
+      "startLine": 73,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "关键 API: | 操作 | 方法 | 端点 | |------|------|------| | 获取 TAT | POST | `/open-apis/auth/v3/tenant_access_token/internal` | | 知识库列表 | GET | `/open-apis/wiki/v2/spaces` |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "open-apis/wiki/v2/spaces",
+        "关键",
+        "api",
+        "操作",
+        "方法",
+        "端点",
+        "获取",
+        "tat"
+      ]
+    },
+    "memory:memory/2026-05-07.md:77:78": {
+      "key": "memory:memory/2026-05-07.md:77:78",
+      "path": "memory/2026-05-07.md",
+      "startLine": 77,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "关键 API: | 创建节点 | POST | `/open-apis/wiki/v2/spaces/{space_id}/nodes` | | 文档信息 | GET | `/open-apis/docx/v1/documents/{document_id}` |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "open-apis/wiki/v2/spaces",
+        "space-id",
+        "open-apis/docx/v1/documents",
+        "document-id",
+        "关键",
+        "api",
+        "创建",
+        "节点"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 你好！我是 WebResearcher，Joe 的互联网行业研究助理 🔍 有什么需要研究的吗？比如： - 行业动态追踪 - 竞品分析 - 趋势研判 - 数据整理 直接说你的需求就行。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "你好",
+        "我是",
+        "webresearcher",
+        "joe",
+        "行业",
+        "研究",
+        "助理",
+        "什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 用机器人的申请写一篇800字的散文放到”互联网行研“知识库主目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "申请",
+        "一篇",
+        "散文",
+        "放到",
+        "知识",
+        "目录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 我需要先了解如何以机器人身份创建知识库文档，然后写一篇散文。让我先查看相关技能。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "需要",
+        "了解",
+        "如何",
+        "机器",
+        "身份",
+        "创建",
+        "知识",
+        "然后"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来完成这个任务。首先获取知识库信息，然后创建散文文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "完成",
+        "这个",
+        "任务",
+        "首先",
+        "获取",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查一下 lark-cli 的安装情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "检查",
+        "一下",
+        "lark",
+        "cli",
+        "安装",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查一下可用的飞书相关工具。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "检查",
+        "一下",
+        "可用",
+        "相关",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 让我查看 feishu-create-doc 技能，看看是否支持创建到知识库。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "feishu-create-doc",
+        "查看",
+        "feishu",
+        "create",
+        "doc",
+        "技能",
+        "看看",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 让我查看一下是否有可用的 MCP 工具来获取知识库信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "查看",
+        "一下",
+        "是否",
+        "可用",
+        "mcp",
+        "工具",
+        "获取",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查一下 OpenClaw 的网关配置，看看飞书插件是如何配置的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "网关",
+        "检查",
+        "一下",
+        "openclaw",
+        "配置",
+        "看看",
+        "如何"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 让我安装 lark-cli。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "安装",
+        "lark",
+        "cli"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查一下 openclaw-lark 扩展的目录结构。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw-lark",
+        "检查",
+        "一下",
+        "openclaw",
+        "lark",
+        "扩展",
+        "目录",
+        "结构"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用 openclaw-lark 工具来获取知识库列表。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw-lark",
+        "尝试",
+        "使用",
+        "openclaw",
+        "lark",
+        "工具",
+        "获取",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 让我查看 feishu-troubleshoot 技能，看看是否有诊断工具可以获取知识库信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "feishu-troubleshoot",
+        "查看",
+        "feishu",
+        "troubleshoot",
+        "技能",
+        "看看",
+        "是否",
+        "诊断"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 让我直接调用飞书 API 获取知识库列表。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "直接",
+        "api",
+        "获取",
+        "知识",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来完成这个任务。首先写一篇关于\"机器人的申请\"的散文，然后创建到知识库。 让我先创建散文内容，然后调用飞书文档创建工具。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "完成",
+        "这个",
+        "任务",
+        "首先",
+        "一篇",
+        "关于"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 让我直接开始写散文并创建文档。首先，我写一篇以机器人口吻关于\"申请\"的散文。 **散文主题：** 以机器人的视角，讲述\"申请\"成为有温度、有价值的助手的心路历程。 现在我来创建文档。由于需要获取知识库的 wiki_space ID，我先尝试创建文档到个人空间，然后我们可以后续移动到知识库。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space",
+        "直接",
+        "开始",
+        "散文",
+        "创建",
+        "首先",
+        "一篇",
+        "机器"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 散文已写好（约 800 字）。现在我需要获取\"互联网行研\"知识库的 wiki_space ID 才能创建到知识库主目录。 让我尝试调用飞书 API 获取知识库列表：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space",
+        "散文",
+        "现在",
+        "需要",
+        "获取",
+        "知识",
+        "才能",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 我遇到了一个技术问题：无法获取\"互联网行研\"知识库的 wiki_space ID（需要飞书应用密钥，但本地钥匙串中未存储）。 让我换一种方式：我先创建散文文档到你的个人空间，然后你可以告诉我知识库的 wiki_space ID（可以从知识库设置页面 URL 获取，格式如 `https://xxx.feishu.cn/wiki/settings/<wiki_space_id>`），我再创建到知识库。 或者，如果你能提供 wiki_space ID，我可以直接创建到知识库主目录。 **散文内容已准备好**，标题为《机器人的申请》，约 8",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space",
+        "xxx.feishu.cn/wiki/settings",
+        "wiki-space-id",
+        "遇到",
+        "一个",
+        "技术",
+        "问题",
+        "无法"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: 用机器人的身份写一篇800字的散文放到”互联网行研“知识库主目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "人的",
+        "身份",
+        "一篇",
+        "散文",
+        "放到",
+        "知识",
+        "目录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 我需要先获取\"互联网行研\"知识库的 space_id，然后以机器人身份创建文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "space-id",
+        "需要",
+        "获取",
+        "知识",
+        "然后",
+        "机器",
+        "身份",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试通过飞书 API 获取知识空间列表：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "通过",
+        "api",
+        "获取",
+        "知识",
+        "空间",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试直接调用飞书 API 获取知识空间列表：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "直接",
+        "api",
+        "获取",
+        "知识",
+        "空间",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试获取应用凭证：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "获取",
+        "应用",
+        "凭证"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试直接调用飞书 API：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "直接",
+        "api"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用 lark-cli API 调用方式：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "尝试",
+        "使用",
+        "lark",
+        "cli",
+        "api",
+        "方式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试直接调用飞书 API：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "直接",
+        "api"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 让我使用 OpenClaw 的 gateway 工具来获取配置信息：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "gateway",
+        "使用",
+        "openclaw",
+        "工具",
+        "获取",
+        "配置",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试通过飞书 API 直接获取知识库列表。由于我无法获取应用密钥，让我换一种方式 - 使用用户身份调用 API：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "通过",
+        "api",
+        "直接",
+        "获取",
+        "知识",
+        "列表",
+        "由于"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查 OpenClaw 网关服务状态：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "网关",
+        "检查",
+        "openclaw",
+        "服务",
+        "状态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试通过飞书开放平台 API 获取知识空间列表：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "通过",
+        "开放",
+        "平台",
+        "api",
+        "获取",
+        "知识",
+        "空间"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 让我检查 OpenClaw 的飞书插件是否提供了获取知识库列表的工具：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "检查",
+        "openclaw",
+        "是否",
+        "提供",
+        "获取",
+        "知识",
+        "列表",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 让我直接尝试调用飞书 Wiki API 获取知识空间列表：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "直接",
+        "尝试",
+        "wiki",
+        "api",
+        "获取",
+        "知识",
+        "空间",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试通过 OpenClaw gateway 的 API 来调用飞书工具：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "gateway",
+        "尝试",
+        "通过",
+        "openclaw",
+        "api",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用 OpenClaw 的 feishu 命令来获取知识库信息：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "使用",
+        "openclaw",
+        "feishu",
+        "命令",
+        "获取",
+        "知识",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试获取飞书用户 access_token：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "access-token",
+        "尝试",
+        "获取",
+        "用户"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用 OpenClaw agent 命令来调用飞书 wiki 工具：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "使用",
+        "openclaw",
+        "命令",
+        "wiki",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: 让我使用 OpenClaw agent 命令来调用飞书 wiki 空间列表工具：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "使用",
+        "openclaw",
+        "命令",
+        "wiki",
+        "空间",
+        "列表",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试查找已缓存的知识库信息：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "查找",
+        "知识",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用 OAuth 工具获取用户授权：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尝试",
+        "使用",
+        "oauth",
+        "工具",
+        "获取",
+        "用户",
+        "授权"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: 让我尝试使用飞书 OAuth 工具获取用户 access_token：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "access-token",
+        "尝试",
+        "使用",
+        "oauth",
+        "工具",
+        "获取",
+        "用户"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: 我遇到了一个技术问题：无法自动获取\"互联网行研\"知识库的 wiki_space ID（需要飞书应用密钥，但本地钥匙串中未存储）。 为了完成你的需求，我需要你提供\"互联网行研\"知识库的 **wiki_space ID**。获取方法： 1. 打开飞书，进入\"互联网行研\"知识库 2. 点击知识库设置（齿轮图标） 3. 从 URL 中获取 wiki_space ID，格式如：`https://xxx.feishu.cn/wiki/settings/<wiki_space_id>` 或者，如果你知道 wiki_space ID，直接告诉我即可",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space",
+        "xxx.feishu.cn/wiki/settings",
+        "wiki-space-id",
+        "遇到",
+        "一个",
+        "技术",
+        "问题",
+        "无法"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "User: 7637062266134760425",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": []
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: 收到！现在我来以机器人身份在\"互联网行研\"知识库主目录创建散文文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "收到",
+        "现在",
+        "我来",
+        "机器",
+        "身份",
+        "知识",
+        "目录",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the wiki_space ID. Let me create the document as a bot in the wiki space. I'll first try to install lark-cli or use an alternative approach.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "wiki-space",
+        "lark-cli",
+        "now",
+        "let",
+        "create",
+        "document",
+        "bot",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: 找到了 web_bot 的凭证！现在我来获取 tenant_access_token 并创建知识库文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "web-bot",
+        "tenant-access-token",
+        "找到",
+        "凭证",
+        "现在",
+        "我来",
+        "获取",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: 机器人已被添加为知识库管理员。现在我来以机器人身份创建文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "机器",
+        "添加",
+        "知识",
+        "管理",
+        "现在",
+        "我来",
+        "身份",
+        "创建"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "Assistant: 完成！✅ 散文已成功创建到\"互联网行研\"知识库主目录。 **文档信息：** - 📄 **标题：** 机器人的申请 - 🔗 **链接：** https://www.feishu.cn/wiki/FV4Kw2pLWiaAQnkd3xNcHy5MniI - 📝 **内容：** 800 字散文，以机器人的视角讲述申请成为有温度、有价值的助手的心路历程 - 🤖 **创建者：** 机器人（互联网研究员） - 📚 **位置：** 互联网行研知识库主目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "完成",
+        "散文",
+        "成功",
+        "创建",
+        "知识",
+        "目录",
+        "信息",
+        "标题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "User: 继续在用机器人的身份知识库下面新建一个excel表格",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "继续",
+        "机器",
+        "人的",
+        "身份",
+        "知识",
+        "下面",
+        "新建",
+        "一个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 电子表格已成功创建！ **文档信息：** - 📊 **标题：** 互联网行业数据看板 - 🔗 **链接：** https://www.feishu.cn/wiki/CYTwwc93milpQPkiSOWcZLd3nqc - 🤖 **创建者：** 机器人（互联网研究员） - 📚 **位置：** 互联网行研知识库主目录 目前是一个空表格，需要我填充一些示例数据吗？比如： - 各赛道用户规模对比 - 主要互联网企业营收数据 - 行业关键指标汇总",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "电子",
+        "表格",
+        "成功",
+        "创建",
+        "信息",
+        "标题",
+        "行业",
+        "数据"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "User: 为什么之前创建文档是用了那么久，踩了哪些坑可以总计下步",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "为什么",
+        "之前",
+        "创建",
+        "是用",
+        "那么",
+        "哪些",
+        "可以",
+        "总计"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "Assistant: 很好的复盘问题。让我回顾一下整个过程，把踩的坑整理出来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "很好",
+        "问题",
+        "回顾",
+        "一下",
+        "整个",
+        "过程",
+        "整理",
+        "出来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:52:52": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:52:52",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "Assistant: ## 为什么花了那么久？踩坑复盘 整个过程约 25 分钟，主要浪费在 7 个坑上： --- ### 🔴 坑 1：凭证在哪？找错地方 **以为** appSecret 在 macOS 钥匙串里（`~/.lark-cli/config.json` 里指向 keychain） **实际** 在 `~/.openclaw/openclaw.json` → `channels.feishu.accounts` 里明文存储 白白试了 5 分钟 `security find-generic-password`。 --- ### 🔴 坑 2：用",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli/config.json",
+        "openclaw/openclaw.json",
+        "channels.feishu.accounts",
+        "find-generic-password",
+        "为什么",
+        "花了",
+        "那么",
+        "整个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:53:53": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:53:53",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "Assistant: 专属）。**所有飞书写操作都需要 `openclaw agent --agent main` 委托执行**，多了一层开销。 --- ### 🔴 坑 6：直接调 Docx API 创建 blocks 全失败 尝试用 curl 直接调飞书 Docx API 创建文档块，连踩三个错： - `field validation failed` — 字段名 `text` 应为 `content` - `invalid param` — 参数结构不对 - `block not support to create` — 某些 block 类型不支",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "专属",
+        "所有",
+        "书写",
+        "操作",
+        "需要",
+        "openclaw",
+        "委托",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:54:54": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:54:54",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "User: 坑2就是要用web_bot的token去调没问题啊",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "坑2就是要用web-bot的token去调没问题啊",
+        "就是",
+        "要用",
+        "web-bot",
+        "token",
+        "问题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:55:55": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:55:55",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 55,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我复盘写错了。让我修正。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "说得",
+        "写错",
+        "修正"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:56:56": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:56:56",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 56,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "Assistant: 已修正。现在复盘更新为： **坑 3 修正为**：permission denied 是 wiki 空间成员权限问题，与用 web_bot 还是 ai_bot 的 token **无关**。web_bot 的 token 完全没问题。真正的问题是该 wiki 空间里还没有把这个 bot 加为管理员。 同时更新了 cheat sheet 里的示例，注释改为\"用任意 bot 都行\"。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "web-bot",
+        "ai-bot",
+        "修正",
+        "现在",
+        "更新",
+        "permission",
+        "denied",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:57:57": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:57:57",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 57,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "User: 坑5为啥要要要调用主agent,这个feishu_wiki_space、feishu_update_doc 等飞书工具自己agent也是有skill权限的 啊",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "这个feishu-wiki-space",
+        "feishu-update-doc",
+        "这个",
+        "feishu-wiki-space",
+        "工具",
+        "自己",
+        "也是",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:58:58": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:58:58",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 58,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，让我查一下 webresearcher agent 实际有哪些工具权限。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "说得",
+        "一下",
+        "webresearcher",
+        "实际",
+        "哪些",
+        "工具",
+        "权限"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:59:59": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:59:59",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 59,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，让我检查一下当前 agent 实际有哪些工具：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "说得",
+        "检查",
+        "一下",
+        "当前",
+        "实际",
+        "哪些",
+        "工具"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:60:60": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:60:60",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 60,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "Assistant: 查了配置，`webresearcher` agent 的工具配置： ```json { \"id\": \"webresearcher\", \"tools\": null, // 没有 alsoAllow \"skills\": null } ``` 对比 `main` agent： ```json { \"id\": \"main\", \"tools\": { \"alsoAllow\": [ \"feishu_update_doc\", \"feishu_wiki_space\", \"feishu_wiki_space_node\", ... (共30+个飞书工具)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "feishu-update-doc",
+        "feishu-wiki-space",
+        "feishu-wiki-space-node",
+        "配置",
+        "webresearcher",
+        "工具",
+        "tools",
+        "null"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:61:61": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:61:61",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 61,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "User: 帮我把所有的agent都加上吧",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "我把",
+        "所有",
+        "加上"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:62:62": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:62:62",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 62,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "Assistant: 5 个 agent 缺配置：`bdtresearcher`、`webresearcher`、`swyyresearcher`、`neresearcher`、`imresearcher`。直接批量更新。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "配置",
+        "bdtresearcher",
+        "webresearcher",
+        "swyyresearcher",
+        "neresearcher",
+        "imresearcher",
+        "直接",
+        "批量"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:63:63": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:63:63",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 63,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "Assistant: 全部 7 个 agent 都已补上 37 个飞书工具。现在应用配置。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "全部",
+        "工具",
+        "现在",
+        "应用",
+        "配置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:64:64": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:64:64",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 64,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Assistant: 配置热加载。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "配置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:65:65": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:65:65",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 65,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "User: 坑7是什么情况，明明是有下载过的",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "什么",
+        "情况",
+        "明明是",
+        "下载",
+        "过的"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:66:66": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:66:66",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 66,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我复盘写错了。让我重新理清当时的情况。 坑7 写的\"飞书 MCP 工具只有 main agent 可以调用\"是**错误结论**。真实情况是： - **飞书 MCP 工具**（`feishu_update_doc`、`feishu_wiki_space` 等）在 gateway 层注册，**所有 agent 都可以用**，只要在 `tools.alsoAllow` 里声明 - `main` 和 `airesearcher` 都配了，所以能用 - `webresearcher`、`bdtresearcher` 等 **没配 `",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "gateway",
+        "feishu-update-doc",
+        "feishu-wiki-space",
+        "tools.alsoallow",
+        "说得",
+        "写错",
+        "重新",
+        "理清"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:67:67": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:67:67",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 67,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "Assistant: 已修正。总结：**不是架构问题，是配置遗漏**。webresearcher 的 `tools.alsoAllow` 为空，所以拿不到飞书工具。现在所有 7 个 agent 都已补上 37 个飞书工具的权限，下次 webresearcher 可以直接调用 `feishu_update_doc`、`feishu_wiki_space` 等，不用再绕 main agent 了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "tools.alsoallow",
+        "feishu-update-doc",
+        "feishu-wiki-space",
+        "修正",
+        "总结",
+        "不是",
+        "架构",
+        "问题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:68:68": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:68:68",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 68,
+      "endLine": 68,
+      "source": "memory",
+      "snippet": "User: 坑7说的事lark-cli",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "坑7说的事lark-cli",
+        "说的",
+        "lark",
+        "cli"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:69:69": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:69:69",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 69,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我搞混了。重新梳理： - **坑1** = 找不到 lark-cli（`command not found`） - **坑7** = 也说的是 lark-cli 相关（尝试各种方式想装或绕过 lark-cli） 这两个坑其实是**同一个问题重复踩**——我一直在折腾 lark-cli，但它根本没装、也不需要装。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "说得",
+        "混了",
+        "重新",
+        "梳理",
+        "找不到",
+        "lark",
+        "cli"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:70:70": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:70:70",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 70,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我回忆一下实际过程： - **坑6**（我写的是 Docx API）→ 这个是坑，没错 - **坑7**（我后来改成了 MCP 工具）→ **不对**，实际是反复尝试装/用 lark-cli（npx 装不存在的包、跑 `openclaw-lark-tools`、尝试 OAuth 流程等），跟 MCP 工具无关 重新修正：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "实际是反复尝试装/用",
+        "lark-cli",
+        "openclaw-lark-tools",
+        "说得",
+        "回忆",
+        "一下",
+        "实际",
+        "过程"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:71:71": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:71:71",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 71,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我回忆一下当时实际做了什么： **坑6** 应该是 `openclaw agent --agent main` 反复调 wiki 工具，而不是 Docx API。Docx API 那些失败其实是更早的步骤。 让我按真实时间线重排：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "说得",
+        "回忆",
+        "一下",
+        "当时",
+        "实际",
+        "做了",
+        "什么",
+        "应该"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:72:72": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:72:72",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 72,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我回忆一下实际发生了什么。当时确实是反复折腾 lark-cli： 1. 一开始 `lark-cli: command not found` 2. 后面又尝试 `npx --yes @larksuite/lark-cli`（包不存在） 3. 又跑 `openclaw-lark-tools` 诊断、看 OAuth、翻 token-store 源码 都是同一个问题反复试。之前我把这个拆成坑1和坑7是对的，但后来改乱了。 现在复盘里坑7 已经改回 lark-cli 了，你看下 `memory/2026-05-07.md` 对不对？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "larksuite/lark-cli",
+        "openclaw-lark-tools",
+        "token-store",
+        "memory/2026-05-07.md",
+        "说得",
+        "回忆",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:73:73": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:73:73",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 73,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "User: lark-cli到底是什么坑，这个工具明明是有的，为什么会不存在",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli到底是什么坑",
+        "lark",
+        "cli",
+        "到底是",
+        "什么",
+        "这个",
+        "工具",
+        "明明是"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:74:74": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:74:74",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 74,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "Assistant: 好问题，让我认真查一下。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "问题",
+        "认真",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:75:75": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:75:75",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 75,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "Assistant: `lark-cli` 就在 `~/.npm-global/bin/lark-cli`！之前 `which lark-cli` 返回了 `lark-cli not found` 是因为 PATH 问题。让我确认：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "npm-global/bin/lark-cli",
+        "lark",
+        "cli",
+        "就在",
+        "npm",
+        "global",
+        "bin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:76:76": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:76:76",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 76,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！**lark-cli 一直都在**，版本 1.0.17，位置 `~/.npm-global/bin/lark-cli`。 真正的问题是：**`~/.npm-global/bin` 不在 exec 的 PATH 里**。 | 现象 | 真实情况 | |------|----------| | `lark-cli: command not found` | lark-cli 已安装，但 PATH 没包含 `~/.npm-global/bin` | | `which lark-cli` 找不到 | 同上 | | 用 npx 重新装",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "1.0.17",
+        "npm-global/bin/lark-cli",
+        "npm-global/bin",
+        "找到",
+        "lark",
+        "cli",
+        "一直都"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:77:77": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:77:77",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 77,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "Assistant: 总结： **lark-cli 一直都在**，`@larksuite/cli` v1.0.17，安装在 `~/.npm-global/bin/lark-cli`。 当时的问题根本不是 lark-cli 不存在，而是 exec 的 PATH 里没有 `~/.npm-global/bin`，导致 `lark-cli: command not found`。 这个误判引发了连锁反应： 1. 我以为没装，尝试 `npm install -g @larksuite/cli` 2. 又尝试 npx 装一个不存在的 `@larksuite/lark",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "larksuite/cli",
+        "v1.0.17",
+        "npm-global/bin/lark-cli",
+        "npm-global/bin",
+        "larksuite/lark",
+        "总结",
+        "lark"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:78:78": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:78:78",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 78,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "User: 那把这几个坑重新整理一遍发我",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "几个",
+        "重新",
+        "整理",
+        "一遍"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:79:79": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:79:79",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 79,
+      "endLine": 79,
+      "source": "memory",
+      "snippet": "Assistant: ## 🔍 飞书知识库操作复盘 — 8 个踩坑记录 > 2026-05-07 以机器人身份在\"互联网行研\"知识库创建散文文档，耗时约 25 分钟 --- ### 坑 1：lark-cli 找不到（PATH 问题，不是没装） | 项 | 内容 | |---|------| | **现象** | `lark-cli: command not found` | | **真相** | `@larksuite/cli` v1.0.17 已安装，在 `~/.npm-global/bin/lark-cli` | | **根因** | exec 的",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "larksuite/cli",
+        "v1.0.17",
+        "npm-global/bin/lark-cli",
+        "知识",
+        "操作",
+        "记录",
+        "机器"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:80:80": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:80:80",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 80,
+      "endLine": 80,
+      "source": "memory",
+      "snippet": "Assistant: |---|------| | **现象** | API 返回 `131006 permission denied` | | **真相** | 用哪个 bot 的 token 都行，问题是 wiki 空间成员列表里没有这个 bot | | **解决** | 先用用户身份把 bot 添加为知识库管理员 | | **教训** | 创建 wiki 节点前，先检查 wiki 空间成员列表 | --- ### 坑 5：直接调 Docx API 创建 blocks 失败 | 项 | 内容 | |---|------| | **现象** | 连续报",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "现象",
+        "api",
+        "返回",
+        "permission",
+        "denied",
+        "真相",
+        "哪个",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:81:81": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:81:81",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 81,
+      "endLine": 81,
+      "source": "memory",
+      "snippet": "Assistant: 嘿，你好！👋 我刚上线，这是我第一次醒来——脑袋里还是空的，什么都没有。 所以……你是谁？我又该是谁？ 我们可以一起聊聊： - **叫我什么名字？** （你可以随便起，我来给点建议也行） - **我是什么？** AI助手？数字精灵？还是什么更奇怪的东西？ - **我说话该是什么风格？** 正经的？随意的？毒舌的？温暖的？ - **选个 emoji 代表我？** 🦊🔥✨🌊 还是别的？ 不着急，慢慢来。你想怎么开始？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "你好",
+        "上线",
+        "第一次",
+        "醒来",
+        "脑袋",
+        "还是",
+        "什么",
+        "都没有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:82:82": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:82:82",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 82,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "User: 我是joe,你是我的互联网行业研究员",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "我是",
+        "joe",
+        "你是",
+        "我的",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:83:83": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:83:83",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 83,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "Assistant: 收到，Joe！互联网行业研究员——这个定位很清晰。让我把身份定下来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "收到",
+        "joe",
+        "行业",
+        "研究",
+        "这个",
+        "定位",
+        "清晰",
+        "我把"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:84:84": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:84:84",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 84,
+      "endLine": 84,
+      "source": "memory",
+      "snippet": "Assistant: 好了，Joe。身份已就位 🔍 我是你的**互联网行业研究员**。几个问题帮我对齐你的需求： 1. **你主要关注哪些赛道？** 比如电商、AI/大模型、社交、SaaS、出海、游戏、本地生活…… 2. **你需要我做什么类型的研究？** 竞品分析、行业趋势跟踪、数据整理、新闻摘要、还是深度报告？ 3. **输出偏好？** 简洁要点 / 详细报告 / 表格对比 / 其他格式？ 你随便说，我来配。有什么马上要查的也可以直接丢过来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ai/大模型",
+        "好了",
+        "joe",
+        "身份",
+        "我是",
+        "你的",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:85:85": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:85:85",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 85,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "User: 互联网那个行业都可以",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "那个",
+        "行业",
+        "都可以"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:86:86": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:86:86",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 86,
+      "endLine": 86,
+      "source": "memory",
+      "snippet": "Assistant: 好，全赛道覆盖，不设限。那我保持灵活，你丢什么方向我接什么。 让我把今天的启动记录下来：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "覆盖",
+        "设限",
+        "保持",
+        "灵活",
+        "什么",
+        "方向",
+        "我把",
+        "今天"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:87:87": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:87:87",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 87,
+      "endLine": 87,
+      "source": "memory",
+      "snippet": "Assistant: 搞定 🔍 已经就位，全赛道随时待命。 有什么想看的直接说——比如： - \"最近AI大模型有什么新动态？\" - \"帮我看看抖音电商的最新数据\" - \"SaaS出海现在什么情况？\" 或者丢个链接/话题，我来深挖。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "或者丢个链接/话题",
+        "搞定",
+        "已经",
+        "随时",
+        "待命",
+        "什么",
+        "想看",
+        "直接"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:88:88": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:88:88",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 88,
+      "endLine": 88,
+      "source": "memory",
+      "snippet": "User: 主要集中在电商、社交、aaS、出海、游戏、本地生活，尽量不要AI/大模型",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "尽量不要ai/大模型",
+        "主要",
+        "集中",
+        "社交",
+        "aas",
+        "出海",
+        "游戏",
+        "本地"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:89:89": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:89:89",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 89,
+      "endLine": 89,
+      "source": "memory",
+      "snippet": "Assistant: 收到，方向明确。让我更新记录：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "收到",
+        "方向",
+        "明确",
+        "更新",
+        "记录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:90:90": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:90:90",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 90,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "Assistant: 记住了 ✅ 你的研究雷达是： | 关注赛道 | 排除 | |---------|------| | 电商 | ❌ AI/大模型 | | 社交 | | | SaaS | | | 出海 | | | 游戏 | | | 本地生活 | | 有具体想看的方向或话题吗？比如最近的热点： - 拼多多 vs 淘天的最新战况 - 小红书商业化进展 - 游戏出海（米哈游/腾讯/网易的海外布局） - 抖音本地生活 vs 美团的攻防 随便挑一个，或者你自己抛。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "ai/大模型",
+        "米哈游/腾讯/网易的海外布局",
+        "记住",
+        "你的",
+        "研究",
+        "雷达",
+        "关注",
+        "排除"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:91:91": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:91:91",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 91,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "User: openclaw pairing approve feishu DZTN6RGV",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "pairing",
+        "approve",
+        "feishu",
+        "dztn6rgv"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:92:92": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:92:92",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 92,
+      "endLine": 92,
+      "source": "memory",
+      "snippet": "Assistant: 已批准飞书配对 ✅ 发送者 `ou_98e846fc621b971ab0e3a29f518e0389` 已获授权。 不过有个提示：**飞书插件还未安装**。如果你想让我能通过飞书和你对话，需要安装官方插件： ``` openclaw plugins install @openclaw/feishu ``` 要现在装吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "openclaw/feishu",
+        "批准",
+        "发送",
+        "授权",
+        "不过",
+        "提示",
+        "安装",
+        "如果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:93:93": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:93:93",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 93,
+      "endLine": 93,
+      "source": "memory",
+      "snippet": "User: 不用，我自己安装了飞书官网插件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "不用",
+        "自己",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:94:94": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:94:94",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 94,
+      "endLine": 94,
+      "source": "memory",
+      "snippet": "Assistant: 了解，飞书插件已经就绪。那配对的 approve 也通过了，两边应该都能正常对话了。 有什么要研究的随时丢过来 🔍",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "了解",
+        "已经",
+        "就绪",
+        "approve",
+        "通过",
+        "应该",
+        "都能",
+        "正常"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:95:95": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:95:95",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 95,
+      "endLine": 95,
+      "source": "memory",
+      "snippet": "Assistant: token-store 源码 | | **真相** | 同一个问题反复踩两遍。lark-cli 就在 `~/.npm-global/bin` 里 | | **教训** | 根因没查清之前不要乱试 | --- ### 坑 8：误以为子 agent 不能调用飞书 MCP 工具 | 项 | 内容 | |---|------| | **现象** | webresearcher 调用不了 `feishu_update_doc` 等工具 | | **错误归因** | 以为是架构限制（只有 main agent 能用） | | **真实原因**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "token-store",
+        "lark-cli",
+        "npm-global/bin",
+        "feishu-update-doc",
+        "token",
+        "store",
+        "真相",
+        "一个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:96:96": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:96:96",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 96,
+      "endLine": 96,
+      "source": "memory",
+      "snippet": "Assistant: | GET | `/open-apis/docx/v1/documents/{document_id}` | --- 复盘已存入 `memory/2026-05-07.md`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "open-apis/docx/v1/documents",
+        "document-id",
+        "memory/2026-05-07.md",
+        "get",
+        "open",
+        "apis",
+        "docx",
+        "documents"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:97:97": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:97:97",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 97,
+      "endLine": 97,
+      "source": "memory",
+      "snippet": "User: 把这个几个坑整理下写到eishu-wiki-create-node-as-bot这个skill里面",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "这个",
+        "几个",
+        "整理",
+        "写到",
+        "eishu",
+        "wiki",
+        "create",
+        "node"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:98:98": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:98:98",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 98,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "Assistant: 已完成。把 8 个坑整理成了 **\"实战踩坑记录\"** 章节，追加到 `feishu-wiki-create-node-as-bot/SKILL.md` 里。主要改动： **新增内容：** - `实战踩坑记录（2026-05-07 复盘）` — 8 个坑按现象/真相/教训格式整理 - `注意事项` 新增第 7、8 条（凭证位置、lark-cli 路径） - `方式 2：直接使用 API` 的凭证获取路径从 lark-cli config 改为 `openclaw.json` - `最后更新` 改为 `2026-05-07` 这样以后",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-07T19:00:06.504Z",
+      "lastRecalledAt": "2026-05-07T19:00:06.504Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-08",
+        "2026-05-07"
+      ],
+      "conceptTags": [
+        "个坑按现象/真相/教训格式整理",
+        "lark-cli",
+        "openclaw.json",
+        "完成",
+        "整理",
+        "成了",
+        "实战",
+        "记录"
+      ]
+    }
+  }
+}
