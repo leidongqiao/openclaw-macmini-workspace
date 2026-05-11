@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-07T19:00:06.686Z",
+  "updatedAt": "2026-05-10T19:00:04.905Z",
   "entries": {
     "memory:memory/2026-05-07.md:4:7": {
       "key": "memory:memory/2026-05-07.md:4:7",
@@ -10,18 +10,20 @@
       "source": "memory",
       "snippet": "Initialization: Joe 上线，完成首次对话; 设定身份：**小智** — Joe 的智能制造行业研究员; 研究方向：工业4.0、数字化工厂、工业互联网、工业机器人、AI+制造、工业软件等; 更新了 IDENTITY.md、USER.md、SOUL.md",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T19:00:06.666Z",
-      "lastRecalledAt": "2026-05-07T19:00:06.666Z",
+      "lastRecalledAt": "2026-05-10T19:00:04.879Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
       "recallDays": [
         "2026-05-08",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-11",
+        "2026-05-10"
       ],
       "conceptTags": [
         "工业4.0",
@@ -42,18 +44,20 @@
       "source": "memory",
       "snippet": "Initialization: 删除了 BOOTSTRAP.md（bootstrap 完成）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T19:00:06.666Z",
-      "lastRecalledAt": "2026-05-07T19:00:06.666Z",
+      "lastRecalledAt": "2026-05-10T19:00:04.879Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
       "recallDays": [
         "2026-05-08",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-11",
+        "2026-05-10"
       ],
       "conceptTags": [
         "bootstrap.md",
@@ -71,18 +75,20 @@
       "source": "memory",
       "snippet": "TODO: [ ] 了解 Joe 具体的研究需求（细分领域、公司、市场）; [ ] 了解 Joe 偏好的信息格式（报告、简报、数据表）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T19:00:06.666Z",
-      "lastRecalledAt": "2026-05-07T19:00:06.666Z",
+      "lastRecalledAt": "2026-05-10T19:00:04.879Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
       "recallDays": [
         "2026-05-08",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-11",
+        "2026-05-10"
       ],
       "conceptTags": [
         "todo",
@@ -1096,6 +1102,1146 @@
         "表格",
         "名称",
         "挖掘"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 开始执行周报生成。第一步：并行抓取4个必抓源。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "开始",
+        "执行",
+        "周报",
+        "生成",
+        "一步",
+        "并行",
+        "抓取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Now executing web_search and vertical source fetches. Brave search is rate-limited so I'll space them out, and fetch vertical sources in parallel.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "web-search",
+        "rate-limited",
+        "now",
+        "executing",
+        "vertical",
+        "source",
+        "fetches",
+        "brave"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Now let me fetch the vertical sources and do a regional search for Zhejiang.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "fetch",
+        "vertical",
+        "sources",
+        "regional",
+        "zhejiang"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Let me try broader searches to get more relevant content for this week's report.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "let",
+        "try",
+        "broader",
+        "searches",
+        "get",
+        "relevant",
+        "content",
+        "week's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Now let me compile all the gathered information and generate the weekly report. Let me first check existing wiki nodes to avoid duplicates.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "compile",
+        "all",
+        "gathered",
+        "information",
+        "generate",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now I have all the data. Let me generate the weekly report and create it in the wiki. First, let me write the report content.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "all",
+        "data",
+        "let",
+        "generate",
+        "weekly",
+        "report",
+        "create"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Now let me create the wiki document:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "create",
+        "wiki",
+        "document"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: The node was created under \"首页\". Let me move it to root and then write content:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "node",
+        "was",
+        "created",
+        "under",
+        "首页",
+        "let",
+        "root",
+        "write"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Good, now in root. Let me write the content:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "good",
+        "now",
+        "root",
+        "let",
+        "write",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Now let me read the spreadsheet A column for dedup:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "read",
+        "spreadsheet",
+        "column",
+        "dedup"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: The spreadsheet is empty (header only). Let me write the new business opportunity entry for 宇树科技:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "spreadsheet",
+        "empty",
+        "header",
+        "only",
+        "let",
+        "write",
+        "new",
+        "business"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Now let me clean up empty rows beyond row 2:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "clean",
+        "empty",
+        "rows",
+        "beyond",
+        "row"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Let me verify the spreadsheet and then push the summary:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "let",
+        "verify",
+        "spreadsheet",
+        "push",
+        "summary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: The delete cleared the data row. Let me rewrite:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "delete",
+        "cleared",
+        "data",
+        "row",
+        "let",
+        "rewrite"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Now let me output the summary for delivery. The skill says the cron/delivery system handles pushing to the group chat. Here's my output:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "cron/delivery",
+        "now",
+        "let",
+        "output",
+        "summary",
+        "delivery",
+        "skill",
+        "says"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 📌 **智能制造行业周报·浙江 | 2026.05.02-05.08（近7天）** 🔥 TOP7 要闻： 1. 宇树科技在浙江证监局启动IPO辅导（中信证券），预计2025Q4提交申报 2. 具身智能领域2026年融资超345亿元，122起融资事件，资金向全产业链渗透 3. 工信部、国家数据局发布\"模数共振\"行动实施方案，面向20个重点制造业 4. 天迈科技并购上海芬能自动化96.45%股权，切入工业自动化赛道 5. 工信部等联合发布《人工智能终端智能化分级》国家标准，覆盖7品类 6. 埃克斯工业×晶合集成\"半导体智能体\"成果获",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "2026.05.02-05.08",
+        "天迈科技并购上海芬能自动化96.45",
+        "智能",
+        "制造",
+        "行业",
+        "周报",
+        "浙江",
+        "2026.05.02"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: 你的群id是多少",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "你的",
+        "多少"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] 当前这个群的 chat_id 是 `oc_fb74967477b8b68e2818ac14d837f55a`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "chat-id",
+        "当前",
+        "这个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: 看一下这个skill:im-weekly-report,这个是我从新能源行拷贝过来的skill，只改了名字，帮我把内容全都改成智能制造行业的研究周报",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "im-weekly-report",
+        "看一下",
+        "这个",
+        "skill:im",
+        "weekly",
+        "report",
+        "能源",
+        "拷贝"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来把这个 skill 从新能源行业全面改造为智能制造行业研究周报。内容改动较大，我会系统性替换行业方向、数据源、搜索词、报告模板等。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "这个",
+        "skill",
+        "能源",
+        "行业",
+        "全面",
+        "改造"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了。以下是主要改动清单： **行业方向全面替换：** - 研究方向从「新能源全产业链」（光伏/风电/储能/氢能/动力电池等）→「智能制造全产业链」（工业机器人/数控机床/工业软件/AI+制造/3D打印/智能物流等） **搜索关键词重写（第二轮）：** - `光伏/风电/储能/氢能` → `工业机器人/协作机器人/人形机器人`、`数控机床/CNC/工业母机`、`工业软件/MES/PLM/SCADA/数字孪生`、`机器视觉/AI质检/预测性维护`、`智能制造融资/灯塔工厂` **垂直信息源替换（第三轮）：** - 北极星太阳能/储能",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "光伏/风电/储能/氢能/动力电池等",
+        "工业机器人/数控机床/工业软件/ai",
+        "制造/3d打印/智能物流等",
+        "光伏/风电/储能/氢能",
+        "工业机器人/协作机器人/人形机器人",
+        "数控机床/cnc/工业母机",
+        "工业软件/mes/plm/scada/数字孪生",
+        "机器视觉/ai质检/预测性维护"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "User: 你再检查下，很多配置信息都没配",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "检查",
+        "很多",
+        "配置",
+        "信息",
+        "都没"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我仔细检查了一下，有很多配置还是沿用的新能源的占位值，没有真正适配 IM researcher。让我逐一排查：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "说得",
+        "仔细",
+        "检查",
+        "一下",
+        "很多",
+        "配置",
+        "还是",
+        "沿用"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我来仔细检查一下。目前有好几个配置还是沿用的新能源的占位值，根本没改过来：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "说得",
+        "我来",
+        "仔细",
+        "检查",
+        "一下",
+        "目前",
+        "几个",
+        "配置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我检查了一下，这几个关键配置全是占位符/沿用新能源的值，根本没适配： | 配置项 | 当前值 | 问题 | |--------|--------|------| | `WIKI_SPACE_ID` | `7637082931059706850` | ❌ 这是新能源知识库的 | | `WIKI_SPACE_NAME` | `智能制造行研` | ❌ 知识库还没创建 | | `SPREADSHEET_TOKEN` | `C5ZgwhqJciryiTkGLH0cvlXzn5b` | ❌ 这是新能源的商机表格 | | `SHEET_",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "这几个关键配置全是占位符/沿用新能源的值",
+        "wiki-space-id",
+        "wiki-space-name",
+        "spreadsheet-token",
+        "说得",
+        "检查",
+        "一下",
+        "几个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 知识库地址：https://qcn8k445rrbc.feishu.cn/wiki/QSPGwnqLjiHPNTkdIiVcZWX8n5g 商机表格：https://qcn8k445rrbc.feishu.cn/wiki/FaGbw1XARinRQpkAwKHcRT7enAd 机器人Id: im_bot BOT_PROFILE你自己创建",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "im-bot",
+        "bot-profile你自己创建",
+        "知识",
+        "地址",
+        "https",
+        "qcn8k445rrbc.feishu.cn",
+        "wiki",
+        "qspgwnqljihpntkdiivczwx8n5g"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 先查 wiki space_id，同时初始化 lark-cli profile。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "space-id",
+        "lark-cli",
+        "wiki",
+        "同时",
+        "初始",
+        "lark",
+        "cli",
+        "profile"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 现在所有真实值都拿到了。知识库 space_id、表格的 obj_token/node_token、lark-cli profile 都已就绪。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "space-id",
+        "obj-token/node-token",
+        "lark-cli",
+        "现在",
+        "所有",
+        "真实",
+        "拿到",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 所有真实值都拿到了： | 配置 | 值 | |---|---| | `WIKI_SPACE_ID` | `7637086272351194069` | | `WIKI_SPACE_NAME` | `智能制造行研` | | `BOT_PROFILE` | `im_bot` | | `SPREADSHEET_TOKEN` | `HheAswhqEhm6QSt17DjclAdGn8c` | | `SHEET_ID` | `a39f2b` | | `WEEKLY_TITLE_PREFIX` | `im-weekly` | 现在更新 SKIL",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "wiki-space-id",
+        "wiki-space-name",
+        "bot-profile",
+        "im-bot",
+        "spreadsheet-token",
+        "sheet-id",
+        "weekly-title-prefix",
+        "im-weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: Now update the SKILL.md with all real values:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "now",
+        "update",
+        "all",
+        "real",
+        "values"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: Now verify all values are correctly set:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "now",
+        "verify",
+        "all",
+        "values",
+        "correctly",
+        "set"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 全部搞定了，总结一下完成的工作： **✅ lark-cli profile 已创建** - `im_bot` profile 已在 `~/.lark-cli/config.json` 中注册，appId `cli_a9715315cdb8dbcf` **✅ config.json 已创建** - `~/.openclaw/workspace/workspace-IMresearcher/skills/im-weekly-report/config.json` **✅ SKILL.md 所有占位值已替换为真实值** | 配置项 | 旧",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "im-bot",
+        "lark-cli/config.json",
+        "cli-a9715315cdb8dbcf",
+        "config.json",
+        "skill.md",
+        "全部",
+        "搞定"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 是否已被添加为「智能制造行研」知识库的管理员？如果没有，需要执行添加管理员操作，否则周报无法写入知识库。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "是否",
+        "添加",
+        "智能",
+        "制造",
+        "知识",
+        "管理",
+        "如果",
+        "没有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: 仿照其他定时任务创建你自己的定时任务",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "仿照",
+        "其他",
+        "任务",
+        "创建",
+        "自己"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 我需要知道智能制造周报推送到哪个飞书群。你告诉我群聊 ID，或者我从已有群里找？ 目前看到的定时任务推送到这些群： | 行业研究 | 群聊 ID | |---------|---------| | AI 行业 | `oc_fc5fd1de29059d524e2bacd3870c87d0` | | 半导体 | `oc_2363a2114d6d509dbb01abc63cb41831` | | 新能源 | `oc_8cb0dc6f77d3a46ef37259ee4d913727` | 智能制造周报推送到哪个群？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "需要",
+        "知道",
+        "智能",
+        "制造",
+        "周报",
+        "推送",
+        "哪个",
+        "告诉"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "User: oc_fb74967477b8b68e2818ac14d837f55a",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": []
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-08.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-08.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-08.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: 定时任务已创建完成 ✅ | 项目 | 值 | |------|---| | **Job ID** | `36858a7f-4374-4144-905b-9069e17b1ad2` | | **名称** | im-weekly-research-report | | **频率** | 每周五 17:00（Asia/Shanghai） | | **下次执行** | 2026-05-08 17:00（就是今天！） | | **Agent** | imresearcher | | **推送群** | `oc_fb74967477b8b68e",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-08T19:00:07.015Z",
+      "lastRecalledAt": "2026-05-08T19:00:07.015Z",
+      "queryHashes": [
+        "d62c1963872e"
+      ],
+      "recallDays": [
+        "2026-05-09",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "im-weekly-research-report",
+        "asia/shanghai",
+        "oc-fb74967477b8b68e",
+        "任务",
+        "创建",
+        "完成",
+        "项目",
+        "job"
       ]
     }
   }

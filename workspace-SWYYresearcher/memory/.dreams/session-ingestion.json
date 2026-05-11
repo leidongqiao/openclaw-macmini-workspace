@@ -1,6 +1,13 @@
 {
   "version": 3,
   "files": {
+    "swyyresearcher:sessions/swyyresearcher/01ccedd9-5be9-46ca-8b0e-da0d84e93326.jsonl": {
+      "mtimeMs": 1778229049250,
+      "size": 366661,
+      "contentHash": "42b18b6e92bfa1047c7e4728a49fc32ea4485080f06232f12275a528287fc266",
+      "lineCount": 11,
+      "lastContentLine": 11
+    },
     "swyyresearcher:sessions/swyyresearcher/39bd645d-e8f6-4d65-b82b-beb8bc576a5f.jsonl": {
       "mtimeMs": 1778120956817,
       "size": 23455,
@@ -8,12 +15,33 @@
       "lineCount": 11,
       "lastContentLine": 11
     },
-    "swyyresearcher:sessions/swyyresearcher/fb46c025-abc6-481d-b109-9df832a57562.jsonl": {
+    "swyyresearcher:sessions/swyyresearcher/56b437af-2798-46dd-ade6-b61762832cd6.jsonl": {
+      "mtimeMs": 1778212536657,
+      "size": 223067,
+      "contentHash": "949410072d508b510f85c5f7b8ae335f3065b69c30c42bab25861da365b7a192",
+      "lineCount": 32,
+      "lastContentLine": 32
+    },
+    "swyyresearcher:sessions/swyyresearcher/7d425545-b3ed-4612-a01e-8092869f12d6.jsonl": {
+      "mtimeMs": 1778229038671,
+      "size": 5501,
+      "contentHash": "7e0d734496a3b3808587ea0c51e591fcffbc85bbb296b535e9c24c55e0bba568",
+      "lineCount": 4,
+      "lastContentLine": 4
+    },
+    "swyyresearcher:sessions/swyyresearcher/fb46c025-abc6-481d-b109-9df832a57562.jsonl.reset.2026-05-08T03-30-50.451Z": {
       "mtimeMs": 1778148403253,
       "size": 125760,
       "contentHash": "ba241a453910d384fd7befd1161419a4590623cf54f1285990ffe269e14c9e6b",
       "lineCount": 14,
       "lastContentLine": 14
+    },
+    "swyyresearcher:sessions/swyyresearcher/fd676e5d-614e-4a14-8a40-4d7095119601.jsonl": {
+      "mtimeMs": 1778221005072,
+      "size": 496277,
+      "contentHash": "eb4eefa5f96e4f66b470e954a58b0dc3be101d4090347a423ed35c9c21615a56",
+      "lineCount": 28,
+      "lastContentLine": 28
     }
   },
   "seenMessages": {
@@ -43,6 +71,88 @@
       "25c7443114ee1b5b78f14b5c28d2437c71d116bf",
       "8835c9f4ef01a19990a605398321670c2b5996b7",
       "5069f62f5c5c8187dc11ef0aff01dd9596808fe0"
+    ],
+    "swyyresearcher:01ccedd9-5be9-46ca-8b0e-da0d84e93326": [
+      "5adbd7e555967f578eedd3271a81491745206d92",
+      "b70f1ba4a19a64a56233545912cb003887f1331f",
+      "e00e3d97cf9ff08be601bdb398e006e2853f8188",
+      "9a9c6fbb9780feb76a920fe99f15e5986bf94e42",
+      "2a6fb749b5863ee286a5f9bdf657cf9364a8c5f8",
+      "e52b483ee7fa4205b517d52c778612d642c16e33",
+      "79538c57248971e2937d36dd4724a689a0bb8159",
+      "b480344297cf936bbadf970ec0fb8aa61c9c63c7",
+      "cdea55dfba94d700b140310954f19de973ae6e11",
+      "0223ea7b278a6f32a0fd05edec93d3899f15af13",
+      "a0ed639fac9e6a57ca43c623a3294fcaf33b1602"
+    ],
+    "swyyresearcher:56b437af-2798-46dd-ade6-b61762832cd6": [
+      "6b24828952fad8993fa28e6e4ba21a4cec63895a",
+      "5cfb927d5cf333c6f6cf0fc90d660bd522c73ea5",
+      "0ecc15191e08dda62dc295941015d5529a86bf25",
+      "075613fd990b6f5ccf7fee05adec765cdbc6488f",
+      "73707f4f4b9d64929a618317921722554bd360d6",
+      "e86c1af2446880c20ecdf3667ab8494d6e22e572",
+      "9af7f406fbb857770331a25eda5f9eb12abfd709",
+      "245089b601b0d99529d7ea9f47c6c8d4a04ee024",
+      "1eb4dd9b70202d8ce376f5ab16d01ea83e397150",
+      "88e37d15055417a8ee022c226d5b9a8860c04273",
+      "4367ff302043bfeb186389ad48f2f997f7f6f3da",
+      "cf4435a89c8e51e57dbca45aa7c8684f9b210af1",
+      "60700028f007b6240e179fa55853f8499014d725",
+      "3711ee6082ccdaa2905bf2059d53667b4c626b69",
+      "dc31b285921424857186b39e82b008684732781f",
+      "2af89c68941ca087980d6b6623058e2f2a06caa2",
+      "ac9c19176cbe43f85d0f612c91f81ba86d4129ed",
+      "c0ec4c6bd91efbf914b003af3cf0094b04a49758",
+      "431f9678a256cdfe7706a27c4b97ff66f0e40197",
+      "ac3c7ec6443b5bfa9cf54c5d529d3a91c5fa47ac",
+      "16fcb85f61d35f5dbe01ae224b66ac302cc08cb3",
+      "5e607df6df71cbb433224b3e42c723f055e81aa9",
+      "6e7997bc7712a65a22aeafa497021eab93dfa77e",
+      "bb3883815b5a9cfa3705e593b7064d8c4fd73476",
+      "e03e07a2eee8a034f9bb9bff8acb11809720fb41",
+      "24d104f9df70a64e80a3977b63721f2ab6d8348d",
+      "6355d0b1749abebfad3f7dc2f555a0e085e43af0",
+      "2ca3a3c6fe1af28c67beb7e9cd8f0de168080724",
+      "78607c950663d88340751d055b0b127dfac10ef3",
+      "e7e1ba7306204f5842415a0db7d7e12d3c69de0d",
+      "7ee80f330d8a2798347ffe9a877369a2244d1593"
+    ],
+    "swyyresearcher:7d425545-b3ed-4612-a01e-8092869f12d6": [
+      "fabc2da4f6fab6b2af9e70b3be4fe3b051f0731b",
+      "2ec0dcb9b64b601a2f7f976f0654019ef053b27b",
+      "103984fe6e81ba9f8884e2db373b896e052f79a8",
+      "4613322d485740806082a0bda95b3109355f743d"
+    ],
+    "swyyresearcher:fd676e5d-614e-4a14-8a40-4d7095119601": [
+      "b10ac2b1747ad8a5024d7eb8d35739c3c406d901",
+      "be7f36bd867c192f528a8500226aa0a41293e5e0",
+      "e784614474f37767fc7b49490212200f12101c39",
+      "4eda5aae0b91fccbb6bdf285f824871850e37bf9",
+      "638465fc689ac70ba6ad8eb426756cac6c7833df",
+      "4eee5c3211eb06507d23e56fda1fdb76daa7e023",
+      "4e3ba31a5706e11ef84ccdae9ae8987b15867424",
+      "6159b83a357c7462a585514241fdfc9efeef09c2",
+      "2df17e286c1ffc90f6a4f5d95d0854e72bc45f31",
+      "25821b91cd6164865087acad196c66540380ac82",
+      "ebd15413bd52394fffbba8520da96286a339cd40",
+      "253a6e27c7928045b57c7e9f8d1e60a4e123978f",
+      "c7b9ad42d7f52e1e10603b7dbc0fc10697c9eeba",
+      "9401ea56f89bc8c58ee096aafb31d71a37eac037",
+      "0f55262e4666e1a6c32ebdd9545fde069d9f5ca6",
+      "58e896ed7ea9c2cb5b2a5d80e3e503a467196ddf",
+      "a1fc826cc09498b6d47df8b3d2098bb536ed30b2",
+      "05544f07fc03f5986853c7762f2b179e02be5f3e",
+      "3659648e5fd9618c647c412541da3c82dd8e4273",
+      "b55b53b8d595fa2c7542e42f74e9785a378edca3",
+      "ad8e0967001571ea4dd43862a7b4aa740ab2ea78",
+      "636cec8b4eee1cd4cea059ac197214e4f45ba152",
+      "f72850cc11dcb41dea89af4402fbd8cfa9ae245b",
+      "9ee0e60b3c5497c5adb8280e1645f7dc7df8cf16",
+      "8d2cb02ffdc81b158e568cf9a26bfffc2c87cab5",
+      "2d8732ab68c84fbe917c31be931e64c57159cae6",
+      "095468d43c8906aea96b75c75b0b60bea3c95750",
+      "95a847ff7c734c356b8fdff5ada5ef099727cc43"
     ]
   }
 }
