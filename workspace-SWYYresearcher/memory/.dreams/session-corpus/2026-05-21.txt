@@ -1,0 +1,55 @@
+[swyyresearcher/sessions/swyyresearcher/aeb06e11-acd0-41fc-a0fa-55798d78f970.jsonl#L5] User: 参照下Users/leidongqiao/.openclaw/workspace/workspace-IMResearcher/skills/im-weekly-report/skill.md,按照这个步骤去同步修改周报skill，注意行业换成了生物医药：1、第一步数据抓取不变，2、商机表格和知识库写入啥的方式不变，内容按照参照的去改
+[swyyresearcher/sessions/swyyresearcher/aeb06e11-acd0-41fc-a0fa-55798d78f970.jsonl#L10] Assistant: 我来对照 IM 周报 skill，同步更新生物医药周报 skill。主要改动： 1. **第一步数据抓取**：采用 IM 的 searxng 优先策略 + 已验证源名单，查询词替换为生物医药 2. **分析框架**：引入"首席行业分析师"角色 + 12条全局规则 + 闭环分析 3. **企业推荐**：加入高管团队背景要求 4. **产品匹配**：基于本地产品资料库的规则 5. **第七步**：双版本输出（Word + wiki），Word 下载链接 6. **第八步**：表格排序改用 
+[swyyresearcher/sessions/swyyresearcher/aeb06e11-acd0-41fc-a0fa-55798d78f970.jsonl#L12] Assistant: 已完成同步修改。主要改动对照： | 改动项 | 修改前 | 修改后 | |--------|--------|--------| | **第一步数据抓取** | Brave web_search OR 语法（不支持） | searxng 优先 + Brave 备用，5个生物医药主题查询并行 | | **必抓源** | 含同花顺/经济观察网（已验证质量差） | 财联社+新华网+36氪+证券时报 | | **垂直源** | 5个（含米内网/丁香园不可靠） | 医药魔方+生物谷+药智网（3个
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L11] Assistant: 现在开始执行本周生物医药行业研究周报。日期范围：2026-05-14 至 2026-05-20（近7天）。 **第〇步：准备阶段** - 读取产品资料，创建报告目录。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L16] Assistant: 产品资料已读取。现在开始第一步：信息抓取。先并行执行4个必抓源 + searxng 5个查询 + 垂直源 + iFinD探测。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L18] Assistant: 开始第一步：信息抓取。先并行执行4个必抓源、searxng精准搜索和iFinD探测。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L23] Assistant: 证券时报 404，跳过。继续执行 searxng 精准搜索和垂直源抓取。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L29] Assistant: 继续抓取垂直源、浙江本地搜索和iFinD探测。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L35] Assistant: iFinD 需要按 skill 要求调用。让我查看正确的调用方式，同时继续补充搜索。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L39] Assistant: 现在用正确的 iFinD 调用方式。创建临时脚本执行3个iFinD查询。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L41] Assistant: 让我补充搜索一些关键文章的正文内容，特别是上海医保新规和浙江相关企业动态。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L45] Assistant: 现在信息收集已经比较充分。让我再补充搜索一些浙江本地企业和政策动态。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L48] Assistant: 让我用 searxng 补充浙江本地搜索。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L51] Assistant: 发现关键浙江政策，抓取全文。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L53] Assistant: 信息收集完毕，现在进入分析阶段并生成周报。开始编写 Word 版周报。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L55] Assistant: Now I have sufficient information. Let me generate the full weekly report. I'll create the Word version first, then the wiki version.
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L59] Assistant: Word 版周报已生成。现在上传至飞书 Drive。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L81] Assistant: 文件已上传，file_token: `UvwBbvnNNozGwUxMJrJc7Kzknzh`。现在查找租户域名并生成下载链接。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L83] Assistant: 租户域名: `qcn8k445rrbc`。下载链接: `https://qcn8k445rrbc.feishu.cn/file/UvwBbvnNNozGwUxMJrJc7Kzknzh` 现在搜索知识库中是否已有同名文档。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L85] Assistant: 没有同名文档，需要创建新的。现在生成 wiki 版周报并创建知识库节点。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L87] Assistant: 节点已创建（在子节点下，后续需要移回根目录）。现在写入 wiki 内容。由于内容较长，我先写入临时文件。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L95] Assistant: Wiki 内容已写入。现在将文档移回知识库根目录。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L97] Assistant: Wiki 文档已创建并移至根目录。链接: https://www.feishu.cn/wiki/BWjywxzoViQ1VvkuhNEcdz4pnbh 现在更新商机挖掘表格。先读取 A 列去重。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L101] Assistant: 现有6条记录，本周新增5家企业均不重复。写入新数据。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L103] Assistant: 5条新数据已写入。现在按时间倒序重排并清理空行。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L105] Assistant: 表格已排序并清理完成。现在推送概要至飞书群聊。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L109] Assistant: ✅ **本周生物医药行业商机周报（2026.05.14-05.20）已生成完成** --- **📊 执行摘要：** **全国动态 TOP6：** - 恒瑞双靶ADC（EGFR/B7-H3）再获CDE受理新适应症，全球首创 | 5月18日 - 生物制品IND申请403个首超化药，研发管线加速 | 4月数据 - CXO行业净利暴增85%，小核酸赛道热度攀升 | 5月14日 - 上海医保"定额报销"新规出台，DRG/DIP持续深化 | 5月18日 - 6月5日起1类高值耗材集采落地，20
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L109] Assistant: Word下载链接：https://qcn8k445rrbc.feishu.cn/file/UvwBbvnNNozGwUxMJrJc7Kzknzh - Wiki存档：https://www.feishu.cn/wiki/BWjywxzoViQ1VvkuhNEcdz4pnbh - 商机表格：5条新增（共11条），已按时间倒序排列
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L110] User: 📄 输出文件： Word版：/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/行业商机周报_生物医药_20260520.docx Word下载链接：https://qcn8k445rrbc.feishu.cn/file/UvwBbvnNNozGwUxMJrJc7Kzknzh Wiki存档：https://www.feishu.cn/wiki/BWjywxzoViQ1Vvk
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L112] Assistant: Let me check the wiki document and fix the issues.
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L116] Assistant: Wiki 文档内容有问题——写入的是文件路径而非实际内容。让我重新写入。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L122] Assistant: Wiki 内容已修复，现在确认一切正确。以下是修正后的输出： --- 📄 **本周生物医药商机周报（2026.05.14-05.20）已生成** **📊 执行摘要：** - 恒瑞双靶ADC再获CDE受理、生物制品IND首超化药、CXO净利暴增85% - 浙江发布"生命工厂"千亿级产业规划，目标2027年培育5家百亿级龙头 - 本周推荐5家浙江企业：震元生物（高）、普利制药（高）、京新药业（中）、拱东医疗（中）、领挚科技（中） **🔗 链接：** - Word下载：https:/
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L123] User: 为什么会出现这个问题，是skill写的不明确把，那就在skill里面限制只要链接
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L125] Assistant: 明白，问题是周报生成后输出中包含了本地文件路径。让我先查看 skill 中输出格式相关的部分。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L127] Assistant: 明白，问题是输出中混入了本地文件路径。让我查看并修复 skill 中的输出格式约束。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L129] Assistant: 明白，问题在输出格式中混入了本地文件路径。让我定位并修复 skill 中的约束。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L131] Assistant: 现在来修复 skill，在关键位置强化"只输出链接，不输出本地路径"的约束。
+[swyyresearcher/sessions/swyyresearcher/bed17cca-f2da-4c37-b009-0c21af502503.jsonl#L133] Assistant: 已修复 skill 中的 6 处约束，核心变更： 1. **推送格式模板**：三个链接统一为飞书可访问格式（Word/wiki/表格） 2. **推送内容要求**：新增 ⚠️ 强制规则，明确禁止输出本地路径、本地文件名、本地保存目录 3. **输出链接格式强制规则**（新增独立段落）：所有输出场景中，任何文件引用都必须是飞书链接，绝不允许出现本地文件系统路径 4. **Word 输出规则（第13条）**：强调生成后必须上传 Drive，向用户只放 Drive 链接 5. **Word
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L5] User: “数据说明：证券时报快讯返回404；iFinD公告语义检索探测成功，两个长关键词公告检索返回空，热点事件接口无权限；垂直源中医药魔方首页偏产品介绍，按公开检索结果补充。”这种报错等日志信息不该出现在周报中
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L9] Assistant: 明白，你说的对。那些数据源抓取状态（404、接口无权限、返回空等）是执行过程的调试信息，不应该出现在最终周报里。 我来检查并修复 SKILL.md 中相关的地方。
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L11] Assistant: 收到，说得很对。这些数据源抓取状态的日志信息（404、接口无权限、返回空等）是执行过程的调试信息，不应该出现在周报成品里。 我来更新 SKILL.md，加一条明确的规则禁止这类内容泄漏到输出中。
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L13] Assistant: 收到，确实不该。这些是抓取过程的调试信息，写进周报里既不专业也干扰阅读。 已经在 SKILL.md 里加了第 13 条全局规则，明确禁止这类内容进入周报正文、wiki 存档或群聊摘要： > **禁止将抓取日志和报错写入周报。** 数据源抓取状态（如"返回404""语义检索返回空""接口无权限""JS渲染失败""跳过该源"等）是执行过程的调试信息，绝不出现在周报正文、wiki 存档或群聊推送摘要中。"资料来源"只列实际采用的信息源名称，不写抓取结果、报错码、空返回等过程信息。 下次出周报
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L14] User: 在soul里面加上不要随意在自己工作空间主目录下创建文件，都成了垃圾，需要的话也是自己建文件夹去归纳放好
+[swyyresearcher/sessions/swyyresearcher/01e7a911-0828-4f2a-81d4-b053ca1de6f6.jsonl#L20] Assistant: 已更新 SOUL.md，新增了 **Workspace Hygiene** 章节： - 禁止在根目录随手创建文件 - 必须建文件夹归纳后再放入 - 优先使用已有约定目录（`memory/`、`reports/` 等） - 临时文件用完及时清理
+[swyyresearcher/sessions/swyyresearcher/346b2cba-53c7-43c9-830a-e43638a30689.jsonl#L94] Assistant: 📌 生物医药商机周报·浙江｜2026.05.15-05.21 🔥 主线：创新药支付扩容、CXO/CDMO订单修复、AI医疗与耗材分化 🏠 浙江机会：杭州创新药/CRO/AI检验，台州原料药与耗材，金华CDMO供应链 🏢 优先跟进：华东医药、泰格医药、普洛药业 🎯 切入方向：短贷/科创贷/订单融资/跨境结算/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/Gb7IbFV9VoTK29xxeRVcZkXinKg Wiki：https:/
+[swyyresearcher/sessions/swyyresearcher/346b2cba-53c7-43c9-830a-e43638a30689.jsonl#L95] User: 生成周报过程中踩了那些坑
+[swyyresearcher/sessions/swyyresearcher/346b2cba-53c7-43c9-830a-e43638a30689.jsonl#L99] Assistant: 这次主要踩了 6 个坑： 1. **searxng 搜索结果质量不稳定** - 有些查询返回很少或无关结果，比如浙江本地检索里混入展会、招标、无关网页。 - 处理方式：补了 Brave 精准搜索，重点抓浙江企业一季报/公告/公开报道。 2. **iFinD 公告检索“成功但为空”** - 探测是 `ok: true`，但两条正式公告语义检索返回空结果。 - 处理方式：按 skill 要求执行并记录，但不把空结果/报错写进周报正文。 3. **部分必抓源内容有效性有限** - 财联社、3
+[swyyresearcher/sessions/swyyresearcher/346b2cba-53c7-43c9-830a-e43638a30689.jsonl#L100] User: 这些坑查看下是否已有记录，没有的加到skill中
+[swyyresearcher/sessions/swyyresearcher/346b2cba-53c7-43c9-830a-e43638a30689.jsonl#L116] Assistant: 已检查并补进 `skills/swyy-weekly-report/SKILL.md` 的「踩坑记录」。 已有记录的： - Brave/OR/429 - iFinD 热点接口无权限 - docs +update 绝对路径 - Wiki 单换行黏连 - 商机表去重/空行 - 链接域名混用等 新补了 6 条： - searxng 本地查询会返回无关结果 - iFinD `ok:true` 但正式公告检索为空 - 必抓源不等于有效信息源 - 同名 wiki 节点已存在时不要重复创建 - D
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L126] Assistant: 📌 生物医药商机周报·浙江｜2026.05.15-05.21 🔥 主线：创新药国际化、细胞治疗IND、集采与合规 🏠 浙江机会：杭州细胞治疗/创新药，台州耗材与出口链 🏢 优先跟进：启函生物、英百瑞、华东医药 🎯 切入方向：科创贷/跨境结算/供应链金融/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/XewrbgBtLojtcRxD5TRcVocCngh Wiki：https://www.feishu.cn/wiki/MvsRwI
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L127] User: 执行周报过程中踩了哪些坑
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L131] Assistant: 这次主要踩了这些坑： 1. **证券时报快讯源 404** skill 里已预期过，实际仍是 404，按规则记录并跳过。 2. **SearXNG 有些查询结果为空/文件空** 部分 query 返回 0 条或空文件，不能只依赖一轮搜索；后面补了浙江专项搜索和企业背景搜索。 3. **Brave web_search 并行触发 429** 我一开始并行打了几条 Brave，免费套餐限流，只有一条成功，其余 429。后续应严格按 skill：优先 SearXNG；Brave 只能串行、
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L131] Assistant: 文件链接用租户域名 `qcn8k445rrbc.feishu.cn`；Wiki 我最终给的是 `www.feishu.cn/wiki/...`，可访问但不够统一。下次最好统一输出租户域名。
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L132] User: 把这些问题的解决方案（404的看看能不能换个地址，再不行就去掉，没权限的也可以去掉），其他的自己解决，好了就把注意事项写进skill,重要的是下次避免发生
+[swyyresearcher/sessions/swyyresearcher/c9aba018-4d25-43e8-8da6-78a528df74d9.jsonl#L190] Assistant: 搞定，已把这次踩坑的解决方案写进： `skills/swyy-weekly-report/SKILL.md` 主要改动： - 移除证券时报快讯必抓源；验证替代地址内容陈旧，不再抓。 - iFinD 固定流程改为只跑 2 个 `search_notice`，不再调用无权限的 `search_trending_news`。 - 明确 Brave 不能并行；只有 searxng 可并行，Brave 兜底必须串行限速。 - 补充 `docs +update --markdown` 必须用相对

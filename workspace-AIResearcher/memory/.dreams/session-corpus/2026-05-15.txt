@@ -1,0 +1,20 @@
+[airesearcher/sessions/airesearcher/23c64d56-061d-4547-ae01-ff269b97c26f.jsonl#L5] User: https://mp.weixin.qq.com/s/r9ARyrBZnt3dM2-SIWE0zQ总结下
+[airesearcher/sessions/airesearcher/23c64d56-061d-4547-ae01-ff269b97c26f.jsonl#L15] Assistant: [[reply_to_current]] 这篇VR陀螺的文章主要讲了AI眼镜行业的**轻量化趋势**，核心要点如下： **📌 三大赛道都在减重** - **AI音频眼镜**：无摄像头无显示，最轻。爱托邦T09 <28g，Vidda G11 26.5g，接近普通眼镜 - **AI拍摄眼镜**：多了镜头模组但仍轻量。华为拍摄眼镜35.5g，李未可View 38g，Moonix专业版仅19.9g - **AR+AI智能眼镜**：功能最多但也做到二三十克。NIMO 29g，Even G2 36g *
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L8] Assistant: 开始执行 AI 行业研究周报生成，覆盖近 7 天（2026-05-08 至 2026-05-15）。 **第一步：信息抓取 — 4 个必抓源并行**
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L10] Assistant: 好的，我已读取全量 Skill 内容，现在开始执行周报生成。先并行抓取 4 个必抓源：
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L15] Assistant: Now executing the 5 web searches serially (rate limit protection), plus the vertical source fetches:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L27] Assistant: Now let me fetch the vertical AI sources and key articles:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L31] Assistant: Now fetching key articles for deeper detail:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L40] Assistant: Now let me do the iFinD financial data queries and a few more targeted searches:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L42] Assistant: Now let me do the iFinD financial data queries and check for more specific Zhejiang news:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L46] Assistant: Now let me execute the iFinD financial news queries in parallel:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L56] Assistant: Now I have comprehensive data. Let me compile the weekly report. First, let me check the knowledge base for existing docs:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L58] Assistant: Now I have all the data. Let me compile the weekly report and create it in the knowledge base.
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L60] Assistant: Now let me write the weekly report content:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L64] Assistant: Now let me update the business opportunities spreadsheet. First let me read all current data:
+[airesearcher/sessions/airesearcher/ad5c68f2-e1c6-4d03-a185-1171e44422d0.jsonl.reset.2026-05-15T07-42-45.058Z#L46] Assistant: 📌 **AI 行业周报·浙江 | 2026.05.08-05.15（近7天）** 🔥 TOP6 要闻： 1. DeepSeek寻求创纪录73亿美元AI融资，估值飙升至500亿美元，国家AI产业基金领投 2. 云深处科技正式启动IPO辅导，拟登陆A股，估值突破百亿 3. 浙大00后创办的魔芯科技完成新一轮亿元融资，KOKONI-World世界模型领跑3D场景生成 4. 浙江英集动力AI"遥控"济南供热管网省1.5亿，Q1订单飙升1
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L66] Assistant: Now let me update the spreadsheet with new商机 data and sort:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L68] Assistant: Let me check if the doc needs to be moved to root directory:
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L72] Assistant: 文档已在根目录，一切就绪。现在推送概要到群聊：
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L74] Assistant: 周报生成完成。清理临时文件：
+[airesearcher/sessions/airesearcher/4bee57c0-db77-48a2-93ac-d2febdec55a9.jsonl#L76] Assistant: ✅ **AI 行业周报·浙江 | 2026.05.08-05.15** 已生成并推送，完成情况如下： **信息抓取：** - ✅ 4 个必抓源：同花顺、财联社、新华网科技、经济观察网 - ✅ 5 轮 web_search：AI 行业、大模型、AI 芯片、机器人/具身智能、AI 融资/政策、浙江本地 AI - ✅ 3 个 AI 垂直源：机器之心、量子位（403）、36氪 - ✅ iFinD 金融数据：新闻语义检索 + 公告语义检索（trending 参数不兼容已跳过） **内容生成：** - �

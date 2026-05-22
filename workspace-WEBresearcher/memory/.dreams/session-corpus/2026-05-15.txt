@@ -1,0 +1,15 @@
+[webresearcher/sessions/webresearcher/1175e638-fc70-4fc4-b8ae-7f2ebefdd075.jsonl#L22] Assistant: 📌 互联网行业周报·浙江 | 2026.05.08-05.15（近7天） 🔥 TOP8 要闻： 1. 跨境电商大洗牌：Q1进出口6184.6亿，小红书Redshop入局 2. GameStop拟555亿美元"蛇吞象"收购eBay 3. 抖音电商开展化妆品资质合规专项治理 4. 义乌/金华跨境电商产业带深度绑定，宁波跨境出口全国第一 5. TikTok发布AI广告解决方案，覆盖创意生成与电商营销 6. 虎牙发布2026Q1财报：游戏相关服务收入占比创新高 7. 社交平台广告市场CAGR 
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L10] Assistant: 开始执行周报生成流程。先进行第一步：必抓源抓取 + 核心搜索。
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L17] Assistant: Brave rate limited. Let me continue with vertical source fetches and use SearXNG for remaining searches.
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L23] Assistant: Now let me use SearXNG for the remaining searches since Brave is rate-limited.
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L51] Assistant: Now I have enough material. Let me compile and write the weekly report.
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L53] Assistant: Now let me push to Feishu wiki. First, check for existing docs.
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L61] Assistant: No existing doc. Let me create the new wiki node.
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L63] Assistant: Now write the content to the doc:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L65] Assistant: Now move the doc to the root of the wiki space:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L67] Assistant: Doc is at root. Now let me update the spreadsheet. First, read A column for dedup:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L71] Assistant: Now I need to write updates to the spreadsheet. I'll update existing rows and add the new entry:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L75] Assistant: Now let me sort the table and clean up. Let me read all data first:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L79] Assistant: Now write back the sorted data and clean up residual rows:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L83] Assistant: Spreadsheet is clean. Now let me send the summary notification:
+[webresearcher/sessions/webresearcher/78e0abe1-50e4-4576-9858-31f6d4e1c58a.jsonl#L85] Assistant: 周报生成完成。以下是执行摘要： **信息源状态：** - ✅ 成功抓取：同花顺、财联社、经济观察网、界面新闻、晚点LatePost - ⚠️ JS渲染失败（返回空白）：36氪首页、虎嗅 - ⚠️ 验证拦截：极客公园(403)、IT桔子(412) - ✅ web_search（Brave）部分成功，受限时切换SearXNG补充 **核心发现（近7天）：** 1. **跨境电商大洗牌** — Q1进出口6184.6亿，小红书Redshop 6月入局，义乌/宁波领跑 2. **GameStop 

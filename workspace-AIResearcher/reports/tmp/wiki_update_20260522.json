@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "doc_id": "NYhvdPoUuoXJe2x0zewcVM6snCg",
+    "log_id": "2026052209360019CB18CE2B7A2979967E",
+    "message": "文档更新成功（overwrite模式）",
+    "mode": "overwrite",
+    "success": true
+  },
+  "_notice": {
+    "update": {
+      "current": "1.0.17",
+      "latest": "1.0.36",
+      "message": "lark-cli 1.0.36 available, current 1.0.17"
+    }
+  }
+}

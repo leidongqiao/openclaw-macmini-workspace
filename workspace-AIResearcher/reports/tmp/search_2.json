@@ -1,0 +1,298 @@
+{
+  "query": "(\"\u5927\u6a21\u578b\" OR \"LLM\" OR \"GPT\" OR \"Claude\")",
+  "number_of_results": 97100,
+  "results": [
+    {
+      "url": "https://zhuanlan.zhihu.com/p/1966910184287863166",
+      "title": "\u4e00\u6587\u641e\u6e05\u695a\u5927\u6a21\u578b\u5230\u5e95\u662f\u4ec0\u4e48\uff1f\u9644\u56fd\u5185\u5916\u77e5\u540d\u5927\u6a21\u578b\u53ca240\u4f59\u5bb6\u5927\u6a21\u578b \u2026",
+      "content": "\u8bed\u8a00\u5927\u6a21\u578b \uff08NLP\uff09\uff1a\u662f\u6307\u5728\u81ea\u7136\u8bed\u8a00\u5904\u7406\uff08Natural Language Processing\uff0cNLP\uff09\u9886\u57df\u4e2d\u7684\u4e00\u7c7b\u5927\u6a21\u578b\uff0c\u901a\u5e38\u7528\u4e8e\u5904\u7406\u6587\u672c\u6570\u636e\u548c\u7406\u89e3\u81ea\u7136\u8bed\u8a00\u3002 \u8fd9\u7c7b\u5927\u6a21\u578b\u7684\u4e3b\u8981\u7279\u70b9\u662f\u5b83\u4eec\u5728\u5927\u89c4\u6a21\u8bed\u6599\u5e93\u4e0a\u8fdb\u884c \u2026",
+      "engine": "bing",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "zhuanlan.zhihu.com",
+        "/p/1966910184287863166",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "thumbnail": "",
+      "priority": "",
+      "engines": [
+        "bing"
+      ],
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://claude.ai/",
+      "title": "Claude: Sign in",
+      "content": "Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work. Create with Claude.",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "claude.ai",
+        "/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://www.datalearner.com/leaderboards",
+      "title": "AI\u5927\u6a21\u578b\u6392\u884c\u699c\u30102026\u5e745\u6708\u66f4\u65b0\u3011\u2014 \u5b9e\u65f6\u8bc4\u6d4b\u6392\u540d | DataLearnerAI",
+      "content": "2 days ago \u00b7 \u5f00\u6e90\u5927\u6a21\u578b\u548c\u95ed\u6e90 API \u6a21\u578b\u600e\u4e48\u5bf9\u6bd4\uff1f \u4f7f\u7528\u9876\u90e8\u7684\"\u8bb8\u53ef\"\u7b5b\u9009\u5207\u6362\u4e3a\"\u5168\u90e8\"\uff0c\u5f00\u6e90\u4e0e\u95ed\u6e90\u6a21\u578b\u53ef\u5728\u540c\u4e00\u57fa\u51c6\u5217\u76f4\u63a5\u5bf9\u6bd4\u3002 \u9664\u5206\u6570\u5916\uff0c\u8fd8\u9700\u8003\u8651\u603b\u6301\u6709\u6210\u672c\uff1a\u95ed\u6e90\u6a21\u578b\u6309 API \u7528\u91cf\u8ba1\u8d39\uff0c\u5f00\u6e90\u6a21 \u2026",
+      "engine": "bing",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "www.datalearner.com",
+        "/leaderboards",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "thumbnail": "",
+      "priority": "",
+      "engines": [
+        "bing"
+      ],
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://chatgpt.com/",
+      "title": "ChatGPT",
+      "content": "ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster.",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "chatgpt.com",
+        "/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://www.xmsumi.com/detail/2984",
+      "title": "\u56fd\u4ea7\u5927\u6a21\u578b\u6a2a\u5411\u5bf9\u6bd4\uff1aKimi K2.6\u3001GLM-5.1\u3001Qwen3\u3001MiniMax M2 \u56db \u2026",
+      "content": "2026 \u5e74 4 \u6708\uff0c\u56fd\u4ea7\u5927\u6a21\u578b\u4e95\u55b7\u3002Kimi K2.6 \u521a\u4e0a\u7ebf\uff0cGLM-5.1\u3001Qwen3\u3001MiniMax M2 \u7d27\u968f\u5176\u540e\u3002\u56db\u5927\u6a21\u578b\u6b63\u9762\u7ade\u4e89\uff0c\u53c2\u6570\u3001\u6027\u80fd\u3001\u4ef7\u683c\u5168\u9762\u5bf9\u6bd4\u3002 \u56db\u5927\u6a21\u578b\u901f\u89c8 \u6a21\u578b \u5382\u5546 \u67b6\u6784 \u603b\u53c2\u6570 \u6fc0\u6d3b\u53c2\u6570 \u4e0a\u4e0b\u6587 \u2026",
+      "engine": "bing",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "www.xmsumi.com",
+        "/detail/2984",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "thumbnail": "",
+      "priority": "",
+      "engines": [
+        "bing"
+      ],
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.anthropic.claude&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3D(%22%E5%A4%A7%E6%A8%A1%E5%9E%8B%22+or+%22llm%22+or+%22gpt%22+or+%22claude%22)",
+      "title": "Claude by Anthropic - Apps on Google Play",
+      "content": "Rating 4.5(466,501) \u00b7 Free \u00b7 AndroidMeet Claude, your AI problem solver and thinking partner. Claude works with you to write, research, code, and tackle complex problems with depth and ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "play.google.com",
+        "/store/apps/details",
+        "",
+        "id=com.anthropic.claude&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3D(%22%E5%A4%A7%E6%A8%A1%E5%9E%8B%22+or+%22llm%22+or+%22gpt%22+or+%22claude%22)",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://blog.csdn.net/chen_si_shang_/article/details/159280208",
+      "title": "2026\u5e74Q1\u5927\u6a21\u578b\u6df1\u5ea6\u590d\u76d8\uff1aOpenAI\uff0cGemini2.0\uff0c\u5b57\u8282\u8df3\u52a8\uff0c\u4e0e\u201c\u591a\u6a21 \u2026",
+      "content": "Mar 20, 2026 \u00b7 \u6587\u7ae0\u6d4f\u89c8\u9605\u8bfb9.8k\u6b21\uff0c\u70b9\u8d5e18\u6b21\uff0c\u6536\u85cf19\u6b21\u3002 2026\u5e74\u5168\u7403\u5927\u6a21\u578b\u884c\u4e1a\u5448\u73b0\u6280\u672f\u8def\u5f84\u5206\u5316\uff1a\u56fd\u5916\u4ee5OpenAI\u7684GPT-5Ultra\u548cGoogle\u7684Gemini2.0\u4e3a\u4ee3\u8868\uff0c\u5728\u591a\u6a21\u6001\u878d\u5408\u548c\u957f\u4e0a\u4e0b\u6587\u5904\u7406\u4e0a\u53d6\u5f97\u7a81 \u2026",
+      "engine": "bing",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "blog.csdn.net",
+        "/chen_si_shang_/article/details/159280208",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "thumbnail": "",
+      "priority": "",
+      "engines": [
+        "bing"
+      ],
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://apps.apple.com/us/app/claude-by-anthropic/id6473753684",
+      "title": "Claude by Anthropic - App Store - Apple",
+      "content": "Rating 4.7(145,275) \u00b7 Free \u00b7 iOS4 days ago \u00b7 Meet Claude, your AI problem solver and thinking partner. Claude works with you to write, research, code, and tackle complex problems with ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "apps.apple.com",
+        "/us/app/claude-by-anthropic/id6473753684",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://baike.baidu.com/item/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B/63800799",
+      "title": "\u4eba\u5de5\u667a\u80fd\u5927\u6a21\u578b_\u767e\u5ea6\u767e\u79d1",
+      "content": "\u5927\u6a21\u578b\u5177\u6709\u53c2\u6570\u91cf\u5927\u3001\u8bad\u7ec3\u6570\u636e\u5927\u3001\u8ba1\u7b97\u8d44\u6e90\u5927\u7b49\u7279\u70b9\uff0c\u62e5\u6709\u89e3\u51b3\u901a\u7528\u4efb\u52a1\u3001\u9075\u5faa\u4eba\u7c7b\u6307\u4ee4\u3001\u8fdb\u884c\u590d\u6742\u63a8\u7406\u7b49\u80fd\u529b\u3002 \u4eba\u5de5\u667a\u80fd\u5927\u6a21\u578b\u7684\u4e3b\u8981\u7c7b\u522b\u5305\u62ec\uff1a\u5927\u8bed\u8a00\u6a21\u578b\u3001\u89c6\u89c9\u5927\u6a21\u578b\u3001\u591a\u6a21\u6001\u5927\u6a21\u578b\u4ee5\u53ca\u57fa\u7840\u79d1 \u2026",
+      "engine": "bing",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "baike.baidu.com",
+        "/item/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%A4%A7%E6%A8%A1%E5%9E%8B/63800799",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "thumbnail": "",
+      "priority": "",
+      "engines": [
+        "bing"
+      ],
+      "positions": [
+        5
+      ],
+      "score": 0.2,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "url": "https://openai.com/index/chatgpt/",
+      "title": "Introducing ChatGPT | OpenAI",
+      "content": "Nov 30, 2022 \u00b7 ChatGPT is fine-tuned from a model in the GPT\u20113.5 series, which finished training in early 2022. You can learn more about the 3.5 series ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "openai.com",
+        "/index/chatgpt/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        5
+      ],
+      "score": 0.2,
+      "category": "general",
+      "publishedDate": null
+    }
+  ],
+  "answers": [],
+  "corrections": [],
+  "infoboxes": [],
+  "suggestions": [],
+  "unresponsive_engines": [
+    [
+      "brave",
+      "Suspended: too many requests"
+    ],
+    [
+      "duckduckgo",
+      "CAPTCHA"
+    ],
+    [
+      "karmasearch",
+      "Suspended: access denied"
+    ],
+    [
+      "startpage",
+      "Suspended: CAPTCHA"
+    ]
+  ]
+}

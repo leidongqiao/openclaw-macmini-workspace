@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "has_child": false,
+    "mode": "node",
+    "node_token": "Zd1CwlcxAiBEjEkyOTRcsWGpn6V",
+    "node_type": "origin",
+    "obj_token": "NYhvdPoUuoXJe2x0zewcVM6snCg",
+    "obj_type": "docx",
+    "origin_node_token": "Zd1CwlcxAiBEjEkyOTRcsWGpn6V",
+    "parent_node_token": "",
+    "source_space_id": "7630717889183534041",
+    "space_id": "7630717889183534041",
+    "target_space_id": "7630717889183534041",
+    "title": "AI-weekly-20260522"
+  },
+  "_notice": {
+    "update": {
+      "current": "1.0.17",
+      "latest": "1.0.36",
+      "message": "lark-cli 1.0.36 available, current 1.0.17"
+    }
+  }
+}

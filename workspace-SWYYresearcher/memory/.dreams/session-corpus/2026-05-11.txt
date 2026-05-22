@@ -1,0 +1,15 @@
+[swyyresearcher/sessions/swyyresearcher/7d425545-b3ed-4612-a01e-8092869f12d6.jsonl#L10] Assistant: 📌 **生物医药行业周报·浙江 | 2026.05.05-05.11（近7天）** 🔥 TOP8 要闻： 1. 中国银行发布"万亿级"生物医药金融行动方案，十五五期间不低于1万亿综合金融支持 2. 国家8部门联合发布儿童用药供应保障实施意见，探索制定国家儿童基药目录 3. 最严细胞治疗监管落地，"不老药"等干细胞产品面临全面规范 4. 沃森生物20cm涨停，生物疫苗板块午后爆发 5. CXO板块景气度持续回升，药明康德单季获增持超2128万股 6. 天星医疗IPO上市，市值超140
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L11] Assistant: 开始执行本周生物医药行业研究周报生成。先并行抓取必抓源和垂直源。
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L21] Assistant: Now let me run the web_search queries. Due to Brave rate limiting, I'll serialize them.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L43] Assistant: Let me search for more Zhejiang-specific biomed news to enrich the local section.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L45] Assistant: Now let me check the wiki for existing weekly docs to avoid duplicates.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L51] Assistant: Now I have all the data. Let me compile the report, create the wiki doc, and update the spreadsheet. The current week is 2026.05.05-05.11.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L53] Assistant: Now let me read the current spreadsheet A column to check for duplicates, then compile the report.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L59] Assistant: Now I have the full picture. Let me create the weekly report, write it to the wiki, and update the spreadsheet. First, let me compose the report content.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L61] Assistant: Now let me create the wiki doc and update the spreadsheet.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L63] Assistant: Doc created. Need to move to root directory and write content.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L65] Assistant: Good, moved to root. Now write the content.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L67] Assistant: Doc created and content written. Now update the spreadsheet. I need to update existing 必访 companies and add 诚意药业 as a new entry.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L71] Assistant: Write succeeded. Now let me update the existing rows' dates and sort the table.
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L73] Assistant: 表格已更新（5家企业，按日期倒序）。现在推送概要到群聊。
+[swyyresearcher/sessions/swyyresearcher/950ab5b5-8633-405f-a225-cccc41daa9d1.jsonl#L77] Assistant: ✅ **本周生物医药行业研究周报（聚焦浙江）已生成完成！** **产出清单：** | 项目 | 状态 | |------|------| | 📄 周报全文（知识库） | ✅ 已创建 `biomed-weekly-20260511` → [查看](https://www.feishu.cn/wiki/Qz1awr6M9iC1tQkDe5McD2jUnWb) | | 📊 商机表格更新 | ✅ 新增1家（诚意药业），共5家企业，已按日期倒序重排 | | 💬 群聊概要推送 | ✅ 已发送

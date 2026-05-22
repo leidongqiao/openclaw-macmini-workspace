@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T19:00:04.860Z",
+  "updatedAt": "2026-05-21T19:00:09.900Z",
   "entries": {
     "memory:memory/2026-05-07.md:4:6": {
       "key": "memory:memory/2026-05-07.md:4:6",
@@ -10,12 +10,12 @@
       "source": "memory",
       "snippet": "初始化: 完成了 bootstrap，身份设定为新能源行业研究员 🔋; 用户：Joe，时区 Asia/Shanghai; 研究方向：光伏、风电、储能、氢能、电动汽车及产业链",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T19:00:06.630Z",
-      "lastRecalledAt": "2026-05-10T19:00:04.801Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
@@ -23,7 +23,11 @@
         "2026-05-08",
         "2026-05-07",
         "2026-05-11",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "asia/shanghai",
@@ -1330,18 +1334,24 @@
       "source": "memory",
       "snippet": "新能源行业周报（2026.05.02-05.08）: 周五上午执行周报生成定时任务; 本周核心事件：碳酸锂逼近20万/吨（7天暴涨12%）、零跑4月交付7.1万辆创新高、宁德时代60GWh钠电储能订单、全球最大16MW漂浮式海上风电平台安装、中国风机企业BNEF排名包揽前6; 浙江重点企业：零跑（杭州/金华）、德业（宁波）、惠柏新材（宁波）、吉利（杭州）; 商机写入表格5条（均为待联系状态）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-08T19:00:06.891Z",
-      "lastRecalledAt": "2026-05-08T19:00:06.891Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
       "queryHashes": [
         "e86b6551e251"
       ],
       "recallDays": [
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-12",
+        "2026-05-11",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-16"
       ],
       "conceptTags": [
         "2026.05.02-05.08",
@@ -1362,18 +1372,24 @@
       "source": "memory",
       "snippet": "新能源行业周报（2026.05.02-05.08）: 周报文档：ne-weekly-20260508 → https://www.feishu.cn/wiki/Varjwyu8XimsqUkwpmlcz9wfnKg; 商机表格：https://www.feishu.cn/sheets/C5ZgwhqJciryiTkGLH0cvlXzn5b",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-08T19:00:06.891Z",
-      "lastRecalledAt": "2026-05-08T19:00:06.891Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
       "queryHashes": [
         "e86b6551e251"
       ],
       "recallDays": [
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-12",
+        "2026-05-11",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-16"
       ],
       "conceptTags": [
         "2026.05.02-05.08",
@@ -4265,6 +4281,3922 @@
         "对比",
         "之前",
         "这次"
+      ]
+    },
+    "memory:memory/2026-05-11.md:3:6": {
+      "key": "memory:memory/2026-05-11.md:3:6",
+      "path": "memory/2026-05-11.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "周报生成 (18:27): 生成本周周报 ne-weekly-20260511 (覆盖05.05-05.11); 知识库链接: https://www.feishu.cn/wiki/PU9Gw6ptLixFUqkNX2kcB1b9n8g; 商机表格已更新（吉利富江能源日期更新为05-11）; 推送到飞书群 oc_8cb0dc6f77d3a46ef37259ee4d913727",
+      "recallCount": 0,
+      "dailyCount": 6,
+      "groundedCount": 0,
+      "totalScore": 3.72,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "28fb5afbbb34"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11",
+        "2026-05-15",
+        "2026-05-14",
+        "2026-05-16",
+        "2026-05-17",
+        "2026-05-18",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "ne-weekly-20260511",
+        "覆盖05.05-05.11",
+        "吉利富江能源日期更新为05-11",
+        "周报",
+        "生成",
+        "本周",
+        "weekly",
+        "覆盖"
+      ]
+    },
+    "memory:memory/2026-05-11.md:8:11": {
+      "key": "memory:memory/2026-05-11.md:8:11",
+      "path": "memory/2026-05-11.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "周报生成 (18:27): 四部门《AI与能源双向赋能行动方案》（★★★★★）; 吉利桐庐钠电产线落地（★★★★，浙江本地）; 光伏组件五巨头Q1集体亏损96亿; 风电出海收入超300亿",
+      "recallCount": 0,
+      "dailyCount": 6,
+      "groundedCount": 0,
+      "totalScore": 3.72,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "28fb5afbbb34"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11",
+        "2026-05-15",
+        "2026-05-14",
+        "2026-05-16",
+        "2026-05-17",
+        "2026-05-18",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成",
+        "部门",
+        "能源",
+        "双向",
+        "行动",
+        "方案",
+        "吉利"
+      ]
+    },
+    "memory:memory/2026-05-11.md:12:13": {
+      "key": "memory:memory/2026-05-11.md:12:13",
+      "path": "memory/2026-05-11.md",
+      "startLine": 12,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "周报生成 (18:27): 浙江新三样/风电出口数据亮眼; 必访企业：吉利富江能源（P0）",
+      "recallCount": 0,
+      "dailyCount": 6,
+      "groundedCount": 0,
+      "totalScore": 3.72,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "28fb5afbbb34"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11",
+        "2026-05-15",
+        "2026-05-14",
+        "2026-05-16",
+        "2026-05-17",
+        "2026-05-18",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "浙江新三样/风电出口数据亮眼",
+        "周报",
+        "生成",
+        "浙江",
+        "三样",
+        "出口",
+        "数据",
+        "企业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 开始执行本周新能源行业研究周报。周报覆盖时间：2026.05.05-05.11。 **第一步：抓取必抓源 + web_search 精准搜索**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "2026.05.05-05.11",
+        "web-search",
+        "开始",
+        "执行",
+        "本周",
+        "能源",
+        "行业",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Now let me do the web_search queries (serially due to rate limiting):",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "web-search",
+        "now",
+        "let",
+        "queries",
+        "serially",
+        "due",
+        "rate",
+        "limiting"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Now let me fetch the vertical sources and do the Zhejiang local search:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "fetch",
+        "vertical",
+        "sources",
+        "zhejiang",
+        "local"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Now the Zhejiang local search and fetching some key articles:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "now",
+        "zhejiang",
+        "local",
+        "fetching",
+        "key",
+        "articles"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Let me get more specific Zhejiang-focused news and fetch the important articles:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "zhejiang-focused",
+        "let",
+        "get",
+        "specific",
+        "zhejiang",
+        "focused",
+        "news",
+        "fetch"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now I have sufficient data. Let me compile the weekly report and notify Joe.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "now",
+        "sufficient",
+        "data",
+        "let",
+        "compile",
+        "weekly",
+        "report",
+        "notify"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 周报内容已整理完成，现在写入知识库。先检查是否已有同名文档：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "周报",
+        "内容",
+        "整理",
+        "完成",
+        "现在",
+        "知识",
+        "检查",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 没有本周同名文档，创建新的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "没有",
+        "本周",
+        "同名",
+        "创建",
+        "新的"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 文档已创建，现在写入内容：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "创建",
+        "现在",
+        "内容"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 文档写入成功。现在确认文档位置（需在根目录）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "成功",
+        "现在",
+        "确认",
+        "位置",
+        "目录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 文档被创建在了非根目录（parent_node_token不为空），需要移回根目录：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "parent-node-token不为空",
+        "创建",
+        "目录",
+        "parent-node-token",
+        "不为",
+        "需要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 文档已在根目录。现在更新商机挖掘表格。先读A列去重：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "目录",
+        "现在",
+        "更新",
+        "挖掘",
+        "表格",
+        "先读"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 吉利富江能源已在表格中，只需更新创建日期。现在运行排序+清理脚本：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "吉利",
+        "富江",
+        "能源",
+        "表格",
+        "只需",
+        "更新",
+        "创建",
+        "日期"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 机器人身份无权限写表格，切换到用户身份：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "机器",
+        "身份",
+        "权限",
+        "表格",
+        "切换",
+        "用户"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 表格写入成功（40个单元格已更新）。现在推送周报概要至飞书群：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "表格",
+        "成功",
+        "单元",
+        "更新",
+        "现在",
+        "推送",
+        "周报",
+        "概要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 周报生成完毕！保存记录：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成",
+        "完毕",
+        "保存",
+        "记录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **周报生成完成！** **本周覆盖**：2026.05.05 - 05.11 **核心产出：** - 📄 **知识库文档**：`ne-weekly-20260511` → https://www.feishu.cn/wiki/PU9Gw6ptLixFUqkNX2kcB1b9n8g - 📊 **商机表格**：已更新（吉利富江能源日期→2026-05-11） - 💬 **飞书群推送**：概要+链接已发送 **本周TOP7要闻：** 1. ★★★★★ 四部门印发《AI与能源双向赋能行动方案》 2. ★★★★ 合盛硅业光伏\"认输",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "2026.05.05",
+        "05.11",
+        "ne-weekly-20260511",
+        "周报",
+        "生成",
+        "完成",
+        "本周",
+        "覆盖"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-11.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-11.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-11.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 📌 **新能源行业周报·浙江 | 2026.05.05-05.11（近7天）** 🔥 TOP7 要闻： 1. 四部门印发《AI与能源双向赋能行动方案》——首次国家层面推进算电协同 2. 合盛硅业跨界光伏\"认输\"，上市以来首亏近30亿 3. 吉利富江能源钠电产线落地桐庐，总投资1.49亿 4. 光伏组件五巨头Q1集体亏损超96亿，储能成翻身关键 5. 中国风电企业境外收入超300亿，出海成胜负手 6. 广交会微电网/家储需求激增，拉美客商大幅增多 7. 浙江\"新三样\"出口增28%，风电机组出口翻倍增98% 🗺️ 浙江地市动态：杭",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-11T19:00:07.755Z",
+      "lastRecalledAt": "2026-05-11T19:00:07.755Z",
+      "queryHashes": [
+        "aef940602c89"
+      ],
+      "recallDays": [
+        "2026-05-12",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "2026.05.05-05.11",
+        "总投资1.49亿",
+        "广交会微电网/家储需求激增",
+        "能源",
+        "行业",
+        "周报",
+        "浙江",
+        "2026.05.05"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 请帮我整理一份月度报告，包括几个方面，第一是关于新能源行业重点的技术突破，行业动态等；二是浙江地区重点新能源行业客户的动态、融资及理财情况；第三个是银行展业的建议。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "整理",
+        "一份",
+        "报告",
+        "包括",
+        "几个",
+        "方面",
+        "第一",
+        "关于"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 我来帮你整理这份月度新能源行业报告。先收集最新的行业动态和浙江地区相关信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "我来",
+        "整理",
+        "能源",
+        "行业",
+        "报告",
+        "收集",
+        "最新",
+        "动态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 好的，基于最新收集的信息，我来整理这份报告： --- # 🔋 新能源行业月度报告（2026年4-5月） ## 一、行业技术突破与动态 **1. 光伏领域** - **N型技术全面主导**：P型(PERC)基本退出主流，TOPCon占据绝对主导，HJT和BC加速规模化量产。主流N型组件转换效率突破26%，占比超50% - **钙钛矿叠层刷新纪录**：晶科突破34.76%、隆基突破35.1%实验室转换效率，成为下一代研发重心 - **超高功率组件**：210mm硅片组件功率普遍达650W+，部分领先企业推出700W+产品。隆基四季度约",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "2026年4-5月",
+        "晶科突破34.76",
+        "隆基突破35.1",
+        "好的",
+        "基于",
+        "最新",
+        "收集",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: **闪充/超充赛道火热**：比亚迪实现\"5分钟充电10%至70%\"，计划2026年底建成20000座闪充站；宁德时代换电站将全系标配超充桩，计划年底累计建成超4000座充换一体站 - **亿纬锂能业绩加速**：2025年营收614.7亿(+26.4%)，Q1 2026预计净利13.8-14.9亿(+25-35%)；BBU电池预计5-6月输出A样 - **动力电池增速分化**：中国需求放缓，欧洲及亚洲新兴市场持续增长；单车带电量从48.5kWh提升至69.1kWh(+42.5%) - **政策催化**：交通运输部发布2026年新能源城",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "闪充/超充赛道火热",
+        "2025年营收614.7亿",
+        "26.4",
+        "2026预计净利13.8-14.9亿",
+        "25-35",
+        "bbu电池预计5-6月输出a样",
+        "单车带电量从48.5kwh提升至69.1kwh",
+        "42.5"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 正泰安能2025H1营收148亿、净利19亿，新增装机超9GW；正泰新能此前完成20亿C轮融资；集团主体信用评级稳定 | | **晶澳科技** | 宁海 | 宁海5GW异质结项目延期至2026年底，2025年预亏近50亿，关注产能出清后的盈利修复 | | **隆基绿能** | 嘉兴 | 全面BC化，2026年出货目标6GWh储能；HIBC技术刷新世界纪录；Q3有望实现组件盈利 | | **天合光能** | 多地布局 | 光伏+储能+系统解决方案+数字能源四大板块，储能业务分担业绩增长压力 | **3. 融资与理财关注点** - 光伏",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "泰安",
+        "2025h1",
+        "新增",
+        "9gw",
+        "完成",
+        "融资",
+        "集团",
+        "主体"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: **\"小股权+大债权\"模式**：参考中行服务航天企业的方案，对科技型新能源企业提供投贷联动 - **储能融资租赁**：针对工商业储能设备，开展融资租赁+电费收益权质押 - **碳资产管理**：配合绿证交易活跃趋势，推出绿证质押融资、碳配额质押等产品 **3. 浙江区域策略** - **聚焦产业集群**：重点对接嘉兴（秀洲+海宁）光伏产业集群、温州正泰生态圈、宁波/德业逆变器产业链 - **户用光伏金融**：正泰安能模式验证了户用光伏的盈利性，可复制推广户用光伏分期/租赁产品 - **出口导向型企业**：跟踪新能源企业出海需求（欧洲户",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "宁波/德业逆变器产业链",
+        "可复制推广户用光伏分期/租赁产品",
+        "股权",
+        "模式",
+        "参考",
+        "服务",
+        "航天",
+        "企业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: 技术层面的突破再帮我深挖一下，还不够全面，另外形成的新报告用word输出",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "技术",
+        "层面",
+        "突破",
+        "一下",
+        "不够",
+        "全面",
+        "另外",
+        "形成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 让我先深挖一下各细分领域的技术突破，再生成Word报告。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "我先",
+        "一下",
+        "领域",
+        "技术",
+        "突破",
+        "再生",
+        "word",
+        "报告"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 现在有了大量详细素材，我来生成完整的Word报告。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "现在",
+        "有了",
+        "大量",
+        "详细",
+        "素材",
+        "我来",
+        "生成",
+        "完整"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Word报告已生成完毕，文件路径：`新能源行业月度报告_2026年5月.docx`（48KB）。 报告结构如下： **一、光伏领域技术突破**（7个子节） - N型TOPCon/HJT/BC三路线并行 - 钙钛矿叠层刷新纪录（晶科34.76%、隆基35.1%） - 降本增效：0BB无主栅、银包铜、纯铜电镀、硅片薄片化 - 场景化定制：海上/防沙/防眩光/BIPV等 - 光储融合趋势、ESG要求、产能出清现状 **二、储能领域技术突破**（6个子节） - 宁德时代五大技术详解（钠电池/凝聚态固态/12C超充/AI算力电池/587Ah大",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "新能源行业月度报告-2026年5月.docx",
+        "n型topcon/hjt/bc三路线并行",
+        "晶科34.76",
+        "隆基35.1",
+        "海上/防沙/防眩光/bipv等",
+        "钠电池/凝聚态固态/12c超充/ai算力电池/587ah大",
+        "word",
+        "报告"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: 不要生成word这种",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "不要",
+        "生成",
+        "word",
+        "这种"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 好的，直接把报告以文字形式发出来： --- 🔋 **新能源行业月度研究报告（2026年5月）** 一、光伏领域技术突破 1. N型技术全面主导 • TOPCon占据绝对主导，量产效率突破26%，N型组件占比超50% • HJT加速规模化量产，晶澳宁海5GW异质结+10GW组件项目推进中 • BC技术快速崛起，隆基全面推进BC化，四季度约50%产品达670-680W，HIBC刷新世界纪录 2. 钙钛矿叠层刷新纪录 • 晶科实验室效率突破34.76%，隆基突破35.1% • 被视为突破单晶硅效率极限的\"终极方案\"，有望推至40%以上",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "产品达670-680w",
+        "晶科实验室效率突破34.76",
+        "隆基突破35.1",
+        "好的",
+        "直接",
+        "报告",
+        "文字",
+        "形式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 2025年新增装机113.3GW/323.5GWh，同比+48%/+66%，中国连续四年第一 • \"十五五\"新型储能CAGR预计超20% 2. 宁德时代五大技术发布（2026.4.21超级科技日） • 无热失控钠电池：175Wh/kg，-40℃保持90%电量，5C快充，成本较LFP低30%+ • 凝聚态固态电池：500Wh/kg，硫化物路线，下半年小批量供货（比预期提前3-4年），面向eVTOL和高端跑车 • 第二代神行超充：12C倍率，5分钟充520公里，推动兆瓦级超充基建升级 • AI算力电池：钠电体系，15000次循环，97%",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "2025年新增装机113.3gw/323.5gwh",
+        "2026.4.21超级科技日",
+        "175wh/kg",
+        "500wh/kg",
+        "比预期提前3-4年",
+        "新增",
+        "113.3gw",
+        "323.5gwh"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: • 一季度需求分化：中国/北美放缓，欧洲/亚洲新兴市场增长 3. 政策催化 • 交通运输部发布新能源公交车及动力电池更新补贴细则 • 电动重卡、工程机械电动化需求增长 • 浦发银行新能源车贷余额占比达49.1% --- 四、风电、氢能及其他前沿技术 1. 风电 • 2025年全球新增170GW创峰值，2026年规划新增风光2亿千瓦+ • 陆上10MW+、海上16MW+机组商业化 • 深远海漂浮式风机突破，构网型风机迭代 • 主控PLC等核心部件国产化全谱系突破 2. 氢能全产业链 • 制氢：航天科技5吨/天液化系统100%国产化 •",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "中国/北美放缓",
+        "欧洲/亚洲新兴市场增长",
+        "浦发银行新能源车贷余额占比达49.1",
+        "航天科技5吨/天液化系统100",
+        "季度",
+        "需求",
+        "分化",
+        "中国"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 隆基绿能：2025亏60-65亿，BC化推进，HIBC刷新纪录，Q3有望组件盈利，储能出货目标6GWh • 天合光能：2025亏65-75亿，储能第二曲线分担增长 • 横店东磁（浙江东阳）：逆势双增，差异化产品+供应链协同 • 阿特斯：储能支撑盈利10.16亿 融资与理财关注点： • 光伏制造端整体亏损，现金流压力大，授信需审慎 • 晶科资产负债率偏高、转债兑付压力需监控 • 正泰安能盈利稳健，优质理财/授信标的 • 储能赛道（宁德时代产业链、先导智能等）订单饱满，信贷投放价值高 • 钠电池、固态电池、钙钛矿初创企业有融资需求 •",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "2025亏60-65亿",
+        "2025亏65-75亿",
+        "储能支撑盈利10.16亿",
+        "优质理财/授信标的",
+        "推进",
+        "hibc",
+        "刷新",
+        "纪录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 总结：2026年呈现\"光伏出清+储能爆发+技术多元\"格局。银行应把握储能/超充/光储协同赛道，优选浙江头部客户，严控光伏制造产能过剩风险，通过绿色金融+投贷联动打造差异化竞争力。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "银行应把握储能/超充/光储协同赛道",
+        "总结",
+        "呈现",
+        "出清",
+        "爆发",
+        "技术",
+        "多元",
+        "格局"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: 你也没法拿到",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "也没",
+        "拿到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 对，Word文件是生成在本地工作区的，你这边直接看不到。两个方案： 1. 我直接把报告贴在聊天里（就像上面那条长消息那样），你复制到自己文档里 2. 我把报告转成PDF放到工作区共享路径，你看能不能从那边下载 哪种方便？或者你有其他方式让我把文件发给你？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "word",
+        "文件",
+        "生成",
+        "本地",
+        "工作",
+        "这边",
+        "直接",
+        "看不到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: @papa [System: This message @mentions the following users: papa (open_id: ou_706927287b0f413a61b39fabc06c3150). Use these open_ids when performing actions involving these users.]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "open-id",
+        "open-ids",
+        "papa",
+        "message",
+        "mentions",
+        "following",
+        "users",
+        "use"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: 那怎么输出格式？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "怎么",
+        "输出",
+        "格式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-12.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-12.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-12.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Joe，Word文件生成在我这边的工作区里，你这边看不到。几个输出方式： 1. **直接发在群里**（就像上面那条长消息），你复制粘贴到自己Word/飞书文档里排版 2. **飞书云文档** — 我可以帮你创建一篇飞书云文档，格式会比群消息更好，支持标题层级、加粗、表格，也方便你和papa协作编辑 3. **PDF** — 我转成PDF文件放在工作区，但同样你这边可能没法直接下载 推荐**方案2**，我直接帮你建一篇飞书云文档，内容按报告结构排版好，你和papa都可以在线查看和编辑。 要我直接创建云文档吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-12T19:00:08.329Z",
+      "lastRecalledAt": "2026-05-12T19:00:08.329Z",
+      "queryHashes": [
+        "7842911a6fdb"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "你复制粘贴到自己word/飞书文档里排版",
+        "joe",
+        "word",
+        "文件",
+        "生成",
+        "这边",
+        "工作",
+        "看不到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 我想看下周报的skill的全文，不要摘要",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "我想",
+        "周报",
+        "skill",
+        "全文",
+        "不要",
+        "摘要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 这是周报 Skill 的全文： --- **ne-weekly-report** — 新能源行业研究周报生成 Skill 每周直接爬取多源行业研究内容，生成周报（动态 + 商机），推送至飞书群。 --- **复用说明** 本 skill 可复用于其他机器人。每个 agent 需要修改的参数： | 参数 | 说明 | |------|------| | `BOT_PROFILE` | lark-cli profile 名称 | | `WIKI_SPACE_ID` | 飞书知识库 space_id | | `WIKI_SPACE_NAM",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "ne-weekly-report",
+        "bot-profile",
+        "lark-cli",
+        "wiki-space-id",
+        "space-id",
+        "wiki-space-nam",
+        "周报",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 个查询（光伏、风电、储能、氢能、新能源融资/政策） - 第三轮垂直源补充 4 个：北极星太阳能、储能网、高工锂电、风电网 - 第四轮本地新能源专项搜索（\"新能源 浙江\"等） **第二步：筛选与分类** - 入选标准：政策发布、企业融资、产能建设、订单中标、技术突破、价格变动、风险信号 - 排除标准：科普、无具体事件的长期趋势分析、纯股市行情 **第三步：筛选 TOP5-8 要闻** 按权重排序：国家级政策/百亿级投资 → 省级政策/十亿级融资 → 产能/价格变动 **第四步：区域地市动态** 按目标区域下属地市汇总近 7 天关键变化",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "新能源融资/政策",
+        "top5-8",
+        "国家级政策/百亿级投资",
+        "省级政策/十亿级融资",
+        "产能/价格变动",
+        "查询",
+        "能源",
+        "融资"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: WIKI_SPACE_ID: \"7637082931059706850\" WIKI_SPACE_NAME: \"新能源行研\" WEEKLY_TITLE_PREFIX: \"ne-weekly\" REGION: \"浙江\" REGION_CITIES: 杭州、宁波、温州、绍兴、嘉兴、湖州、金华、台州、丽水、衢州、舟山 ``` --- 全文比较长，以上是完整结构。如果你想看某个具体章节（比如表格写入逻辑、去重规则、或者周报模板）的详细内容，我可以再展开。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "wiki-space-id",
+        "wiki-space-name",
+        "weekly-title-prefix",
+        "ne-weekly",
+        "region-cities",
+        "能源",
+        "weekly",
+        "region"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 帮我分析下iFinD-Finance-Data skill，看看是否可以加入周报的skill里面作为第一步的第五轮作为信息抓取源之一",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "帮我分析下ifind-finance-data",
+        "分析",
+        "ifind",
+        "finance",
+        "data",
+        "skill",
+        "看看",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 分析完了，下面是我的评估： --- **结论：可以加入，而且价值明确，但需要控制调用范围。** **iFinD 能补什么现有抓取源没有的：** 1. **上市公司公告语义检索**（`search_notice`）—— 这是最大的差异化。现有来源都是新闻门户，但企业中标、产能扩张、定增公告等一手信息往往最先出现在公告里。比如搜 `\"储能 中标\"` 或 `\"光伏 产能扩张\"` + 近7天时间过滤 2. **热点事件查询**（`search_trending_news`）—— 支持按行业筛选（如\"电力设备\"\"新能源\"），返回24小时/近7",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "search-trending-news",
+        "返回24小时/近7",
+        "分析",
+        "完了",
+        "下面",
+        "我的",
+        "评估"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: **覆盖范围偏上市公司**——对非上市企业的动态（比如初创储能公司）覆盖有限 **我的建议：加入，但作为\"精选补充\"而非\"必抓\"** - 设为可选轮次（如果 iFinD 配置可用才执行） - 只用 news 类的3个查询，不用 stock/edb（周报不需要股价行情和宏观数据） - 控制 size=5-8，不要贪多 要我把这些内容写成具体的 skill 更新补丁吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "stock/edb",
+        "5-8",
+        "覆盖",
+        "范围",
+        "上市",
+        "公司",
+        "企业",
+        "动态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: 你帮我放到获取源的第五轮把，注意主要限定行业范围和时间（要求一周近7天内）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "放到",
+        "获取",
+        "第五",
+        "注意",
+        "主要",
+        "限定",
+        "行业",
+        "范围"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 已更新。第五轮内容已插入到第四轮和按需补充之间，包含 3 个 iFinD 查询： 1. **search_notice** — 公告语义检索，抓中标/融资/产能扩张/项目开工类公告 2. **search_trending_news** — 热点事件，限定电力设备行业 3. **search_news** — 资讯检索，抓并网/投产/签约类新闻 都限定了近 7 天时间范围，size=8 控制数据量，串行执行避免限流。如果 iFinD 不可用或调用失败会自动跳过。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T19:00:08.922Z",
+      "lastRecalledAt": "2026-05-14T19:00:08.922Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "抓中标/融资/产能扩张/项目开工类公告",
+        "search-trending-news",
+        "search-news",
+        "抓并网/投产/签约类新闻",
+        "更新",
+        "第五",
+        "内容"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 **新能源行业周报·浙江 | 2026.05.09-05.15（近7天）** 🔥 TOP7 要闻： 1. 8家新能源车企集体辟谣\"锁电\"约谈，监管信号明确 2. 锂价逼近20万/吨，钠电池2026年出货量预计翻三番 3. 中国电解槽订单排至2028年，全行业仍亏损 4. 宁波能源涨停：清洁能源装机+35.7%，Q1利润+71.6% 5. 国家发改委赴浙江调研虚拟电厂 6. 光伏板块三重共振但盘中调整，太空光伏成新主线 7. 杭州具身智能机器人条例正式施行，全国首部 🗺️ 浙江地市：杭州 3 条 | 宁波 1 条 | 全省",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "2026.05.09-05.15",
+        "锂价逼近20万/吨",
+        "35.7",
+        "71.6",
+        "能源",
+        "行业",
+        "周报",
+        "浙江"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 开始执行本周新能源行业研究周报。日期范围：2026.05.09-05.15。 先并行抓取4个必抓源：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "2026.05.09-05.15",
+        "开始",
+        "执行",
+        "本周",
+        "能源",
+        "行业",
+        "研究",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 必抓源抓取完毕。现在开始第二轮 web_search 精准搜索（5个查询并行）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "web-search",
+        "抓取",
+        "完毕",
+        "现在",
+        "开始",
+        "第二",
+        "精准",
+        "搜索"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Brave 限流了，改用 SearXNG 执行搜索。逐个串行执行避免限流：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "brave",
+        "改用",
+        "searxng",
+        "执行",
+        "搜索",
+        "避免"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: SearXNG 结果不可用，改回 Brave 串行搜索（每次间隔2秒）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "searxng",
+        "结果",
+        "不可",
+        "brave",
+        "搜索",
+        "每次",
+        "间隔"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 现在执行第四轮本地搜索和第三轮垂直源抓取：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "现在",
+        "执行",
+        "四轮",
+        "本地",
+        "搜索",
+        "第三",
+        "垂直",
+        "抓取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 继续抓取剩余垂直源，并搜索更多浙江新能源动态：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "继续",
+        "抓取",
+        "剩余",
+        "垂直",
+        "搜索",
+        "更多",
+        "浙江",
+        "能源"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Now let me read the spreadsheet A列 for deduplication, and also fetch a couple of key articles:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "read",
+        "spreadsheet",
+        "deduplication",
+        "fetch",
+        "couple",
+        "key"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Now I have all the data. Let me compile the report and write the spreadsheet. First, let me write the \"必访\" enterprises to the spreadsheet:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "now",
+        "all",
+        "data",
+        "let",
+        "compile",
+        "report",
+        "write",
+        "spreadsheet"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 表格写入完成。现在检查知识库是否有同名文档，然后创建/覆盖周报：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "然后创建/覆盖周报",
+        "表格",
+        "完成",
+        "现在",
+        "检查",
+        "知识",
+        "是否",
+        "同名"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 没有同名文档，需要创建新文档。现在生成周报全文并创建：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "没有",
+        "同名",
+        "需要",
+        "创建",
+        "现在",
+        "生成",
+        "周报",
+        "全文"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 周报已创建成功。验证文档位置并推送概要：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "周报",
+        "创建",
+        "成功",
+        "验证",
+        "位置",
+        "推送",
+        "概要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 文档在根目录，无需移动。现在推送周报概要到群聊：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "目录",
+        "移动",
+        "现在",
+        "推送",
+        "周报",
+        "概要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 周报生成任务完成 ✅ **执行摘要：** 📌 **新能源行业周报·浙江 | 2026.05.09-05.15** 已生成并推送 **信息抓取情况：** - ✅ 4个必抓源：同花顺、财联社、新华网、经济观察网 - ✅ web_search 精准搜索：光伏/风电/储能/氢能/新能源车（Brave + 限流重试） - ✅ 垂直源：北极星光伏网（JS渲染失败）、储能网（空内容）、GGII（连接失败）、风电网（域名不存在） - ✅ 浙江本地搜索：3轮补充 - ⚠️ iFinD金融数据：本周未调用（按skill规则，仅在skill可用时执行）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-15T19:00:07.924Z",
+      "lastRecalledAt": "2026-05-15T19:00:07.924Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-16",
+        "2026-05-15"
+      ],
+      "conceptTags": [
+        "2026.05.09-05.15",
+        "web-search",
+        "光伏/风电/储能/氢能/新能源车",
+        "周报",
+        "生成",
+        "任务",
+        "完成",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 周报中涉及的企业都按照基本情况，团队情况，银行行动切入点，风险点这几方面进行分析并总结输出文档",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "周报",
+        "涉及",
+        "企业",
+        "按照",
+        "基本",
+        "情况",
+        "团队",
+        "银行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Let me check if there's a recent weekly report or if I need to generate one first.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "let",
+        "check",
+        "there's",
+        "recent",
+        "weekly",
+        "report",
+        "need",
+        "generate"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我先运行本周的周报生成，提取其中的企业，然后逐一分析。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "好的",
+        "我先",
+        "运行",
+        "本周",
+        "周报",
+        "生成",
+        "提取",
+        "其中"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我现在基于近一周（5.10-5.17）抓取的新能源行业信息，提取其中的企业，然后按你要求的维度逐一分析并生成文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "5.10-5.17",
+        "好的",
+        "现在",
+        "基于",
+        "一周",
+        "5.10",
+        "5.17",
+        "抓取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Now I have enough information. Let me compile the analysis document.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "now",
+        "enough",
+        "information",
+        "let",
+        "compile",
+        "analysis",
+        "document"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now let me create this as a Feishu doc in the knowledge base.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "create",
+        "feishu",
+        "doc",
+        "knowledge",
+        "base"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Good, the workspace markdown file is saved locally. Now let me also create this as a Feishu doc in the knowledge base for easy sharing.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "good",
+        "markdown",
+        "saved",
+        "locally",
+        "now",
+        "let",
+        "create",
+        "feishu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 已完成。周报中涉及的7家企业都已按 **基本情况、团队情况、银行行动切入点、风险点** 四个维度逐一分析，文档已创建在飞书知识库。 📄 **文档链接**：<https://www.feishu.cn/wiki/IGURwBjUpildoIkVchhcemwRn7b> **分析的企业清单：** 1. 国富氢能（02582.HK）— 电解槽头部，订单排到2028年但亏损加剧 2. **浙江新能（600032.SH）**⭐ — 省属新能源平台，P0必访 3. **浙江钠创**⭐ — 钠电池初创，产业化初期 4. **天能股份（68881",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "02582.hk",
+        "600032.sh",
+        "完成",
+        "周报",
+        "涉及",
+        "企业",
+        "基本",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: 这稿看起来是开会可用的结构",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "看起来",
+        "开会",
+        "可用",
+        "结构"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: [[reply_to_current]] 对，这版按\"基本情况→团队→银行切入点→风险点\"的结构，适合直接拿来跟团队过会用。飞书文档里还加了 callout 高亮块，风险点用⚠️标出，优先级也有 P0/P1/P2 分层。 如果需要调整结构或者补充某家企业的更深入分析（比如财务数据更细、产业链上下游关系等），随时说。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "p0/p1/p2",
+        "基本",
+        "情况",
+        "团队",
+        "银行",
+        "切入",
+        "风险"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: 补充一下产业链上下游关系。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "补充",
+        "一下",
+        "产业",
+        "下游",
+        "关系"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我给每家企业补上产业链上下游关系，同时加一张全景产业链图。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "好的",
+        "每家",
+        "企业",
+        "产业",
+        "下游",
+        "关系",
+        "同时",
+        "一张"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 哈哈，看来开会派上用场了 🎯",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "哈哈",
+        "看来",
+        "开会"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: 不错不错 就这个逻辑完美 我先用之前的那个",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "不错",
+        "这个",
+        "逻辑",
+        "完美",
+        "先用",
+        "之前",
+        "那个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 好嘞，之前那版直接在飞书文档里 <https://www.feishu.cn/wiki/IGURwBjUpildoIkVchhcemwRn7b> 可以用 👍",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "之前",
+        "直接",
+        "https",
+        "www.feishu.cn",
+        "wiki",
+        "igurwbjupildoikvchhcemwrn7b",
+        "可以"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "User: 团队情况中加企业高层人员信息，包括学校、曾就业单位等信息",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "团队",
+        "情况",
+        "企业",
+        "高层",
+        "人员",
+        "信息",
+        "包括",
+        "学校"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 收到，我先去查每家企业高管的履历信息。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "收到",
+        "先去",
+        "每家",
+        "企业",
+        "履历",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 信息收集得差不多了，现在来更新文档，在每家的\"团队情况\"里加上高管履历。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "信息",
+        "收集",
+        "差不多",
+        "现在",
+        "更新",
+        "每家",
+        "团队",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 已更新。每家企业的团队情况都补充了高管履历，包括学校、曾就职单位等： **新增的高管履历要点：** - **邬品芳（国富氢能）**：40年装备制造经验，富瑞特装（300228.SZ）创始人，二次创业做氢能 - **陆川（正泰新能源）**：1981年博士，中美双律师资格，2005年入正泰，从法务一路做到新能源总裁 - **马紫峰（浙江钠创）**：上海交大讲席教授，浙大本科+硕士+华南理工博士，中科院973首席科学家 - **张天任（天能股份）**：浙大EMBA，美加州国际大学荣誉博士，教授级高工 - **曾毓群（宁德时代）**：上海交",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T19:00:07.728Z",
+      "lastRecalledAt": "2026-05-17T19:00:07.728Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "300228.sz",
+        "更新",
+        "每家",
+        "企业",
+        "团队",
+        "情况",
+        "补充",
+        "履历"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-18.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-18.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-18.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 分享时候提示需开启互联网获得链接的人可阅读/可编辑，怎么设置",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T19:00:08.815Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "cda70fe5512d"
+      ],
+      "recallDays": [
+        "2026-05-19",
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "分享时候提示需开启互联网获得链接的人可阅读/可编辑",
+        "分享",
+        "时候",
+        "提示",
+        "开启",
+        "获得",
+        "阅读",
+        "编辑"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-18.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-18.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-18.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 这是飞书文档的**链接分享权限**设置，不是机器人权限问题。操作步骤： 1. 打开那个文档 2. 点击右上角的 **「分享」** 按钮 3. 在弹出的分享面板里，找到 **「谁可以访问」** 或类似的下拉选项 4. 把默认的「仅组织内成员」改成 **「互联网上获得链接的人」** 5. 选择权限级别：「可阅读」或「可编辑」 6. 点「完成」或「保存」 ⚠️ **注意**：这一步需要**你自己在飞书里手动操作**，我这边没法帮你改。因为这涉及文档的安全权限，必须由文档所有者（也就是你）在飞书客户端或网页端设置。 设好之后再把链接分享出去",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T19:00:08.815Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "cda70fe5512d"
+      ],
+      "recallDays": [
+        "2026-05-19",
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "分享",
+        "权限",
+        "设置",
+        "不是",
+        "机器",
+        "问题",
+        "操作",
+        "步骤"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-18.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-18.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-18.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 分享链接按钮点了没反应",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T19:00:08.815Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "cda70fe5512d"
+      ],
+      "recallDays": [
+        "2026-05-19",
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "分享",
+        "按钮",
+        "点了",
+        "反应"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-18.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-18.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-18.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: @ou_6ae01ddbdaaf91a78d7b74e072774a5a 点分享没反应，大概率是**组织管理员在后台关闭了对外分享权限**，按钮会被禁用。 **可能的原因和解决办法：** 1. **管理员限制**（最可能） - 需要你们组织的飞书管理员在后台开启「允许文档对外分享」 - 路径：飞书管理后台 → 安全与合规 → 数据安全 → 文档对外分享 → 开启「互联网上获得链接的人可阅读」 - 这个只有**管理员**能改 2. **客户端卡了** - 试试飞书网页端（feishu.cn）打开同一个文档，看分享是否正常 - 如果网页",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T19:00:08.815Z",
+      "lastRecalledAt": "2026-05-18T19:00:08.815Z",
+      "queryHashes": [
+        "cda70fe5512d"
+      ],
+      "recallDays": [
+        "2026-05-19",
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "feishu.cn",
+        "分享",
+        "反应",
+        "概率",
+        "组织",
+        "管理",
+        "后台",
+        "关闭"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 帮我整理一下华友钴业集团，浙江本地的同业都有哪些合作？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "整理",
+        "一下",
+        "集团",
+        "浙江",
+        "本地",
+        "都有",
+        "哪些",
+        "合作"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来查一下华友钴业集团在浙江本地的同业合作情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "好的",
+        "我来",
+        "一下",
+        "集团",
+        "浙江",
+        "本地",
+        "合作",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 整理好了，华友钴业（总部桐乡）在浙江本地的同业合作主要有以下几家： **1. 青山集团（温州）** 浙江本地最核心的合作伙伴，全球\"镍王\"。2022年3月，华友钴业 + 青山集团 + 大众汽车（中国）三方签署战略合作，在印尼共同开发镍钴资源，规划建设年产约12万吨镍金属 + 1.5万吨钴金属，可满足约160GWh电池的镍钴原料供应。此外，青山还曾与华友签订高冰镍供应协议（年供6万吨）。双方在印尼华能项目上也是紧密协同。 **2. 宁波容百科技（宁波）** 三元正极材料龙头，和华友在产业链上高度互补。容百董事长白厚善在印尼华能项目五周",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "1.5万吨钴金属",
+        "整理",
+        "好了",
+        "总部",
+        "浙江",
+        "本地",
+        "合作",
+        "主要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: 帮我梳理一下华友钴业集团跟浙江地区银行的合作情况",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "梳理",
+        "一下",
+        "集团",
+        "浙江",
+        "地区",
+        "银行",
+        "合作",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我根据公开信息整理了华友钴业与浙江地区（及关联）银行的合作情况： --- **华友钴业银行合作概况** 截至2025年3月底，华友共计获得**银行授信额度841.42亿元**（2023年底为777.56亿元），未使用授信额度288.36亿元，间接融资渠道畅通。融资方式包括银行融资、债券发行、融资租赁等多渠道。 **重点银行合作：** **1. 北京银行（杭州分行 / 衢州分行）** ⭐ 最核心合作方 - 华友是**北京银行总行级战略客户** - 2025年3月，董事长霍学文亲赴衢州产业园参观，表示\"非常乐意与华友深入合作\"，未",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "银行授信额度841.42亿元",
+        "2023年底为777.56亿元",
+        "未使用授信额度288.36亿元",
+        "好的",
+        "根据",
+        "公开",
+        "信息",
+        "整理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: **总结：** 华友在银行合作方面呈现\"一核多元\"格局——**北京银行**是最核心的战略合作银行（总行级战略客户），合作深度和广度都最高；**浦发银行**在跨境/海外项目融资上配合紧密；加上建行等大行，整体授信超840亿元，融资能力强劲。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.108Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.108Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "在跨境/海外项目融资上配合紧密",
+        "总结",
+        "银行",
+        "合作",
+        "方面",
+        "呈现",
+        "多元",
+        "格局"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 已完成本周新能源行业商机周报（聚焦浙江）生成与归档。 - Word 版：<https://qcn8k445rrbc.feishu.cn/file/UZPgbudH2oW2YOx5pmLcvD6Unrd> - Wiki 存档：<https://www.feishu.cn/wiki/NO4YwY0YeiXQc6kqxv9cta1Dngg> - 商机表格：<https://qcn8k445rrbc.feishu.cn/sheets/C5ZgwhqJciryiTkGLH0cvlXzn5b> 已同步更新商机表格，新增/置顶 5 家浙江本地企业",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "新增/置顶",
+        "完成",
+        "本周",
+        "能源",
+        "行业",
+        "周报",
+        "聚焦",
+        "浙江"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 参照下Users/leidongqiao/.openclaw/workspace/workspace-IMResearcher/skills/im-weekly-report/skill.md,按照这个步骤去同步修改周报skill，注意行业换成了新能源：1、第一步数据抓取不变，2、商机表格和知识库写入啥的方式不变，内容按照参照的去改",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "参照下users/leidongqiao",
+        "参照",
+        "users",
+        "leidongqiao",
+        "openclaw",
+        "imresearcher",
+        "skills",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 我已经仔细对比了两个 skill。现在按照 IM skill 的方法论来重构 NE 周报 skill，保持行业为新能源。主要改动： 1. **第一步数据抓取**：采用 searxng 优先、更新必抓源/垂直源/搜索查询为新能源内容、更新 iFinD 查询 2. **新增第〇步**：首席行业分析师角色 + 12条全局规则 3. **重组工作流**：参照 IM 的第二步~第六步（信息跟踪范围、分析逻辑、企业推荐规则、产品匹配） 4. **第七步双版本输出**：Word 版 + 飞书 wiki 版 5. **第八步商机表格**：采用 IM",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "更新必抓源/垂直源/搜索查询为新能源内容",
+        "已经",
+        "仔细",
+        "对比",
+        "skill",
+        "现在",
+        "按照",
+        "方法"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 已完成同步修改。以下是主要改动汇总： ### ✅ 第一步：数据抓取（已更新） - **必抓源**：移除了同花顺/经济观察网（实测质量差），替换为 36氪快讯 + 证券时报快讯（4个必抓源与 IM 一致） - **第二轮搜索**：改用 searxng 优先（6个新能源查询，并行执行），Brave 降级为备用 - **第三轮垂直源**：保留北极星光伏、储能头条、风电网，移除高工锂电（JS 渲染失败），新增 36氪研究院 - **第五轮 iFinD**：3 个查询更新为新能源关键词（光伏/风电/储能/氢能/动力电池），必须先探测环境再执行",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "移除了同花顺/经济观察网",
+        "光伏/风电/储能/氢能/动力电池",
+        "完成",
+        "同步",
+        "修改",
+        "以下",
+        "主要",
+        "一步"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 注意事项/踩坑记录 与 IM 保持一致，行业改为新能源，添加了所有已知的踩坑记录 原始文件已备份为 `SKILL.md.bak`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "备份",
+        "注意事项/踩坑记录",
+        "skill.md.bak",
+        "注意",
+        "事项",
+        "记录",
+        "保持",
+        "一致"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 你好 Joe，我在。🔋",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-20T19:00:10.512Z",
+      "lastRecalledAt": "2026-05-20T19:00:10.512Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "你好",
+        "joe",
+        "我在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 📌 新能源商机周报·浙江｜2026.05.15-05.21 🔥 主线：多用户绿电直连、储能高景气、高效光伏集采 🏠 浙江机会：杭州/宁波/嘉兴算电协同与园区光储改造，带动储能、逆变器、海缆和绿电运营需求 🏢 优先跟进：禾迈股份、运达股份、容百科技 🎯 切入方向：项目融资/保函票据/供应链金融/跨境结算/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/T9pZb1K1Mo7RMuxQqgjcG2WUnch Wiki：https://qcn8k445rrbc.feishu.cn/wi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.21",
+        "杭州/宁波/嘉兴算电协同与园区光储改造",
+        "项目融资/保函票据/供应链金融/跨境结算/数字财资",
+        "qcn8k445rrbc.feishu.cn/wi",
+        "能源",
+        "周报",
+        "浙江",
+        "2026.05.15"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: 生成周报过程中踩了那些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "生成",
+        "周报",
+        "过程",
+        "那些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 主要踩了这些坑： 1. **配置文件缺失** - `skills/ne-weekly-report/config.json` 不存在，只能按 skill 里的默认参数执行。 - 还好关键参数默认可用：`ne_bot`、知识库、商机表 token 都能跑通。 2. **部分必抓源不可用** - 证券时报快讯 URL 返回 404。 - 风电网 `chinawind.com.cn` DNS 失败。 - 北极星光伏返回大量反爬 JS，不能当正文依据。 - 储能网正文提取很少，信息价值有限。 - 这些都按 skill 要求跳过，没有写进周报",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "ne-bot",
+        "chinawind.com.cn",
+        "主要",
+        "这些",
+        "配置",
+        "文件",
+        "缺失",
+        "skills"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 我做了别名映射，保留已有状态列，只更新触发信号和方案，避免重复新增。 8. **本地 zsh 空 glob 小坑** - 清理摘要目录时用了 `rm -f reports/summary/*`，目录为空时 zsh 报 `no matches found`。 - 已改成 `find ... -delete`，并把这个坑记到 self-improving 里了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "reports/summary",
+        "self-improving",
+        "做了",
+        "别名",
+        "映射",
+        "保留",
+        "已有",
+        "状态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: 这些坑查看下是否已有记录，没有的加到skill中",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "这些",
+        "查看",
+        "是否",
+        "已有",
+        "记录",
+        "没有",
+        "加到",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 查过了。已有记录覆盖了大部分，我补了缺失的几条到 `skills/ne-weekly-report/SKILL.md` 的「执行经验与避坑指南」。 **已存在的坑** - lark-cli 路径不在 PATH - searxng 结果需落盘，避免 stdout 截断 - zsh 跑 bash 数组 `${!queries[@]}` 会失败 - iFinD `search_trending_news` 可能 403 - iFinD `search_notice` 可能为空 - 证券时报 404、风电网 DNS 失败 - 北极星反爬 J",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "skills/ne-weekly-report/skill.md",
+        "lark-cli",
+        "search-trending-news",
+        "search-notice",
+        "已有",
+        "记录",
+        "覆盖",
+        "大部分"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 📌 新能源商机周报·浙江｜2026.05.15-05.21 🔥 主线：AI+能源、储能高景气、固态电池材料 🏠 浙江机会：零碳园区、光储充、深远海清洁能源、锂电材料技改 🏢 优先跟进：永太科技、容百科技、锦浪科技 🎯 切入方向：技改融资/跨境结算/订单融资/票据与避险 Word：https://qcn8k445rrbc.feishu.cn/file/FAFYbUpQSoeofnx4vkBcjySYnAc Wiki：https://www.feishu.cn/wiki/NO4YwY0YeiXQc6kqxv9cta1Dngg",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.21",
+        "技改融资/跨境结算/订单融资/票据与避险",
+        "能源",
+        "周报",
+        "浙江",
+        "2026.05.15",
+        "05.21",
+        "景气"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: 周报生成中遇到了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成",
+        "遇到",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 主要这些坑： 1. **数据源不稳定** - 证券时报快讯仍是 404。 - 风电网 `chinawind.com.cn` DNS 解析失败。 - 36氪研究院页面已删除/不可用。 - 北极星光伏页面返回大量 JS/反爬脚本，正文不可直接用。 2. **searxng 命令踩了 shell 坑** - 我一开始用 zsh 数组写法，触发 `bad substitution`。 - 后面改成 `bash <<'BASH'` 执行，并把 JSON 结果落盘再解析，才稳定。 3. **iFinD 调用方式容易错** - 不能直接给 `ca",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "chinawind.com.cn",
+        "36氪研究院页面已删除/不可用",
+        "js/反爬脚本",
+        "主要",
+        "这些",
+        "数据",
+        "稳定",
+        "证券"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 更新时还要保留原状态列，不能覆盖客户经理跟进状态。 7. **最后摘要里的 Wiki 链接域名我给得不够稳** - 正确 Wiki 链接应是： https://qcn8k445rrbc.feishu.cn/wiki/NO4YwY0YeiXQc6kqxv9cta1Dngg - 我最后发成了 `www.feishu.cn/wiki/...`，这个需要修正。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "www.feishu.cn/wiki",
+        "更新",
+        "保留",
+        "状态",
+        "不能",
+        "覆盖",
+        "客户",
+        "经理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: 优化方案和注意的点写进skill把",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "方案",
+        "注意",
+        "写进",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 已写进 `skills/ne-weekly-report/SKILL.md` 了，主要补了这些点： - searxng 批量搜索要用 bash，避免 zsh `bad substitution` - 北极星/风电网/36氪研究院等源的失败处理规则 - iFinD 空结果/403 不得写进正式周报正文或摘要 - 飞书 Wiki 正确链接必须用租户域名：`qcn8k445rrbc.feishu.cn` - `docs +fetch` 校验正文路径是 `.data.markdown` - 表格残留空行、别名去重、状态保留的注意事项 - 踩",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "skills/ne-weekly-report/skill.md",
+        "北极星/风电网/36氪研究院等源的失败处理规则",
+        "空结果/403",
+        "qcn8k445rrbc.feishu.cn",
+        "data.markdown",
+        "写进",
+        "skills",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: 不错不错 wind的技能也加进去吧",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "不错",
+        "wind",
+        "技能",
+        "加进去"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 让我先看看现在有哪些技能，以及 Wind 技能的情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "我先",
+        "看看",
+        "现在",
+        "哪些",
+        "技能",
+        "以及",
+        "wind",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Joe，你是说万得 Wind 的数据查询技能？让我确认一下： 1. 目前已经有了 iFinD（同花顺）的技能 2. 你想再加一个 Wind（万得）的技能，对吧？ 需要你确认几个事： 1. **Wind API 的访问方式**：你们用的是 Wind 量化接口（Wind Quant API）还是 Wind 资讯的其他方式？Python SDK？还是通过 Wind 终端？ 2. **API 认证信息**：Wind 的账号/终端是否已经在这台 Mac mini 上配置好了？ 3. **数据需求**：主要想查哪些数据？新能源相关的行情、财务、",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "的账号/终端是否已经在这台",
+        "joe",
+        "你是",
+        "wind",
+        "数据",
+        "查询",
+        "技能",
+        "确认"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "User: 先不弄，等我给你指示再装",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "指示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 收到，等你指示再弄。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "收到",
+        "指示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "User: 研究一下 看看好不好用 不用账户@用户942830 [System: This message @mentions the following users: 用户942830 (open_id: ou_44e8d75d2f0bf9ec3dc65987564f4d70). Use these open_ids when performing actions involving these users.]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "open-id",
+        "open-ids",
+        "研究",
+        "一下",
+        "看看",
+        "好不好",
+        "不用",
+        "账户"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 研究完了，给你总结一下 Wind API 的情况： **Wind API (WindPy) 概况：** 1. **核心功能很全** - `w.wsd()` — 日时间序列（行情、财务、评级等） - `w.wss()` — 日截面数据（多品种多指标快照） - `w.wsi()` — 分钟线数据 - `w.wsq()` — 实时行情 - `w.wset()` — 板块/概念成分 - `w.edb()` — 宏观经济数据 2. **必须登录，绕不开** - macOS：App Store 下载 \"Wind API\" App，需要输入账号密",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "w.wsd",
+        "w.wss",
+        "w.wsi",
+        "w.wsq",
+        "w.wset",
+        "板块/概念成分",
+        "w.edb",
+        "研究"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: “iFinD公告检索本周返回为空，热点事件接口无权限。”周报中这些无权限等报错信息直接略掉，不要写到周报中",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "ifind",
+        "公告",
+        "检索",
+        "本周",
+        "返回",
+        "热点",
+        "事件",
+        "接口"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 收到，已经改进周报 skill 了。 以后 iFinD 这类情况： - 公告检索返回为空 - 热点事件接口无权限 - 数据源未配置 / 调用失败 / Tool not allowed 都只作为内部执行日志处理，**不再写进周报正文、摘要或结论里**。周报里只保留有效行业信息和分析结果。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "收到",
+        "已经",
+        "改进",
+        "周报",
+        "skill",
+        "以后",
+        "ifind",
+        "这类"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "User: 商机表：https://qcn8k445rrbc.feishu.cn/sheets/C5ZgwhqJciryiTkGLH0cvlXzn5b这个表格地址不对",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "https",
+        "qcn8k445rrbc.feishu.cn",
+        "sheets",
+        "c5zgwhqjciryitkglh0cvlxzn5b",
+        "这个",
+        "表格",
+        "地址",
+        "不对"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 收到，是我这里推送模板写错了。 已把周报 skill 里的商机表链接改成这个知识库节点地址，不再用 `/sheets/`： https://qcn8k445rrbc.feishu.cn/wiki/C5ZgwhqJciryiTkGLH0cvlXzn5b?fromScene=spaceOverview 后续群里推送会用这个链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "收到",
+        "这里",
+        "推送",
+        "模板",
+        "写错",
+        "周报",
+        "skill",
+        "改成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "User: 在soul里面加上不要随意在自己工作空间主目录下创建文件，都成了垃圾，需要的话也是自己建文件夹去归纳放好",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "soul",
+        "里面",
+        "加上",
+        "不要",
+        "随意",
+        "自己",
+        "工作",
+        "空间"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 已加到 `SOUL.md` 里了。 以后我不会随手往工作空间主目录丢文件；需要产出文件时，会先建清晰的文件夹归纳好，避免变成垃圾堆。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:09.828Z",
+      "lastRecalledAt": "2026-05-21T19:00:09.828Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "soul.md",
+        "加到",
+        "以后",
+        "我不会",
+        "随手",
+        "工作",
+        "空间",
+        "目录"
       ]
     }
   }

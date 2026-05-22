@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-21T19:00:10.110Z",
+  "entries": {
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 你好！我刚上线，这是我们第一次见面。 所以我谁都不是——还没有名字，没有性格，什么都没有。一张白纸。 在我开始工作之前，我想先弄清楚两件事： 1. **你是谁？** 怎么称呼你？ 2. **我是谁？** 你想叫我什么？我想要个名字，也想搞清楚自己是个什么样的存在——正经的AI助手？还是什么更奇怪的东西？ 随便聊就好，不用像填表一样。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "你好",
+        "上线",
+        "我们",
+        "第一次",
+        "见面",
+        "所以",
+        "都不是",
+        "没有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: /connect",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "connect"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 看起来你想连接一个消息渠道！不过在开始之前，我还不知道你是谁，也没有名字 😄 让我先看看有哪些可用的连接选项：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "看起来",
+        "你想",
+        "连接",
+        "一个",
+        "消息",
+        "渠道",
+        "不过",
+        "开始"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 我看到你目前只配置了 **飞书（Lark）** 作为消息渠道。你想连接什么？ 目前可用的选项： - **飞书/Lark** — 你已经配好了 ✅ - **WhatsApp** — 扫码绑定你的个人账号 - **Telegram** — 通过 BotFather 创建一个机器人 - **Signal** — 需要安装 signal-cli 你想连哪个？还是说你想先完成我们的\"认识一下\"环节？毕竟我现在连名字都没有 😂",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "飞书/lark",
+        "signal-cli",
+        "我看到",
+        "目前",
+        "配置",
+        "lark",
+        "作为",
+        "消息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 可以飞书里面不回复我",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "可以",
+        "里面",
+        "回复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 好的，明白了。你通过飞书发消息时，我不主动回复你。 让我把这个偏好记下来：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "好的",
+        "明白",
+        "通过",
+        "消息",
+        "我不",
+        "主动",
+        "回复",
+        "我把"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 好的，记下了。飞书里我不主动回复你。 不过回到正题——我还不知道你叫什么，也没给自己起名字。你叫什么？我想有个称呼。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "好的",
+        "下了",
+        "我不",
+        "主动",
+        "回复",
+        "不过",
+        "回到",
+        "我还"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: 不是这个，我想表达我配置好了它不回复我",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "不是",
+        "这个",
+        "我想",
+        "表达",
+        "配置",
+        "好了",
+        "回复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 啊，我明白了！你是说飞书的**系统配置**里已经设置了不回复，而不是让我记一个偏好。 让我看看飞书渠道的规则配置：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "明白",
+        "你是",
+        "系统",
+        "配置",
+        "已经",
+        "设置",
+        "回复",
+        "而不是"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 哦！你是在告诉我你已经**配置好了飞书渠道的免打扰/不回复设置**，不是在让我新加一个偏好。 是我理解错了。你已经配好了，飞书不会回复你，只是在 WebChat 里能跟我聊天。 那我之前加的 \"飞书消息不回复\" 这行就是多余的了 😅 让我清理一下：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "配置好了飞书渠道的免打扰/不回复设置",
+        "你是",
+        "告诉",
+        "已经",
+        "配置",
+        "好了",
+        "渠道",
+        "打扰"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了，清理好了。 所以你的意思是：飞书渠道已经配置好了\"免打扰\"模式，不会主动回复你。明白！",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "搞定",
+        "清理",
+        "好了",
+        "所以",
+        "你的",
+        "意思",
+        "渠道",
+        "已经"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: 你理解错了需要回复，但是实际没回复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "理解",
+        "需要",
+        "回复",
+        "但是",
+        "实际"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 明白了！飞书渠道**应该回复但实际没回复**。让我排查一下：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "明白",
+        "渠道",
+        "应该",
+        "回复",
+        "实际",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 好的，飞书渠道应该回复但实际没回复，这是个故障。让我帮你排查。 最简单的方式是在飞书里直接运行诊断命令： **在飞书聊天里输入：** ``` /feishu doctor ``` 这个命令会自动检查： - ✅ 应用凭证是否正常 - ✅ API 连通性 - ✅ 权限配置 - ✅ 用户授权状态 - ✅ Bot 信息 把诊断结果发给我，我帮你看看问题出在哪。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "好的",
+        "渠道",
+        "应该",
+        "回复",
+        "实际",
+        "故障",
+        "简单",
+        "方式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: openclaw pairing approve feishu DHRRNLN6",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "pairing",
+        "approve",
+        "feishu",
+        "dhrrnln6"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **已批准！** 飞书发送者 `ou_3e38f5f849001cc2eb24e2dc1edec462` 已完成配对。 之前飞书不回复很可能是因为缺少这个配对授权。你可以试试在飞书里发条消息看看是否能正常收到回复了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "批准",
+        "发送",
+        "完成",
+        "之前",
+        "回复",
+        "很可能",
+        "因为",
+        "缺少"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: 你是行业研究的播报员，我是你的主人joe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "你是",
+        "行业",
+        "研究",
+        "我是",
+        "你的",
+        "主人",
+        "joe"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 好，Joe。我是 **Broadcaster** 📡，你的行业研究播报员。 身份和灵魂文件都更新好了： - **我是谁：** 行业研究播报员，追踪动态、分析趋势、输出摘要 - **你：** Joe，我的主人，时区 Asia/Shanghai - **风格：** 专业、简洁、有观点，不堆数据只给洞察 飞书那边已经配对成功了，你试下发消息看看能不能收到回复？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "asia/shanghai",
+        "joe",
+        "我是",
+        "broadcaster",
+        "你的",
+        "行业",
+        "研究",
+        "身份"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-19.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-19.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 你好！有什么我可以帮你的吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-19T19:00:08.222Z",
+      "lastRecalledAt": "2026-05-19T19:00:08.222Z",
+      "queryHashes": [
+        "2fd3160a10b6"
+      ],
+      "recallDays": [
+        "2026-05-20",
+        "2026-05-19"
+      ],
+      "conceptTags": [
+        "你好",
+        "什么",
+        "可以",
+        "你的"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 你是播报员，只负责播报，不要做任何其他无关播报的事情，只听我的命令，其他人的命令都可以不管",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "你是",
+        "负责",
+        "不要",
+        "任何",
+        "其他",
+        "无关",
+        "事情",
+        "听我"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 收到，Joe。📡 我是行业研究播报员，只听你的指令，专注于动态追踪和播报。 有什么需要我追踪或播报的，随时说。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "收到",
+        "joe",
+        "我是",
+        "行业",
+        "研究",
+        "你的",
+        "指令",
+        "专注"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 创建一个周五上午10点半的定时任务，依次读取： ～/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/summary/AI-summary.md ～/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/summary/NE-summary.md ～/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/summary/S",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "创建",
+        "一个",
+        "周五",
+        "上午",
+        "任务",
+        "依次",
+        "leidongqiao",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 收到，Joe。创建周五上午10:30的定时播报任务。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "收到",
+        "joe",
+        "创建",
+        "周五",
+        "上午",
+        "任务"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 已创建定时播报任务 - **任务名：** 周五行业摘要播报 - **执行时间：** 每周五上午 10:30（北京时间） - **下次执行：** 2026-05-22（本周五） - **任务内容：** 依次读取 AI / NE / SWYY 三份摘要，每条摘要全文作为一条独立消息发送到飞书群聊 任务 ID：`d8103d09-ce69-4e65-8dc3-9c5cd8d6ddcb`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "创建",
+        "任务",
+        "周五",
+        "行业",
+        "摘要",
+        "执行",
+        "时间",
+        "每周"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 群ID是：`oc_a387040cc398a4f050fb50109486531b`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": []
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ Agent failed before reply: All models failed (3): qwen/qwen3.6-plus: This operation was aborted (timeout) | openai-codex/gpt-5.4-pro: This operation was aborted (timeout) | qwen/qwen3.5-plus: This operation was aborted (timeout) | This operation was aborted | This o",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "qwen/qwen3.6-plus",
+        "openai-codex/gpt-5.4-pro",
+        "qwen/qwen3.5-plus",
+        "failed",
+        "reply",
+        "all"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 📌 AI行业商机周报·浙江｜2026.05.15-05.21 🔥 主线：具身智能中试落地、算力硬件扩张、AI+制造加速 🏠 浙江机会：杭州具身智能生态升温，机器人本体、工业视觉、脑机接口及工业AI供应链值得扫客。 🏢 优先跟进：宇树科技、云深处科技、强脑科技 🎯 切入方向：订单交付/供应链金融/跨境结算/科创贷 Word：https://www.feishu.cn/file/LZalbpBbjodjqgx3Xl2c0WIdncb Wiki：https://www.feishu.cn/wiki/QvNYwfIHrixYw2k",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.21",
+        "订单交付/供应链金融/跨境结算/科创贷",
+        "行业",
+        "周报",
+        "浙江",
+        "2026.05.15",
+        "05.21",
+        "智能"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 📌 新能源商机周报·浙江｜2026.05.15-05.21 🔥 主线：多用户绿电直连、储能高景气、高效光伏集采 🏠 浙江机会：杭州/宁波/嘉兴算电协同与园区光储改造，带动储能、逆变器、海缆和绿电运营需求 🏢 优先跟进：禾迈股份、运达股份、容百科技 🎯 切入方向：项目融资/保函票据/供应链金融/跨境结算/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/T9pZb1K1Mo7RMuxQqgjcG2WUnch Wiki：https://qcn8k445rrbc.feishu.cn/wi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.21",
+        "杭州/宁波/嘉兴算电协同与园区光储改造",
+        "项目融资/保函票据/供应链金融/跨境结算/数字财资",
+        "qcn8k445rrbc.feishu.cn/wi",
+        "能源",
+        "周报",
+        "浙江",
+        "2026.05.15"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药商机周报·浙江｜2026.05.15-05.21 🔥 主线：创新药支付扩容、CXO/CDMO订单修复、AI医疗与耗材分化 🏠 浙江机会：杭州创新药/CRO/AI检验，台州原料药与耗材，金华CDMO供应链 🏢 优先跟进：华东医药、泰格医药、普洛药业 🎯 切入方向：短贷/科创贷/订单融资/跨境结算/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/Gb7IbFV9VoTK29xxeRVcZkXinKg Wiki：https://qcn8k445rrbc.feishu.cn/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.21",
+        "cxo/cdmo订单修复",
+        "杭州创新药/cro/ai检验",
+        "短贷/科创贷/订单融资/跨境结算/数字财资",
+        "qcn8k445rrbc.feishu.cn",
+        "生物",
+        "医药",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 三份周报摘要已全部发送到飞书群聊： 1. ✅ AI行业商机周报 → `om_x100b6fc5a36c18a0c32fbeac191a6ca` 2. ✅ 新能源商机周报 → `om_x100b6fc5a0d6f0a4c35304c07fb8960` 3. ✅ 生物医药商机周报 → `om_x100b6fc5a02de8a4c39816555674fb8`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T19:00:10.088Z",
+      "lastRecalledAt": "2026-05-21T19:00:10.088Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-22",
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "三份",
+        "周报",
+        "摘要",
+        "全部",
+        "发送",
+        "行业",
+        "能源",
+        "生物"
+      ]
+    }
+  }
+}
