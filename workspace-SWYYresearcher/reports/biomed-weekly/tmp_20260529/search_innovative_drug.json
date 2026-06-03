@@ -1,0 +1,326 @@
+{
+  "query": "\u521b\u65b0\u836f \u65b0\u836f\u83b7\u6279 IND NDA CDE\u5ba1\u8bc4 \u4e34\u5e8a\u8bd5\u9a8c 2026",
+  "number_of_results": 0,
+  "results": [
+    {
+      "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=688177&id=9096769",
+      "title": "\u516c\u53f8\u516c\u544a_\u767e\u5965\u6cf0\uff1a2022\u5e74\u5e74\u5ea6\u62a5\u544a\u6458\u8981\u65b0\u6d6a\u8d22\u7ecf",
+      "content": "7 days ago \u00b7 \u8fd1\u5e74\uff0cCDE\u5df2\u9646\u7eed\u53d1\u5e03\u82e5\u5e72\u4f18\u5316\u5ba1\u8bc4\u5ba1\u6279\u7684\u653f\u7b56\uff0c\u6ce8\u518c\u7533\u8bf7\u65b9\u9762\u5982\u300a\u5173\u4e8e\u6539\u9769\u836f\u54c1\u533b\u7597\u5668\u68b0\u5ba1\u8bc4\u5ba1\u6279\u5236\u5ea6\u7684\u610f\u89c1\u300b\u7b49\uff0c\u4e34\u5e8a\u8bd5\u9a8c\u5ba1\u8bc4\u65b9\u9762\u5982\u300a\u5173\u4e8e\u8c03\u6574\u836f\u7269\u4e34\u5e8a\u8bd5\u9a8c\u5ba1\u8bc4\u5ba1\u6279\u7684\u516c\u544a\u300b\u7b49\u3002",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "money.finance.sina.com.cn",
+        "/corp/view/vCB_AllBulletinDetail.php",
+        "",
+        "stockid=688177&id=9096769",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "url": "https://www.huxiu.com/article/4862172.html",
+      "title": "\u77f3\u836f\u96c6\u56e2\u4e00\u5b63\u5ea6\u5f52\u6bcd\u51c0\u5229\u6da6\u540c\u6bd4\u4e0b\u964d41.8%\uff0c\u5254\u9664\u6388\u6743\u8d39\u540e\u964d\u5e45\u6536\u7a84\u81f37.3%",
+      "content": "\u56fe\uff1a\u77f3\u836f\u7814\u53d1\u6295\u5165\u60c5\u51b5\uff082025\u5168\u5e74+2026Q1\uff09 \u00b7 \u4f46\u95ee\u9898\u7684\u5173\u952e\u4e0d\u662f\u7ba1\u7ebf\u591a\u4e0d\u591a\uff0c\u800c\u662f\u5546\u4e1a\u5316\u901f\u5ea6\u662f\u5426\u8d76\u5f97\u4e0a\u65e7\u4e1a\u52a1\u4e0b\u6ed1\u7684\u901f\u5ea6\u3002\u521b\u65b0\u836f\u4eceIII\u671f\u5230\u83b7\u6279\u3001\u4ece\u83b7\u6279\u5230\u8fdb\u9662\u3001\u4ece\u8fdb\u9662\u5230\u653e\u91cf\uff0c\u6bcf\u4e00\u6b65\u90fd\u4ee5\u5b63\u5ea6\u751a\u81f3\u5e74\u5ea6\u4e3a\u5355\u4f4d\u3002\u800c\u96c6\u91c7\u964d\u4ef7\u4ece\u901a\u77e5\u5230\u6267\u884c\uff0c\u5468\u671f\u53ef\u4ee5\u538b\u7f29\u5230\u534a\u5e74\u3002\u672c\u5c4aASCO\u4e0a\uff0c\u77f3\u836f\u5c06\u643a\u591a\u6b3e\u521b\u65b0\u836f\u7ba1\u7ebf\u4eae\u76f8\uff0c\u5176\u4e2d\u9488\u5bf9\u80ba\u764c\u7684EGFR ADC\u662f\u56fd\u5185\u9996\u4e2a\u8fdb\u5165III\u671f\u4e34\u5e8a\u7684\u540c\u7c7b\u4ea7\u54c1\uff0c\u5df2\u83b7FDA\u5feb\u901f\u901a\u9053\u8d44\u683c\uff1b\u4ece\u5eb7\u5b81\u6770\u745e\u5f15\u8fdb\u7684KN026\uff08HER2\u53cc\u6297\uff09\u6709\u671b2026\u5e74\u83b7\u6279\uff0c\u586b\u8865\u56fd\u5185HER2\u9633\u6027\u80c3\u764c\u4e8c\u7ebf\u6cbb\u7597\u7684\u7a7a\u767d\u3002",
+      "publishedDate": null,
+      "thumbnail": "",
+      "engine": "brave",
+      "parsed_url": [
+        "https",
+        "www.huxiu.com",
+        "/article/4862172.html",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "brave"
+      ],
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general"
+    },
+    {
+      "template": "default.html",
+      "title": "\u56fd\u5185\u521b\u65b0\u836f/\u6539\u826f\u578b\u65b0\u836f\u7533\u8bf7\u4e34\u5e8a/\u83b7\u6279\u4e34\u5e8a/\u7533\u62a5\u4e0a\u5e02/\u83b7\u6279\u4e0a\u5e02\u6570\u636e\u5206\u6790\u4e13\u9898\u96c6\u5408-\u6469\u71b5\u533b\u836f",
+      "content": "\u6839\u636e\u6469\u71b5\u533b\u836f\u6570\u636e\u5e93\u7edf\u8ba1\uff0c2026.05.18-2026.05.24\u671f\u95f4\u5171\u670984\u4e2a\u521b\u65b0\u836f/\u6539\u826f\u578b\u65b0\u836f\u4e34\u5e8a\u7533\u8bf7/\u4e0a\u5e02\u7533\u8bf7\u83b7\u56fd\u5bb6\u836f\u54c1\u76d1\u7763\u7ba1\u7406\u5c40\u836f\u54c1\u5ba1\u8bc4\u4e2d\u5fc3\uff08CDE\uff09\u627f\u529e\u3002 \u5176\u4e2d\u56fd\u4ea7\u836f\u54c1\u53d7\u7406\u53f777\u4e2a\uff0c\u8fdb\u53e3\u836f\u54c1\u53d7\u7406\u53f77\u4e2a\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "url": "https://www.pharnexcloud.com/zhuanti/5",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "www.pharnexcloud.com",
+        "/zhuanti/5",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://bydrug.pharmcube.com/news/detail/fffb33137af2ebf942684bd716937e58",
+      "title": "VIVA\u670b\u53cb\u5708\u4e28VVN461\u7528\u4e8e\u6cbb\u7597\u767d\u5185\u969c\u672f\u540e\u708e\u75c7\u7684II\u671f\u4e34\u5e8a\u8bd5\u9a8c\u7533\u8bf7\u6b63\u5f0f ...",
+      "content": "2 days ago \u00b7 \u8fd1\u65e5\uff0c\u7531\u7ef4\u4e9a\u751f\u7269\u53c2\u4e0e\u6295\u8d44\u5b75\u5316\u7684\u773c\u79d1\u521b\u65b0\u836f\u516c\u53f8\u7ef4\u7738\u751f\u7269\u5ba3\u5e03\uff0cFDA\u6279\u51c6\u8be5\u516c\u53f8\u81ea\u4e3b\u7814\u53d1\u836f\u7269VVN461\u7684II\u671f\u4e34\u5e8a\u8bd5\u9a8c\u7533\u8bf7\uff08IND\uff09\uff0c\u7528\u4e8e\u6cbb\u7597\u767d\u5185\u969c\u672f\u540e\u708e\u75c7\u3002Missing: CDE | Show results with:CDE",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "bydrug.pharmcube.com",
+        "/news/detail/fffb33137af2ebf942684bd716937e58",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "\u91cc\u7a0b\u7891\uff5c\u8d5b\u6d66\u751f\u7269\u5e72\u7ec6\u80de\u4e00\u7c7b\u65b0\u836f IND \u83b7 CDE \u53d7\u7406 2026 \u5e74 5 \u6708 23 \u65e5 \u533b\u9ea6\u5ba2\u65b0\u95fb eMedClub News \u56fd\u5bb6\u7ea7\u9ad8\u65b0 ...",
+      "content": "\u56fd\u5bb6\u7ea7\u9ad8\u65b0\u6280\u672f\u4f01\u4e1a\u3001\u4e2d\u56fd\u533b\u836f\u751f\u7269\u6280\u672f\u534f\u4f1a\u7406\u4e8b\u5355\u4f4d \u2014\u2014\u8d5b\u6d66 \u751f\u7269\u79d1\u6280 \uff08\u957f\u6625\uff09\u6709\u9650\u516c\u53f8\u81ea\u4e3b\u7814\u53d1\u7684\u4eba\u8110\u5e26\u6765\u6e90 3D \u95f4\u5145\u8d28\u5e72\u7ec6\u80de\u6ce8\u5c04\u6db2\u7684\u4e00\u7c7b\u65b0\u836f IND \u7533\u8bf7\uff0c\u6b63\u5f0f\u83b7\u56fd\u5bb6\u836f\u76d1\u5c40\u836f\u54c1\u5ba1\u8bc4\u4e2d\u5fc3\uff08CDE\uff09\u53d7\u7406\uff0c\u9002\u5e94\u75c7\u805a\u7126\u7f3a\u8840\u6027\u8111\u5352\u4e2d\uff0c\u53d7\u7406\u53f7\uff1aCXSL2600554\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "url": "https://xueqiu.com/5603603160/390532493",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "xueqiu.com",
+        "/5603603160/390532493",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://www.ttbiotech.com/",
+      "title": "\u4e0a\u6d77\u540c\u817e\u751f\u7269\u79d1\u6280\u6709\u9650\u516c\u53f8",
+      "content": "19 hours ago \u00b7 \u8fd1\u65e5\uff0c\u56fd\u5185\u5916\u6ccc\u4f53\u9886\u57df\u8fce\u6765\u4e00\u4e2a\u4ee4\u4eba\u632f\u594b\u7684\u91cc\u7a0b\u7891\u2014\u2014\u4e0a\u6d77\u601d\u5fb7\u514b\u7d22\u751f\u7269\u79d1\u6280\u6709\u9650\u516c\u53f8\u81ea\u4e3b\u7814\u53d1\u7684I\u7c7b\u751f\u7269\u65b0\u836fSTX11101\u6ce8\u5c04\u6db2\uff0c\u4e34\u5e8a\u8bd5\u9a8c\u7533\u8bf7\uff08IND\uff09\u5df2\u83b7\u56fd\u5bb6\u836f\u54c1\u76d1\u7763\u7ba1\u7406\u5c40\u836f\u54c1\u5ba1\u8bc4\u4e2d\u5fc3 ...Missing: NDA | Show results with:NDA",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "www.ttbiotech.com",
+        "/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "\u91cc\u7a0b\u7891\uff5c\u8d5b\u6d66\u751f\u7269\u5e72\u7ec6\u80de\u4e00\u7c7b\u65b0\u836f Ind \u83b7 Cde \u53d7\u7406",
+      "content": "\u9664\u6b64\u4e4b\u5916\uff0c\u516c\u53f8\u5e03\u5c40\u591a\u6761\u7814\u53d1\u7ba1\u7ebf\uff0c\u76ee\u524d\u5df2\u5b8c\u6210\u5e72\u7ec6\u80de\u5728\u6cbb\u7597\u7f3a\u8840\u6027\u8111\u5352\u4e2d\u3001\u7cd6\u5c3f\u75c5\u3001\u80be\u635f\u4f24\u3001\u795e\u7ecf\u7ec4\u7ec7\u635f\u4f24\u7b49\u9886\u57df\u7684\u4e00\u7cfb\u5217\u57fa\u7840\u6027\u7814\u7a76\u3002 \u6b64\u6b21 IND \u7684\u6210\u529f\u7533\u62a5\uff0c\u5145\u5206\u9a8c\u8bc1\u4e86\u8d5b\u6d66\u751f\u7269\u5728\u5e72\u7ec6\u80de\u836f\u7269\u9886\u57df\u7684\u6280\u672f\u5b9e\u529b\u4e0e\u5408\u89c4\u6027\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "url": "https://www.sohu.com/a/1026600321_120088173",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "www.sohu.com",
+        "/a/1026600321_120088173",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://www.163.com/dy/article/KTRKC25705568W0A.html",
+      "title": "\u4e59\u809d\u65b0\u836f\u4e4b\u6218\uff0c\u5168\u7403\u6700\u5927\u5e02\u573a\u3001\u6700\u624e\u5806\u7ba1\u7ebf\u3001\u6700\u5927\u8d44\u672c\u6295\u5165\u3002\u3002\u3002 - \u7f51\u6613",
+      "content": "3 days ago \u00b7 2021\u5e748\u6708\u83b7\u5f97\u201c\u7a81\u7834\u6027\u6cbb\u7597\u836f\u7269\u201d\u8ba4\u5b9a\uff0c2026\u5e743\u670817\u65e5\u516c\u793a\u200cBepirovirsen\u200c \u62df\u7eb3\u5165\u4f18\u5148\u5ba1\u8bc4\u54c1\u79cd\u3002 2\uff0c\u6d69\u535a\u533b\u836fAHB-137\uff0c\u53cd\u4e49\u5be1\u6838\u82f7\u9178\uff08ASO\uff09\uff0cIIa\u671f300mg\u7ec462%\u60a3\u8005HBsAg\u8f6c\u9634\uff08 ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "www.163.com",
+        "/dy/article/KTRKC25705568W0A.html",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "#IND-\u65b0\u95fb\u6807\u7b7e\u805a\u5408 -\u51711175\u6761- \u7b2c1\u9875-ByDrug-\u4e00\u7ad9\u5f0f\u533b\u836f\u8d44\u6e90\u5171\u4eab\u4e2d\u5fc3-\u533b\u836f\u9b54\u65b9",
+      "content": "51\u6b3e\u54c1\u79cd\u8fc7\u8bc4\uff0c\u5b89\u5fbd\u6770\u73ba\u533b\u836f\u9886\u8dd1 \u56fd\u518581\u6b3e\u65b0\u836fIND\u83b7\u6279\u3002 \u6839\u636e\u6469\u71b5\u533b\u836f\u6570\u636e\u5e93\u7edf\u8ba1\uff0c2026\u5e745\u670811\u65e5\u81f32026\u5e745\u670817\u65e5\u671f\u95f4\uff0c\u5171\u6709107\u4e2a\u521b\u65b0\u836f/\u6539\u826f\u578b\u65b0\u836f\u4e34\u5e8a\u7533\u8bf7/\u4e0a\u5e02\u7533\u8bf7\u83b7\u56fd\u5bb6\u836f\u54c1\u76d1\u7763\u7ba1\u7406\u5c40\u836f\u54c1\u5ba1\u8bc4\u4e2d\u5fc3 \uff08CDE\uff09 \u627f\u529e \uff08\u6309\u53d7\u7406\u53f7\u7edf\u8ba1\uff0c\u4e0d\u542b\u8865\u5145\u7533\u8bf7\uff09 \u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "url": "https://bydrug.pharmcube.com/news/summary/tag/IND",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "bydrug.pharmcube.com",
+        "/news/summary/tag/IND",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "template": "default.html",
+      "url": "https://www.bilibili.com/video/BV1FnGt62EU4/",
+      "title": "\u60f3\u8e81\u52a8\u7684\u521b\u65b0\u836f\uff0c\u51c6\u5907\u8fce\u63a5\u53c8\u4e00\u4e2a\u201cDeepSeek\u65f6\u523b\u201d\uff1f\u7b2c\u4e8c\u6ce2\u884c\u60c5\u5728\u8def\u4e0a\u4e86\u5417\uff1f_\u54d4\u54e9\u54d4\u54e9_bilibili",
+      "content": "\u4f60\u6709\u6ca1\u6709\u89c9\u5f97\uff0c\u6700\u8fd1\u521b\u65b0\u836f\u53c8\u5f00\u59cb\u201c\u8822\u8822\u6b32\u52a8\u201d\u4e86\uff1f\u56de\u60f3\u53bb\u5e74\uff0c\u5dee\u4e0d\u591a\u5c31\u662f\u8fd9\u4e2a\u65f6\u5019\uff0c\u6211\u4eec\u5373\u5c06\u8fce\u6765\u521b\u65b0\u836f\u7684\u201cDeepSeek\u65f6\u523b\u201d\u3002\u800c\u6700\u8fd1\u521b\u65b0\u836f\u7684\u79cd\u79cd\u70ed\u70b9\uff0c\u4f3c\u4e4e\u53c8\u5728\u915d\u917f\u7740\u201c\u7b2c\u4e8c\u6625\u201d\u3002 \u4e0e\u53bb\u5e74\u5982\u706b\u5982\u837c\u7684BD\u4ea4\u6613\u4e00\u6837\uff0c\u4eca\u5e745\u670812\u65e5\uff0c\u56fd\u5185\u521b\u65b0\u836f\u9f99\u5934\u62ff\u4e0b\u4e86\u5168\u7403\u9876\u5c16\u836f\u4f01\u7684BD\u5927\u5355\uff0c\u603b\u91d1\u989d\u9ad8\u8fbe152\u4ebf\u7f8e\u5143\uff0c\u8fd9\u662f\u4e2d\u56fd\u521b\u65b0\u836f\u53f2\u4e0a\u7b2c\u4e8c\u5927\u7684BD\u4ea4\u6613\u3002 \u5f80\u524d\u51e0\u5929\uff0c\u56fd\u5bb6\u533b\u4fdd\u5c40\u5728\u533b\u4fdd\u8c03\u6574\u65b9\u6848\u4e2d\uff0c\u9996\u6b21\u5f15\u5165\u201c\u9884\u7533\u62a5\u201d\u673a\u5236\u3002\u521b\u65b0\u836f\u53ea\u8981\u8fc7\u4e86\u6280\u672f\u5ba1\u8bc4\uff0c\u5c31\u53ef\u4ee5\u62a5\u540d\u8fdb\u533b\u4fdd\u3002",
+      "publishedDate": null,
+      "thumbnail": "https://imgs.search.brave.com/stxlDUY3sEMy-KMJK4YGyNotuDZFdU9Ht7KHJbkfITE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pMi5o/ZHNsYi5jb20vYmZz/L2FyY2hpdmUvYjA2/MmIxNzU0NDJlNmNi/ZjRkNTRmMjlhOTdi/OWRkMzc4MjUwNDc1/My5qcGdAMTAwd18x/MDBoXzFjLnBuZw",
+      "engine": "brave",
+      "parsed_url": [
+        "https",
+        "www.bilibili.com",
+        "/video/BV1FnGt62EU4/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "brave"
+      ],
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general"
+    }
+  ],
+  "answers": [],
+  "corrections": [],
+  "infoboxes": [],
+  "suggestions": [],
+  "unresponsive_engines": [
+    [
+      "karmasearch",
+      "access denied"
+    ],
+    [
+      "startpage",
+      "CAPTCHA"
+    ]
+  ]
+}

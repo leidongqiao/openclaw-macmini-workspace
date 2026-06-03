@@ -1,0 +1,19 @@
+Usage:
+  lark-cli wiki +move [flags]
+
+Flags:
+      --apply                        submit a move request when the caller lacks permission to move the document immediately
+      --dry-run                      print request without executing
+  -h, --help                         help for +move
+  -q, --jq string                    jq expression to filter JSON output
+      --node-token string            wiki node token to move inside Wiki
+      --obj-token string             Drive document token for docs-to-wiki mode
+      --obj-type string              Drive document type for docs-to-wiki mode (doc|sheet|bitable|mindnote|docx|file|slides)
+      --source-space-id string       source wiki space ID for --node-token; if omitted, it is resolved from the node token
+      --target-parent-token string   target parent wiki node token; if omitted for docs-to-wiki, the document is moved to the target space root
+      --target-space-id string       target wiki space ID; required for docs-to-wiki, optional for node move when --target-parent-token is set
+
+Global Flags:
+      --profile string   use a specific profile
+
+Error: unknown flag: --parent-node-token

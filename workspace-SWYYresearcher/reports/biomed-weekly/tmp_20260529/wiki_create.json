@@ -1,0 +1,36 @@
+[lark-cli] [WARN] proxy detected: HTTPS_PROXY=http://127.0.0.1:7890 — requests (including credentials) will transit through this proxy. Set LARK_CLI_NO_PROXY=1 to disable proxy.
+Creating wiki node...
+Created wiki node in space 7637083944097270734 via explicit_space_id.
+Warning: resource was created with bot identity, but no current user open_id is configured, so auto-grant was skipped. Run `lark-cli auth login` and retry, or grant permission manually.
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "has_child": false,
+    "node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "node_type": "origin",
+    "obj_token": "DQzkdliElojWzvxV6qTcGbaYnMg",
+    "obj_type": "docx",
+    "origin_node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "parent_node_token": "EPTRwyE9Iir6xfkS7w3c0Qkpn8b",
+    "permission_grant": {
+      "hint": "No current user identity (not logged in or session expired). Run `lark-cli auth login` and retry, or grant permission manually via the Lark document UI.",
+      "message": "Resource was created with bot identity, but no current CLI user open_id is configured, so current user full_access (可管理权限) was not granted. You can retry later or continue using bot identity.",
+      "perm": "full_access",
+      "status": "skipped"
+    },
+    "resolved_by": "explicit_space_id",
+    "resolved_space_id": "7637083944097270734",
+    "space_id": "7637083944097270734",
+    "title": "biomed-weekly-20260529",
+    "url": "https://qcn8k445rrbc.feishu.cn/wiki/DdPHwC4KriLBtJkZcqFchaaOn3c"
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.38",
+      "latest": "1.0.42",
+      "message": "lark-cli 1.0.42 available, current 1.0.38, run: lark-cli update"
+    }
+  }
+}

@@ -66,6 +66,18 @@ description: |
 
 **研究方向：新能源全产业链**（光伏、风电、储能、氢能、动力电池及材料、新能源汽车、充电桩/换电站、电网及特高压、综合能源服务、碳交易/绿证等）
 
+## 运行护栏（必须先执行）
+
+这些规则比后文任何历史踩坑记录优先级更高。若后文出现旧命令或矛盾写法，以本节为准。
+
+1. **最终群聊输出只有一种格式**：cron / delivery / 群聊可见的最终 assistant 回复，必须是第十步的「200字左右摘要 + Word/Wiki/商机表三个链接」。不得把执行过程、报错诊断、修复说明作为最终回复。
+2. **关键路径先完成并落盘**：Word、Wiki、商机表、`reports/summary/NE-summary.md` 四项完成后，优先输出第十步摘要。后续移动、排序、抽查、补归档属于收尾，不得覆盖摘要。
+3. **非关键收尾必须用保护命令**：`wiki +move`、重复节点清理、抽查补修、排序刷新等非关键动作，不能直接以裸命令执行。必须包在 `if ! ...; then ...; fi` 或等价逻辑中，失败只写内部日志且整体退出码保持 0，避免被 runtime 记录为 cron error。
+4. **禁止用 `&&` 串联飞书写操作**：尤其禁止把 `wiki +move && docs +update`、`docs +update && fetch` 写成一条命令。每个写操作单独执行，先判断前置条件，再决定是否继续。
+5. **docs +update 只允许 v2 写法**：统一使用 `--api-version v2 --command overwrite --content @./wiki_content.md --doc-format markdown`。禁止使用旧写法 `--mode overwrite --markdown`，也不要在同名覆盖场景继续使用旧参数。
+6. **Wiki 链接只用租户域名**：最终输出和正文中使用 `https://qcn8k445rrbc.feishu.cn/wiki/<node_token>`，不得使用 `https://www.feishu.cn/wiki/...`。
+7. **失败信息不进周报正文**：iFinD 403/429/空结果、web_fetch 404/DNS/lock stale、权限不足等，只能进入内部日志。
+
 ## Token 优化原则
 
 - **搜索优先用 searxng**（本地 SearXNG 实例），Brave web_search 作为备用；searxng 无 API 限流、无布尔 OR 语法问题、无需逐条串行。用法：`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`；时间范围用 `--time-range day`（近1天）或 `--time-range week`（近7天）
@@ -104,12 +116,13 @@ description: |
 
 ### 3. 飞书 Wiki
 
-- **Wiki 节点默认挂子目录**: `wiki +node-create --space-id` 创建后可能挂在某个 parent 下。如需根目录，创建后用 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。
+- **Wiki 根目录校验**: `wiki +node-create --space-id` 通常直接创建在根目录。创建后用 `wiki +node-get --token "https://<tenant>.feishu.cn/wiki/<node_token>" --format json` 或 `wiki nodes list --space-id <space_id>` 检查新节点的 `parent_node_token` 是否为空字符串（空间层级）。若已为空，直接跳过移动。若挂在非根目录子节点下，执行 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。**移动/排序是非关键步骤**：失败时最多重试 1 次；仍失败只写内部日志，不能中断周报任务，必须继续写摘要并推送群聊。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式，标题和正文之间加空行。
 - **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
+- **Wiki 文档标题必须匹配节点名**: wiki 内容 markdown 的第一个 `#` 标题**必须**是 `ne-weekly-YYYYMMDD`，和 wiki 节点名一致。`docs +update --api-version v2 --command overwrite` 会把 markdown 第一个 `#` 标题设为文档标题，覆盖 wiki 节点原标题。如果 markdown 没有 `#` 标题，标题会变成 "Untitled"。
 - **Wiki 链接域名**: 最终推送必须使用租户域名链接，例如 `https://qcn8k445rrbc.feishu.cn/wiki/<node_token>`，不要写成 `https://www.feishu.cn/wiki/<node_token>`。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连。`lark-cli docs +fetch --format json` 的正文路径是 `.data.markdown`，不是 `.markdown`。
-- **同名 Wiki 已存在时直接覆盖**: 创建前先列出全部节点查重；若已有 `ne-weekly-YYYYMMDD`，不要重复新建，使用 `docs +update --mode overwrite --new-title` 覆盖更新，并保留该节点链接。
+- **同名 Wiki 已存在时直接覆盖**: 创建前先列出全部节点查重；若已有 `ne-weekly-YYYYMMDD`，不要重复新建，使用 v2 `docs +update --api-version v2 --command overwrite --content @./wiki_content.md --doc-format markdown` 覆盖更新，并保留该节点链接。
 
 ### 4. 商机表格去重与写入
 
@@ -582,7 +595,9 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 **Word 输出要求：**
 - **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`（即 NE Researcher 工作空间的 `reports/ne-weekly/`），不得保存到其他目录；如目录不存在先创建。
-- 文件名格式：`行业商机周报_新能源_YYYYMMDD.docx`
+- **同步至 Codex 上传目录**：Word 文件生成后，先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/新能源` 目录下的所有文件（目录本身不要删除），然后将生成的 Word 周报文件拷贝一份到该目录。
+- 文件名格式：`ne-weekly-YYYYMMDD.docx`（与 wiki 节点名 `ne-weekly-YYYYMMDD` 一致）
+- **同名 Word 文件覆盖**：生成前先检查保存目录下是否已存在 `ne-weekly-YYYYMMDD.docx`；若已存在则直接覆盖更新，不重复创建。
 - 字体使用华文楷体
 - **Word 样式优化**：Word 版必须是干净的报告排版，不要把 Markdown 原始符号带入正文；生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段，企业信息可用短段落或简洁项目符号，但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 
@@ -751,9 +766,22 @@ fi
    ⚠️ **必须搜索所有节点**（不限 `parent_node_token`），否则第一次创建时可能被放在「首页」下，第二次搜不到就重复创建了！
    ⚠️ **如果找到多个同名文档**，选 `obj_edit_time` 最新的那个，用 `docs +update` 覆盖；其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
+   ⚠️ **Wiki 排序规则（时间倒序，非阻塞）**：周报 wiki 文档在知识库根目录中尽量按**时间倒序排列**，即最新周报排在最前面。飞书 wiki 根目录节点列表不支持显式排序参数（无 `insert_after` 等），节点顺序由创建/移动时间决定。实现方式：创建新周报后，先用 `wiki +node-get --token "https://<租户域名>.feishu.cn/wiki/<node_token>" --format json` 或节点列表确认 `parent_node_token`；若已为空，直接跳过 `move`；若不为空，再执行受保护的 `wiki +move` 将其移回根目录。`move` 只影响知识库排序/位置，**不得影响周报推送主流程**：失败时重试 1 次，仍失败则记录内部日志并继续第十步推送摘要，不要让 cron 以 error 结束。
+
+   非关键移动必须使用保护写法，不得裸跑：
+   ```bash
+   if ! ~/.npm-global/bin/lark-cli wiki +move --profile "$BOT_PROFILE" --as bot \
+     --node-token "$NODE_TOKEN" \
+     --target-space-id "$WIKI_SPACE_ID" \
+     > ./wiki_move.log 2>&1; then
+     echo "[internal] wiki move failed, continue: $(tail -1 ./wiki_move.log)" >> ./run.log
+   fi
+   ```
+
 2. **如果找到同名文档**：
-   - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 覆盖内容
-   - 输出文档链接：`https://www.feishu.cn/wiki/<node_token>`
+   - 将 wiki Markdown 写入本地文件（如 `wiki_content.md`），首行必须是 `# $WEEKLY_TITLE_PREFIX-YYYYMMDD`
+   - 使用 `lark-cli docs +update --profile $BOT_PROFILE --as bot --api-version v2 --doc <obj_token> --command overwrite --content @./wiki_content.md --doc-format markdown` 覆盖内容
+   - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`（不要用 www.feishu.cn）
 
 3. **如果未找到同名文档**：
    - 使用以下命令以**机器人身份**创建（注意必须带 profile）：
@@ -764,9 +792,10 @@ fi
        --obj-type "docx"
      ```
    - 从返回结果提取 `obj_token`（用于内容更新）和 `node_token`（用于 URL）
-   - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 写入内容
-   - 输出文档链接：`https://www.feishu.cn/wiki/<node_token>`
-   - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`，如果不在根目录，用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
+   - 将 wiki Markdown 写入本地文件（如 `wiki_content.md`），首行必须是 `# $WEEKLY_TITLE_PREFIX-YYYYMMDD`
+   - 使用 `lark-cli docs +update --profile $BOT_PROFILE --as bot --api-version v2 --doc <obj_token> --command overwrite --content @./wiki_content.md --doc-format markdown` 写入内容
+   - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`（不要用 www.feishu.cn）
+   - ✅ 创建后用 `wiki +node-get --token "https://<租户域名>.feishu.cn/wiki/<node_token>" --format json` 或 `wiki nodes list --space-id "$WIKI_SPACE_ID"` 检查新节点的 `parent_node_token`；若为空则跳过移动；若挂在非根目录子节点下，按上面的保护写法执行 `wiki +move`。移动失败不得抛出到主流程，最多重试 1 次后继续推送。
 
 **禁止**使用 `feishu_wiki_space_node` 工具（该工具可能将文档创建在首页下），必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id` 命令。
 
@@ -874,12 +903,12 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-NEresearcher/reports/sum
 10. **搜索优先 searxng**：searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用，且不用 OR 语法（Brave 不支持），改用空格分隔关键词。
 11. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告，不影响功能。
 12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`，文件名格式 `行业商机周报_新能源_YYYYMMDD.docx`；生成后上传飞书 Drive；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
+13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`，文件名格式 `ne-weekly-YYYYMMDD.docx`（与 wiki 节点名一致）；生成前检查同名文件已存在则直接覆盖；生成后上传飞书 Drive；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
 14. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现"（日期，来源）""（来源：XXX）"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 必须执行**：不可跳过。先在循环外做一次快速探测确认环境可用，再执行全部 3 个查询。
 16. **所有飞书 API 统一走 lark-cli**：sheets/drive/docs/wiki 操作全部用 lark-cli，不用 Python urllib 直接调 API（HTTPS_PROXY 代理会导致 SSL 证书验证失败）。
 17. **lark-cli 文件上传路径**：`--file` 必须是当前工作目录下的相对路径，不支持绝对路径。操作前先 `cd` 到文件所在目录。
-18. **lark-cli wiki 创建后需检查位置**：`wiki +node-create` 默认可能放在「首页」子节点下，创建后需检查 `parent_node_token`，如在子节点下需 `wiki +move` 移回根目录。
+18. **lark-cli wiki 创建后检查根目录**：`wiki +node-create` 通常直接创建在根目录。创建后用 `wiki +node-get --token "https://<租户域名>.feishu.cn/wiki/<node_token>" --format json` 或 `wiki nodes list --space-id` 确认 `parent_node_token` 为空（空间层级），若为空直接跳过；若挂在可见子节点下再 `wiki +move` 移回根目录。`wiki +move` 只用于位置/排序，不是周报生成和推送的关键路径，失败不得导致 cron 失败通知覆盖正常摘要。
 
 ## 踩坑记录（供后续优化参考）
 
@@ -892,7 +921,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-NEresearcher/reports/sum
 5. **iFinD 被跳过或调用签名错误**：未先做环境探测就跳过，或把 `search_notice` 误当成 server_type。→ 必须先探测再执行；Node 调用签名固定为 `call('news','search_notice', params)` / `call('news','search_trending_news', params)`。
 6. **Python urllib SSL 证书验证失败**：HTTPS_PROXY 代理导致 `self-signed certificate in certificate chain`。→ 全部改用 lark-cli。
 7. **lark-cli 上传文件要求相对路径**：绝对路径直接报错。→ 先 `cd` 到目录再用 `./文件名`。
-8. **wiki 创建后自动嵌套在子节点下**：`wiki +node-create` 默认放在「首页」节点下。→ 创建后需 `wiki +move` 移回根目录。
+8. **wiki 文档标题被内容覆盖**：`docs +update --api-version v2 --command overwrite` 会把 markdown 第一个 `#` 标题覆盖为文档标题。→ wiki 内容 markdown 首行**必须**是 `# ne-weekly-YYYYMMDD`，和 wiki 节点名一致。
 9. **lark-cli 子命令语法不统一**：每个子命令 flag 风格不一致，需反复 `--help`。→ 在 skill 中预定义完整命令。
 10. **Word 下载链接格式**：`https://<租户域名>.feishu.cn/file/<file_token>`，上传文件后拼接。
 11. **未并行执行搜索**：skill 说"并行执行"但实际串行。→ searxng 支持并行，Brave 需串行。
@@ -903,6 +932,9 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-NEresearcher/reports/sum
 16. **表格读取范围会返回残留空行**：`sheets +read A1:J20` 或更大范围可能读到 `[None, None, ...]` 全空行。→ 写入前只保留 A 列非空记录，更新/排序后按有效行数写入，并删除 end_row 之后多余行。
 17. **企业别名导致重复商机**：如 `宁波容百新能源科技股份有限公司` 与 `容百科技股份有限公司` 会被当成两家公司。→ 建别名映射，匹配到已有行时保留表内原客户名称，只更新商机内容、日期和备注。
 18. **Word 版残留 Markdown 格式**：直接从 md 转 docx 容易残留 `- `、`**`、标题井号或尖括号链接，影响正式阅读。→ Word 必须走独立格式化逻辑，并在上传前用 python-docx 扫描段落自检；发现残留就重生成，不得上传有 Markdown 痕迹的 Word。
+19. **web_fetch 工具层 file lock stale**：财联社、新华网等站点偶发 `file lock stale` 错误（非站点问题，是 OpenClaw fetch 工具的文件锁冲突）。→ 跳过该源即可，重试也无济于事，不影响其他数据源。
+20. **`python3 -c "..."` 长脚本极不稳定**：超过 50 行的 Python 代码直接嵌入 `-c` 参数时，引号嵌套、函数签名、缩进极易出错（如 `add_bullet()` 误传 `bold=False` 参数报 `TypeError`）。→ 超过 30 行的 Python 脚本必须写独立文件（如 `/tmp/xxx.py`）后执行，不要用 `-c`。
+21. **Searxng 中文查询噪音极高**：60 条搜索结果中约 40% 是无效结果——招聘页、赌博/色情垃圾页、英文无关结果（如 Hy-Vee 超市搜索页）、LinkedIn 垃圾职位等。`"浙江 新能源"` 类查询噪音尤其高。→ 必须人工过滤，不能依赖自动排序。优先采信政府网站、权威媒体、上市公司公告、行业协会来源。
 
 ## 文件路径
 
@@ -931,3 +963,104 @@ space_id: 7637082931059706850
 space_name: 新能源行研
 节点标题: ne-weekly-YYYYMMDD
 ```
+
+---
+
+## 执行踩坑记录（2026-05-23）
+
+### 1. lark-cli openclaw 绑定配置问题
+
+**现象**：`lark-cli drive +upload --profile ne_bot --as bot` 报错 `profile "ne_bot" not found`，提示可用 profiles 只有 `cli_a96ca9994c795bb4`。
+
+**原因**：`lark-cli config bind --source openclaw` 绑定时用的是默认 app（`cli_a96ca9994c795bb4`），不是 ne_bot 自己的 app（`cli_a97152fac6b81bd4`）。openclaw 绑定的 config 会覆盖 lark-cli 的默认 profile 选择。
+
+**解决**：重新执行 `lark-cli config bind --source openclaw --app-id cli_a97152fac6b81bd4 --identity bot-only`，把 ne_bot 绑定到 openclaw。
+
+### 2. Drive 上传 "invalid param [10003]"
+
+**现象**：使用 `cli_a96ca9994c795bb4` profile 上传 Drive 文件时报 `TAT API error: [10003] invalid param`。
+
+**原因**：该 profile 对应的 bot 没有 Drive 上传权限或 token 不匹配。
+
+**解决**：切回 ne_bot profile 后解决（绑定正确后自动解决）。
+
+### 3. Wiki 内容写入 — v1 API 导致黏行
+
+**现象**：用 v1 API (`lark-cli docs +update --mode overwrite`) 写入 wiki 后，fetch 回来发现企业元数据黏行：
+- `推荐等级：** 高\n- **所属行业` — 两行被合并
+- `**基本情况：** 正泰集团...（大段内容）**高层与团队背景：** 南存辉...` — 列表项被合并成一坨
+
+**原因**：v1 API 的 Markdown 解析器对 `- **字段：** 值` 格式处理不正确，空行也会被吞。
+
+**解决**：改用 v2 API `--api-version v2 --command overwrite --content @./wiki_content.md --doc-format markdown`，通过 stdin 传入内容（`--content -` 或 `@./file`），列表格式正常渲染。
+
+**注意**：`@/tmp/xxx.md` 会报错（必须是当前目录相对路径），要先 `cp` 到当前目录或用 `@./file`。
+
+### 5. Python 脚本中 lark-cli 输出被 proxy 警告污染
+
+**现象**：用 `subprocess.run` 调用 lark-cli 时，stdout 包含 `[lark-cli] [WARN] proxy detected:` 警告行，导致 `json.loads()` 解析失败。
+
+**解决**：先 `2>/dev/null` 或 `grep -v 'proxy detected'` 过滤警告行，或在 Python 中找第一个 `{` 作为 JSON 起始位置。
+
+### 6. 智光电气地域错误（内容层面）
+
+**现象**：首版周报推荐了智光电气，但该企业总部在广州，不是浙江企业。
+
+**原因**：搜索时只找了"储能 电力设备"关键词，没严格验证企业注册地/总部地址。Skill 明确要求"商机地图、行动清单、企业动态仅限目标区域"。
+
+**修正**：替换为锦浪科技（宁波象山），并补充了完整的高管背景信息。
+
+### 7. 南都电源重复推荐（去重逻辑）
+
+**现象**：表中已有"浙江南都电源动力股份有限公司"，又新增了"南都电源科技股份有限公司"。
+
+**原因**：去重只做精确匹配，没做简称归一化。
+
+**修正**：技能中已有别名映射表（`宁波容百新能源` ≈ `容百科技`），执行时应先读取表中 A 列做归一化匹配。
+
+### 8. Wiki 标题被 markdown 内容覆盖
+
+**现象**：创建节点时 `--title "ne-weekly-20260523"`，但写入内容后标题变成了 "新能源行业商机周报" 或 "Untitled"。
+
+**原因**：`docs +update --api-version v2 --command overwrite --content @./wiki_content.md` 会把 markdown 第一个 `#` 标题设为文档标题，覆盖 wiki 节点原标题。如果 markdown 没有 `#` 标题，标题变 "Untitled"。
+
+**解决**：wiki 内容 markdown 文件的第一个 `#` 标题**必须**是 `ne-weekly-YYYYMMDD`，和 wiki 节点名严格一致。生成 markdown 时确保首行为 `# ne-weekly-YYYYMMDD`。
+
+### 9. 不要把非关键收尾错误推送到群聊
+
+**现象**：2026-05-28 周报已生成摘要和链接，但 cron 最终推送到飞书群的是底层报错，摘要没有正常推送。运行记录显示 `lark-cli wiki +move ... failed`。
+
+**实际原因**：不是 `wiki +move` API 失败。执行时把两步串到同一条 shell：`lark-cli wiki +move ... && lark-cli docs +update ...`。其中 `wiki +move` 已成功返回 `ok: true`，节点 `parent_node_token` 为空并已在根目录；失败的是后续 `docs +update` 使用了旧参数 `--mode overwrite --markdown @./wiki_content.md`。当前 v2 写法必须是 `--api-version v2 --command overwrite --content @./wiki_content.md --doc-format markdown`。
+
+**为什么影响推送**：虽然随后用正确参数补跑 `docs +update` 成功，但前面失败的工具调用已经被 runtime 记录为错误诊断，cron 最终被判 `status: error`，OpenClaw announce delivery 发送了 failure notification，覆盖了正常摘要推送。
+
+**硬规则**：
+- 不要把多个飞书写操作用 `&&` 串成一条命令，尤其不要把非关键整理步骤和关键写入/推送步骤串在一起。
+- `wiki +move` 只用于根目录位置/排序刷新，属于非关键收尾步骤；先检查 `parent_node_token`，已为空就跳过。
+- `wiki +move` 失败最多重试 1 次，仍失败只写内部日志，不能让 cron 以 error 结束，必须继续写 `reports/summary/NE-summary.md` 并推送群聊摘要。执行时必须用 `if ! command; then log; fi` 这类保护写法，保证 shell 最终退出码为 0。
+- `docs +update` 统一使用 v2 参数：`--api-version v2 --command overwrite --content @./wiki_content.md --doc-format markdown`；禁止再用旧参数 `--mode overwrite --markdown`。
+- 若 Word/Wiki/商机表和摘要已经成功，后续任何非关键收尾失败都不得作为最终 assistant 回复内容。
+
+### 10. 为什么这些坑会反复出现
+
+**根因不是没有记录，而是记录没有形成执行约束：**
+- 旧命令和新命令同时存在：前文要求 v2，后文仍残留 `--mode overwrite --markdown` 或 `--mode overwrite --new-title`，执行时容易引用旧段落。
+- 规则分散：同一个问题分别写在「执行经验」「注意事项」「踩坑记录」「日期复盘」里，优先级不明确。
+- 软性规则无法阻止 runtime：写了“失败不要中断”，但如果实际跑的是裸命令，命令非零退出仍会被 OpenClaw 记录为 tool error，cron 最终可能被判失败。
+- 关键路径和收尾路径混在一起：移动/排序/抽查本来是收尾，却和写入/推送串在同一条 shell 或同一段流程里，导致小错误覆盖用户真正需要的摘要。
+- cron 的 announce delivery 会把最终状态直接发群：只要最终状态被判 error 或最终回复不是摘要模板，就可能污染群聊。
+
+**修整原则：**
+1. 以后新增踩坑必须先更新「运行护栏」或对应步骤的命令模板，再补充日期复盘；不能只写复盘。
+2. 任何历史命令若与「运行护栏」冲突，直接改掉，不保留“旧写法示例”。
+3. 所有非关键动作必须带退出码保护；需要真的失败中断的，必须是 Word/Wiki/商机表/摘要这四个关键交付之一。
+
+### 经验教训
+
+1. **v2 API 是未来方向**：v1 已 deprecated，所有 docs +create/+fetch/+update 都应先用 v2。`docs +update --api-version v2 --command overwrite --content @./file --doc-format markdown` 写入正常；`docs +fetch --api-version v2 --doc-format markdown --format json` 可正常返回 `.data.markdown`，可用于黏行抽查。
+2. **openclaw 绑定是必须步骤**：任何新 bot profile 使用前必须先 `lark-cli config bind --source openclaw --app-id <app_id>`。
+3. **企业地域验证**：推荐前必须确认企业注册地/总部在目标区域内，不能只看搜索结果。
+4. **去重必须先读表**：写商机表前必须先 `sheets +read` 读 A 列，做归一化去重，不能直接 append。
+5. **长 Python 脚本写文件**：超过 30 行的 Python 代码必须写独立文件（如 `/tmp/xxx.py`）后执行，不要用 `python3 -c "..."`。
+6. **Searxng 结果必须人工过滤**：中文查询噪音极高（~40% 垃圾结果），不可直接采信自动排序结果，优先政府/权威媒体/上市公司公告/行业协会来源。
+7. **外部推送优先级高于内部整理**：周报正文、Word、Wiki、商机表和摘要已生成时，应优先保证摘要发到目标群。归档、移动、排序、抽查修复等非关键步骤失败，只能内部记录和后续补救，不能把用户可读摘要替换成底层错误通知。

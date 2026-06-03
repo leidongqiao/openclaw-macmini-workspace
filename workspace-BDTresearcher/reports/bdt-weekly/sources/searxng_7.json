@@ -1,0 +1,348 @@
+{
+  "source_id": 7,
+  "source_name": "SearXNG 7",
+  "url_or_query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA",
+  "fetched_at": "2026-05-28T19:42:02.388637+08:00",
+  "ok": true,
+  "status_or_error": "ok",
+  "content_or_results": {
+    "query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA",
+    "number_of_results": 0,
+    "results": [
+      {
+        "url": "https://mydoctor.kaiserpermanente.org/mas/doctor/edaturgut",
+        "title": "Eda Turgut, DO at Kaiser Permanente - My Doctor Online",
+        "content": "Rating 4.8(115)3 days ago · Eda Turgut, DO · About Me · Specialties and Institutes · My Qualifications Last directory update: 05/25/26 · My Practice Locations · Resources for My Patients.",
+        "thumbnail": null,
+        "engine": "google",
+        "template": "default.html",
+        "parsed_url": [
+          "https",
+          "mydoctor.kaiserpermanente.org",
+          "/mas/doctor/edaturgut",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "google"
+        ],
+        "positions": [
+          1
+        ],
+        "score": 1.0,
+        "category": "general",
+        "publishedDate": null
+      },
+      {
+        "template": "default.html",
+        "title": "半导体设备市场规模、份额|行业报告 [2035]",
+        "content": "半导体设备市场概览 2026年全球半导体设备市场规模估计为70717.35百万美元，预计到2035年将达到82296.62百万美元，2026年至2035年复合年增长率为1.7%。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          1
+        ],
+        "score": 1.0,
+        "category": "general",
+        "url": "https://www.globalmarketstatistics.com/zh/market-reports/semiconductor-equipment-market-14871",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.globalmarketstatistics.com",
+          "/zh/market-reports/semiconductor-equipment-market-14871",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "url": "https://azure.microsoft.com/en-us/blog/azure-netapp-files-for-eda-workloads-from-revolution-to-breakthrough-at-scale/",
+        "title": "Azure NetApp Files for EDA workloads: From revolution to breakthrough at ...",
+        "content": "6 days ago · Discover how Azure NetApp Files enables scalable, high-performance storage for EDA workloads, delivering low latency, massive concurrency, and predictable ...",
+        "thumbnail": null,
+        "engine": "google",
+        "template": "default.html",
+        "parsed_url": [
+          "https",
+          "azure.microsoft.com",
+          "/en-us/blog/azure-netapp-files-for-eda-workloads-from-revolution-to-breakthrough-at-scale/",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "google"
+        ],
+        "positions": [
+          2
+        ],
+        "score": 0.5,
+        "category": "general",
+        "publishedDate": null
+      },
+      {
+        "template": "default.html",
+        "title": "券商评\"韬定律\"：EDA、晶圆代工、制造设备三个环节受影响最大",
+        "content": "华为提出的\"韬定律\"引发产业界热议。5月26日，华创证券研究所电子组研究员张文瑶在接受《中国电子报》记者采访时指出：EDA、晶圆代工、制造 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          2
+        ],
+        "score": 0.5,
+        "category": "general",
+        "url": "https://news.qq.com/rain/a/20260527A063VA00",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "news.qq.com",
+          "/rain/a/20260527A063VA00",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "url": "https://eda.europa.eu/news-and-events/events/2026/07/07/default-calendar/defence-industry-worshop",
+        "title": "Defence industry workshop",
+        "content": "2 days ago · Defence industry workshop · 07 July 2026 to 07 July 2026 · 10:00 - 16:00.",
+        "thumbnail": null,
+        "engine": "google",
+        "template": "default.html",
+        "parsed_url": [
+          "https",
+          "eda.europa.eu",
+          "/news-and-events/events/2026/07/07/default-calendar/defence-industry-worshop",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "google"
+        ],
+        "positions": [
+          3
+        ],
+        "score": 0.3333333333333333,
+        "category": "general",
+        "publishedDate": null
+      },
+      {
+        "template": "default.html",
+        "title": "半导体设备系列第六期，半导体设备投资全图谱 从第一期光刻机开始，我们用五期时间把半导体设备产业链从头到尾拆了一遍。光刻机是芯片制造的\"心脏 ...",
+        "content": "从第一期光刻机开始，我们用五期时间把半导体设备产业链从头到尾拆了一遍。光刻机是芯片制造的\"心脏\"，刻蚀和薄膜是\"雕刻刀\"和\"镀膜机\"，清洗、离子注入、CMP则是\"清洁工\"\"掺杂师\"和\"抛光师\"，封测设备是出厂前的最后一道工序。今天站在整条产业链终点，来画一张完整的投资全图谱。 但先说 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          3
+        ],
+        "score": 0.3333333333333333,
+        "category": "general",
+        "url": "https://xueqiu.com/9788351891/390605486",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "xueqiu.com",
+          "/9788351891/390605486",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "url": "https://www.eastgrandforks.gov/Calendar.aspx?EID=12274&month=5&year=2026&day=8&calType=0",
+        "title": "Calendar • EDA Meeting - East Grand Forks, MN",
+        "content": "20 hours ago · EDA Meeting. Wednesday, May 27, 2026. Date: May 27, 2026. 2026-05-27T12:00:00. Time: 12:00 PM - 1:30 PM. Location: Event Location. Address: East Grand Forks, MN ...",
+        "thumbnail": null,
+        "engine": "google",
+        "template": "default.html",
+        "parsed_url": [
+          "https",
+          "www.eastgrandforks.gov",
+          "/Calendar.aspx",
+          "",
+          "EID=12274&month=5&year=2026&day=8&calType=0",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "google"
+        ],
+        "positions": [
+          4
+        ],
+        "score": 0.25,
+        "category": "general",
+        "publishedDate": null
+      },
+      {
+        "template": "default.html",
+        "title": "半导体设备",
+        "content": "①国内存储芯片龙头资本化进程加速，半导体设备订单确定性愈发凸显； ②中芯国际与华虹半导体产能已逼近满载，两者2026年资本开支计划均有不同程度提升； ③SEMI预测，全球半导体设备销售额将2027年继续增长，连续三年刷新历史纪录。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          4
+        ],
+        "score": 0.25,
+        "category": "general",
+        "url": "https://www.cls.cn/subject/11055",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.cls.cn",
+          "/subject/11055",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "url": "https://www.fdfa.admin.ch/",
+        "title": "Welcome to the FDFA: Diplomacy for Switzerland",
+        "content": "16 hours ago · The FDFA safeguards Switzerland's foreign policy interests. It maintains relations with other states and international organisations such as the EU and UN, ...",
+        "thumbnail": null,
+        "engine": "google",
+        "template": "default.html",
+        "parsed_url": [
+          "https",
+          "www.fdfa.admin.ch",
+          "/",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "google"
+        ],
+        "positions": [
+          5
+        ],
+        "score": 0.2,
+        "category": "general",
+        "publishedDate": null
+      },
+      {
+        "template": "default.html",
+        "title": "中国最强刻蚀机厂：台积电买了800多台设备，3-45nm都在用",
+        "content": "按照尹志尧博士的说法，台积电最先进的生产线上，也使用中微的刻蚀机，有中微800多个反应台，从45纳米到3纳米都在用中微的机器，作为全球最顶级的晶圆厂，台积电使用中微的设备，就足以证明中微有多强了。 所以说，…",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          5
+        ],
+        "score": 0.2,
+        "category": "general",
+        "url": "https://m.sohu.com/a/1027693169_121097259",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "m.sohu.com",
+          "/a/1027693169_121097259",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "answers": [],
+    "corrections": [],
+    "infoboxes": [],
+    "suggestions": [],
+    "unresponsive_engines": [
+      [
+        "brave",
+        "Suspended: too many requests"
+      ],
+      [
+        "karmasearch",
+        "Suspended: access denied"
+      ],
+      [
+        "startpage",
+        "Suspended: CAPTCHA"
+      ]
+    ]
+  },
+  "stderr": ""
+}

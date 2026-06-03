@@ -1,0 +1,107 @@
+URL: https://www.stcn.com/article/newsflash.html
+STATUS: 404
+
+404 Not Found - 证券时报
+window.IS_LOGIN = false;
+                tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#c7000b",
+                        primaryDark: "#960009",
+                        primaryLight: "#fbe9ea",
+                        accent: "#ff9900",
+                        mainText: "#1E2534",
+                    },
+                },
+            },
+            plugins: [
+                function ({ addComponents }) {
+                    addComponents({
+                        ".w-common": {
+                            width: "100%",
+                            maxWidth: "1400px",
+                        },
+                    });
+                },
+            ],
+        };
+首页
+快讯
+新闻
+要闻
+金融
+评论
+产经
+创投
+滚动
+视频
+投资
+A股
+公司
+新股
+基金
+港美股
+数据
+信披+
+专题
+地方
+京
+津
+冀
+晋
+蒙
+辽
+吉
+黑
+沪
+苏
+浙
+皖
+闽
+赣
+鲁
+豫
+鄂
+湘
+粤
+桂
+琼
+渝
+川
+黔
+滇
+藏
+陕
+甘
+青
+宁
+新
+鹏
+服务
+人民鉴真
+投关服务
+投教服务
+其他服务
+公众号
+电子报
+客户端
+对不起，您要访问的页面不存在或已被删除!本页面
+5
+秒之后将带您回到证券时报首页。
+返回首页
+深圳证券时报社有限公司版权所有，未经书面授权禁止使用
+Copyright © 2008-2026 Shenzhen Securities Times Co., Ltd. All Rights Reserved
+(function () {
+    var countdown = 5;
+    var el = document.getElementById('countdown');
+    var timer = setInterval(function () {
+      countdown--;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        window.location.href = '/';
+      } else if (el) {
+        el.textContent = String(countdown);
+      }
+    }, 1000);
+  })();

@@ -114,6 +114,7 @@ fi
 10. 无法确认的信息写“待核实”或“未披露”。
 11. 每条重要判断都要形成闭环：事实信号 → 经营含义 → 金融需求 → 产品匹配 → 营销动作；但“近期政策变动”板块不要每条政策都单独写闭环，应先把政策内容写充分，最后统一写一段综合影响闭环。
 12. 周报正文不要在句中写来源括注，例如“（来源：XXX）”。如需保留依据，可在文末或开头“资料来源”统一概括，不要影响客户经理阅读。
+13. **摘要交付优先级最高**：当 Word、Wiki、商机表三个链接已经生成后，任何不影响这三项产物的错误（例如只读校验解析失败、日志清理失败、重复排序/去重检查失败、CLI warning/notice 解析失败）都必须降级为 warning 写入本地诊断文件，不得抛出非零退出，不得影响最终群聊摘要输出。
 
 ### 第一步：信息抓取（必抓源 + 搜索为主 + 垂直源补充）
 
@@ -132,6 +133,7 @@ fi
 
 > 使用本地 SearXNG 实例：`SEARXNG_URL=${SEARXNG_URL:-http://localhost:8080}`
 > ⚠️ **运行器选择（必须执行）**：先检测 `uv` 是否存在；不存在则用 `python3`，不得因 `uv: command not found` 放弃。
+> ⚠️ **JSON API 预检（必须执行）**：SearXNG 首页 200 不代表 JSON API 可用。执行搜索前必须先请求一次 `"$SEARXNG_URL/search?q=半导体&format=json&categories=general"`，确认 HTTP 200 且 `content-type` 为 `application/json`。若返回 403，通常是 `/etc/searxng/settings.yml` 中 `search.formats` 只启用了 `html`，需要在持久化配置中加入 `json` 并重启容器；修复前不得把它误判为“无结果”。若无法修复，记录原因后再回退 web_search。
 
 ```bash
 SEARXNG_URL=${SEARXNG_URL:-http://localhost:8080}
@@ -150,6 +152,8 @@ searxng_search() { if command -v uv >/dev/null 2>&1; then uv run "$SEARXNG_SCRIP
 ⚠️ **必须使用 SearXNG，不要用 web_search（Brave 限流 1次/秒）**。如果 SearXNG 不可用，才回退到 web_search 串行执行。
 
 ⚠️ **已知坑：SearXNG 结果会跑偏。** `EDA` 容易搜到教育/经济开发署，`HBM` 容易搜到非半导体条目。处理规则：保留有效结果、剔除明显无关项；优先采纳标题/摘要同时包含半导体语境词的结果（芯片、晶圆、封装、存储、设备、材料、功率、SiC、GaN、车规、算力、AI服务器等）；若有效结果不足，用更窄补充检索替代，例如 `"HBM 先进封装 半导体"`、`"EDA 芯片设计 半导体"`、`"半导体设备 刻蚀 光刻 中国"`，不要直接改用泛搜索大段爬取。
+
+⚠️ **SearXNG 错误留痕**：若 SearXNG 子查询失败，保存原始错误、HTTP 状态码和 stderr 到 `reports/bdt-weekly/sources/searxng_<编号>.json`，不要只写 `{"error":"failed"}`。否则事后无法区分服务不可达、JSON 未启用、搜索词无结果、上游引擎限流。
 
 **第三轮：半导体垂直源补充（3个，编号10-12，并行）：**
 
@@ -252,6 +256,13 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 - 关注 **近 7 天内** 发生的事件（周报覆盖一周范围）
 - 关注目标区域及周边地区的半导体企业动态优先
 
+**⚠️ 抓取源审计留痕（必须执行）：**
+- 本次所有抓取源必须统一落盘到 `reports/bdt-weekly/sources/`，用于事后审计和复盘。
+- 必抓 web_fetch 源分别保存为 `webfetch_01_10jqka.json`、`webfetch_02_cls.json`、`webfetch_03_xinhuanet_tech.json`、`webfetch_04_eeo.json`。
+- SearXNG 编号 5-10、13 保存为 `searxng_<编号>.json`；iFinD 编号 14-17 保存为 `ifind_news.json`、`ifind_notice.json`、`ifind_stocks.json`、`ifind_financials.json`。
+- 垂直源 10-12 若用 web_fetch 成功，保存 `webfetch_10_ijiwei.json`、`webfetch_11_elecfans.json`、`webfetch_12_eet_china.json`；若失败并回退 SearXNG，保存失败原因和回退结果。
+- 每个落盘文件至少包含：`source_id`、`source_name`、`url_or_query`、`fetched_at`、`ok`、`status_or_error`、`content_or_results`。不要只依赖运行上下文。
+
 ### 第二步：信息跟踪范围
 
 按以下四大维度分类和组织抓取到的信息：
@@ -352,7 +363,7 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 必须从企业经营活动推导银行业务机会：
 - 扩产/技改/设备采购 → 项目贷款、设备融资、科技创新和技术更新改造再贷款、平安租赁
 - 订单增长/备货增加 → 短贷、普惠信用贷、银票贴现、国内信用证
-- 应收账款增加/账期较长 → 付融通、保理、商票保贴、商票 e 贴
+- 应收账款增加/账期较长 → 付融通、保理、商票保贴、商票e贴
 - 供应链上下游关系明确 → 订单融资、订货贷、平台数字贷、供应链金融
 - 进口设备/材料、出口客户、海外业务 → 跨境支付结算、人民币国际证+福费廷、外币存款、跨境资金管理、平安避险
 - 资金账户分散/管理复杂 → 数字财资、资产池、慧收款、移企付、口袋管家
@@ -387,7 +398,9 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 
 1. **账户与资金管理**：数字财资、资产池、慧收款、移企付、平安结算通、产业结算通、口袋管家
 2. **融资与授信**：平安透、网上自由贷、普惠金融信用贷、普惠金融科创贷、普惠金融担保贷、普惠金融抵押贷、银票极速贴现、银票无感贴现、国内信用证开证及融资、科技创新和技术更新改造再贷款
-3. **供应链金融**：订单融资、付融通、商票保贴、商票贴现、商票 e 贴、订货贷、平台数字贷、普惠金融场景化方案
+3. **供应链金融**：订单融资、付融通、商票保贴、商票贴现、商票e贴、订货贷、平台数字贷、普惠金融场景化方案
+
+⚠️ **产品名称口径**：报告和商机表中的产品名称应优先使用 `productFile.docx` 原文写法。例如票据产品统一写“商票e贴/商票E贴”中的资料原文口径，不写成“商票 e 贴”。如果确需使用别名，必须先确认产品资料中存在同义写法。
 4. **跨境与出海**：跨境支付结算、跨境贸易金融、跨境资金管理、外币存款、人民币国际证+福费廷、境内企业外债贷款、非居民全球授信、平安避险、新银关通
 5. **资本市场与综合金融**：并购融资、银团融资、债券承销、债生态业务、资本市场融资、结构金融、平安证券债券承销、平安租赁、保险资金债权投资计划、集合资金信托计划、永续债权投资计划/永续信托计划
 6. **员工与企业主服务**：平安薪、橙 e 贷、星链贷、普金信用贷、家族信托、私人理财权益、信用卡权益
@@ -543,7 +556,12 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 
 **Word 输出要求：**
 - **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`，不得保存到其他目录；如目录不存在先创建。
-- 文件名格式：`行业商机周报_半导体_YYYYMMDD.docx`
+- **同步到 local-uploader 目录**：Word 文件生成并上传 Drive 后，先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/半导体` 目录下的所有文件（保留目录本身，不删除目录），然后将 Word 周报文件拷贝一份到该目录。
+- **双版本命名必须一致**：Word 文件名、Wiki 节点标题、Wiki Markdown 本地文件名使用同一个 basename：`$WEEKLY_TITLE_PREFIX-YYYYMMDD`。
+  - Word 文件名：`bdt-weekly-YYYYMMDD.docx`
+  - Wiki 节点标题：`bdt-weekly-YYYYMMDD`
+  - Wiki 本地源稿：`bdt-weekly-YYYYMMDD.wiki.md`
+  - 不再使用 `行业商机周报_半导体_YYYYMMDD.docx` 这类中文文件名，避免 Drive、Wiki、摘要里同一份周报名称不一致。
 - 字体使用华文楷体。
 - **Word 样式优化**：Word 版必须是干净的报告排版，不要把 Markdown 原始符号带入正文；生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段，企业信息可用短段落或简洁项目符号，但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 - 生成后上传为飞书 Drive 文件，获取可下载链接；**飞书 wiki 知识库正文开头必须写入 Word 版下载链接**（放在标题下方、正文说明前），推送摘要中的“周报全文（Word）”也必须使用该下载链接，不要只放本地路径。
@@ -627,6 +645,38 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 
 使用 `$LARK_CLI` 完整读取表格数据、按日期倒序排序、写回并清理残留行。**不要使用 Python urllib 直接调 Sheets API**；此前实践会遇到 404/SSL/接口路径不一致问题。
 
+⚠️ **lark-cli JSON 解析通用规则（必须执行）**：`$LARK_CLI` 可能在 JSON 前后输出 proxy warning、deprecated warning、update notice 等非 JSON 文本。任何 Python 校验/排序/清理脚本解析 `$LARK_CLI` 输出文件时，必须先按括号层级截取第一个完整 JSON 对象，再 `json.loads()`；禁止使用 `json.loads(text[text.find('{'):])` 解析到文件末尾。
+
+推荐 Python helper：
+
+```python
+def extract_first_json(text):
+    start = text.find("{")
+    if start < 0:
+        raise ValueError("no JSON object found")
+    level = 0
+    in_str = False
+    esc = False
+    for i, ch in enumerate(text[start:], start):
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+        else:
+            if ch == '"':
+                in_str = True
+            elif ch == "{":
+                level += 1
+            elif ch == "}":
+                level -= 1
+                if level == 0:
+                    return json.loads(text[start:i + 1])
+    raise ValueError("incomplete JSON object")
+```
+
 推荐流程：
 
 ```bash
@@ -652,6 +702,7 @@ fi
 - `sheets +delete-dimension` 的 `--end-index` 不能超过当前 `grid_properties.row_count`，否则会报 `[90202] dimension endIndex wrong`。如果 `row_count <= end_row`，说明表格已经没有残留行，跳过删除即视为成功。
 - 写入前如目标行数不足，可先用 `$LARK_CLI sheets +insert-dimension` 或 `+add-dimension` 补齐行数；写入后再按上面逻辑清理。
 - 排序后必须验证 `sheets +read A1:J30`，确认最新日期在前、A 列无异常空行。
+- ⚠️ **空行判断不要只看超范围读取结果**：`sheets +read A1:J30` 可能在实际 `row_count` 之外返回全 `null` 行。必须结合 `sheets +info` 的 `grid_properties.row_count` 判断残留行；若 `row_count == end_row`，读到的尾部全 `null` 是超范围回显，不是表内脏行。
 
 ### 第九步：写入知识库（飞书 wiki 版）
 
@@ -661,10 +712,11 @@ fi
 
 **Wiki 企业元数据格式要求：** 推荐等级、所属行业、所在地区、产业链位置、推荐方向等元数据必须用 Markdown 列表格式（`- 推荐等级：高`），不要用 `**key：** value` 格式。飞书 Markdown 解析器会把连续的同类型行合并到一个段落，导致所有字段挤在一行。
 
-**重要：每次生成都覆盖当前同名文件（bdt-weekly-YYYYMMDD），不要有重复日期的文档。**
+**重要：每次生成都覆盖当前同名文件（bdt-weekly-YYYYMMDD），不要有重复日期的文档。Word/Wiki/本地 Markdown 三者必须同名同日期，只有扩展名不同。**
 
 **🔴 关键规则（必须严格遵守）：**
 - 文档必须创建在知识库**根目录**（`parent_node_token` 为空字符串），**不能**创建在“首页”或其他节点下面。
+- 创建新节点时必须显式传空父节点：`--parent-node-token ""`。不要省略该参数；部分 `lark-cli wiki +node-create` 版本在只传 `--space-id` 时仍可能落到“首页”或默认节点下。
 - 必须使用**机器人身份**（`--as bot`）创建，创建者显示为机器人。
 - **保持 BDT 现有写入方式**：必须使用 `--profile $BOT_PROFILE --as bot`，避免 lark-cli 默认应用（通常是 ai_bot）导致权限错误。
 - 空间名称是 `半导体行研`。
@@ -682,6 +734,7 @@ fi
 2. **如果找到同名文档**：
    - 将 wiki 版 Markdown 保存为本地临时文件（例如 `bdt-weekly-YYYYMMDD.wiki.md`），正文保留标题、列表、加粗等 Markdown 语法。
    - 使用 `"$LARK_CLI" docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown @bdt-weekly-YYYYMMDD.wiki.md` 覆盖内容。**不要用原始 docx/v1 blocks API 手工创建文本块**，否则加粗、链接等 Markdown 富文本会丢失。
+   - ⚠️ **不要给该命令强行加 `--api-version v2`**。当前已验证可用路径是不带 `--api-version v2` 的 Markdown overwrite；`docs +update --api-version v2 --markdown @文件` 在部分 lark-cli 版本会报 `--command is required`，导致 cron 最终状态失败并只推送失败通知。
    - 输出文档链接：`https://www.feishu.cn/wiki/<node_token>`。
 
 3. **如果未找到同名文档**：
@@ -689,13 +742,33 @@ fi
      ```bash
      "$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot \
        --space-id "$WIKI_SPACE_ID" \
+       --parent-node-token "" \
        --title "$WEEKLY_TITLE_PREFIX-YYYYMMDD" \
        --obj-type "docx"
      ```
    - 从返回结果提取 `obj_token`（用于内容更新）和 `node_token`（用于 URL）。
    - 将 wiki 版 Markdown 保存为本地临时文件，使用 `"$LARK_CLI" docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown @bdt-weekly-YYYYMMDD.wiki.md` 写入内容。
+   - ⚠️ **不要给该命令强行加 `--api-version v2`**。当前已验证可用路径是不带 `--api-version v2` 的 Markdown overwrite；`docs +update --api-version v2 --markdown @文件` 在部分 lark-cli 版本会报 `--command is required`，导致 cron 最终状态失败并只推送失败通知。
    - 输出文档链接：`https://www.feishu.cn/wiki/<node_token>`。
-   - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`，如果不在根目录，用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
+   - ⚠️ 创建后必须立即用 `wiki nodes list` 确认该 `node_token` 的 `parent_node_token`。如果不是空字符串，立即用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录，并保存 move 结果；不要等全文写入或最终验收时才发现位置错误。
+4. **🔴 Wiki 排序规则（必须执行）**：周报 wiki 文档必须以时间倒序排列，即最新一期紧挨在「商机挖掘表格」之后。
+   - 创建或更新完成后，再次执行 `"$LARK_CLI" wiki nodes list --params '{"space_id":"'$WIKI_SPACE_ID'","page_size":50}' --profile $BOT_PROFILE` 获取根目录节点列表。
+   - 在根目录中查找标题包含“商机挖掘”的节点，记录其 `node_token`。
+   - 先用 `wiki +move` 确保本期周报节点在根目录：
+     ```bash
+     "$LARK_CLI" wiki +move --profile $BOT_PROFILE --as bot \
+       --node-token <本期周报 node_token> \
+       --target-space-id "$WIKI_SPACE_ID" \
+       --target-parent-token ""
+     ```
+   - ⚠️ **参数坑**：`wiki +move` 没有 `--parent-node-token` 参数，根目录移动必须用 `--target-parent-token ""`。不要把 `wiki +node-create` 的 `--parent-node-token` 参数套到 `wiki +move` 上。
+   - 如果需要把本期周报精确排到「商机挖掘表格」之后，当前 `wiki +move` CLI 不暴露 `after_node_token` 参数，必须用原生 API：
+     ```bash
+     "$LARK_CLI" api POST "/open-apis/wiki/v2/spaces/$WIKI_SPACE_ID/nodes/<本期周报 node_token>/move" \
+       --profile "$BOT_PROFILE" --as bot \
+       --data '{"target_space_id":"'"$WIKI_SPACE_ID"'","target_parent_token":"","after_node_token":"<商机挖掘表格 node_token>"}'
+     ```
+   - ⚠️ 如果找不到「商机挖掘表格」节点，记录警告但不得中断流程，周报仍保留在根目录。
 
 **禁止**使用 `feishu_wiki_space_node` 工具（该工具可能将文档创建在首页下），必须使用 `"$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot --space-id` 命令。
 
@@ -704,12 +777,14 @@ fi
 "$LARK_CLI" docs +fetch --doc <obj_token> --profile "$BOT_PROFILE" --as bot > /tmp/wiki_fetch.json
 ```
 检查返回 Markdown：
-- 必须能看到 `**Word版下载：**` 和 Word file 链接；
+- 必须能看到 `**Word版下载：**` 和 Word file 链接；飞书 fetch 可能把纯 URL 转成 Markdown 链接，只要链接文本和目标 URL 都存在即视为通过；
 - 必须保留企业元数据列表（`- **推荐等级：**` 等）；
 - 不得出现 `推荐等级.*所属行业`、`所属行业.*所在地区`、`所在地区.*产业链位置`、`产业链位置.*推荐方向` 这类字段黏连；
 - 若发现黏连或格式丢失，使用 `docs +update --mode overwrite --markdown @文件` 重新覆盖，不要改用底层 blocks API。
 
 ⚠️ **已知坑：wiki fetch 校验不要对整个 JSON 字符串做正则。** 只检查返回里的 `data.markdown` 字段；否则 JSON 转义/压缩可能造成“推荐等级.*所属行业”误报。若 `data.markdown` 中列表项逐行存在，即视为通过。
+
+⚠️ **docs +fetch 版本提示**：若 `docs +fetch` 输出 v1 deprecated 警告但仍能返回 Markdown，可继续用于本次校验并记录警告。不要因为 v1 deprecated 警告临时把已验证可用的 `docs +update --mode overwrite --markdown @文件` 改成 `docs +update --api-version v2`；如需升级 v2，必须先用 `--dry-run` 或测试文档确认命令可用，再纳入周报主流程。
 
 ### 第十步：推送至群聊（极简概要 + 链接，200字左右）
 
@@ -773,6 +848,14 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-BDTresearcher/reports/su
 4. 如果 Word Drive 链接、wiki 链接或 sheets 链接任一缺失，**不要推送群聊摘要**；先补齐链接，再输出第十步模板。
 5. 若需要向用户说明执行状态，只能在非群聊/人工排查上下文说明；在群聊定时任务中，最终输出仍必须是第十步摘要模板。
 
+**⚠️ Cron 成功态保护（防止摘要生成后只推送失败通知）：**
+- 一旦 Word 链接、Wiki 链接、商机表链接齐全，且 `reports/summary/BDT-summary.md` 已写入，后续不要再执行非必要的高风险写操作（例如二次 `docs +update`、重复 move、重复表格清理）。
+- 若确需做补充校验，只允许执行只读检查；发现问题时记录到本地诊断文件，不要让已完成的摘要交付被非关键修复命令的失败覆盖。
+- **非核心错误直接忽略并继续群发**：只要 Word/Wiki/商机表链接齐全，后续只读校验、JSON 解析、重复行检查、排序检查、临时文件清理等失败都不影响结果摘要输出。命令层必须使用稳健解析或 `|| true`/try-except 兜底，不能让这类失败把 cron run 标成 error。
+- **解析 lark-cli JSON 输出时必须截取首个完整 JSON 对象**：`lark-cli` 可能在 JSON 后追加 proxy warning、update notice、deprecated warning。禁止用 `json.loads(text[text.find('{'):])` 直接解析到文件末尾；必须按括号层级截取第一个完整 JSON 对象，或把非 JSON warning 另存诊断文件。
+- OpenClaw cron 的 `delivery.mode=announce` 在任务 `status=error` 时会推送 failure notification，而不是最终摘要。因此最终回复前最后一步必须是读取/确认 `reports/summary/BDT-summary.md`，并以第十步模板作为 assistant 最终输出；不要在最终输出后再调用工具。
+- **最终工具调用禁令**：`reports/summary/BDT-summary.md` 写入后，不要再执行 `cat`、`for f ...`、`echo/show`、日志查看、排序复核、只读抽查等任何工具调用来“展示结果”。这些动作一旦失败仍会把 cron 标红。若人工排查必须查看，只能在非 cron 对话中执行；cron 主流程直接把摘要作为最终 assistant 回复。
+
 ### 第十一步：表达风格
 
 面向客户经理，不面向学术研究。写作风格规则：
@@ -811,14 +894,15 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-BDTresearcher/reports/su
 4. **禁止推荐不合规业务**。
 5. **双版本输出**：Word 版用于详细报告（华文楷体），wiki 版用于知识库存档（飞书 Markdown 格式），内容结构一致。⚠️ Word 与 Wiki 格式必须分离：Word 去掉所有 Markdown 标记；Wiki 用标准 Markdown（标题、列表、加粗、分隔线）。Wiki 中企业元数据必须用列表格式（`- 推荐等级：高`），不要用 `**key：** value`。
 6. **知识库标题**：bdt-weekly-YYYYMMDD。
-7. **知识库写入**：必须使用 `"$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建。
+7. **知识库写入**：必须使用 `"$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID --parent-node-token \"\"` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建。创建后立刻校验 `parent_node_token`，非空则立即用 `wiki +move --target-parent-token \"\"` 移回根目录。🔴 **Wiki 排序**：创建/更新完成后，若需排到「商机挖掘表格」之后，使用原生 Wiki move API 的 `after_node_token`，不要使用不存在的 `wiki +move --after-node-token`。
 8. **群聊推送**：推送概要 + 链接，不是全文。
 9. **商机挖掘表格**：数据来源为周报“四、客户经理行动建议”中提及的浙江企业。写入前必须去重，只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行。
 10. **表格写入/飞书操作统一使用 `$LARK_CLI`**：全部飞书操作（Drive 上传、wiki 创建/写入、表格读写/清理）均通过 `"$LARK_CLI" --profile $BOT_PROFILE --as bot` 执行。不要直接用 Python urllib 调 Sheets API（会遇 404/SSL 证书问题）。每个 agent 对应自己的 bot，不要混用。
-11. **搜索工具选择**：第一步保持本 skill 既有策略，优先使用 SearXNG（本地无限制），脚本路径 `~/.openclaw/skills/searxng/scripts/searxng.py`，环境变量 `SEARXNG_URL=${SEARXNG_URL:-http://localhost:8080}`。仅在 SearXNG 不可用时回退到 `web_search`（Brave 限流 1次/秒，需串行执行）。
+11. **搜索工具选择**：第一步保持本 skill 既有策略，优先使用 SearXNG（本地无限制），脚本路径 `~/.openclaw/skills/searxng/scripts/searxng.py`，环境变量 `SEARXNG_URL=${SEARXNG_URL:-http://localhost:8080}`。执行前必须预检 JSON API；仅在 SearXNG 不可用或 JSON API 无法修复时回退到 `web_search`（Brave 限流 1次/秒，需串行执行）。
 12. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。$LARK_CLI 会检测到代理变量并发出警告，不影响功能。
-13. **Word 输出**：使用华文楷体字体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`，文件名格式 `行业商机周报_半导体_YYYYMMDD.docx`；生成后上传飞书 Drive，并将下载链接写在 wiki 正文开头及推送摘要中；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
+13. **Word 输出**：使用华文楷体字体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`，文件名必须与 Wiki 节点同 basename，格式为 `bdt-weekly-YYYYMMDD.docx`；生成后上传飞书 Drive，并将下载链接写在 wiki 正文开头及推送摘要中；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
 14. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现“（日期，来源）”“（来源：XXX）”。资料来源只在报告开头或文末统一概括。
+15. **源材料审计留痕**：每次抓取必须把必抓源、SearXNG、垂直源、浙江专项、iFinD 和回退搜索结果统一保存到 `reports/bdt-weekly/sources/`，文件内保留 source_id、来源、时间、ok 状态、错误或内容摘要，避免事后只能依赖运行上下文。
 
 ## 文件路径
 
@@ -855,7 +939,7 @@ REGION_CITIES: ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","
 
 # Word 输出目录
 WORD_REPORT_DIR: "/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/"
-WORD_FILE_PATTERN: "行业商机周报_半导体_YYYYMMDD.docx"
+WORD_FILE_PATTERN: "bdt-weekly-YYYYMMDD.docx"
 ```
 
 ### 其他 agent 复用步骤

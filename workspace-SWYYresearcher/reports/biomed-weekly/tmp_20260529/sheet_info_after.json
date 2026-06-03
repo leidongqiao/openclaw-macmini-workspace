@@ -1,0 +1,40 @@
+[lark-cli] [WARN] proxy detected: HTTPS_PROXY=http://127.0.0.1:7890 — requests (including credentials) will transit through this proxy. Set LARK_CLI_NO_PROXY=1 to disable proxy.
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "sheets": {
+      "sheets": [
+        {
+          "grid_properties": {
+            "column_count": 20,
+            "frozen_column_count": 0,
+            "frozen_row_count": 1,
+            "row_count": 28
+          },
+          "hidden": false,
+          "index": 0,
+          "resource_type": "sheet",
+          "sheet_id": "cfde3f",
+          "title": "Sheet1"
+        }
+      ]
+    },
+    "spreadsheet": {
+      "spreadsheet": {
+        "owner_id": "ou_8c4d343883ffd267a597e24ba39f0509",
+        "title": "生物医药商机挖掘",
+        "token": "AQjXsU9DehPYPEtDlZbcYY6Wnsf",
+        "url": "https://qcn8k445rrbc.feishu.cn/sheets/AQjXsU9DehPYPEtDlZbcYY6Wnsf"
+      }
+    }
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.38",
+      "latest": "1.0.42",
+      "message": "lark-cli 1.0.42 available, current 1.0.38, run: lark-cli update"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T19:00:09.791Z",
+  "updatedAt": "2026-06-01T19:00:03.146Z",
   "entries": {
     "memory:memory/2026-05-07.md:5:8": {
       "key": "memory:memory/2026-05-07.md:5:8",
@@ -7721,6 +7721,6417 @@
         "方案",
         "写进",
         "skills"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药商机周报·浙江｜2026.05.15-05.22 🔥 主线：创新药临床证据升级、核酸/基因治疗产业化、器械与IVD价格见底修复 🏠 浙江机会：钱塘医药港出海和产业化提速，台州器械/原料药、绍兴生物制造进入扫客窗口 🏢 优先跟进：嘉因生物、海昶生物、华东医药 🎯 切入方向：科创贷/设备租赁/跨境结算/供应链金融 Word：https://qcn8k445rrbc.feishu.cn/file/Z6DBbnEvKoMWzOxsuAjcMYcWnWf Wiki：https://qcn8k445rrbc.feishu.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "核酸/基因治疗产业化",
+        "台州器械/原料药",
+        "科创贷/设备租赁/跨境结算/供应链金融",
+        "qcn8k445rrbc.feishu",
+        "生物",
+        "医药",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 周报生成过程中踩了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成",
+        "过程",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Joe，这次主要踩了这些坑，我都绕过去了： 1. **iFinD 调用方式一开始错了** - 我先把 `search_notice` 当成 server type 调，报了 `unknown server_type: search_notice`。 - 修正为：`call('news', 'search_notice', params)`。 - 后续探测成功，但两个正式公告查询结果为空，只作为执行日志处理，没写进周报正文。 2. **飞书 Wiki 节点默认挂到了子节点下面** - 创建 `biomed-weekly-2026052",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "server-type",
+        "biomed-weekly-2026052",
+        "joe",
+        "这次",
+        "主要",
+        "这些",
+        "过去"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: **Skill 内容很长，读取输出被工具截断** - 我按要求读取了 skill，但工具界面返回被截断显示。 - 关键执行规则、避坑、路径、飞书、iFinD、商机表逻辑都已按 skill 执行；后续最好把关键“执行命令模板”单独沉淀，避免每次全量长文本依赖截断输出。 总体看，最大的问题是 **iFinD 调用签名、Wiki 节点位置、商机表去重/空行清理** 这三个。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "商机表去重/空行清理",
+        "skill",
+        "内容",
+        "输出",
+        "工具",
+        "截断",
+        "要求",
+        "界面"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 这些问题都遇到过好多次了，skill里面应该有备注到吧，怎么还是会有这个问题，如果skill里没提到就补充到skill里面",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "这些",
+        "问题",
+        "遇到",
+        "好多",
+        "skill",
+        "里面",
+        "应该",
+        "备注"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，这些坑不是新问题。我的问题是：虽然 skill 里已经写了不少避坑，但有些写成“经验提示”，没有变成**强制执行顺序/可复制命令模板**，我执行时还是手写了一段，于是又踩了 iFinD 调用签名和 Wiki 检查这种老坑。我来把缺的补成更硬的流程。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "强制执行顺序/可复制命令模板",
+        "说得",
+        "这些",
+        "不是",
+        "问题",
+        "我的",
+        "虽然",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 对，Joe，你说得对。问题不是 skill 完全没写，而是： - **iFinD 探测/空结果**、**Wiki 根目录 move**、**商机表去重/清空行**、**Drive full_access warning** 这些确实已经写了。 - 但 **iFinD 的具体函数签名**没写死成模板，所以我又手写错了。 - **Wiki 黏连检查**只写了“按行检查”，但没说明 `docs +fetch` 可能输出字面量 `\\n`，导致这次验证误报。 - 本质是：有些坑只写成“备注”，没有升级成**强制复制模板 + 验证门槛**。 我",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "探测/空结果",
+        "商机表去重/清空行",
+        "full-access",
+        "joe",
+        "说得",
+        "问题",
+        "不是",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: “把这次纠正记到 self-improving corrections 里了”这个是什么鬼，你自己创建一个垃圾干嘛还放在主目录，赶紧删了，我需要把这些写进周报skill",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "self-improving",
+        "这次",
+        "纠正",
+        "self",
+        "improving",
+        "corrections",
+        "这个",
+        "什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 收到，我处理错了。你要的是把经验固化进**周报 skill**，不是另搞一套主目录“自我改进”记录。我马上删掉我刚写进去的那段，并只保留在周报 skill 里。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "收到",
+        "处理",
+        "你要",
+        "的是",
+        "经验",
+        "固化",
+        "周报",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 删了。我刚才写进 `~/self-improving/corrections.md` 的那段已经移除。 现在只保留在周报 skill 里，位置包括： - iFinD 强制调用签名模板：`call('news','search_notice', params)` - Wiki fetch 黏连检查避免误报的验证逻辑 - 2026-05-22 复盘三条：iFinD 签名、Wiki 检查误报、备注必须模板化 你说得对，以后这类周报流程经验只写进 `swyy-weekly-report/SKILL.md`，不再往主目录塞额外记录。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.019Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.019Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "self-improving/corrections.md",
+        "search-notice",
+        "swyy-weekly-report/skill.md",
+        "刚才",
+        "写进",
+        "self",
+        "improving",
+        "corrections.md"
+      ]
+    },
+    "memory:memory/2026-05-23.md:5:8": {
+      "key": "memory:memory/2026-05-23.md:5:8",
+      "path": "memory/2026-05-23.md",
+      "startLine": 5,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "swyy-weekly-report 执行: **执行时间**: 2026-05-23 14:21 (Asia/Shanghai); **覆盖周期**: 2026.05.16 — 2026.05.23; **wiki标题**: biomed-weekly-20260523; **wiki链接**: https://qcn8k445rrbc.feishu.cn/wiki/Cp11wGMCoiepGdkFb4RcnQRBnAd",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "swyy-weekly-report",
+        "asia/shanghai",
+        "2026.05.16",
+        "2026.05.23",
+        "biomed-weekly-20260523",
+        "swyy",
+        "weekly",
+        "report"
+      ]
+    },
+    "memory:memory/2026-05-23.md:9:10": {
+      "key": "memory:memory/2026-05-23.md:9:10",
+      "path": "memory/2026-05-23.md",
+      "startLine": 9,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "swyy-weekly-report 执行: **Word链接**: https://qcn8k445rrbc.feishu.cn/file/F802bGgdAoKY99xkFFUcuLS2nRd; **商机表**: https://qcn8k445rrbc.feishu.cn/sheets/AQjXsU9DehPYPEtDlZbcYY6Wnsf",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "swyy-weekly-report",
+        "swyy",
+        "weekly",
+        "report",
+        "执行",
+        "word",
+        "https",
+        "qcn8k445rrbc.feishu.cn"
+      ]
+    },
+    "memory:memory/2026-05-23.md:14:17": {
+      "key": "memory:memory/2026-05-23.md:14:17",
+      "path": "memory/2026-05-23.md",
+      "startLine": 14,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "本周核心信号: **恒瑞-BMS 152亿美元BD交易**：创中国创新药BD新纪录，一季度对外BD达614亿美元; **生物制品IND超化药**：403 vs 382，中国新药研发加速向生物药转型; **英百瑞6项细胞治疗新药同步受理**：浙江本周最重磅产业信号; **科伦博泰ADC入选ASCO口头报告**：sac-TMT联合K药III期数据优异（HR=0.35, ORR 70.2%）",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "恒瑞-bms",
+        "sac-tmt联合k药iii期数据优异",
+        "0.35",
+        "70.2",
+        "本周",
+        "核心",
+        "信号",
+        "bms"
+      ]
+    },
+    "memory:memory/2026-05-23.md:18:20": {
+      "key": "memory:memory/2026-05-23.md:18:20",
+      "path": "memory/2026-05-23.md",
+      "startLine": 18,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "本周核心信号: **CXO拐点确认**：康龙化成Q1订单落地，药石科技净利+36.59%; **医疗器械处于量价底部**：2026年是集采价格承压最后一年; **iFinD公告检索返回空**：近7天无相关生物医药上市公司公告，正常记录",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "36.59",
+        "本周",
+        "核心",
+        "信号",
+        "cxo",
+        "确认",
+        "化成",
+        "订单"
+      ]
+    },
+    "memory:memory/2026-05-23.md:24:27": {
+      "key": "memory:memory/2026-05-23.md:24:27",
+      "path": "memory/2026-05-23.md",
+      "startLine": 24,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "表格更新: 更新：英百瑞（杭州）生物医药有限公司（已有行，更新触发信号和日期）; 更新：浙江英特集团股份有限公司（已有行，更新触发信号和日期）; 新增：浙江美华鼎昌医药科技有限公司（海归博士团队，新型制剂/器械）; 总计22条有效商机",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "新型制剂/器械",
+        "表格",
+        "更新",
+        "杭州",
+        "生物",
+        "医药",
+        "有限公司",
+        "已有"
+      ]
+    },
+    "memory:memory/2026-05-23.md:31:32": {
+      "key": "memory:memory/2026-05-23.md:31:32",
+      "path": "memory/2026-05-23.md",
+      "startLine": 31,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Wiki 验证: 格式验证通过：无粘连问题（0 bad lines）; 位置验证通过：parent_node_token = \"\"（根目录）",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "parent-node-token",
+        "wiki",
+        "验证",
+        "格式",
+        "通过",
+        "问题",
+        "bad",
+        "位置"
+      ]
+    },
+    "memory:memory/2026-05-23.md:36:39": {
+      "key": "memory:memory/2026-05-23.md:36:39",
+      "path": "memory/2026-05-23.md",
+      "startLine": 36,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Skill 更新记录: 新增踩坑 #29：Brave 对中文地域/工业术语索引极差，返回80%不相关结果; 新增踩坑 #30：lark-cli proxy warning 混入输出，管道解析 JSON 会失败; 更新避坑指南：加入 lark-cli proxy warning 和 Brave 地域索引警告; 更新避坑指南第8条：wiki 创建后「必定」嵌套（从「可能」改为「必定」）",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "对中文地域/工业术语索引极差",
+        "lark-cli",
+        "skill",
+        "更新",
+        "记录",
+        "新增",
+        "brave",
+        "中文"
+      ]
+    },
+    "memory:memory/2026-05-23.md:40:41": {
+      "key": "memory:memory/2026-05-23.md:40:41",
+      "path": "memory/2026-05-23.md",
+      "startLine": 40,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Skill 更新记录: 更新 Wiki 创建流程：创建命令改为先落盘 `> /tmp/wiki_create.json 2>&1`，新增强制模板自动检查 parent_node_token 并 move; 明确不要传 `--parent-node-token \"\"`（无效）",
+      "recallCount": 0,
+      "dailyCount": 8,
+      "groundedCount": 0,
+      "totalScore": 4.96,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-30",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "tmp/wiki-create.json",
+        "parent-node-token",
+        "skill",
+        "更新",
+        "记录",
+        "wiki",
+        "创建",
+        "流程"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 周报生成完毕 ✅ 📌 **生物医药行业商机周报·浙江｜2026.05.16-05.23** 🔥 主线：创新药BD创纪录/生物制品IND超化药/CXO拐点确认 🏠 浙江机会：英百瑞6项细胞治疗新药同步受理，杭州医药港CGT赛道加速 🏢 优先跟进：英百瑞、浙江英特、美华鼎昌 🎯 切入方向：GMP项目贷款/供应链金融/科创贷/跨境结算 Word版：https://qcn8k445rrbc.feishu.cn/file/F802bGgdAoKY99xkFFUcuLS2nRd Wiki存档：https://qcn8k445rrbc.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "2026.05.16-05.23",
+        "创新药bd创纪录/生物制品ind超化药/cxo拐点确认",
+        "gmp项目贷款/供应链金融/科创贷/跨境结算",
+        "周报",
+        "生成",
+        "完毕",
+        "生物",
+        "医药"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Let me start gathering information from all the required sources. I'll fetch the mandatory sources and run searxng searches in parallel.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "let",
+        "start",
+        "gathering",
+        "information",
+        "all",
+        "required",
+        "sources",
+        "i'll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Now let me run searxng searches in parallel and fetch vertical sources:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "run",
+        "searxng",
+        "searches",
+        "parallel",
+        "fetch",
+        "vertical"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Now let me fetch vertical sources and key articles, plus run iFinD:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "fetch",
+        "vertical",
+        "sources",
+        "key",
+        "articles",
+        "plus"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Now let me fetch key articles and run iFinD:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "fetch",
+        "key",
+        "articles",
+        "run",
+        "ifind"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now let me run iFinD and search for more Zhejiang-specific biomed news:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "zhejiang-specific",
+        "now",
+        "let",
+        "run",
+        "ifind",
+        "zhejiang",
+        "specific",
+        "biomed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: iFinD returned no relevant notices. Let me do additional Zhejiang-specific searches:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "zhejiang-specific",
+        "ifind",
+        "returned",
+        "relevant",
+        "notices",
+        "let",
+        "additional",
+        "zhejiang"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: I have gathered sufficient information to generate the weekly report. Now let me create the comprehensive analysis and generate both Word and wiki versions.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "gathered",
+        "sufficient",
+        "information",
+        "generate",
+        "weekly",
+        "report",
+        "now",
+        "let"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Now I need to create the Word document and handle all the Feishu integration. Let me upload the wiki markdown first and create the Word doc.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "need",
+        "create",
+        "word",
+        "document",
+        "handle",
+        "all",
+        "feishu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: No existing 20260523 node. Need to create new wiki node.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "existing",
+        "node",
+        "need",
+        "create",
+        "new",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Node was created under a parent. Need to move it to root.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "node",
+        "was",
+        "created",
+        "under",
+        "parent",
+        "need",
+        "root"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Now let me create the Word document with python-docx, upload to Drive, then write the wiki content.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "python-docx",
+        "now",
+        "let",
+        "create",
+        "word",
+        "document",
+        "python",
+        "docx"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Now upload Word to Feishu Drive and update wiki content:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "upload",
+        "word",
+        "feishu",
+        "drive",
+        "update",
+        "wiki",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: Now update the wiki md with the correct Word download link, then write to wiki:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "update",
+        "wiki",
+        "correct",
+        "word",
+        "download",
+        "link",
+        "write"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Now let me validate the wiki content by fetching it back and checking for line粘连:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "validate",
+        "wiki",
+        "content",
+        "fetching",
+        "back",
+        "checking"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Need to fix the wiki markdown - the enterprise metadata must use list format with dashes. Let me fix all three companies:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "need",
+        "fix",
+        "wiki",
+        "markdown",
+        "enterprise",
+        "metadata",
+        "must",
+        "use"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: Now re-upload the fixed wiki markdown and validate again:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "re-upload",
+        "now",
+        "upload",
+        "fixed",
+        "wiki",
+        "markdown",
+        "validate"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Now let me update the spreadsheet and then push the summary to the group chat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "update",
+        "spreadsheet",
+        "push",
+        "summary",
+        "group",
+        "chat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Now let me prepare the group chat summary and push it.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "prepare",
+        "group",
+        "chat",
+        "summary",
+        "push"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Now let me save the daily memory and clean up temp files:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "save",
+        "clean",
+        "temp"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 周报生成完毕 ✅ 📌 **生物医药行业商机周报·浙江｜2026.05.16-05.23** 🔥 主线：创新药BD创纪录/生物制品IND超化药/CXO拐点确认 🏠 浙江机会：英百瑞6项细胞治疗新药同步受理，杭州医药港CGT赛道加速 🏢 优先跟进：英百瑞、浙江英特、美华鼎昌 🎯 切入方向：GMP项目贷款/供应链金融/科创贷/跨境结算 Word版：https://qcn8k445rrbc.feishu.cn/file/F802bGgdAoKY99xkFFUcuLS2nRd Wiki存档：https://qcn8k445rrbc.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "2026.05.16-05.23",
+        "创新药bd创纪录/生物制品ind超化药/cxo拐点确认",
+        "gmp项目贷款/供应链金融/科创贷/跨境结算",
+        "周报",
+        "生成",
+        "完毕",
+        "生物",
+        "医药"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "User: 执行过程中踩了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "执行",
+        "过程",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: 执行过程中踩了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "执行",
+        "过程",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 执行过程中实际踩到的坑（按时间线）： --- **1. lark-cli wiki 语法写错** 一开始用了 `wiki +node-list --params '{\"space_id\":\"...\"}'`，直接报错 `unknown flag: --params`。必须改为 `--space-id \"...\"` 参数形式。之前踩过的坑又踩了一次。 **2. lark-cli 输出混入 proxy warning** 所有 lark-cli 命令开头都有 `[WARN] proxy detected: HTTPS_PROXY=...`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "node-list",
+        "space-id",
+        "https-proxy",
+        "执行",
+        "过程",
+        "实际",
+        "踩到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 医疗器械\"` 返回结果里混入 B站视频、社保缴费标准、摩托车摩旅等无关页面。必须抽样标题/摘要逐条过滤。 **6. Brave 浙江搜索几乎无效** `web_search(\"生物医药 浙江 杭州 宁波 产业 2026\", freshness=\"week\")` 10条结果里8条不相关（B站、bilibili、长鑫半导体等），有效信息极少。Brave 对中文工业术语索引覆盖有限，已印证之前的结论。 **7. iFinD search_notice 返回空** 环境探测 `ok: true`，但两条正式公告检索 `notices cou",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "必须抽样标题/摘要逐条过滤",
+        "web-search",
+        "search-notice",
+        "医疗",
+        "器械",
+        "返回",
+        "结果",
+        "混入"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 3. Wiki 节点创建后挂在子目录下 wiki +node-create 创建的节点 parent_node_token = \"EPTRwyE9Iir6xfkS7w3c0Qkpn8b\"，自动嵌套在「首页」节点下，不是根目录。必须补一步 wiki +move --target-space-id 移回根目录。 这个问题在调用时去掉parent_node_token，生成后检查下是否需要move,其他坑看看skill里是否提到，没提到的补充进去",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "node-create",
+        "parent-node-token",
+        "target-space-id",
+        "这个问题在调用时去掉parent-node-token",
+        "wiki",
+        "节点",
+        "创建",
+        "目录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 好的，逐一核对 skill 里已提到的坑和未提到的，然后补充 + 优化 wiki 创建流程。 **已记录在 skill 里的：** - ✅ Wiki 节点默认挂子目录 → 踩坑 #8、#18、流程 #921、#932 都有 - ✅ Wiki 单换行黏行 → 踩坑 #16、流程 #801 有 - ✅ iFinD search_notice 可能为空 → 踩坑 #21 有 - ✅ iFinD ok:true 不代表有有效公告 → 踩坑 #21 有 - ✅ 核心简称去重需别名映射 → 踩坑 #17、流程有 - ✅ searxng 本地查询",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T19:00:10.476Z",
+      "lastRecalledAt": "2026-05-23T19:00:10.476Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "好的",
+        "逐一",
+        "核对",
+        "skill",
+        "提到",
+        "然后",
+        "补充"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: Now let me update the SKILL.md with the two new pitfall entries and improve the wiki creation flow.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "now",
+        "let",
+        "update",
+        "two",
+        "new",
+        "pitfall",
+        "entries"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: Now let me improve the wiki creation flow to explicitly address the parent_node_token issue with a clear template:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "parent-node-token",
+        "now",
+        "let",
+        "improve",
+        "wiki",
+        "creation",
+        "flow",
+        "explicitly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: Let me update the wiki creation flow to make the \"check → move\" step a strict mandatory template:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "let",
+        "update",
+        "wiki",
+        "creation",
+        "flow",
+        "check",
+        "step",
+        "strict"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: Let me now improve the wiki creation section with a mandatory check→move template, and also improve the lark-cli output handling guidance:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "let",
+        "now",
+        "improve",
+        "wiki",
+        "creation",
+        "section",
+        "mandatory"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also update the 避坑指南 section and the flow instructions to be consistent:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "update",
+        "指南",
+        "section",
+        "flow",
+        "instructions",
+        "consistent"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: Good, the main flow has been updated. Now let me update the \"关键规则\" section and the 避坑指南 section to reference the new mandatory template:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "good",
+        "flow",
+        "has",
+        "been",
+        "updated",
+        "now",
+        "let",
+        "update"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: Now let me update the Brave search section and the wiki node creation flow:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "update",
+        "brave",
+        "section",
+        "wiki",
+        "node",
+        "creation"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: Let me update the Brave guidance to also mention the poor indexing for Chinese regional/industrial terms:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "regional/industrial",
+        "let",
+        "update",
+        "brave",
+        "guidance",
+        "mention",
+        "poor",
+        "indexing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: Now let me verify all the changes are coherent:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "verify",
+        "all",
+        "changes",
+        "coherent"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: Good. Now let me verify the wiki creation section is coherent:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "good",
+        "now",
+        "let",
+        "verify",
+        "wiki",
+        "creation",
+        "section",
+        "coherent"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: Good, but the create command needs to write to `/tmp/wiki_create.json` first, not just show the command. Let me fix the creation template to include the file output:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "tmp/wiki-create.json",
+        "good",
+        "but",
+        "create",
+        "command",
+        "needs",
+        "write",
+        "tmp"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: Now let me summarize what I've done to update the skill file: **已更新到 SKILL.md 的内容：** ### 1. 新增 2 条踩坑记录（第 29-30 条） - **#29 Brave 对中文地域/工业术语索引极差**：宽泛搜索返回 80% 不相关结果 - **#30 lark-cli proxy warning 混入输出**：所有命令输出混入 `[WARN] proxy detected`，`| python3` 管道会 JSONDecodeError ###",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "29-30",
+        "对中文地域/工业术语索引极差",
+        "lark-cli",
+        "now",
+        "let",
+        "summarize",
+        "what"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: /tmp/wiki_create.json 2>&1 # 强制模板：解析 parent_node_token，如不为空立即 move PARENT_TOKEN=*** -c \"...\") NODE_TOKEN=*** -c \"...\") OBJ_TOKEN=*** -c \"...\") if [ -n \"$PARENT_TOKEN\" ]; then echo \"⚠️ Node created under parent, moving to root...\" lark-cli wiki +move --node-token \"$NODE",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "tmp/wiki-create.json",
+        "parent-node-token",
+        "parent-token",
+        "node-token",
+        "obj-token",
+        "lark-cli",
+        "tmp",
+        "wiki-create.json"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: 已更新完毕，总结如下： --- ### ✅ Skill 更新总览 | 更新位置 | 内容 | |---------|------| | **踩坑记录 第29条** | Brave 对中文地域/工业术语索引极差（80%不相关），建议仅用于精准企业名搜索 | | **踩坑记录 第30条** | lark-cli 所有命令输出混入 proxy warning，`| python3` 管道会 JSONDecodeError | | **避坑指南 第1条** | 新增 lark-cli proxy warning 处理方案：先写文件，跳过 w",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "对中文地域/工业术语索引极差",
+        "lark-cli",
+        "更新",
+        "完毕",
+        "总结",
+        "如下",
+        "skill",
+        "总览"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "User: 从「默认放在首页」改为「必定放在某个 parent 节点下」这是啥意思，应该放根目录，而不是某个节点",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "默认",
+        "放在",
+        "首页",
+        "必定",
+        "parent",
+        "节点",
+        "是啥",
+        "意思"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，我表述有误。应该澄清： **实际情况是：** `wiki +node-create` 不传 `--parent-node-token` 时，飞书 API **默认会把新节点挂在「首页」节点下面**，而不是你想要的根目录。 **期望结果：** 节点在知识库根目录（`parent_node_token == \"\"`） **当前行为：** 节点挂在「首页」节点下（`parent_node_token == \"EPTRwyE9Ii...\"`） 所以不是\"放某个 parent 下\"，而是**明确挂在「首页」节点下**。我改成准确的表",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "node-create",
+        "parent-node-token",
+        "说得",
+        "表述",
+        "应该",
+        "澄清",
+        "实际",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: 已更新。同时检查下其他相关描述是否一致：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "更新",
+        "同时",
+        "检查",
+        "其他",
+        "相关",
+        "描述",
+        "是否",
+        "一致"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: 已更正。两处都改为「挂在「首页」节点下」，明确问题行为，避免误导。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-24T19:00:11.346Z",
+      "lastRecalledAt": "2026-05-24T19:00:11.346Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-05-24"
+      ],
+      "conceptTags": [
+        "更正",
+        "首页",
+        "节点",
+        "明确",
+        "问题",
+        "行为",
+        "避免",
+        "误导"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 周报skill中生成word的名字和wiki一致，且同样检查同名文件就覆盖",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "周报",
+        "skill",
+        "生成",
+        "word",
+        "名字",
+        "wiki",
+        "一致",
+        "同样"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 我来修改 SKILL.md，让 Word 文件名与 wiki 名称一致，并让 Word 上传也支持同名覆盖。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "我来",
+        "修改",
+        "word",
+        "文件",
+        "wiki",
+        "名称",
+        "一致"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 我来修改两处：Word 文件名改为与 wiki 一致的 `biomed-weekly-YYYYMMDD` 格式，并在 Drive 上传前增加同名文件检查覆盖逻辑。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "biomed-weekly-yyyymmdd",
+        "我来",
+        "修改",
+        "word",
+        "文件",
+        "wiki",
+        "一致",
+        "biomed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 让我重新读取精确的文本来匹配：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "重新",
+        "精确",
+        "文本",
+        "匹配"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: I need to find the exact text in the SKILL.md to make precise edits. Let me read the relevant sections:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "need",
+        "find",
+        "exact",
+        "precise",
+        "edits",
+        "let",
+        "read"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now update the remaining references to the old filename format:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "now",
+        "update",
+        "remaining",
+        "references",
+        "old",
+        "filename",
+        "format"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Now let me add a new entry to the 踩坑记录 section and update the 注意事项 section:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "add",
+        "new",
+        "entry",
+        "记录",
+        "section",
+        "update"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Now let me update the wiki section's description to be consistent, and add a踩坑记录 entry:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "update",
+        "wiki",
+        "section's",
+        "description",
+        "consistent",
+        "add"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Now I need to update the drive section in the SKILL.md to also check for same name before upload, just like wiki does.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "now",
+        "need",
+        "update",
+        "drive",
+        "section",
+        "check",
+        "name"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Let me verify all references are updated:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "let",
+        "verify",
+        "all",
+        "references",
+        "updated"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 已完成修改，主要变更： 1. **Word 文件名统一**：从 `行业商机周报_生物医药_YYYYMMDD.docx` 改为 `biomed-weekly-YYYYMMDD.docx`，与 wiki 节点标题一致 2. **Word 上传增加同名覆盖逻辑**：上传 Drive 前先 `drive +list` 查找同名旧文件，`drive +delete` 删除后再上传新版本，确保 Drive 中只保留最新版本 3. **踩坑记录新增第31条**：记录此次变更和 Drive 同名覆盖的注意事项",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.423Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.423Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "行业商机周报-生物医药-yyyymmdd.docx",
+        "biomed-weekly-yyyymmdd.docx",
+        "完成",
+        "修改",
+        "主要",
+        "变更",
+        "word",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 【生物医药】商机周报·浙江｜2026.05.22-05.28 🔥 主线：ADC/双抗BD爆发、医保目录常态化、器械集采企稳 🏠 浙江机会：医药商业龙头供应链、CDMO扩产融资、温州医疗器械集群 🏢 优先跟进：华东医药、九洲药业、联赢佳士比 🎯 切入方向：付融通/项目贷款/科技创新再贷款 Word：https://qcn8k445rrbc.feishu.cn/file/CvSqbPpqXoDxoYxyyvtcJYVTn5c Wiki：https://qcn8k445rrbc.feishu.cn/wiki/ORbPwoez",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "adc/双抗bd爆发",
+        "付融通/项目贷款/科技创新再贷款",
+        "生物",
+        "医药",
+        "周报",
+        "浙江",
+        "2026.05.22"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 开始执行。第一步：多源信息抓取。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "开始",
+        "执行",
+        "一步",
+        "信息",
+        "抓取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 财联社JS渲染严重，跳过。36氪和新华网有有效内容。现在并行执行searxng搜索。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "渲染",
+        "严重",
+        "有效",
+        "内容",
+        "现在",
+        "并行",
+        "执行",
+        "searxng"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Now let me fetch vertical sources and read product file:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "fetch",
+        "vertical",
+        "sources",
+        "read",
+        "product"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: The productFile.docx is binary. Let me extract its text content, and also do the Brave search supplement and iFinD query.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "productfile.docx",
+        "binary",
+        "let",
+        "extract",
+        "content",
+        "brave",
+        "supplement",
+        "ifind"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Now I have all the data. Let me read the existing spreadsheet for dedup and memory for context.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "all",
+        "data",
+        "let",
+        "read",
+        "existing",
+        "spreadsheet",
+        "dedup"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Now I have all the data. Let me generate the complete report. Let me start with the Word version using python-docx.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "python-docx",
+        "now",
+        "all",
+        "data",
+        "let",
+        "generate",
+        "complete",
+        "report"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Now let me write the report generation script:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "write",
+        "report",
+        "generation",
+        "script"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Now upload Word to Drive, then handle wiki.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "upload",
+        "word",
+        "drive",
+        "handle",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Got the file_token. Now let me update the wiki markdown with the correct download link, then handle the wiki.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "file-token",
+        "got",
+        "now",
+        "let",
+        "update",
+        "wiki",
+        "markdown",
+        "correct"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Now handle wiki: check for existing node, create or update.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "handle",
+        "wiki",
+        "check",
+        "existing",
+        "node",
+        "create",
+        "update"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Already at root. The `--insert-after` isn't supported, so ordering will be by creation time. Now update the wiki content:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "insert-after",
+        "already",
+        "root",
+        "insert",
+        "isn't",
+        "supported",
+        "ordering",
+        "will"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Now update the spreadsheet with the opportunity data:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "update",
+        "spreadsheet",
+        "opportunity",
+        "data"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: Delivery: to send a message, use the `message` tool. [Thu 2026-05-28 17:01 GMT+8] 周报skill第七步中 **Word 输出要求：** - **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`（即 SWYY Researcher 工作空间的 `reports/biomed-weekly/`），不得保存到其他目录；如目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "users/leidongqiao",
+        "reports/biomed-weekly",
+        "delivery",
+        "send",
+        "message",
+        "use",
+        "tool",
+        "thu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 我来更新 SKILL.md 的两个要求： 1. **Word 输出后**：先清空指定目录下的文件，再拷贝一份 Word 周报进去 2. **Wiki 排序**：新周报创建后移到根目录，排在\"商机挖掘表格\"节点后面，实现时间倒序",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "我来",
+        "更新",
+        "要求",
+        "word",
+        "输出",
+        "指定",
+        "目录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: The second edit failed because that text is from your message, not in SKILL.md. Let me do the first edit correctly and find the right location for the second addition.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "second",
+        "edit",
+        "failed",
+        "message",
+        "not",
+        "let",
+        "first"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: Now let me add the wiki sorting requirement. I'll add it in the 第九步 section where wiki creation is described:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "add",
+        "wiki",
+        "sorting",
+        "requirement",
+        "i'll",
+        "第九"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also add a concrete implementation note in the wiki creation step about the ordering:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "add",
+        "concrete",
+        "implementation",
+        "wiki",
+        "creation",
+        "step"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Now let me find the wiki creation step to add the sorting implementation details:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "find",
+        "wiki",
+        "creation",
+        "step",
+        "add",
+        "sorting"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also update the \"注意事项\" section at the end to reflect these new rules:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "update",
+        "注意",
+        "事项",
+        "section",
+        "end",
+        "reflect"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 好的，我来更新 SKILL.md，加入你提到的两个要求。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "好的",
+        "我来",
+        "更新",
+        "加入",
+        "提到",
+        "要求"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 已更新 SKILL.md 的第七步，增加了两个要求： **1. Word 同步至本地上传目录：** Word 保存到 `reports/biomed-weekly/` 后，会先清空 `/Users/leidongqiao/Documents/ codex project/local-uploader/data/生物医药` 目录下的文件（保留目录），再拷贝一份 Word 周报进去。 **2. Wiki 时间倒序排列：** 新周报 wiki 节点创建后会排在知识库根目录的「商机挖掘表格」节点后面，实现周报按时间倒序排列（最新在最前）。同",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "reports/biomed-weekly",
+        "users/leidongqiao/documents",
+        "project/local-uploader/data/生物医药",
+        "更新",
+        "第七",
+        "增加",
+        "要求"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: Now sync the summary file and push to group chat:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "sync",
+        "summary",
+        "push",
+        "group",
+        "chat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: Now let me clean up the temp files and update the plan.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "clean",
+        "temp",
+        "update",
+        "plan"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: Now let me do the final wiki format validation as required by the skill:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "final",
+        "wiki",
+        "format",
+        "validation",
+        "required",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: Wiki格式验证通过。现在推送群聊摘要：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "wiki",
+        "格式",
+        "验证",
+        "通过",
+        "现在",
+        "推送",
+        "摘要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: Joe，晚上好。我在。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "joe",
+        "晚上",
+        "我在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "User: - **同步至本地上传目录**：Word 文件保存到固定目录后，必须执行以下步骤： 1. 清空 `/Users/leidongqiao/Documents/ codex project/local-uploader/data/生物医药` 目录下的所有文件（保留目录本身，不删除目录） 2. 将生成的 Word 周报文件拷贝一份到该目录 周报skill第七步里面这个步骤怎么没成功",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "users/leidongqiao/documents",
+        "project/local-uploader/data/生物医药",
+        "同步",
+        "本地",
+        "目录",
+        "word",
+        "文件",
+        "保存"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 我先查一下周报 skill 的第七步和刚才生成文件的位置，确认是脚本没执行、路径有空格问题，还是执行后被覆盖。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "我先",
+        "一下",
+        "周报",
+        "skill",
+        "第七",
+        "刚才",
+        "生成",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 问题找到了，也补好了。 原因有两个： 1. 今天生成 Word 后，我没有实际执行“清空本地上传目录 + 拷贝 Word”的同步命令，所以目录保持为空。 2. `swyy-weekly-report` 的第七步里有重复说明，其中一条路径写错了：`/Users/leidongqiao/Documents/codex project/...` 少了 `Documents/` 后面的空格，和你指定的真实目录不一致，容易误导后续执行。 我已经做了两件事： - 已把今天的 `biomed-weekly-20260528.docx` 同步到：`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.556Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.556Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "swyy-weekly-report",
+        "biomed-weekly-20260528.docx",
+        "问题",
+        "找到",
+        "好了",
+        "原因",
+        "今天",
+        "生成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药商机周报·浙江｜2026.05.22-05.29 🔥 主线：创新药支持、集采落地、CXO/CDMO产能效率 🏠 浙江机会：杭州创新药/CRO、台州CDMO和IVD器械企业的研发周转、设备更新、跨境结算需求更突出 🏢 优先跟进：贝达药业、九洲药业、百诚医药 🎯 切入方向：科创授信/设备融资/付融通/数字财资/跨境结算 Word：https://qcn8k445rrbc.feishu.cn/file/P2NYbxpHvosazsxnTwdcFGzsn8f Wiki：<https://qcn8k445rrbc.fei",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "cxo/cdmo产能效率",
+        "杭州创新药/cro",
+        "科创授信/设备融资/付融通/数字财资/跨境结算",
+        "qcn8k445rrbc.fei",
+        "生物",
+        "医药",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ 🛠️ export BOT_PROFILE=swyy_bot OBJ_TOKEN=*** cd reports/biomed-weekly && ~/.npm-global/bin/lark-cl… (agent) failed",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "bot-profile",
+        "swyy-bot",
+        "obj-token",
+        "reports/biomed-weekly",
+        "npm-global/bin/lark-cl",
+        "export",
+        "reports",
+        "biomed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 这是什么报错",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Joe，你没有发任何报错信息给我哦 😅 请把报错内容贴一下，或者发个截图，我帮你看看是什么问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "joe",
+        "没有",
+        "任何",
+        "信息",
+        "内容",
+        "一下",
+        "或者",
+        "发个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 周报生成的报错啊",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 看到了时间戳，但**没看到具体的报错内容** 😅 可能是截图没传上来，或者报错信息没贴全。 帮我看下： 1. **直接把报错文字贴过来**，或者 2. **重新发一下截图** 这样我才能帮你分析是什么问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "看到",
+        "时间",
+        "具体",
+        "内容",
+        "可能是",
+        "传上来",
+        "或者",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: 你推送到群里的周报报错信息啊",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "推送",
+        "周报",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！周报 cron 任务今天（5/29 周五）8:30 执行时报错了。让我看看具体错误内容。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "5/29",
+        "找到",
+        "周报",
+        "cron",
+        "任务",
+        "今天",
+        "周五",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 让我查看这次报错的完整 session 记录，找到根因。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "查看",
+        "这次",
+        "完整",
+        "记录",
+        "找到",
+        "根因"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: .err 文件都是空的，数据抓取都成功了。让我看下 cron session 的记录找具体报错。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "err",
+        "文件",
+        "都是",
+        "数据",
+        "抓取",
+        "成功",
+        "我看",
+        "cron"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 找到根因了！今天周报的报错是一个 **lark-cli 命令参数错误**。 ## 报错详情 在 Wiki 整理阶段，agent 执行了： ``` lark-cli wiki +move --node-token xxx --parent-node-token xxx ... ``` **`--parent-node-token` 是无效参数**，lark-cli 报错： ``` Error: unknown flag: --parent-node-token ``` 正确参数应该是 `--target-parent-token`。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "node-token",
+        "parent-node-token",
+        "target-parent-token",
+        "找到",
+        "根因",
+        "今天",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: 修一下把，还有别的报错不",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "一下",
+        "还有",
+        "别的"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 找到了报错位置。在第九步第4小节（Wiki 节点排序调整）中，`lark-cli wiki +move` 使用了无效参数 `--parent-node-token` 和 `--insert-after`。 让我确认下正确的参数：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "parent-node-token",
+        "insert-after",
+        "找到",
+        "位置",
+        "第九",
+        "小节",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 找到根因了。**`lark-cli wiki +move` 不支持 `--parent-node-token` 和 `--insert-after`**，正确参数是 `--target-parent-token`。 让我修复 SKILL.md：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "parent-node-token",
+        "insert-after",
+        "target-parent-token",
+        "skill.md",
+        "找到",
+        "根因",
+        "lark"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also check the other wiki +move command in step 3:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "check",
+        "other",
+        "wiki",
+        "command",
+        "step"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Let me check the other wiki +move commands in the file to make sure they're all correct:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "let",
+        "check",
+        "other",
+        "wiki",
+        "commands",
+        "sure",
+        "they're",
+        "all"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: Now let me check the rest of the error details from the session to see if there are other issues:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "check",
+        "rest",
+        "error",
+        "details",
+        "see",
+        "other"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 确认了！**报错就是这个 `--parent-node-token` 参数错误**。另外，让我看看那个 `--insert-after` 命令执行了没有，以及还有没有其他报错：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "parent-node-token",
+        "insert-after",
+        "确认",
+        "就是",
+        "这个",
+        "parent",
+        "node",
+        "token"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 发现了第二个报错！`drive +list` 命令用了 `--as bot` 但 lark-cli 的 drive 子命令不支持这个 flag。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "发现",
+        "第二个",
+        "drive",
+        "list",
+        "命令",
+        "bot",
+        "lark"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！一共有 **3 个报错**： ## 报错汇总 | # | 报错 | 原因 | 影响 | |---|------|------|------| | 1 | `drive +list --as bot` | **`drive +list` 不支持 `--as` 参数**（只有 `--profile`） | Drive 文件列表查询失败 | | 2 | 连锁：`drive_upload.json` 找不到 | 上一个失败导致后续 Python 脚本读不到文件 | Word 上传可能受影响（但实际 Word 还是成功上传了，agen",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "drive-upload.json",
+        "找到",
+        "共有",
+        "原因",
+        "影响",
+        "drive",
+        "list",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Wait, I need to fix the subprocess path — `~/.npm-global/bin/lark-cli` won't expand in subprocess. Let me fix that:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "npm-global/bin/lark-cli",
+        "wait",
+        "need",
+        "fix",
+        "subprocess",
+        "path",
+        "npm",
+        "global"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also check and fix the docs +fetch +as bot issue:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "check",
+        "fix",
+        "docs",
+        "fetch",
+        "bot",
+        "issue"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: Let me verify which lark-cli commands actually support `--as`:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "let",
+        "verify",
+        "which",
+        "lark",
+        "cli",
+        "commands",
+        "actually"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: All the lark-cli commands only support `--profile`, NOT `--as bot`. This is another widespread bug. Let me fix all instances:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "all",
+        "lark",
+        "cli",
+        "commands",
+        "only",
+        "support",
+        "profile"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: The `--as bot` flag is used throughout the entire skill. I need to check whether the lark-cli version supports it at all:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "bot",
+        "flag",
+        "used",
+        "throughout",
+        "entire",
+        "skill",
+        "need"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: OK so `sheets +read` supports `--as bot`. Let me test the others:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.478Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.478Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "sheets",
+        "read",
+        "supports",
+        "bot",
+        "let",
+        "test",
+        "others"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: So `--as bot` works on most commands EXCEPT `drive +list`. Let me also check `drive +upload`:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "bot",
+        "works",
+        "commands",
+        "except",
+        "drive",
+        "list",
+        "let",
+        "check"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: OK, 所以实际上 `--as bot` 大部分命令都支持，唯独 **`drive +list`** 不支持。而 `--parent-node-token` 确实是 `wiki +move` 的错误参数（正确是 `--target-parent-token`），`--insert-after` 则完全不存在。 现在总结一下所有报错： --- ## 报错汇总 | # | 报错内容 | 原因 | 影响 | |---|---------|------|------| | 1 | `drive +list` 报 `unknown flag:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "parent-node-token",
+        "target-parent-token",
+        "insert-after",
+        "所以",
+        "实际",
+        "bot",
+        "大部分",
+        "命令"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 文件每次名称不同（`biomed-weekly-YYYYMMDD.docx`），没找到同名文件也无妨，上传还是成功了 - 第2-3个报错：wiki 内容写入成功了，只是节点位置调整失败，不影响阅读",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "biomed-weekly-yyyymmdd.docx",
+        "第2-3个报错",
+        "文件",
+        "每次",
+        "名称",
+        "不同",
+        "biomed",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "User: 都修复好了没",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "修复",
+        "好了"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 已经修复了3个报错，再确认下有没有遗漏。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "已经",
+        "修复",
+        "确认",
+        "没有",
+        "遗漏"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: `--as bot` 在 `wiki +node-create`、`docs +update`、`docs +fetch`、`wiki +move` 等命令上都正常，唯独 **`drive +list`** 不支持。这个已经修了。 让我再确认下 wiki +move 的修复是否正确：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "node-create",
+        "bot",
+        "wiki",
+        "node",
+        "create",
+        "docs",
+        "update",
+        "fetch"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: OK, `wiki +move` 这里已经修掉了 `--parent-node-token`，只保留了 `--target-space-id`。 现在看看 `drive +list` 那里是否还有 `--as bot` 残留（grep显示第48行、817、818行还有文档说明里的 `--as bot`）： 这些都在 **描述/经验总结** 区域，不是实际命令。但第48行是配置说明，可能会误导 agent：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "parent-node-token",
+        "target-space-id",
+        "描述/经验总结",
+        "wiki",
+        "这里",
+        "已经",
+        "掉了",
+        "parent"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also check the Python scripts that use `--as bot` in the subprocess calls:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "check",
+        "python",
+        "scripts",
+        "use",
+        "bot",
+        "subprocess"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: OK，剩下的都是文档描述区域，没有实际命令了。现在再查下 Python 脚本里的 subprocess 调用：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "剩下",
+        "都是",
+        "描述",
+        "区域",
+        "没有",
+        "实际",
+        "命令",
+        "现在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: Let me verify `sheets +read` supports `--as bot`:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "let",
+        "verify",
+        "sheets",
+        "read",
+        "supports",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: OK, `sheets +write` / `+delete-dimension` / `+sort` **不支持** `--as bot`！让我检查下 skill 里这些命令：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "delete-dimension",
+        "sheets",
+        "write",
+        "delete",
+        "dimension",
+        "sort",
+        "支持",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: Sheets 命令全部不支持 `--as bot`！继续修复：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "sheets",
+        "命令",
+        "全部",
+        "支持",
+        "bot",
+        "继续",
+        "修复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 将最近两周的合并为一个周报吧",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "最近",
+        "合并",
+        "一个",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 我来把两份最近周报合并成一份。先确认下覆盖范围：两份都覆盖5月22-29日这一周，内容有大量重叠。我以05.29版为基础，把05.28版中有价值的差异信息补进去，生成一份合并版。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "两份都覆盖5月22-29日这一周",
+        "我以05.29版为基础",
+        "把05.28版中有价值的差异信息补进去",
+        "我来",
+        "最近",
+        "周报",
+        "合并",
+        "一份"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 已派生子会话在合并两份周报了，合并完成后我会把结果推送上来。🔬",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "派生",
+        "会话",
+        "合并",
+        "周报",
+        "完成后",
+        "结果",
+        "推送",
+        "上来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 合并文件已生成，让我快速验证一下完整度。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "合并",
+        "文件",
+        "生成",
+        "快速",
+        "验证",
+        "一下",
+        "完整"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 合并周报已完成，保存在 `reports/biomed-weekly/wiki_20260529_merged.md`。给你说下合并要点： **合并结果概览：** - **覆盖周期：** 2026.05.22-05.29（双周合并版） - **Word 版链接：** 沿用 05.29 版 **合并要点：** 1. **行业趋势**补回了 05.28 版的具体数据：ADC 赛道（AACR 401 份摘要、中国药企 72 席）、双抗（荣昌生物 RC148）、CXO 分化（百诚易主、九洲 39 亿扩产）、IVD 去泡沫化（超六成亏损、普门",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "05.29",
+        "05.28",
+        "合并",
+        "周报",
+        "完成",
+        "保存",
+        "reports"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: [Subagent Context] You are running as a subagent (depth 1/1). Results auto-announce to your requester; do not busy-poll for status. [Subagent Task] 合并生物医药周报。读取以下两个文件： - /Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/wiki_20260528.md -",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "1/1",
+        "auto-announce",
+        "busy-poll",
+        "users/leidongqiao",
+        "context",
+        "running",
+        "depth",
+        "results"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: 输出保存为：/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/wiki_20260529_merged.md 格式要求：飞书 wiki Markdown 格式，企业元数据用列表格式（- **推荐等级：** 高），不要单换行黏连。 Begin. Execute the assigned task to completion.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "users/leidongqiao",
+        "输出",
+        "保存",
+        "users",
+        "leidongqiao",
+        "openclaw",
+        "swyyresearcher",
+        "reports"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Now let me merge the two reports. I'll use 05.29 as the skeleton and enrich it with the specific details from 05.28.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "05.29",
+        "05.28",
+        "now",
+        "let",
+        "merge",
+        "two",
+        "reports",
+        "i'll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 合并完成。已保存至 `reports/biomed-weekly/wiki_20260529_merged.md`。 **合并要点总结：** 1. **骨架**：以 05.29 版为主体结构，覆盖周期改为 `2026.05.22-05.29（双周合并版）`，保留 05.29 的 Word 版链接 2. **行业趋势补回**：05.28 版的 ADC（AACR 401份摘要、中国药企72席）、双抗（荣昌生物 RC148）、CXO 分化（百诚易主、九洲39亿扩产）、IVD去泡沫化（超六成亏损、普门科技复苏拐点）、冠脉支架集采等全部补入",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "05.29",
+        "2026.05.22-05.29",
+        "05.28",
+        "合并",
+        "完成",
+        "保存",
+        "reports",
+        "biomed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: OK, all `--as bot` 是多余的。修复所有 sheets 相关调用：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "all",
+        "bot",
+        "多余",
+        "修复",
+        "所有",
+        "sheets",
+        "相关"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: Now let me do a final sweep:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "final",
+        "sweep"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: 全部清干净了。最后一轮确认：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "全部",
+        "干净",
+        "最后",
+        "一轮",
+        "确认"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: 全部修好了 ✅ 做个总结： ## 修复内容 | 报错 | 根因 | 修复 | |------|------|------| | `drive +list --as bot` | drive +list 不支持 `--as` | 去掉 `--as bot` | | `drive +delete --as bot` | drive +delete 不支持 `--as` | 去掉 `--as bot` | | `sheets +read/+write/+info/+delete-dimension --as bot` | sheets 子",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T19:00:03.972Z",
+      "lastRecalledAt": "2026-05-30T19:00:03.972Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-31",
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "delete-dimension",
+        "全部",
+        "修好",
+        "总结",
+        "修复",
+        "内容",
+        "根因",
+        "drive"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [media attached: media://inbound/5æ_ä_å_æ_å_æ_è_æ_ºåº_æ_æ_æ_æ---0e78735f-2dae-4a2d-812d-ecf94017ef1c.pdf (application/pdf) | media://inbound/5æ_ä_å_æ_å_æ_è_æ_ºåº_æ_æ_æ_æ---0e78735f-2dae-4a2d-812d-ecf94017ef1c.pdf] [File: /Users/leidongqiao/.openclaw/media/inbound/5æ_ä_å_æ_å",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "application/pdf",
+        "users/leidongqiao",
+        "media",
+        "attached",
+        "inbound",
+        "5æ-ä-å-æ-å-æ-è-æ-oåo-æ-æ-æ-æ",
+        "0e78735f",
+        "2dae"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 这是一份**5月下半月创新药智库材料汇总**，共8页，涵盖了2026年5月13日-5月31日期间生物医药行业的重要动态，分为六大板块： **一、新药审批与临床突破** - 艾伯维CD123 ADC获批（全球首个CD123 ADC） - 2026 ASCO上6款双抗ADC首次公布临床数据，5款来自中国 - 胰腺癌治疗多个突破（泛RAS靶向药、恒瑞mRNA疫苗等） - 辉瑞抗真菌药儿科适应症在中国获批 - 恒瑞GLP-1管线全面开花 **二、医药交易与企业战略** - 信达生物与辉瑞达成105亿美元肿瘤项目战略合作 - 恒瑞与BMS达成",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "涵盖了2026年5月13日-5月31日期间生物医药行业的重要动态",
+        "恒瑞glp-1管线全面开花",
+        "一份",
+        "下半",
+        "创新",
+        "材料",
+        "盖了",
+        "期间"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 你整理下以上这份材料汇总的内容以及溯源找到的原文，选择重要的、相关的内容，整合进前面发布的“生物医药行业周报·浙江 | 2026.05.22-05.28",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "整理",
+        "以上",
+        "材料",
+        "内容",
+        "以及",
+        "溯源",
+        "找到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 我先搜索一下之前发布的周报文档，同时查看群里的历史记录定位那份周报。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "我先",
+        "搜索",
+        "一下",
+        "之前",
+        "发布",
+        "周报",
+        "同时",
+        "查看"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Let me find the published weekly report doc on Feishu.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "let",
+        "find",
+        "published",
+        "weekly",
+        "report",
+        "doc",
+        "feishu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Let me check the skill and recent files more carefully.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "let",
+        "check",
+        "skill",
+        "recent",
+        "carefully"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Let me find the existing weekly report and understand what needs to be updated.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "let",
+        "find",
+        "existing",
+        "weekly",
+        "report",
+        "understand",
+        "what",
+        "needs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Let me find the existing published weekly report document.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "let",
+        "find",
+        "existing",
+        "published",
+        "weekly",
+        "report",
+        "document"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: Let me read the existing wiki report and check what's on Feishu wiki.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "let",
+        "read",
+        "existing",
+        "wiki",
+        "report",
+        "check",
+        "what's",
+        "feishu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 我需要找到那份已发布的周报，然后整合新材料。让我先搜索飞书上的周报文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "需要",
+        "找到",
+        "那份",
+        "发布",
+        "周报",
+        "然后",
+        "整合",
+        "材料"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Let me find the existing weekly report doc that was published for 2026.05.22-05.28.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "let",
+        "find",
+        "existing",
+        "weekly",
+        "report",
+        "doc",
+        "was"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 我来处理这个任务——把PDF中的新材料整合进已发布的周报。先梳理哪些内容值得整合，再溯源更新。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "我来",
+        "处理",
+        "这个",
+        "任务",
+        "pdf",
+        "中的",
+        "材料",
+        "整合"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 我先把PDF材料中的重要条目梳理出来，然后溯源原文、与现有周报对照，最后整合更新。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "先把",
+        "pdf",
+        "材料",
+        "中的",
+        "重要",
+        "条目",
+        "梳理",
+        "出来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: Now let me search for the other key items from the PDF that should be added to the report. Let me identify what's already covered in the merged report and what's new. The existing merged report (biomed-weekly-20260529_merged.md) covers 2026.05.22-05.29. The PDF materia",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "biomed-weekly-20260529-merged.md",
+        "2026.05.22-05.29",
+        "now",
+        "let",
+        "other",
+        "key",
+        "items",
+        "pdf"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: that weren't captured yet—the children's antifungal drug approval, the insulin withdrawal in Europe, and the 500 million yuan fine are the key new items to add. Let me check what's already in the merged report from May 22-29 and cross-reference with the new material th",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "22-29",
+        "cross-reference",
+        "weren't",
+        "captured",
+        "yet",
+        "children's",
+        "antifungal",
+        "drug"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: acquisition of 欧加隆. Now I'm ready to integrate these findings into the existing wiki document that covers the May 22-29 period, making sure the updates flow naturally from what's already been documented. I'm realizing the user wants to merge new material into an existi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "22-29",
+        "acquisition",
+        "now",
+        "i'm",
+        "ready",
+        "integrate",
+        "findings",
+        "existing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: new items emerging: the pediatric anti-infective drug breakthrough, Eli Lilly's European insulin withdrawal, the 7·22 storm policy, the natural medicine Beijing consensus, the COINS regulation impact on Chinese innovation drugs, and ergothioneine's industry inflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "anti-infective",
+        "new",
+        "items",
+        "emerging",
+        "pediatric",
+        "anti",
+        "infective",
+        "drug"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: existing report structure. Looking at the timeline constraints, I realize the current weekly report covers May 22-28, but the new material spans May 17-31. The user's instruction to \"integrate into the previous published weekly report\" means I should update the existin",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "22-28",
+        "17-31",
+        "existing",
+        "report",
+        "structure",
+        "looking",
+        "timeline",
+        "constraints"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the existing wiki and the PDF material. Let me identify the new items to integrate and prepare the updated document.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "now",
+        "existing",
+        "wiki",
+        "pdf",
+        "material",
+        "let",
+        "identify",
+        "new"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Now I have a clear picture. Let me identify what's new in the PDF that's NOT in the existing wiki, then integrate.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "now",
+        "clear",
+        "picture",
+        "let",
+        "identify",
+        "what's",
+        "new",
+        "pdf"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the existing wiki and the new PDF material. Let me integrate the important new items. The existing report covers 2026.05.22-05.29. The PDF adds 5/29-5/31 items and some overlapping content from 5/17-5/28 with new angles. I'll integrate the new content.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "5/29-5/31",
+        "5/17-5/28",
+        "now",
+        "existing",
+        "wiki",
+        "new",
+        "pdf"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: Now let me look at what's already in the existing report more carefully, then integrate the new items.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "look",
+        "what's",
+        "already",
+        "existing",
+        "report",
+        "carefully"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the existing wiki on Feishu and the PDF content. Let me identify what's new and needs to be integrated, then update the wiki.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "now",
+        "existing",
+        "wiki",
+        "feishu",
+        "pdf",
+        "content",
+        "let",
+        "identify"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: Now I have enough context. Let me identify the new items from the PDF that aren't in the existing wiki, then build the updated document.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-31T19:00:03.989Z",
+      "lastRecalledAt": "2026-05-31T19:00:03.989Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01",
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "now",
+        "enough",
+        "context",
+        "let",
+        "identify",
+        "new",
+        "items",
+        "pdf"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the existing wiki and the PDF material. Let me identify what's new and integrate it.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "now",
+        "existing",
+        "wiki",
+        "pdf",
+        "material",
+        "let",
+        "identify",
+        "what's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: Now I have a clear picture. Let me prepare the updated wiki by integrating the new material.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "now",
+        "clear",
+        "picture",
+        "let",
+        "prepare",
+        "updated",
+        "wiki",
+        "integrating"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: Now I have a clear picture of what's new in the PDF vs. what's already in the wiki. Let me build the updated wiki.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "now",
+        "clear",
+        "picture",
+        "what's",
+        "new",
+        "pdf",
+        "already",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 好，我来分析新材料，找出已有周报中缺失的关键内容，然后整合更新。 先对比现有wiki和PDF材料，识别需要补充的新内容：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "我来",
+        "分析",
+        "材料",
+        "找出",
+        "已有",
+        "周报",
+        "缺失",
+        "关键"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 现在更新飞书wiki文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "现在",
+        "更新",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: Wiki文档已更新完毕，格式验证通过。现在推送群聊摘要。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "wiki",
+        "更新",
+        "完毕",
+        "格式",
+        "验证",
+        "通过",
+        "现在",
+        "推送"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 已完成整合更新，向群推送摘要。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "完成",
+        "整合",
+        "更新",
+        "推送",
+        "摘要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "User: 你整理下以上这份材料汇总的内容以及溯源找到的原文，选择重要的、相关的内容，整合进前面发布的“生物医药行业周报·浙江 | 2026.05.22-05.28",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "整理",
+        "以上",
+        "材料",
+        "内容",
+        "以及",
+        "溯源",
+        "找到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 已完成整合，向群推送更新摘要。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "完成",
+        "整合",
+        "推送",
+        "更新",
+        "摘要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: 你整理下以上这份材料汇总的内容以及溯源找到的原文，选择重要的、相关的内容，整合进前面发布的“生物医药行业周报·浙江 | 2026.05.22-05.28",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "整理",
+        "以上",
+        "材料",
+        "内容",
+        "以及",
+        "溯源",
+        "找到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 刚才已完成整合，但群推送摘要漏发了，现在补上。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "刚才",
+        "完成",
+        "整合",
+        "推送",
+        "摘要",
+        "现在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药行业周报·浙江 补充更新完成",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "生物",
+        "医药",
+        "行业",
+        "周报",
+        "浙江",
+        "补充",
+        "更新",
+        "完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: 已完成全部工作： 1. ✅ **Wiki文档已更新** — `biomed-weekly-20260529` 已整合PDF新材料，覆盖周期扩展至 05.22-05.31 2. ✅ **格式验证通过** — 无黏连问题 3. ✅ **群聊摘要已推送** — 11条新增重点已发群 主要整合内容： - ADC/双抗（CD123获批、ASCO双抗ADC炸场、百利天恒IZA-bren） - 恒瑞GLP-1（HRS-7535 III期、三靶点16%减重） - 百亿美元级合作（信达+辉瑞105亿、恒瑞+BMS 152亿） - 前沿赛道（核药多核素",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "biomed-weekly-20260529",
+        "05.22-05.31",
+        "adc/双抗",
+        "百利天恒iza-bren",
+        "恒瑞glp-1",
+        "hrs-7535",
+        "完成",
+        "全部"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "User: 温州不是杭州分行管辖范围，不用纳进来",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "温州",
+        "不是",
+        "杭州",
+        "分行",
+        "管辖",
+        "范围",
+        "不用",
+        "进来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: 更新后的wiki（`/tmp/updated_wiki_20260531.md`）里已经没有温州相关内容了，飞书上的wiki文档用的就是这个版本。让我再fetch确认一下飞书上的当前版本：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "tmp/updated-wiki-20260531.md",
+        "更新",
+        "wiki",
+        "tmp",
+        "updated-wiki-20260531",
+        "已经",
+        "没有",
+        "温州"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 飞书上的周报wiki已确认无温州相关内容。 之前生成的更新版wiki本身就没包含温州内容（仁迈生物、温州产业大会、温州区域机会等都已排除），飞书上的文档就是这个版本，不用担心。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "周报",
+        "wiki",
+        "确认",
+        "温州",
+        "相关",
+        "内容",
+        "之前",
+        "生成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "User: 重新给我推一下周报",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "重新",
+        "一下",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药行业周报·浙江 补充更新版 覆盖周期：2026.05.22-05.31 🔥 新增重点： • 艾伯维CD123 ADC Decnupaz获批（全球首个CD123 ADC） • 恒瑞GLP-1全面突破：HRS-7535 III期达主要终点/三靶点减重16%/瑞普泊肽NDA获受理 • 信达+辉瑞105亿美元Co-Co合作（12个肿瘤项目） • 恒瑞+BMS 152亿美元全球战略合作 • ASCO 2026：6款双抗ADC首次公布数据（5款中国），百利天恒IZA-bren食管鳞癌III期达终点 • 胰腺癌治疗突破：和黄+康宁",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.31",
+        "恒瑞glp-1全面突破",
+        "hrs-7535",
+        "iii期达主要终点/三靶点减重16",
+        "辉瑞105亿美元co-co合作",
+        "百利天恒iza-bren食管鳞癌iii期达终点",
+        "生物",
+        "医药"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: 已重新推送周报摘要到群聊 ✅",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "重新",
+        "推送",
+        "周报",
+        "摘要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "User: 麻烦word版也同步更新下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "麻烦",
+        "word",
+        "同步",
+        "更新"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: Word已上传成功。现在需要更新wiki中的Word下载链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "word",
+        "成功",
+        "现在",
+        "需要",
+        "更新",
+        "wiki",
+        "中的",
+        "下载"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: 旧Word已删除。现在更新wiki里的Word下载链接并覆盖wiki文档。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "word",
+        "删除",
+        "现在",
+        "更新",
+        "wiki",
+        "下载",
+        "覆盖"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Word版已同步更新，链接不变： https://qcn8k445rrbc.feishu.cn/file/RE2JbGH2gob8S5x7cqfcQX9sn8b",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "word",
+        "同步",
+        "更新",
+        "不变",
+        "https",
+        "qcn8k445rrbc.feishu.cn",
+        "re2jbgh2gob8s5x7cqfcqx9sn8b"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: 旧文件已删除，新Word已上传到飞书云盘，Wiki也已更新为新的下载链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T19:00:03.094Z",
+      "lastRecalledAt": "2026-06-01T19:00:03.094Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "文件",
+        "删除",
+        "word",
+        "wiki",
+        "更新",
+        "新的",
+        "下载"
       ]
     }
   }

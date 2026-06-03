@@ -1,0 +1,4 @@
+[imresearcher/sessions/imresearcher/cdbcbbf2-9ede-403c-843f-e29aec22e672.jsonl#L5] User: 周报skill中生成word的名字和wiki一致，且同样检查同名文件就覆盖
+[imresearcher/sessions/imresearcher/cdbcbbf2-9ede-403c-843f-e29aec22e672.jsonl#L8] Assistant: 现在 Wiki 标题是 `im-weekly-YYYYMMDD`，Word 文件名是 `行业商机周报_智能制造_YYYYMMDD.docx`。我让两者保持一致，并给 Word 也加上同名覆盖逻辑。
+[imresearcher/sessions/imresearcher/cdbcbbf2-9ede-403c-843f-e29aec22e672.jsonl#L12] Assistant: Now I need to update the lark-cli upload example to use the new filename:
+[imresearcher/sessions/imresearcher/cdbcbbf2-9ede-403c-843f-e29aec22e672.jsonl#L14] Assistant: 改好了。总结一下变更： 1. **Word 文件名**从 `行业商机周报_智能制造_YYYYMMDD.docx` 改为 `im-weekly-YYYYMMDD.docx`，与 wiki 标题 `im-weekly-YYYYMMDD` 保持一致 2. **新增同名文件覆盖规则**：保存前先检查 `reports/im-weekly/` 下是否已存在同名 `.docx`，存在则直接覆盖 3. **同步更新**了注意事项第 13 条和上传示例中的文件名引用

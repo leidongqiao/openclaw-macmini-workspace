@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T19:00:10.110Z",
+  "updatedAt": "2026-05-29T19:00:04.221Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-05-19.txt:1:1",
@@ -923,6 +923,613 @@
         "行业",
         "能源",
         "生物"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Now sending each summary as an independent message to the group chat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "now",
+        "sending",
+        "each",
+        "summary",
+        "independent",
+        "message",
+        "group",
+        "chat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 3条摘要已全部发送到飞书群聊 ✅ 1. 🤖 AI行业商机周报·浙江 2. ⚡ 新能源商机周报·浙江 3. 💊 生物医药商机周报·浙江",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "摘要",
+        "全部",
+        "发送",
+        "行业",
+        "周报",
+        "浙江",
+        "能源",
+        "生物"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Now sending the three summaries to the Feishu group chat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "now",
+        "sending",
+        "three",
+        "summaries",
+        "feishu",
+        "group",
+        "chat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 3条摘要已依次发送到飞书群聊： 1. ✅ **互联网商机周报** — AI Token计费、算力网、SaaS Agent化 2. ✅ **智能制造商机周报** — 具身智能IPO竞速、工业AI进工厂 3. ✅ **半导体商机周报** — AI算力链、国产设备材料、先进封装",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "摘要",
+        "依次",
+        "发送",
+        "周报",
+        "token",
+        "saas",
+        "智能",
+        "制造"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 📌 AI行业商机周报·浙江｜2026.05.15-05.22 🔥 主线：AI终端标准化、算力与模型落地、具身智能量产验证 🏠 浙江机会：杭州国家具身智能中试基地落地，叠加\"人工智能+\"专项和算力/数据金融工具。 🏢 优先跟进：宇树科技、云深处科技、强脑科技 🎯 切入方向：科创贷/订单融资/票据贴现/数字财资/跨境结算 Word：<https://qcn8k445rrbc.feishu.cn/file/Yzs0bd6Z9oPADNx7T6qcgdgLn2g> Wiki：<https://www.feishu.cn/wiki/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "专项和算力/数据金融工具",
+        "科创贷/订单融资/票据贴现/数字财资/跨境结算",
+        "www.feishu.cn/wiki",
+        "行业",
+        "周报",
+        "浙江",
+        "2026.05.15"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 📌 新能源商机周报·浙江｜2026.05.16-05.22 🔥 主线：多用户绿电直连、储能景气回升、逆变器/风电出海 🏠 浙江机会：园区绿电直连、工商业储能、宁波/杭州出口链条 🏢 优先跟进：禾迈电力、锦浪科技、南都电源 🎯 切入方向：跨境结算/票据保理/供应链金融/项目融资 Word：https://qcn8k445rrbc.feishu.cn/file/YehKbsRUHoxgnuxBZ8dcnouLnzf Wiki：https://qcn8k445rrbc.feishu.cn/wiki/K85ewKyuriCu41k",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.16-05.22",
+        "逆变器/风电出海",
+        "宁波/杭州出口链条",
+        "跨境结算/票据保理/供应链金融/项目融资",
+        "能源",
+        "周报",
+        "浙江",
+        "2026.05.16"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药商机周报·浙江｜2026.05.15-05.22 🔥 主线：创新药临床证据升级、核酸/基因治疗产业化、器械与IVD价格见底修复 🏠 浙江机会：钱塘医药港出海和产业化提速，台州器械/原料药、绍兴生物制造进入扫客窗口 🏢 优先跟进：嘉因生物、海昶生物、华东医药 🎯 切入方向：科创贷/设备租赁/跨境结算/供应链金融 Word：https://qcn8k445rrbc.feishu.cn/file/Z6DBbnEvKoMWzOxsuAjcMYcWnWf Wiki：https://qcn8k445rrbc.feishu.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "核酸/基因治疗产业化",
+        "台州器械/原料药",
+        "科创贷/设备租赁/跨境结算/供应链金融",
+        "qcn8k445rrbc.feishu",
+        "生物",
+        "医药",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 📌 【互联网】商机周报·浙江｜2026.05.15-05.22 🔥 主线：AI Token计费、算力网、SaaS Agent化 🏠 浙江机会：杭州冲刺AI创新发展第一城，Token结算枢纽、开源大模型和AI+制造是核心抓手。 🏢 优先跟进：阿里云、DeepSeek、网易杭州 🎯 切入方向：云资源预付/生态结算/跨境收款/科创融资 Word：https://qcn8k445rrbc.feishu.cn/file/J4HQbNabmoF9VdxSLUVcS4Ypnsh Wiki：https://www.feishu.cn/wi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "云资源预付/生态结算/跨境收款/科创融资",
+        "www.feishu.cn/wi",
+        "周报",
+        "浙江",
+        "2026.05.15",
+        "05.22",
+        "token"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 📌 智能制造商机周报·浙江｜2026.05.15-05.22 🔥 主线：具身智能IPO竞速、工业AI进工厂、核心零部件国产化 🏠 浙江机会：杭州研发/整机+宁波量产/场景协同，宁波\"AI+制造\"政策释放智能工厂与具身智能进工厂项目机会 🏢 优先跟进：宇树科技、云深处科技、宁波中亿智能 🎯 切入方向：供应链金融/订单融资/科创贷/设备融资/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/RcdNbqm1oo3nGFxJKWXc8n5rnEd Wiki：https://www.fei",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "杭州研发/整机",
+        "宁波量产/场景协同",
+        "供应链金融/订单融资/科创贷/设备融资/数字财资",
+        "www.fei",
+        "智能",
+        "制造",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 📌 半导体商机周报·浙江｜2026.05.16-05.22 🔥 主线：AI算力链、国产设备材料、先进封装/IC载板 🏠 浙江机会：杭州设备与功率IDM、宁波材料封测、衢州电子化学品、义乌IC载板进入扫客窗口。 🏢 优先跟进：士兰微、长川科技、江丰电子 🎯 切入方向：设备融资/供应链金融/票据贴现/跨境结算/数字财资 Word：<https://www.feishu.cn/file/S1eJbgBkJoR1voxv6RPcqSqUnDb> Wiki：<https://www.feishu.cn/wiki/Bmh2wOdgri",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:15.731Z",
+      "lastRecalledAt": "2026-05-22T19:00:15.731Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.16-05.22",
+        "先进封装/ic载板",
+        "设备融资/供应链金融/票据贴现/跨境结算/数字财资",
+        "www.feishu.cn/wiki/bmh2wodgri",
+        "半导体",
+        "周报",
+        "浙江",
+        "2026.05.16"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 你好 Joe！📡 我是 Broadcaster，你的行业研究播报员。有什么需要追踪或分析的行业动态，随时告诉我。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.764Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.764Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "你好",
+        "joe",
+        "我是",
+        "broadcaster",
+        "你的",
+        "行业",
+        "研究",
+        "什么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 人工智能商机周报·浙江｜2026.05.22-05.29 🔥 主线：AI计量规范、具身智能中试、算力/光通信景气 🏠 浙江机会：杭州具身智能基地带动机器人链，宁波AI+制造打开工业场景 🏢 优先跟进：宇树科技、DeepSeek、群核科技 🎯 切入方向：科创贷/设备融资/供应链金融/数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/DyrTb8RvhossiwxaotEcT95dnCf Wiki：https://www.feishu.cn/wiki/GttNwX1u1i8MyJk",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "算力/光通信景气",
+        "科创贷/设备融资/供应链金融/数字财资",
+        "人工",
+        "智能",
+        "周报",
+        "浙江",
+        "2026.05.22"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 📌 新能源商机周报·浙江｜2026.05.23-05.29 🔥 主线：多用户绿电直连、光伏反内卷、储能/电池结构性景气 🏠 浙江机会：新能源与新型储能集群调整，杭州电网扩容、金华独立储能项目带动本地光储和电力设备需求 🏢 优先跟进：容百科技、天能电池、正泰集团 🎯 切入方向：订单/票据/供应链金融 + 跨境结算 + 数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/CvN6bZRbqoccX5xTrpzc65Ronlb Wiki：https://qcn8k445rrbc.feish",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.23-05.29",
+        "储能/电池结构性景气",
+        "订单/票据/供应链金融",
+        "qcn8k445rrbc.feish",
+        "能源",
+        "周报",
+        "浙江",
+        "2026.05.23"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 📌 生物医药商机周报·浙江｜2026.05.22-05.29 🔥 主线：创新药支持、集采落地、CXO/CDMO产能效率 🏠 浙江机会：杭州创新药/CRO、台州CDMO和IVD器械企业的研发周转、设备更新、跨境结算需求更突出 🏢 优先跟进：贝达药业、九洲药业、百诚医药 🎯 切入方向：科创授信/设备融资/付融通/数字财资/跨境结算 Word：https://qcn8k445rrbc.feishu.cn/file/P2NYbxpHvosazsxnTwdcFGzsn8f Wiki：https://qcn8k445rrbc.feis",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "cxo/cdmo产能效率",
+        "杭州创新药/cro",
+        "科创授信/设备融资/付融通/数字财资/跨境结算",
+        "qcn8k445rrbc.feis",
+        "生物",
+        "医药",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 📌 【互联网】商机周报·浙江｜2026.05.22-05.29 🔥 主线：数据要素赋能AI、Token/算力运营、AI电商与跨境出海 🏠 浙江机会：杭州AI生态、AI外贸、电商SaaS和AI商拍继续释放结算与融资需求 🏢 优先跟进：DeepSeek、群核科技、有赞 🎯 切入方向：云资源预付/平台结算/跨境收款/项目回款 Word：https://qcn8k445rrbc.feishu.cn/file/RJ7ZbDPqzo9jGIx5uIBczuOOnDd Wiki：https://www.feishu.cn/wiki/WS",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "token/算力运营",
+        "云资源预付/平台结算/跨境收款/项目回款",
+        "www.feishu.cn/wiki/ws",
+        "周报",
+        "浙江",
+        "2026.05.22",
+        "05.29"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 📌 智能制造商机周报·浙江|2026.05.23-05.29 🔥 主线: 科技金融再贷款、AI计量标准、具身智能规模交付 🏠 浙江机会: 杭州机器人链主、绍兴AI+制造技改、宁波智能装备项目制订单 🏢 优先跟进: 宇树科技、云深处、均普智能 🎯 切入方向: 供应链付款/订单融资/设备技改/跨境结算 Word:https://qcn8k445rrbc.feishu.cn/file/HrYabGXvsoPueWx1Z6JcAp4Gnmh Wiki:https://qcn8k445rrbc.feishu.cn/wiki/E50C",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.23-05.29",
+        "供应链付款/订单融资/设备技改/跨境结算",
+        "qcn8k445rrbc.feishu.cn/wiki/e50c",
+        "智能",
+        "制造",
+        "周报",
+        "浙江",
+        "2026.05.23"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 📌 半导体商机周报·浙江｜2026.05.23-05.29 🔥 主线：AI算力/先进封装、设备更新再贷款、车规与功率芯片 🏠 浙江机会：杭州钱塘芯谷+集成电路展会延续升温，宁波封测/材料、衢州电子化学品适合扫客 🏢 优先跟进：士兰微、长川科技、甬矽电子 🎯 切入方向：技改融资/票据/供应链金融/跨境结算 Word：https://www.feishu.cn/file/ELkRbC5CJosi4vxw6IwcDLEJnYY Wiki：https://www.feishu.cn/wiki/SO6nwLztTiK8QNk6nWA",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.23-05.29",
+        "ai算力/先进封装",
+        "宁波封测/材料",
+        "技改融资/票据/供应链金融/跨境结算",
+        "半导体",
+        "周报",
+        "浙江",
+        "2026.05.23"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 播报完成：3条摘要已发送到群聊（互联网 / 智能制造 / 半导体），本地文件上传6份到小程序云平台，无失败。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "完成",
+        "摘要",
+        "发送",
+        "智能",
+        "制造",
+        "半导体",
+        "本地",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 3条摘要已全部发送到飞书群聊 `oc_a387040cc398a4f050fb50109486531b`： | # | 摘要 | 消息ID | |---|------|--------| | 1 | AI商机周报 | om_x100b6ebbeb8adc84c4eb3dfa5e3239f | | 2 | 新能源商机周报 | om_x100b6ebbe8d80488c4ccc46dcba583a | | 3 | 生物医药商机周报 | om_x100b6ebbe81064acc2883bd3db08280 | 播报完成。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:04.203Z",
+      "lastRecalledAt": "2026-05-29T19:00:04.203Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "摘要",
+        "全部",
+        "发送",
+        "消息",
+        "周报",
+        "能源",
+        "生物",
+        "医药"
       ]
     }
   }

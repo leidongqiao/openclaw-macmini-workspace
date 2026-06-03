@@ -1,19 +1,40 @@
 {
   "version": 3,
   "files": {
-    "broadcaster:sessions/broadcaster/6dd76315-76c5-41ba-8b5c-599f1af6dab5.jsonl": {
+    "broadcaster:sessions/broadcaster/67400c90-4058-44ac-a004-d3f956d1de1c.jsonl": {
+      "mtimeMs": 1779417045244,
+      "size": 11343,
+      "contentHash": "8247ea3cdfe1613bb5cb25028b0e85e67465689f379d2b242e8e3b57e43764d5",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/6dd76315-76c5-41ba-8b5c-599f1af6dab5.jsonl.reset.2026-05-25T02-09-52.449Z": {
       "mtimeMs": 1779375659379,
       "size": 9946,
       "contentHash": "d3287f0d6aff06f9012963ee1da32d046b61ce594915945c2fc779bf99737c7f",
       "lineCount": 5,
       "lastContentLine": 5
     },
+    "broadcaster:sessions/broadcaster/6f1e5ee1-65c6-4c2a-acb1-72c0310ab353.jsonl": {
+      "mtimeMs": 1779674996597,
+      "size": 1730,
+      "contentHash": "126fa460b0c02d03b45d455bf17f63594c6d067ff8ebab1857a10a0ba146b898",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/8aab690a-f4f0-4bdc-9ae9-425d40299a7e.jsonl": {
+      "mtimeMs": 1779433244520,
+      "size": 12640,
+      "contentHash": "63ebf25aa216b2a702ab0eb6fe3b80344721b14f5990d1b7221d64f1e87abbe9",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
     "broadcaster:sessions/broadcaster/9ab929b2-3a9c-4714-a713-c324545f1909.jsonl": {
-      "mtimeMs": 1779375854151,
-      "size": 6885,
-      "contentHash": "67fd1993f492838e048b3a815120cdfc555933fdb2ec507662874441b568f20c",
-      "lineCount": 6,
-      "lastContentLine": 6
+      "mtimeMs": 1780038079416,
+      "size": 20759,
+      "contentHash": "33f623baf3ae5dfb1732e5ed45cf1ace77df7e73549d319d5718618707331046",
+      "lineCount": 18,
+      "lastContentLine": 18
     },
     "broadcaster:sessions/broadcaster/9e2b9b66-5431-4d08-9d71-3b70b04ae9a9.jsonl.reset.2026-05-21T10-09-57.499Z": {
       "mtimeMs": 1779189817677,
@@ -35,6 +56,20 @@
       "contentHash": "d2c76c192b5b274367e96622a2073b4aba3f678e8e7a00b8710d68f3b5c01e0e",
       "lineCount": 2,
       "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/e107cd24-e9ec-494d-a8c6-f47941d2aaba.jsonl": {
+      "mtimeMs": 1780038097921,
+      "size": 25501,
+      "contentHash": "c7528a356dbbec18035a0a65934eda0f56bf4b39327888b3c1c96203085dfefe",
+      "lineCount": 1,
+      "lastContentLine": 1
+    },
+    "broadcaster:sessions/broadcaster/e6d73188-e51b-49fd-b937-2e0afd6b3600.jsonl": {
+      "mtimeMs": 1780021876051,
+      "size": 25818,
+      "contentHash": "8ab7e9982244598128455fa5fda87bcb93b5f580a0d4dd367055bbdb0ff71807",
+      "lineCount": 1,
+      "lastContentLine": 1
     }
   },
   "seenMessages": {
@@ -73,10 +108,39 @@
       "f2fa67775f23124801fde217c6c352ffceb116bc",
       "e48d01cda1bcadc8f37bb987d90c7209d7d819af",
       "e1955e9179a4db4b9c67dd882005bc68bf51d6f5",
-      "29da694119de4b1df6261b10792de62318634d00"
+      "29da694119de4b1df6261b10792de62318634d00",
+      "362ce35f0c34715f8b13e7d0cc3f1ecbc0c53c0c",
+      "774311fed62a6809fb6f516c689243cb3c86aca0",
+      "790f6343f7705c52de1da906ba5559c8f74daba9",
+      "f5603855b35d071048a67387b69b4de4fb285927",
+      "3a9a1f73e5ab478de31ec3e80d95e862030de001",
+      "acf650168851822fce2a1c32468930ef3fa489d5",
+      "918e22b645a9bbf207ee78735825aeec1cc87cac",
+      "29f85b6f730c9b3cd3407e8b3e9a6de21a7ebd49",
+      "ea80e6dc4a7a79f7a1b2294146e87eae18b05e5a",
+      "2fcb9ae0b8e2a9e2dd2fc9106f74c9554d22419d",
+      "6b6c18944cae631c57c6f806ffe8ac254cb5f277",
+      "6d6227da365d87f82229eda70eb2755f4df55cd1"
     ],
     "broadcaster:bdd9f5a8-3925-42d0-9fd8-9259dee94dd3": [
       "6c82122f62e4ed5773886d6d64f4023e8448a086"
+    ],
+    "broadcaster:67400c90-4058-44ac-a004-d3f956d1de1c": [
+      "01445cc61643d58157cd50274d91e52a77306faf",
+      "cf67b474fb0ee932e9362e4fca60acccf365dbf5"
+    ],
+    "broadcaster:8aab690a-f4f0-4bdc-9ae9-425d40299a7e": [
+      "a233c5ebe7566a123c10bde6a57780697d7b480b",
+      "709b04e31a92ae1a490d845e71fab8a43910f77c"
+    ],
+    "broadcaster:6f1e5ee1-65c6-4c2a-acb1-72c0310ab353": [
+      "5aaa1da1eb793227a6a3893f8625c7c426ceeb8d"
+    ],
+    "broadcaster:e107cd24-e9ec-494d-a8c6-f47941d2aaba": [
+      "1cf276d10ff765119c756d24a5bedaf35d3f9db0"
+    ],
+    "broadcaster:e6d73188-e51b-49fd-b937-2e0afd6b3600": [
+      "cdd1c3bff1ac1303818488fa01ade07bd96c8c09"
     ]
   }
 }

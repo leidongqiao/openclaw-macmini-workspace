@@ -73,35 +73,44 @@ description: |
 - **iFinD 时间精确到近7天**:time_start/time_end 必须用实际日期,size 控制在 5-10
 - **表格只查 A 列**去重,不查全表
 - **所有飞书 API 统一走 lark-cli**(sheets/drive/docs/wiki),不用 Python urllib 直接调 API,避免 SSL 代理问题
-- **lark-cli 路径**:在 PATH 中可能不可用，实测位置为 `~/.npm-global/bin/lark-cli`。所有脚本中应优先使用绝对路径 `~/.npm-global/bin/lark-cli`。
+- **lark-cli 路径**:在 PATH 中可能不可用,实测位置为 `~/.npm-global/bin/lark-cli`。所有脚本中应优先使用绝对路径 `~/.npm-global/bin/lark-cli`。
 - **lark-cli 命令按预定义参数执行**,不要反复试错
 - **正文点入按需**:只在搜索结果发现重要线索时点入正文(maxChars=4000)
-- **searxng 结果直接落盘**:输出是完整 JSON，避免在命令 stdout 中被截断。建议先写入临时文件再解析，不要在 exec 输出中直接解析。
+- **searxng 结果直接落盘**:输出是完整 JSON,避免在命令 stdout 中被截断。建议先写入临时文件再解析,不要在 exec 输出中直接解析。
 
 ## 执行经验与避坑指南(持续更新)
 
 ### 1. 工具调用与路径
 
 - **lark-cli 不在 PATH**: 实测路径为 `~/.npm-global/bin/lark-cli`。所有脚本用绝对路径，别依赖 PATH。
-- **SKILL.md 很长会被 read 截断**: 执行本 skill 前如用户要求“严格读取全量 skill”，必须用 `read offset/limit` 分段读到文件末尾，不能只读首段后凭印象执行。
+- **SKILL.md 很长会被 read 截断**: 执行本 skill 前如用户要求"严格读取全量 skill"，必须用 `read offset/limit` 分段读到文件末尾，不能只读首段后凭印象执行。
 - **searxng 截断**: 搜索结果 JSON 较大，直接 echo 会被截断。必须先写文件再解析。
 - **Brave 429 限流**: Brave 免费套餐约 1 次/秒，不能并行调用 `web_search`。只有 searxng 可以并行；Brave 备用时必须串行、间隔执行，否则会 429。
 - **iFinD search_trending_news 可能 403**: 该接口受权限限制，返回 `Tool not allowed`。遇到时跳过即可，**不要在报告正文中标注**。
 - **iFinD search_notice 可能为空**: 语义检索对时间范围和 query 要求严格，可能返回空。为空时直接忽略，**不要在报告正文中标注**。
 - **iFinD 调用方式**: 不能直接向 `call-node.js` 喂 JSON，必须按 skill 要求用 Node `require` 方式调用 `call()` 函数。
+- **iFinD call.py 相对路径坑**: `call.py` 用 `Path("mcp_config.json")` 相对路径读配置，从非 skill 目录执行时会 `FileNotFoundError`。已修复为 `Path(__file__).parent.joinpath("mcp_config.json")`。如遇此问题，确保从 skill 目录执行或使用 Node.js 方案（`call-node.js` 用 `__dirname` 绝对路径，无此问题）。
+- **message 工具参数校验**: `message` 工具的 `send` action 同时需要 `text` 和 `message` 两个字段，只传一个会报 `Validation failed`。两个参数传相同值即可。
+- **cron 隔离 session 中 feishu_im_user_message 不可用**: isolated session 没有用户 OAuth 上下文，返回 `need_user_authorization`。群聊推送改用 `message` 工具（机器人身份）。
 
 ### 2. 数据抓取
 
 - **失效名单**: 证券时报快讯 404、IT之家机器人 404、36氪研究院页面已删除。按规则跳过即可，不要重试，**不要在报告中提及**。
 - **JS 渲染失败**: 所有垂直源返回空白时，跳过并继续，**不要在报告中提及**。
+- **腾讯文章 fetch 提取质量差**: 部分腾讯新闻页面用 JS 渲染严重，`web_fetch extractMode=text` 的 readability 提取会丢失正文、只返回网站模板导航文本。遇到腾讯文章时，换其他源或搜索摘要替代。
 
 ### 3. 飞书 Wiki
 
-- **Wiki 节点默认挂子目录**: `wiki +node-create --space-id` 创建后可能挂在某个 parent 下。如需根目录，创建后用 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。
+- **Wiki 节点创建后可能挂在子目录**: `wiki +node-create` 不传 `parent-node-token` 时，API 默认会将节点挂在某个 parent 下（`parent_node_token` 不为空）。创建后必须检查返回的 `parent_node_token`，如不为空则执行 `wiki +move --node-token <token> --target-space-id <space>` 移到空间根级。**兜底检查流程**: 创建 wiki 节点 → 解析返回 JSON 的 `parent_node_token` → 如非空则执行 `+move` → 二次确认 `parent_node_token` 已为空。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式，标题和正文之间加空行。
 - **Wiki 开头元信息也会黏行**: `覆盖周期`、`资料来源`、`Word版下载` 等不要依赖两个空格换行；建议每项之间空一行或写成列表，创建后 fetch 抽查。
 - **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
-- **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连。
+- **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连，同时检查是否出现乱码、Unicode 转义残留、空正文、正文被 JSON/XML 包裹、链接丢失等问题。只要 fetch 回来的内容不可读或与本地 wiki Markdown 明显不一致，必须重写/重传后再次 fetch，不能推送。
+- **乱码/转义错误是发布失败，不是小瑕疵**: Wiki 正文中出现 `\u4e2d\u56fd`、`&#x`、`&lt;`/`&gt;` 大量残留、`{ "content": ... }`、XML 标签正文化、连续问号/方块字符、中文大面积缺失，均判定为发布失败。必须回到本地 Markdown 源重新写入，必要时改用临时文件传参，避免 shell 转义污染。
+- **大段 Wiki Markdown 必须用文件传参**: 使用 `lark-cli docs +update --api-version v2 --command overwrite --doc-format markdown --content @reports/im-weekly/im-weekly-YYYYMMDD.md`。不要把 Markdown 内容先 `json.dumps` 后作为字符串写入,否则会把正文变成带 `\uXXXX` 的 JSON 字符串。
+- **Word 链接一致性**: 上传 Word 后得到的 Drive file 链接，必须同时写入本地 Markdown、Wiki 正文、`reports/summary/IM-summary.md` 和最终推送摘要。推送前逐项比对，四处链接不一致时以最新上传且已在 Wiki fetch 中验证存在的链接为准，修正后再推送。
+- **Wiki node-create 的 flag 差异**: 简写版 `+node-create` 不支持 `--space-id` 和 `--format json` 等 flag。正确用法是 `wiki +node-create --profile im_bot --as bot --space-id <space_id> --title <title> --obj-type docx`。如果遇到 `unknown flag` 错误，改用完整子命令 `wiki nodes create --params '{"space_id":"...","title":"..."}'` 并去掉不支持的 flag。
+- **lark-cli 简写 + 命令和完整子命令的参数不一致**: `wiki +node-create`、`wiki +move` 等简写命令使用独立的 flag 集（如 `--space-id`、`--title`），而完整子命令如 `wiki nodes list` 使用 `--params` JSON。混用时容易踩坑，建议统一使用简写 + 命令并只传它支持的 flag。
 
 ### 4. 商机表格去重与写入
 
@@ -110,11 +119,13 @@ description: |
 - **排序 key 有 None 值**: 创建日期列可能有空值/None。排序时必须做 `str(r[8] or '')` 安全转换，直接比较会报 TypeError。
 - **空行可能是 `[None, None, ...]`**: lark-cli 读表时空行不一定是空数组，不能用 `str(row[0]).strip()` 判断，否则 `None` 会变成字符串 `"None"`，导致把空行当有效记录、排序/清理异常。必须写 `row and row[0] is not None and str(row[0]).strip()`。
 - **清理表格前先复读验证**: 写入、排序、删除空行后，必须重新读取 `A1:J30` 和 sheet `row_count`，确认没有 `[None, None]` 残留且总行数合理，再宣布完成。
+- **Sheets --values JSON 转义坑**: `lark-cli sheets +write` 的 `--values` 参数传 JSON 数组时，shell 转义非常容易出错（尤其是值里含中文引号、emoji 时）。建议先将 JSON 写到临时文件，解析后拼接为单行字符串再传入，或确保 `ensure_ascii=False` 后正确 shell-quote。遇到 `JSONDecodeError` 时检查 stderr 中是否有 proxy warning 或其他前缀输出污染了 JSON。
 
 ### 5. Word/Wiki 格式分离
 
-- 建议用脚本生成两份：docx(去 Markdown 符号) 和 md(保留 Markdown)。
-- Word 版用 python-docx 时，`- **` 等标记需去除，段落用纯文本。
+- 建议用脚本生成两份:docx(去 Markdown 符号) 和 md(保留 Markdown)。
+- Word 版用 python-docx 时,`- **` 等标记需去除,段落用纯文本。
+- **推送前必须做发布链路自检**: 本地 docx 存在且大小正常、本地 md 存在且无执行日志、Drive file 链接可拼接、Wiki fetch 可读且无乱码、summary 链接与 Wiki 链接一致、商机表链接为 sheets URL。任一项失败都不得推送群聊摘要。
 
 ## 工作流
 
@@ -240,12 +251,12 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 ```
 
 **iFinD 调用说明:**
-- 使用 Node.js 方案(`call-node.js`,无需额外依赖): 通过 Node `require` 加载后调用 `call()` 函数，不能直接向脚本喂 JSON。
+- 使用 Node.js 方案(`call-node.js`,无需额外依赖): 通过 Node `require` 加载后调用 `call()` 函数,不能直接向脚本喂 JSON。
 - 使用 Python 方案:`python3 ~/.openclaw/skills/ifind-finance-data/call.py`
 - 优先使用 Node.js 方案(环境要求更低)
 - 每次调用后检查 `ok` 字段确认是否成功,失败则跳过该查询
-- **search_trending_news 可能 403 Tool not allowed**: 该接口受权限限制，返回 403 时跳过即可，**不要在报告正文中标注**。
-- **search_notice 可能返回空结果**: 语义检索对时间和 query 要求严格，为空时直接忽略，**不要在报告正文中标注**。
+- **search_trending_news 可能 403 Tool not allowed**: 该接口受权限限制,返回 403 时跳过即可,**不要在报告正文中标注**。
+- **search_notice 可能返回空结果**: 语义检索对时间和 query 要求严格,为空时直接忽略,**不要在报告正文中标注**。
 - **时间参数必须用近 7 天的实际日期(YYYY-MM-DD 格式),不可用模糊描述**
 - **行业限定**:query 中必须包含智能制造相关关键词(机器人/数控机床/工业软件/智能工厂等),避免返回无关公告
 - 如果 iFinD 密钥未配置或调用全部失败,跳过本轮,继续后续步骤
@@ -432,25 +443,25 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 # 智能制造行业商机周报
 
 ## 一、行业动态与发展总结
-（仅全国/国家/行业层面，不含浙江内容）
+(仅全国/国家/行业层面,不含浙江内容)
 
 ### 1. 近期政策变动
-（政策情况要写详细：发布主体/时间背景/核心条款/支持方向/约束要求；本小节末尾统一写一段“综合影响闭环”，不要每条政策各写一个闭环）
+(政策情况要写详细:发布主体/时间背景/核心条款/支持方向/约束要求;本小节末尾统一写一段"综合影响闭环",不要每条政策各写一个闭环)
 
 梳理近期国家部委、行业主管部门发布的相关政策、监管要求、产业扶持、财政补贴、设备更新、绿色低碳、专精特新、外贸稳增长、科技创新等政策变化。
 
-要求：
+要求:
 - 不要简单罗列政策标题。
 - 要说明政策对【目标行业】的影响。
 - 要说明可能带来的银行业务机会。
-- 如政策发布日期、发布部门、政策名称可查，应简要注明。
+- 如政策发布日期、发布部门、政策名称可查,应简要注明。
 - 浙江省及浙江地市政策不要放在这里。
 
 ### 2. 政府规划与产业方向
 
 只梳理国家层面的产业规划、重大项目规划、重点产业布局和未来产业方向。
 
-重点关注：
+重点关注:
 - 国家级产业规划
 - 国家战略性新兴产业
 - 国家未来产业方向
@@ -462,7 +473,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 总结行业当前的发展阶段、景气度、需求变化、技术路线、价格变化、竞争格局和资本市场表现。
 
-要求说明：
+要求说明:
 - 行业处于上行、分化、调整还是出清阶段
 - 哪些细分赛道更有机会
 - 哪些企业类型更值得银行关注
@@ -472,7 +483,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 分析全国或行业层面的上游、中游、下游最新变化。
 
-重点判断：
+重点判断:
 - 上游原材料、设备、零部件价格或供应变化
 - 中游企业扩产、订单、产能利用率变化
 - 下游需求、出口、客户结构、渠道变化
@@ -485,27 +496,27 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 梳理浙江省及杭州、宁波、温州、绍兴、嘉兴、湖州、金华、台州等重点城市近期政策、产业规划、园区规划、招商引资、设备更新、技改补贴、绿色制造、智能制造等动态。
 
-要求：
+要求:
 - 说明政策或规划对本地企业的影响。
 - 说明可能带来的银行授信、票据、供应链、跨境、现金管理等机会。
-- 如政策发布日期、发布部门、政策名称可查，应简要注明。
+- 如政策发布日期、发布部门、政策名称可查,应简要注明。
 
 ### 2. 浙江重点产业与区域机会
 
-重点关注：
-- 浙江“415X”先进制造业集群
+重点关注:
+- 浙江"415X"先进制造业集群
 - 【目标行业】在浙江的重点产业集群、重点园区和重点城市
 - 专精特新、小巨人、高新技术企业、隐形冠军
 - 产业园区、开发区、重点项目、产业基金、招商落地项目
 
-要求说明：
+要求说明:
 - 哪些产业集群正在释放机会
 - 哪些区域更值得客户经理重点扫客
 - 哪些企业类型更可能产生融资、供应链、跨境或现金管理需求
 
 ### 3. 浙江上下游产业链动态
 
-分析浙江本地产业链上下游变化：
+分析浙江本地产业链上下游变化:
 - 上游原材料、设备、零部件供应
 - 中游制造、加工、集成、平台企业
 - 下游客户、外贸订单、经销商、终端应用
@@ -517,51 +528,51 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 用3-5条总结浙江地区最值得平安银行杭州分行关注的展业机会。
 
-要求：
+要求:
 - 必须结合浙江本地政策、产业集群、企业动态和产业链变化。
 - 必须说明对应的银行业务机会。
-- 尽量落到具体产品方向，如授信融资、票据、保理、供应链金融、跨境结算、现金管理、代发、财富管理等。
+- 尽量落到具体产品方向,如授信融资、票据、保理、供应链金融、跨境结算、现金管理、代发、财富管理等。
 
 ## 三、重点企业推荐
 
 选择3-8家最值得客户经理跟进的浙江企业。每家企业按照以下模板输出。
-⚠️ **硬性结构要求（不可压缩/不可省略）**：每一家企业必须严格保留下列字段和小标题；不得把“企业关键信息”合并成一段，也不得把“推荐理由”“银行展业机会”改写成无结构长段。若资料不足，字段仍保留，并写“未披露/待核实”。生成完成后必须逐家自检：是否包含【推荐等级、所属行业、所在地区、产业链位置、推荐方向、企业关键信息-基本情况、企业关键信息-高层与团队背景、企业关键信息-银行关注点、推荐理由、银行展业机会、推荐产品组合、客户经理切入话术、风险提示】；缺一项必须返工。
+⚠️ **硬性结构要求(不可压缩/不可省略)**:每一家企业必须严格保留下列字段和小标题;不得把"企业关键信息"合并成一段,也不得把"推荐理由""银行展业机会"改写成无结构长段。若资料不足,字段仍保留,并写"未披露/待核实"。生成完成后必须逐家自检:是否包含【推荐等级、所属行业、所在地区、产业链位置、推荐方向、企业关键信息-基本情况、企业关键信息-高层与团队背景、企业关键信息-银行关注点、推荐理由、银行展业机会、推荐产品组合、客户经理切入话术、风险提示】;缺一项必须返工。
 
-### 企业名称：XXX公司
+### 企业名称:XXX公司
 
-**推荐等级：** 高 / 中 / 低
-**所属行业：**
-**所在地区：**
-**产业链位置：** 上游 / 中游 / 下游 / 平台型 / 服务商
-**推荐方向：** 流动资金 / 供应链金融 / 跨境结算 / 票据 / 现金管理 / 代发 / 财富管理 / 综合金融等。
+**推荐等级:** 高 / 中 / 低
+**所属行业:**
+**所在地区:**
+**产业链位置:** 上游 / 中游 / 下游 / 平台型 / 服务商
+**推荐方向:** 流动资金 / 供应链金融 / 跨境结算 / 票据 / 现金管理 / 代发 / 财富管理 / 综合金融等。
 
-**企业关键信息：**
-- **基本情况：** 主营业务、成立时间、所在地、企业性质、商业模式、产业链位置。
-- **高层与团队背景：** 董事长/实控人/总经理/CFO/CTO的教育背景、学校、导师、职业经历、产业资源；未公开标注"未披露/待核实"。
-- **银行关注点：** 管理层背景对企业技术实力、客户资源、融资能力、资本运作或决策路径的影响。
+**企业关键信息:**
+- **基本情况:** 主营业务、成立时间、所在地、企业性质、商业模式、产业链位置。
+- **高层与团队背景:** 董事长/实控人/总经理/CFO/CTO的教育背景、学校、导师、职业经历、产业资源;未公开标注"未披露/待核实"。
+- **银行关注点:** 管理层背景对企业技术实力、客户资源、融资能力、资本运作或决策路径的影响。
 
-**推荐理由：**
+**推荐理由:**
 - 基于政策、行业、浙江区域、企业动态、产业链位置、团队背景等事实信号写2-4点。
 - 必须说明该企业为什么值得客户经理优先跟进。
-- 不要只写企业好，要说明“好在哪里、机会在哪里、现在为什么值得看”。
+- 不要只写企业好,要说明"好在哪里、机会在哪里、现在为什么值得看"。
 
-**银行展业机会：**
+**银行展业机会:**
 - 从企业经营变化推导银行业务机会。
 - 说明企业在授信融资、票据、保理、供应链金融、跨境结算、现金管理、代发、财富管理等方面的潜在需求。
-- 必须讲清楚“企业经营场景 → 金融需求 → 平安银行可切入产品”。
+- 必须讲清楚"企业经营场景 → 金融需求 → 平安银行可切入产品"。
 
-**推荐产品组合：**
-不用表格。用一段自然语言总结，必须包含“主推产品 + 配套产品 + 切入理由”。每家企业一般推荐2-4类产品即可，避免堆砌。例如：建议以【主推产品】切入，解决企业【核心经营/资金场景】；配套使用【产品1、产品2】，用于【具体理由】。资料未披露的额度、期限、费率或准入条件写“待沟通”。
+**推荐产品组合:**
+不用表格。用一段自然语言总结,必须包含"主推产品 + 配套产品 + 切入理由"。每家企业一般推荐2-4类产品即可,避免堆砌。例如:建议以【主推产品】切入,解决企业【核心经营/资金场景】;配套使用【产品1、产品2】,用于【具体理由】。资料未披露的额度、期限、费率或准入条件写"待沟通"。
 
-**客户经理切入话术：**
-简短、自然、可直接拜访使用的话术，避免生硬推销。
+**客户经理切入话术:**
+简短、自然、可直接拜访使用的话术,避免生硬推销。
 
-**风险提示：**
-诉讼、负债率、应收账款、客户集中度、行业波动、政策依赖、核心团队稳定性等；无明显风险写"暂无明显公开风险，仍需结合征信、流水、财报、合同、客户结构和实地尽调确认"。
+**风险提示:**
+诉讼、负债率、应收账款、客户集中度、行业波动、政策依赖、核心团队稳定性等;无明显风险写"暂无明显公开风险,仍需结合征信、流水、财报、合同、客户结构和实地尽调确认"。
 
 ## 四、客户经理行动建议
 
-用3-5条给出当天或近期最值得执行的动作，例如：
+用3-5条给出当天或近期最值得执行的动作,例如:
 - 优先拜访哪些企业
 - 从哪个业务场景切入
 - 先聊哪些经营问题
@@ -571,53 +582,57 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 **Word 输出要求:**
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`(即 IM Researcher 工作空间的 `reports/im-weekly/`),不得保存到其他目录;如目录不存在先创建。
-- 文件名格式:`行业商机周报_智能制造_YYYYMMDD.docx`
+- **同步拷贝**:生成并保存后,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/智能制造` 目录下的所有文件(目录结构保留,不要删除目录本身),然后将 Word 周报文件拷贝一份到该目录。注意该路径中 `Documents/` 后确实有一个空格,不要擅自改成无空格路径。
+- 文件名格式:`im-weekly-YYYYMMDD.docx`(与 wiki 标题一致)
+- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `im-weekly-YYYYMMDD.docx`,如存在则直接覆盖,不保留旧文件。
+- **⚠️ 同步后校验**:拷贝完成后必须读取源文件和目标文件的大小、mtime,确认一致；如发现同名文件同时存在于错误空格目录,不得引用错误目录文件。
 - 字体使用华文楷体
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 ##### Word 下载链接
 
-Word 文件上传飞书 Drive 后获取 `file_token`，拼接下载链接：
+Word 文件上传飞书 Drive 后获取 `file_token`,拼接下载链接:
 ```
 https://<租户域名>.feishu.cn/file/<file_token>
 ```
-例如：`https://qcn8k445rrbc.feishu.cn/file/DWMabuSB5og3PbxtC0OcY4kQnQg`
+例如:`https://qcn8k445rrbc.feishu.cn/file/DWMabuSB5og3PbxtC0OcY4kQnQg`
 
-**使用方法：**
-1. 上传文件：`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./文件名.docx" --name "文件名.docx"`
+**使用方法:**
+1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./im-weekly-YYYYMMDD.docx" --name "im-weekly-YYYYMMDD.docx"`
 2. 从返回结果获取 `file_token`
-3. 拼接下载链接：`https://<租户域名>.feishu.cn/file/<file_token>`
-4. 将该链接写入 wiki 正文开头和推送摘要中
+3. 拼接下载链接:`https://<租户域名>.feishu.cn/file/<file_token>`
+4. 将该链接写入 wiki 正文开头、`reports/summary/IM-summary.md` 和推送摘要中
+5. 推送前比对三处 Word 链接完全一致；不一致时先修正,不得推送。
 
-**租户域名获取方式：**
-- 从已有的飞书 wiki URL 中提取，例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
+**租户域名获取方式:**
+- 从已有的飞书 wiki URL 中提取,例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
 - 或从 `lark-cli wiki nodes list` 返回的 URL 中提取
 
-**说明：** 该链接在飞书租户内用户已登录状态下可访问下载/预览。
+**说明:** 该链接在飞书租户内用户已登录状态下可访问下载/预览。
 
-#### 版本B：飞书 wiki 版（知识库存档格式）
+#### 版本B:飞书 wiki 版(知识库存档格式)
 
-- 内容与 Word 版结构一致，适配飞书文档 Markdown 格式
+- 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
 - 通过第九步写入知识库
-- wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入：`**Word版下载：** [点击下载Word版周报](飞书Drive下载链接)`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**，格式为 `**Word版下载：** https://.../file/...`，不要写成 `<https://...>`；飞书文档转换可能吞掉尖括号链接，导致 wiki 中只剩空的“Word版下载”。
-- ⚠️ **飞书 wiki 排版硬规则：不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并，导致“推荐等级/所属行业/所在地区/产业链位置/推荐方向”等字段黏在一行。
-- ⚠️ **企业元数据必须用列表格式**（`- 推荐等级：高`），不要用 `**推荐等级：** 高`（飞书 Markdown 会把连续行合并到一行，导致所有字段挤在一起），格式如下：
+- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
+- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
+- ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致"推荐等级/所属行业/所在地区/产业链位置/推荐方向"等字段黏在一行。
+- ⚠️ **企业元数据必须用列表格式**(`- 推荐等级:高`),不要用 `**推荐等级:** 高`(飞书 Markdown 会把连续行合并到一行,导致所有字段挤在一起),格式如下:
   ```markdown
-  - **推荐等级：** 高
-  - **所属行业：** XXX
-  - **所在地区：** 杭州
-  - **产业链位置：** 中游/平台型
-  - **推荐方向：** XXX
+  - **推荐等级:** 高
+  - **所属行业:** XXX
+  - **所在地区:** 杭州
+  - **产业链位置:** 中游/平台型
+  - **推荐方向:** XXX
   ```
-- ⚠️ **企业关键信息也必须用列表格式并逐项换行**，不要写成一整段；固定格式如下：
+- ⚠️ **企业关键信息也必须用列表格式并逐项换行**,不要写成一整段;固定格式如下:
   ```markdown
   **企业关键信息:**
   - **基本情况:** XXX
   - **高层与团队背景:** XXX
   - **银行关注点:** XXX
   ```
-  写入 wiki 后抽查时,除企业元数据黏连外,还必须检查是否存在 `企业关键信息.*基本情况.*高层与团队背景.*银行关注点` 或 `基本情况.*高层与团队背景` 同一行黏连；发现即重写修复。
-- ⚠️ **Word 与 Wiki 格式分离**：Word 版去掉所有 Markdown 标记（纯段落 + 华文楷体）；Wiki 版保留完整 Markdown（标题、列表、加粗、分隔线）。两者内容相同，格式各自适配平台。写入 wiki 后必须 fetch 回来抽查一次，重点检查是否存在 `推荐等级.*所属行业`、`所属行业.*所在地区`、`所在地区.*产业链位置`、`产业链位置.*推荐方向` 这类同一行黏连；发现即重写修复。
+  写入 wiki 后抽查时,除企业元数据黏连外,还必须检查是否存在 `企业关键信息.*基本情况.*高层与团队背景.*银行关注点` 或 `基本情况.*高层与团队背景` 同一行黏连;发现即重写修复。
+- ⚠️ **Word 与 Wiki 格式分离**:Word 版去掉所有 Markdown 标记(纯段落 + 华文楷体);Wiki 版保留完整 Markdown(标题、列表、加粗、分隔线)。两者内容相同,格式各自适配平台。写入 wiki 后必须 fetch 回来抽查一次,重点检查是否存在 `推荐等级.*所属行业`、`所属行业.*所在地区`、`所在地区.*产业链位置`、`产业链位置.*推荐方向` 这类同一行黏连;发现即重写修复。
 
 
 ### 第八步:更新/追加商机到表格
@@ -645,7 +660,7 @@ https://<租户域名>.feishu.cn/file/<file_token>
 - 如果没有任何已有行的核心简称匹配 → **追加新行**
 
 ⚠️ **别名映射(补充)**:
-- 同一企业可能用不同简称(如 `杭州云深处科技有限公司` vs `云深处科技（杭州）`)，去括号后仍不同。建议在精确匹配前，增加一个已知别名映射表，将常见别名统一映射到标准简称后再匹配。
+- 同一企业可能用不同简称(如 `杭州云深处科技有限公司` vs `云深处科技(杭州)`),去括号后仍不同。建议在精确匹配前,增加一个已知别名映射表,将常见别名统一映射到标准简称后再匹配。
 
 ⚠️ **严禁**:
 - 更新行时修改A列客户名称(包括加后缀、改格式等),必须保持原名称不变
@@ -683,7 +698,7 @@ with open("/tmp/sheet_data.json") as f:
     rows = json.load(f)
 header = rows[0]
 data_rows = [r for r in rows[1:] if len(r) > 0 and r[0] and r[0].strip()]
-data_rows.sort(key=lambda x: str(x[8] or '') if len(x) > 8 else "", reverse=True)  # ⚠️ 创建日期列可能有空值/None，必须用 str() 安全转换
+data_rows.sort(key=lambda x: str(x[8] or '') if len(x) > 8 else "", reverse=True)  # ⚠️ 创建日期列可能有空值/None,必须用 str() 安全转换
 end_row = 1 + len(data_rows)
 values_str = json.dumps(data_rows)
 print(f"排序完成:{len(data_rows)}行,end_row={end_row}")
@@ -724,14 +739,16 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**重要：每次生成都覆盖当前同名文件（im-weekly-YYYYMMDD），不要有重复日期的文档。**
+**重要:每次生成都覆盖当前同名文件(im-weekly-YYYYMMDD),不要有重复日期的文档。**
 
-**Word 下载链接位置要求：** Word 版上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入 `**Word版下载：** <下载链接>`，推送摘要中的「周报全文（Word）」也必须使用该下载链接。
+**Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** <下载链接>`,推送摘要中的「周报全文(Word)」也必须使用该下载链接。
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
 - 必须使用**机器人身份**(`--as bot`)创建,创建者显示为机器人
 - **⚠️ `--as bot` 默认使用 lark-cli 配置的默认应用(通常是 ai_bot),不是当前 agent 自己的 bot。必须使用 `--profile $BOT_PROFILE --as bot`**
+- **⚠️ 周报节点必须固定在知识库根目录的「商机挖掘表格」节点后面**,按时间倒序排列(最新周报紧跟在商机挖掘表格之后,旧周报依次排在后面)。也就是说,创建新周报后,必须通过 `wiki +move` 调整其在根目录的顺序,确保新周报紧跟在商机挖掘表格后面。
+- **⚠️ 写入后必须回读校验**: 使用 docs/wiki fetch 能力读取刚写入的正文,确认标题、Word 下载链接、覆盖周期、至少 3 个企业标题、行动建议均可读且中文正常。若出现乱码、Unicode 转义残留、正文为空、Markdown 被吞、JSON/XML 正文化或字段黏连,必须立即重写并再次回读,直到通过。
 
 **步骤:**
 
@@ -746,6 +763,8 @@ fi
 2. **如果找到同名文档**:
    - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 覆盖内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
+   - ⚠️ **位置排序**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将当前周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保最新周报紧跟在商机挖掘表格后面。
+   - ⚠️ **回读校验**: 覆盖后立即 fetch 文档正文,检查中文可读性、Word 下载链接、企业元数据列表、行动建议、乱码/转义/黏行问题。检查不通过时,不得进入群聊推送,必须修正文档后重试。
 
 3. **如果未找到同名文档**:
    - 使用以下命令以**机器人身份**创建(注意必须带 profile):
@@ -759,28 +778,30 @@ fi
    - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 写入内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`,如果不在根目录,用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
+   - ⚠️ **位置排序(必须在根目录)**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将新周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <新周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保新周报紧跟在商机挖掘表格后面,所有旧周报自动依次后移。
+   - ⚠️ **回读校验**: 创建并写入后立即 fetch 文档正文,检查中文可读性、Word 下载链接、企业元数据列表、行动建议、乱码/转义/黏行问题。检查不通过时,不得进入群聊推送,必须修正文档后重试。
 
 **禁止**使用 `feishu_wiki_space_node` 工具(该工具可能将文档创建在首页下),必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id` 命令。
 
 
-### 第十步：推送至群聊（极简概要 + 链接，200字左右）
+### 第十步:推送至群聊(极简概要 + 链接,200字左右)
 
-**🔴 关键规则：推送到群聊的内容是极简概要和链接，不是全文！手机端必须能一次读完。**
+**🔴 关键规则:推送到群聊的内容是极简概要和链接,不是全文!手机端必须能一次读完。**
 
-**长度限制：正文控制在 200 字左右（不含链接 URL），最多不超过 300 字。**
+**长度限制:正文控制在 200 字左右(不含链接 URL),最多不超过 300 字。**
 
-推送至群聊的消息格式如下：
+推送至群聊的消息格式如下:
 
 ```markdown
-📌 【目标行业】商机周报·浙江｜YYYY.MM.DD-MM.DD
-🔥 主线：XXX、XXX、XXX
-🏠 浙江机会：XXX
-🏢 优先跟进：XXX、XXX、XXX
-🎯 切入方向：XXX/XXX/XXX
+📌 【目标行业】商机周报·浙江|YYYY.MM.DD-MM.DD
+🔥 主线:XXX、XXX、XXX
+🏠 浙江机会:XXX
+🏢 优先跟进:XXX、XXX、XXX
+🎯 切入方向:XXX/XXX/XXX
 
-Word：<飞书Drive下载链接>
-Wiki：<https://www.feishu.cn/wiki/XXXX>
-商机表：<https://xxx.feishu.cn/wiki/XXXX>
+Word:<飞书Drive下载链接>
+Wiki:<https://www.feishu.cn/wiki/XXXX>
+商机表:<https://xxx.feishu.cn/wiki/XXXX>
 ```
 
 ####  10.1 同步至工作空间
@@ -798,45 +819,50 @@ find ~/.openclaw/workspace/workspace-IMresearcher/reports/summary -maxdepth 1 -t
 echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/summary/IM-summary.md
 ```
 
-⚠️ 不要用 `rm -f reports/summary/*`: zsh 在目录为空时会报 `no matches found`，导致后续摘要文件不写入。统一用 `find ... -delete`。
+⚠️ 不要用 `rm -f reports/summary/*`: zsh 在目录为空时会报 `no matches found`,导致后续摘要文件不写入。统一用 `find ... -delete`。
 
 #### 10.2 推送至群聊
 
-**推送内容要求：**
-- 行业动态：只提炼 2-3 个主线关键词，不逐条列新闻
-- 浙江区域：只写 1 句机会集中方向
-- 企业推荐：只列重点 3 家以内，不写推荐理由
-- 行动建议：只写 1 句“优先跟进 + 切入方向”
-- 样式要求：正文四行呈现，固定为「🔥 主线 / 🏠 浙江机会 / 🏢 优先跟进 / 🎯 切入方向」，不要写成一大段话
-- Word 周报飞书 Drive 下载链接（不要只放本地路径）
+**推送内容要求:**
+- 行业动态:只提炼 2-3 个主线关键词,不逐条列新闻
+- 浙江区域:只写 1 句机会集中方向
+- 企业推荐:只列重点 3 家以内,不写推荐理由
+- 行动建议:只写 1 句"优先跟进 + 切入方向"
+- 样式要求:正文四行呈现,固定为「🔥 主线 / 🏠 浙江机会 / 🏢 优先跟进 / 🎯 切入方向」,不要写成一大段话
+- Word 周报飞书 Drive 下载链接(不要只放本地路径)
 - 周报 wiki 存档链接
-- 商机挖掘表格链接（sheets URL）
+- 商机挖掘表格链接(sheets URL)
 - **不要**输出周报全文内容
 - **不要**使用长分隔线、长清单、TOP5-8逐条新闻、企业推荐理由、执行日志
 
-**🔒 群聊最终回复锁（防止误推全文/日志）：**
-1. 任何会被 delivery / cron / 群聊看到的最终 assistant 回复，**必须且只能**使用本步骤的「200字左右极简概要 + 三个链接」格式。
-2. **禁止**把以下内容作为最终群聊推送：执行日志、完成情况清单、工具调用结果、文件本地路径、Markdown/wiki 源稿、Word 正文全文、调试说明。
-3. 推送前必须自检 4 项，缺一不可：
-   - 已压缩为 2-3 个主线关键词，不是 TOP 新闻长清单；
-   - Word 链接是飞书 Drive/file 下载链接，不是本地路径；
-   - wiki 链接是 `https://www.feishu.cn/wiki/...`；
+**🔒 群聊最终回复锁(防止误推全文/日志):**
+1. 任何会被 delivery / cron / 群聊看到的最终 assistant 回复,**必须且只能**使用本步骤的「200字左右极简概要 + 三个链接」格式。
+2. **禁止**把以下内容作为最终群聊推送:执行日志、完成情况清单、工具调用结果、文件本地路径、Markdown/wiki 源稿、Word 正文全文、调试说明。
+3. 推送前必须自检 4 项,缺一不可:
+   - 已压缩为 2-3 个主线关键词,不是 TOP 新闻长清单;
+   - Word 链接是飞书 Drive/file 下载链接,不是本地路径;
+   - wiki 链接是 `https://www.feishu.cn/wiki/...`;
    - 商机表格链接是 sheets URL。
-4. 如果 Word Drive 链接、wiki 链接或 sheets 链接任一缺失，**不要推送群聊摘要**；先补齐链接，再输出第十步模板。
-5. 若需要向用户说明执行状态，只能在非群聊/人工排查上下文说明；在群聊定时任务中，最终输出仍必须是第十步摘要模板。
+4. 推送前必须追加自检 4 项,缺一不可:
+   - Wiki fetch 回读内容中文正常,没有乱码、Unicode 转义残留、JSON/XML 正文化、空正文;
+   - Wiki fetch 回读内容没有 `推荐等级.*所属行业`、`基本情况.*高层与团队背景` 等字段黏连;
+   - 本地 Markdown、Wiki fetch、summary 文件、推送摘要中的 Word Drive 链接完全一致;
+5. 如果 Word Drive 链接、wiki 链接、sheets 链接任一缺失,或 Wiki 回读校验不通过,**不要推送群聊摘要**;先补齐/修复,再输出第十步模板。
+6. 若需要向用户说明执行状态,只能在非群聊/人工排查上下文说明;在群聊定时任务中,最终输出仍必须是第十步摘要模板。
+7. **cron 投递规则:** 智能制造周报定时任务的 cron delivery 应配置为 `mode:none`,避免 OpenClaw 将失败诊断自动推送到群聊。发布链路通过自检后,由 agent 使用 `message` 工具显式发送 `reports/summary/IM-summary.md` 的内容到目标飞书群；若运行失败,不得向群聊发送错误诊断或执行日志。
 
-**🔒 报告正文纯净锁（防止执行日志混入 Word/Wiki 正文）：**
-1. **第七步生成的 Word 版和 Wiki 版周报正文中，绝对禁止出现任何执行日志、探测状态、失败记录、跳过说明。**
-2. 以下类型的信息**只能记录在执行笔记/日志文件中**，不得出现在报告正文任何位置：
-   - 「XX页面存在404/页面删除，已按规则记录并跳过」
+**🔒 报告正文纯净锁(防止执行日志混入 Word/Wiki 正文):**
+1. **第七步生成的 Word 版和 Wiki 版周报正文中,绝对禁止出现任何执行日志、探测状态、失败记录、跳过说明。**
+2. 以下类型的信息**只能记录在执行笔记/日志文件中**,不得出现在报告正文任何位置:
+   - 「XX页面存在404/页面删除,已按规则记录并跳过」
    - 「XX探测成功/失败」
    - 「XX查询返回空结果」
    - 「XX接口无权限」
    - 「JS 渲染失败」「fetch failed」「返回空白」
    - 任何「已跳过」「已记录」「重试 N 次」「耗时 X 秒」等执行状态描述
-3. 如果某个数据源完全没有有效内容，**直接忽略该源**，不要在报告中写"XX源无数据"或"XX源抓取失败"。报告只呈现有实质内容的信息。
-4. 如果所有数据源都失败导致无法生成有效报告，输出最小化版本并标注"本周信息有限"，但依然不要写具体的抓取失败细节。
-5. 写入 Word/Wiki 前必须自检：全文搜索「404」「跳过」「无权限」「空结果」「探测」「fetch failed」「JS 渲染」「重试」等关键词，如发现立即删除相关段落。
+3. 如果某个数据源完全没有有效内容,**直接忽略该源**,不要在报告中写"XX源无数据"或"XX源抓取失败"。报告只呈现有实质内容的信息。
+4. 如果所有数据源都失败导致无法生成有效报告,输出最小化版本并标注"本周信息有限",但依然不要写具体的抓取失败细节。
+5. 写入 Word/Wiki 前必须自检:全文搜索「404」「跳过」「无权限」「空结果」「探测」「fetch failed」「JS 渲染」「重试」等关键词,如发现立即删除相关段落。
 
 
 ### 第十一步:表达风格
@@ -854,7 +880,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 
 ### 第十二步:输出完成
 
-输出完成后,由调用方(定时任务等)通过 delivery 配置推送到飞书群,无需在 skill 内执行推送。
+输出完成后,不得依赖调用方的 cron delivery 自动推送最终回复。定时任务场景必须先写入并复核 `reports/summary/IM-summary.md`,再用 `message` 工具把该摘要显式推送到目标飞书群；普通手动场景按用户要求交付。
 
 ## 特殊场景
 
@@ -864,7 +890,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 1. 不要编造内容
 2. **不要在报告正文中写"XX源抓取失败""XX页面404"等执行日志**
 3. 基于已知信息生成最小化版本并标注"本周信息有限"
-4. 如需向 Joe 说明执行情况，在群聊推送之外单独说明（如私聊或执行日志文件）
+4. 如需向 Joe 说明执行情况,在群聊推送之外单独说明(如私聊或执行日志文件)
 
 ### 用户要求手动生成
 
@@ -879,17 +905,19 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致
 6. **知识库标题**:im-weekly-YYYYMMDD
 7. **知识库写入**:必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建
-8. **群聊推送**:推送概要 + 链接,不是全文
+8. **群聊推送**:推送概要 + 链接,不是全文；定时任务必须由 agent 显式调用 `message` 工具发送摘要,不要依赖 cron delivery 自动转发最终回复或失败诊断。
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用,且不用 OR 语法(Brave 不支持),改用空格分隔关键词。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能。
-12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`，文件名格式 `行业商机周报_智能制造_YYYYMMDD.docx`；生成后上传飞书 Drive；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
-13. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现"（日期，来源）""（来源：XXX）"。资料来源只在报告开头或文末统一概括。
-14. **iFinD 必须执行**:不可跳过。先在循环外做一次快速探测确认环境可用,再执行全部 3 个查询。
-15. **所有飞书 API 统一走 lark-cli**:sheets/drive/docs/wiki 操作全部用 lark-cli,不用 Python urllib 直接调 API(HTTPS_PROXY 代理会导致 SSL 证书验证失败)。
-16. **lark-cli 文件上传路径**:`--file` 必须是当前工作目录下的相对路径,不支持绝对路径。操作前先 `cd` 到文件所在目录。
-17. **lark-cli wiki 创建后需检查位置**:`wiki +node-create` 默认可能放在「首页」子节点下,创建后需检查 `parent_node_token`,如在子节点下需 `wiki +move` 移回根目录。
+12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;将该链接写在 wiki 正文开头和推送摘要中。
+13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`,文件名格式 `im-weekly-YYYYMMDD.docx`(与 wiki 标题一致);保存前先检查同名文件并覆盖;生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
+14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
+15. **iFinD 必须执行**:不可跳过。先在循环外做一次快速探测确认环境可用,再执行全部 3 个查询。
+16. **所有飞书 API 统一走 lark-cli**:sheets/drive/docs/wiki 操作全部用 lark-cli,不用 Python urllib 直接调 API(HTTPS_PROXY 代理会导致 SSL 证书验证失败)。
+17. **lark-cli 文件上传路径**:`--file` 必须是当前工作目录下的相对路径,不支持绝对路径。操作前先 `cd` 到文件所在目录。
+18. **lark-cli wiki 创建后需检查位置**:`wiki +node-create` 默认可能放在「首页」子节点下,创建后需检查 `parent_node_token`,如在子节点下需 `wiki +move` 移回根目录。
+19. **Wiki 回读校验**:写入知识库后必须 fetch 回来检查中文、链接、企业标题、行动建议、乱码/转义/黏行。检查失败不得推送。
+20. **Word 链接一致性**:本地 Markdown、Wiki fetch、summary 文件和推送摘要中的 Word Drive 链接必须一致;不一致时先修正。
 
 ## 踩坑记录(供后续优化参考)
 
@@ -905,9 +933,12 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 8. **lark-cli 上传文件要求相对路径**:绝对路径直接报错。→ 先 `cd` 到目录再用 `./文件名`。
 9. **wiki 创建后自动嵌套在子节点下**:`wiki +node-create` 默认放在「首页」节点下。→ 创建后需 `wiki +move` 移回根目录。
 10. **lark-cli 子命令语法不统一**:每个子命令 flag 风格不一致,需反复 `--help`。→ 在 skill 中预定义完整命令。
-11. **Word 下载链接格式**：`https://<租户域名>.feishu.cn/file/<file_token>`，上传文件后拼接。
+11. **Word 下载链接格式**:`https://<租户域名>.feishu.cn/file/<file_token>`,上传文件后拼接。
 12. **未并行执行搜索**:skill 说"并行执行"但实际串行。→ searxng 支持并行,Brave 需串行。
-13. **执行日志混入周报正文**:探测状态、404 跳过、空结果、无权限等日志信息被写入 Word/Wiki 正文或群聊推送。→ 新增「报告正文纯净锁」规则，写入前自检关键词并清除。
+13. **执行日志混入周报正文**:探测状态、404 跳过、空结果、无权限等日志信息被写入 Word/Wiki 正文或群聊推送。→ 新增「报告正文纯净锁」规则,写入前自检关键词并清除。
+14. **Wiki 知识库乱码/转义未自检**:Markdown 写入后未 fetch 回读,可能出现 Unicode 转义、JSON/XML 正文化、中文乱码、字段黏连或链接丢失。→ 写入后必须 fetch 回读校验,失败则重写,不得推送。
+15. **Word 链接多处不一致**:重新上传 Word 后,本地 Markdown、Wiki、summary、推送摘要可能保留不同 file_token。→ 推送前四处比对,以最新上传且已在 Wiki fetch 中验证存在的链接为准。
+16. **cron failure 误推错误信息到群聊**:OpenClaw cron delivery 若保持 `announce`,运行中任一工具失败可能导致群聊收到失败诊断,即使本地 summary 已生成。→ 智能制造周报 cron 已改为 `delivery.mode=none` 且 `failureAlert=false`,由 agent 通过 `message` 工具只发送最终摘要。
 
 ## 文件路径
 

@@ -1,0 +1,180 @@
+URL: https://36kr.com/research
+STATUS: 404
+
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+// 埋点需求详情 https://shimo.im/sheets/aJg66OpLVX0PGC28/
+/*****工具方法*****/
+function isNumber(path) {
+    return !isNaN(Number(path));
+}
+function isObj(key) {
+    return typeof key === 'object';
+}
+/**
+ * 判断obj中是否有key这个属性
+ * @param obj {object}
+ * @param key {string}
+ */
+function objHasKey(obj, key) {
+    return obj.hasOwnProperty(key);
+}
+/**
+ * @param {{
+  *  control: Boolean,
+  *  key: string,
+  *  value: string,
+  *  data?: obj,
+  *  elseValue?: string
+  * }} option
+  *
+  * 参数说明：
+  * control 判断条件
+  * data 最终返回的对象
+  * key 添加到data中的属性
+  * value 要添加的值
+  * elseValue 如果control不成立，添加到data的值 传入此参数则添加，不传则不会添加
+  */
+function setProperty(option) {
+    var _a = option.data, data = _a === void 0 ? {} : _a, key = option.key, value = option.value, control = option.control, elseValue = option.elseValue;
+    if (control) {
+        data[key] = value;
+    }
+    else if (elseValue) {
+        data[key] = elseValue;
+    }
+    return data;
+}
+function getClass(attributes) {
+    var classObj = attributes.class || {};
+    return classObj.value || "";
+}
+var Platform;
+(function (Platform) {
+    Platform["H5"] = "H5";
+    Platform["WEB"] = "web";
+})(Platform || (Platform = {}));
+;
+function judgePlatform(userAgent) {
+    if (!userAgent && typeof window !== 'undefined') {
+        userAgent = navigator.userAgent;
+    }
+    if (!userAgent)
+        return Platform.WEB;
+    if (userAgent.match(/iPad|iPhone/i)) {
+        return Platform.H5;
+    }
+    else if (userAgent.match(/Android/i)) {
+        return Platform.H5;
+    }
+    return Platform.WEB;
+}
+/*****工具方法end*****/
+/**
+ * 统计点击跳转外链的数据
+ * 包括media_content_id、media_event_value、source_id、media_source
+ * @param {String} hrefValue
+ */
+function externalLink(hrefValue) {
+    var data = {};
+    var externalLinkList = [
+        { pathKey: '/', mediaSourceValue: 'page_home' },
+        { pathKey: 'p', mediaSourceValue: 'article' },
+        { pathKey: 'newsflashes', mediaSourceValue: 'newsflash', subPathNotNumMediaSourceValue: 'page_newsflashes' },
+        { pathKey: 'topics', mediaSourceValue: 'topics' },
+    ];
+    var pathInfo = new PathInfo(window.location.pathname);
+    // 记录外链url
+    data.media_content_id = hrefValue;
+    // 详情页中（当前地址包含ID），含有外链，发送source_id
+    Object.assign(data, setProperty({
+        control: isNumber(pathInfo.sub),
+        key: 'source_id',
+        value: pathInfo.sub,
+    }));
+    // 地方站 外链记录media_event_value
+    if (pathInfo.root === 'local') {
+        data.media_event_value = 'local_' + pathInfo.sub;
+    }
+    return Object.assign(data, genMediaSource(externalLinkList, isNumber(pathInfo.sub)));
+}
+/**
+ * 统计点击跳转www.36kr.com内链的数据
+ * 根据主站路由规则,分析点击的地址
+ * 收集source_id、media_source、media_event_value、media_content_type、media_content_id
+ * @param {String} hrefValue
+ * @param {String} className 点击的a标签所带class
+ */
+function internalLink(hrefValue, className) {
+    var pageInfo = new PageInfo(hrefValue);
+    var data = {};
+    /* 聚合页跳转id */
+    Object.assign(data, setProperty({
+        control: pageInfo.currentPath.sub && isNumber(pageInfo.currentPath.sub) && pageInfo.destPath.sub && isNumber(pageInfo.destPath.sub),
+        key: 'source_id',
+        value: pageInfo.currentPath.sub,
+    }));
+    /* 搜索结果、资讯、地方 */
+    Object.assign(data, genMediaEventValue(hrefValue));
+    // 文章详情含有跳转链接
+    Object.assign(data, setProperty({
+        control: pageInfo.currentPath.root === 'p' && isNumber(pageInfo.currentPath.sub) && isNumber(pageInfo.destPath.sub),
+        key: 'media_source',
+        value: 'article',
+    }));
+    /* 不同页面，进入详情页 */
+    Object.assign(data, intoDetailPage(pageInfo.destPath.sub));
+    /* 添加media_conten_type 针对相应页面添加属性 */
+    Object.assign(data, genContentTypeAndId(hrefValue, className));
+    return data;
+}
+/**
+ * 获取media_event_value统一方法
+ * 点击搜索结果list和地方站list跳转到详情页
+ * @param currentPath
+ * @param subHref
+ */
+function genMediaEventValue(hrefValue) {
+    var data = {};
+    var key = 'media_event_value';
+    var pageInfo = new PageInfo(hrefValue);
+    var genMediaEventValueList = [
+        { pathKey: 'search', subPathList: [
+                { key: 'articles', value: 'search_articles' },
+                { key: 'newsflashes', value: 'search_flashnews' },
+                { key: 'video', value: 'search_videos' },
+                { key: 'monographic', value: 'search_topics' },
+                { key: 'user', value: 'search_writer' },
+            ] },
+        { pathKey: 'information', subPathList: [
+                'web_news', 'contact', 'enterpriseservice', 'happy_life', 'travel',
+                'real_estate', 'web_recommend', 'technology', { key: 'zhichang', value: 'web_zhichang' }, 'innovate',
+            ] },
+        { pathKey: 'local' }
+    ];
+    for (var _i = 0, genMediaEventValueList_1 = genMediaEventValueList; _i < genMediaEventValueList_1.length; _i++) {
+        var pathItem = genMediaEventValueList_1[_i];
+        if (pageInfo.currentPath.root === pathItem.pathKey) {
+            if (pageInfo.currentPath.root === 'local') {
+                // 城市
+                data.media_event_value = 'local_' + pageInfo.currentPath.sub;
+            }
+            else {
+                for (var _a = 0, _b = pathItem.subPathList; _a < _b.length; _a++) {
+                    var subPathItem = _b[_a];
+                    var value = isObj(subPathItem) ? subPathItem.value : subPathItem;
+                    var subPathKey = isObj(subPathItem) ? subPathItem.key : subPathItem;
+                    if (pageInfo.currentPath.sub === subPathKey) {
+                        Object.assign(data, setProperty({
+                            control: isNumber(pageInfo.destPath.sub),
+                            key: key,
+         

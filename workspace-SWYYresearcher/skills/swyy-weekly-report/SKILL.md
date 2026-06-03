@@ -45,7 +45,7 @@ description: |
 ### 使用方式
 
 执行周报生成前，先读取同级 `config.json`（如有）并覆盖参数；如无则使用默认值。
-命令中统一使用 `--profile $BOT_PROFILE --as bot`。
+命令中统一使用 `--profile $BOT_PROFILE`。
 
 ## 何时使用
 
@@ -83,11 +83,12 @@ description: |
 ### 1. 工具调用与路径
 
 - **lark-cli 不在 PATH**: 实测路径为 `~/.npm-global/bin/lark-cli`。所有脚本用绝对路径，别依赖 PATH。
+- **lark-cli 输出混入 proxy warning**: 所有 lark-cli 命令 stderr 输出 `[lark-cli] [WARN] proxy detected: HTTPS_PROXY=...`，`| python3` 管道会 JSONDecodeError。lark-cli 输出必须先写文件（`> /tmp/xxx.json 2>&1`），再用 Python 跳过 warning 行找到 `{` 开头解析，不能直接管道。
 - **searxng 截断**: 搜索结果 JSON 较大，直接 echo 会被截断。必须先写文件再解析。
 - **iFinD search_trending_news 已停用**: 该接口受权限限制，返回 `Tool not allowed`。不要调用；如历史流程中出现，仅记录到执行日志，绝不写入周报正文/wiki/群聊摘要。
 - **iFinD search_notice 可能为空**: 语义检索对时间范围和 query 要求严格，可能返回空。为空时正常标注，不影响报告。
 - **iFinD 调用方式**: 不能直接向 `call-node.js` 喂 JSON，必须按 skill 要求用 Node `require` 方式调用 `call()` 函数。
-- **Brave web_search 严禁并行**: 免费套餐 1 req/s，并行会触发 429。只有 searxng 可并行；Brave 作为兜底时必须串行、每次间隔 ≥1 秒，且不用 OR 语法。
+- **Brave web_search 严禁并行**: 免费套餐 1 req/s，并行会触发 429。只有 searxng 可并行；Brave 作为兜底时必须串行、每次间隔 ≥1 秒，且不用 OR 语法。**Brave 对中文地域/工业术语索引极差**，宽泛搜索（如「生物医药 浙江 杭州 宁波 产业 2026」）返回 80% 不相关结果。Brave 仅适合精准搜索（具体企业名+融资/公告/一季报等），不要用于地域+行业的宽泛组合搜索。
 - **lark-cli docs +update 的 `--markdown @file` 必须用相对路径**: 先 `cd` 到 Markdown 所在目录，再用 `--markdown '@./wiki_YYYYMMDD.md'`，不要传绝对路径。
 
 ### 2. 数据抓取
@@ -97,7 +98,7 @@ description: |
 
 ### 3. 飞书 Wiki
 
-- **Wiki 节点默认挂子目录**: `wiki +node-create --space-id` 创建后可能挂在某个 parent 下。如需根目录，创建后用 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。
+- **Wiki 节点默认挂在「首页」下**: `wiki +node-create --space-id` 创建后默认挂在「首页」节点下（`parent_node_token` 不为空），不是根目录。不要传 `--parent-node-token ""`（无效）。创建后必须用模板检查 `parent_node_token`，如不为空立即 `wiki +move --node-token <token> --target-space-id <space>` 移回根目录。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式，标题和正文之间加空行。
 - **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连。
@@ -584,7 +585,17 @@ NODE
 
 **Word 输出要求：**
 - **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`（即 SWYY Researcher 工作空间的 `reports/biomed-weekly/`），不得保存到其他目录；如目录不存在先创建。
-- 文件名格式：`行业商机周报_生物医药_YYYYMMDD.docx`
+- **同步至本地上传目录**：Word 文件保存到固定目录后，必须执行以下步骤：
+  1. 清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/生物医药` 目录下的所有文件（保留目录本身，不删除目录）
+  2. 将生成的 Word 周报文件拷贝一份到该目录
+- 推荐执行命令：
+  ```bash
+  UPLOAD_DIR="/Users/leidongqiao/Documents/codex project/local-uploader/data/生物医药"
+  find "$UPLOAD_DIR" -maxdepth 1 -type f -delete
+  cp "$WORD_FILE" "$UPLOAD_DIR/"
+  ls -la "$UPLOAD_DIR"
+  ```
+- 文件名格式：`biomed-weekly-YYYYMMDD.docx`（与 wiki 节点标题一致）
 - 字体使用华文楷体
 - **Word 样式优化**：Word 版必须是干净的报告排版，不要把 Markdown 原始符号带入正文；生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段，企业信息可用短段落或简洁项目符号，但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 
@@ -596,11 +607,46 @@ https://<租户域名>.feishu.cn/file/<file_token>
 ```
 例如：`https://qcn8k445rrbc.feishu.cn/file/DWMabuSB5og3PbxtC0OcY4kQnQg`
 
-**使用方法：**
-1. 上传文件：`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./文件名.docx" --name "文件名.docx"`
-2. 从返回结果获取 `file_token`
-3. 拼接下载链接：`https://<租户域名>.feishu.cn/file/<file_token>`
-4. 将该链接写入 wiki 正文开头和推送摘要中
+**使用方法（含同名覆盖）：**
+
+⚠️ **上传前必须检查 Drive 中是否存在同名文件，如有则先删除再上传，确保 Drive 中只保留最新版本。**
+
+```bash
+export BOT_PROFILE
+WEEKLY="biomed-weekly-YYYYMMDD.docx"
+
+# 1. 先列出根目录，查找同名旧文件并删除
+lark-cli drive +list --profile "$BOT_PROFILE" > /tmp/drive_list.json 2>&1
+python3 - <<'PYEOF'
+import json, subprocess, os
+
+text = open('/tmp/drive_list.json').read()
+idx = text.find('{')
+if idx < 0:
+    sys.exit(0)
+data = json.loads(text[idx:])
+files = data.get('data', {}).get('files', []) or data.get('files', [])
+target = os.environ.get('WEEKLY', '')
+for f in files:
+    ft = f.get('file_token', '')
+    fn = f.get('name', '') or f.get('file_name', '')
+    if fn == target:
+        print(f"Deleting old file: {fn} ({ft})")
+        lark_bin = os.path.expanduser('~/.npm-global/bin/lark-cli')
+        subprocess.run([lark_bin, 'drive', '+delete',
+                        '--profile', os.environ['BOT_PROFILE'],
+                        '--file-token', ft, '--type', 'file'],
+                       capture_output=True, text=True)
+PYEOF
+
+# 2. 上传新文件
+lark-cli drive +upload --profile "$BOT_PROFILE" \
+  --file "./$WEEKLY" --name "$WEEKLY" > /tmp/drive_upload.json 2>&1
+```
+
+3. 从上传返回结果获取 `file_token`
+4. 拼接下载链接：`https://<租户域名>.feishu.cn/file/<file_token>`
+5. 将该链接写入 wiki 正文开头和推送摘要中
 
 **租户域名获取方式：**
 - 从已有的飞书 wiki URL 中提取，例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
@@ -700,7 +746,7 @@ def run(args):
     return p.stdout
 
 # 1. 读取有效范围，过滤空白行
-out = run([LARK, 'sheets', '+read', '--profile', PROFILE, '--as', 'bot',
+out = run([LARK, 'sheets', '+read', '--profile', PROFILE,
            '--spreadsheet-token', TOKEN, '--range', f'{SHEET}!A1:J400',
            '--value-render-option', 'ToString'])
 rows = json.loads(out).get('data', {}).get('valueRange', {}).get('values') or []
@@ -716,27 +762,27 @@ data.sort(key=lambda x: str(x[8] or ''), reverse=True)
 end_row = 1 + len(data)
 
 # 3. 写回 header + 数据
-run([LARK, 'sheets', '+write', '--profile', PROFILE, '--as', 'bot',
+run([LARK, 'sheets', '+write', '--profile', PROFILE,
      '--spreadsheet-token', TOKEN, '--range', f'{SHEET}!A1:J1',
      '--values', json.dumps([header], ensure_ascii=False)])
 if data:
-    run([LARK, 'sheets', '+write', '--profile', PROFILE, '--as', 'bot',
+    run([LARK, 'sheets', '+write', '--profile', PROFILE,
          '--spreadsheet-token', TOKEN, '--range', f'{SHEET}!A2:J{end_row}',
          '--values', json.dumps(data, ensure_ascii=False)])
 
 # 4. 先覆盖空值，再删除 end_row 之后的行，避免旧数据/空白残留
 blank = [['' for _ in range(10)] for _ in range(20)]
-run([LARK, 'sheets', '+write', '--profile', PROFILE, '--as', 'bot',
+run([LARK, 'sheets', '+write', '--profile', PROFILE,
      '--spreadsheet-token', TOKEN, '--range', f'{SHEET}!A{end_row+1}:J{end_row+20}',
      '--values', json.dumps(blank)])
-info = json.loads(run([LARK, 'sheets', '+info', '--profile', PROFILE, '--as', 'bot',
+info = json.loads(run([LARK, 'sheets', '+info', '--profile', PROFILE,
                        '--spreadsheet-token', TOKEN]))
 sheets = info['data']['sheets']['sheets'] if isinstance(info['data'].get('sheets'), dict) else info['data'].get('sheets', [])
 target = next((s for s in sheets if s.get('sheet_id') == SHEET or s.get('sheetId') == SHEET), sheets[0])
 gp = target.get('grid_properties') or target.get('gridProperties') or {}
 max_rows = int(gp.get('row_count') or gp.get('rowCount') or 0)
 if max_rows > end_row:
-    run([LARK, 'sheets', '+delete-dimension', '--profile', PROFILE, '--as', 'bot',
+    run([LARK, 'sheets', '+delete-dimension', '--profile', PROFILE,
          '--spreadsheet-token', TOKEN, '--sheet-id', SHEET, '--dimension', 'ROWS',
          '--start-index', str(end_row + 1), '--end-index', str(max_rows)])
 
@@ -767,8 +813,8 @@ PYEOF
 
 **🔴 关键规则（必须严格遵守）：**
 - 文档必须创建在知识库**根目录**（`parent_node_token` 为空字符串），**不能**创建在「首页」或其他节点下面
-- 必须使用**机器人身份**（`--as bot`）创建，创建者显示为机器人
-- **⚠️ `--as bot` 默认使用 lark-cli 配置的默认应用（通常是 ai_bot），不是当前 agent 自己的 bot。必须使用 `--profile $BOT_PROFILE --as bot`**
+- **📅 时间倒序排列**：新周报 wiki 节点必须排在知识库根目录列表的「商机挖掘表格」节点**后面**，确保周报按**时间倒序**排列（最新周报在最前面，紧跟商机挖掘表格之后）。
+- 必须使用**机器人身份**（lark-cli profile 对应 bot 应用）。**`--profile $BOT_PROFILE` 已经指定了机器人身份，不需要额外 `--as bot`**。
 
 **步骤：**
 
@@ -781,28 +827,70 @@ PYEOF
    ⚠️ **如果找到多个同名文档**，选 `obj_edit_time` 最新的那个，用 `docs +update` 覆盖；其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
 2. **如果找到同名文档**：
-   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 覆盖内容；**不要**用 `@/Users/.../wiki.md` 绝对路径
+   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 覆盖内容；**不要**用 `@/Users/.../wiki.md` 绝对路径
    - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`
 
 3. **如果未找到同名文档**：
-   - 使用以下命令以**机器人身份**创建（注意必须带 profile）：
+   - 使用以下命令以**机器人身份**创建（注意必须带 profile，输出先落盘再解析）：
      ```bash
-     lark-cli wiki +node-create --profile $BOT_PROFILE --as bot \
+     lark-cli wiki +node-create --profile $BOT_PROFILE \
        --space-id "$WIKI_SPACE_ID" \
        --title "$WEEKLY_TITLE_PREFIX-YYYYMMDD" \
-       --obj-type "docx"
+       --obj-type "docx" > /tmp/wiki_create.json 2>&1
+     ```
+   - **位置检查与 move（强制模板，每次创建新节点必须复制执行）**：
+     ```bash
+     # 解析创建结果的 parent_node_token（注意 lark-cli 输出混入 proxy warning，必须先落盘解析）
+     PARENT_TOKEN=$(python3 -c "
+     import json
+     text = open('/tmp/wiki_create.json').read()
+     idx = text.find('{')
+     data = json.loads(text[idx:])
+     print(data['data'].get('parent_node_token',''))
+     ")
+     NODE_TOKEN=$(python3 -c "
+     import json
+     text = open('/tmp/wiki_create.json').read()
+     idx = text.find('{')
+     data = json.loads(text[idx:])
+     print(data['data'].get('node_token',''))
+     ")
+     OBJ_TOKEN=$(python3 -c "
+     import json
+     text = open('/tmp/wiki_create.json').read()
+     idx = text.find('{')
+     data = json.loads(text[idx:])
+     print(data['data'].get('obj_token',''))
+     ")
+
+     if [ -n "$PARENT_TOKEN" ]; then
+       echo "⚠️ Node created under parent '$PARENT_TOKEN', moving to root..."
+       lark-cli wiki +move --profile $BOT_PROFILE \
+         --node-token "$NODE_TOKEN" \
+         --target-space-id "$WIKI_SPACE_ID"
+     else
+       echo "✅ Node already at root"
+     fi
      ```
    - 从返回结果提取 `obj_token`（用于内容更新）和 `node_token`（用于 URL）
-   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 写入内容；**不要**用绝对路径
+   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 写入内容；**不要**用绝对路径
    - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`
-   - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`，如果不在根目录，用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
 
-4. **创建/更新后必须做两项验证（不要只看命令成功）：**
+4. **Wiki 节点排序调整（新建节点时必须执行）：**
+   - 新周报节点创建并移到根目录后，需要确保其排在「商机挖掘表格」节点**后面**（实现时间倒序：最新周报紧跟表格之后）。
+   - 先获取根目录节点列表，找到「商机挖掘表格」的 `node_token`：
+     ```bash
+     lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE > /tmp/wiki_root_nodes.json 2>&1
+     ```
+   - 解析返回结果，找到 title 包含「商机挖掘」的节点 `node_token`，记为 `$TABLE_NODE_TOKEN`。
+   - ⚠️ **`lark-cli wiki +move` 不支持 `--insert-after` 参数**，无法在 wiki 内指定兄弟节点的插入顺序。飞书 wiki 根目录节点默认按创建时间倒序排列，新节点自然排在旧节点前面，**跳过此步骤即可**。
+
+5. **创建/更新后必须做两项验证（不要只看命令成功）：**
    - 位置验证：再次 `wiki nodes list`，确认本次 `node_token` 的 `parent_node_token == ""`。如不为空，立刻执行 `wiki +move`。
    - 格式验证：执行 `docs +fetch` 抽查字段是否黏连。注意 `docs +fetch` 可能把换行以字面量 `\n` 输出，检查前必须先把 `\\n` 还原成真实换行；正则必须按行检查，**禁止用会跨行误报的全文 `.*` 检查**。可复制：
 
 ```bash
-lark-cli docs +fetch --doc "$OBJ_TOKEN" --profile $BOT_PROFILE --as bot > wiki_fetch_YYYYMMDD.md
+lark-cli docs +fetch --doc "$OBJ_TOKEN" --profile $BOT_PROFILE > wiki_fetch_YYYYMMDD.md
 python3 - <<'PY'
 import pathlib, re, sys
 text = pathlib.Path('wiki_fetch_YYYYMMDD.md').read_text(errors='ignore')
@@ -819,7 +907,7 @@ PY
 
    - 如果验证失败，不要把“抓取/验证日志”写进周报；只修正 Markdown 空行后重新 `docs +update`。
 
-**禁止**使用 `feishu_wiki_space_node` 工具（该工具可能将文档创建在首页下），必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id` 命令。
+**禁止**使用 `feishu_wiki_space_node` 工具（该工具可能将文档创建在首页下），必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --space-id` 命令。
 
 ### 第十步：推送至群聊（极简概要 + 链接，200字左右）
 
@@ -918,13 +1006,13 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 4. **禁止推荐不合规业务**
 5. **双版本输出**：Word 版用于详细报告（华文楷体），wiki 版用于知识库存档（飞书 Markdown 格式），内容结构一致
 6. **知识库标题**：biomed-weekly-YYYYMMDD
-7. **知识库写入**：必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
+7. **知识库写入**：必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --space-id $WIKI_SPACE_ID` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
 8. **群聊推送**：推送概要 + 链接，不是全文
 9. **商机挖掘表格**：数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重，只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索优先 searxng**：searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用，且不用 OR 语法（Brave 不支持），改用空格分隔关键词。
 11. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告，不影响功能。
 12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式 `行业商机周报_生物医药_YYYYMMDD.docx`；生成后必须上传飞书 Drive 获取下载链接；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
+13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式 `biomed-weekly-YYYYMMDD.docx`（与 wiki 节点标题一致）；生成后必须上传飞书 Drive 获取下载链接；**上传前检查 Drive 中同名旧文件并删除，确保只保留最新版本**；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
 14. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现"（日期，来源）""（来源：XXX）"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 公告检索必须执行**：不可跳过。先在循环外做一次快速探测确认环境可用，再执行 2 个 `search_notice` 查询；不要调用无权限的 `search_trending_news`。
 16. **所有飞书 API 统一走 lark-cli**：sheets/drive/docs/wiki 操作全部用 lark-cli，不用 Python urllib 直接调 API（HTTPS_PROXY 代理会导致 SSL 证书验证失败）。
@@ -942,7 +1030,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 5. **iFinD 被跳过未执行**：未先做环境探测就跳过。→ 必须先探测再执行。
 6. **Python urllib SSL 证书验证失败**：HTTPS_PROXY 代理导致 `self-signed certificate in certificate chain`。→ 全部改用 lark-cli。
 7. **lark-cli 上传文件要求相对路径**：绝对路径直接报错。→ 先 `cd` 到目录再用 `./文件名`。
-8. **wiki 创建后自动嵌套在子节点下**：`wiki +node-create` 默认放在「首页」节点下。→ 创建后需 `wiki +move` 移回根目录。
+8. **wiki 创建后自动嵌套在「首页」下**：飞书 API 默认把新节点挂在「首页」节点下，**不是根目录**。→ 创建后必须用脚本模板检查 `parent_node_token`，如不为空立即 `wiki +move --target-space-id <space>` 移回根目录。**不要传 `--parent-node-token ""`**（无效）。
 9. **lark-cli 子命令语法不统一**：每个子命令 flag 风格不一致，需反复 `--help`。→ 在 skill 中预定义完整命令。
 10. **Word 下载链接格式**：`https://<租户域名>.feishu.cn/file/<file_token>`，上传文件后拼接。**向用户输出时只放此链接，禁止出现本地文件路径。**
 11. **未并行执行搜索**：skill 说"并行执行"但实际串行。→ searxng 支持并行，Brave 需串行。
@@ -963,6 +1051,9 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 26. **2026-05-22 复盘：iFinD 调用签名再次写错**：`call-node.js` 不是 `call('search_notice', params)`，而是 `call('news','search_notice', params)`。→ 第五轮固定复制 iFinD 模板，不要手写调用签名。
 27. **2026-05-22 复盘：wiki 黏连检查误报**：`docs +fetch` 可能输出字面量 `\n`，全文正则 `推荐等级.*所属行业` 会把转义换行后的多行误判成同一行。→ 检查前先 `text.replace('\\n','\n')`，再逐行匹配；只在同一真实行命中时才判定黏连。
 28. **2026-05-22 复盘：已有经验没有转成强制模板会重复踩坑**：仅写“注意/经验”不够。→ 对 iFinD、wiki 验证、商机表清理这类脆弱步骤，必须在流程正文提供可复制命令模板，并在执行时优先复制模板而非临场重写。
+29. **2026-05-23 复盘：Brave 对中文地域/工业术语索引极差**：`web_search("生物医药 浙江 杭州 宁波 产业 2026", freshness="week")` 返回10条中8条不相关（B站视频、社保缴费、摩托车、长鑫半导体等）。→ Brave 补充搜索应使用更精准的关键词组合（如具体企业名+融资/公告/一季报），不要用宽泛的地域+行业组合搜索；优先依赖 searxng 和必抓源。
+30. **2026-05-23 复盘：lark-cli proxy warning 混入输出**：所有 lark-cli 命令 stderr 输出 `[lark-cli] [WARN] proxy detected: HTTPS_PROXY=...`，`| python3` 管道会 JSONDecodeError。→ lark-cli 输出必须先写文件，再用 Python 跳过 warning 行找到 `{` 开头解析，不能直接管道。
+31. **2026-05-25 复盘：Word 与 Wiki 同名一致 + Drive 同名覆盖**：Word 文件名和 wiki 节点标题统一为 `biomed-weekly-YYYYMMDD`。Drive 不会自动覆盖同名文件，上传前必须先 `drive +list` 查找同名旧文件并 `drive +delete`，再上传新版本。
 
 ## 文件路径
 

@@ -1,0 +1,18 @@
+[lark-cli] [WARN] proxy detected: HTTPS_PROXY=http://127.0.0.1:7890 — requests (including credentials) will transit through this proxy. Set LARK_CLI_NO_PROXY=1 to disable proxy.
+Creating wiki node...
+Created wiki node in space 7637083944097270734 via explicit_space_id.
+Warning: resource was created with bot identity, but no current user open_id is configured, so auto-grant was skipped. Run `lark-cli auth login` and retry, or grant permission manually.
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "has_child": false,
+    "node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "node_type": "origin",
+    "obj_token": "DQzkdliElojWzvxV6qTcGbaYnMg",
+    "obj_type": "docx",
+    "origin_node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "parent_node_token": "EPTRwyE9Iir6xfkS7w3c0Qkpn8b",
+    "permission_grant": {
+      "hint": "No current user identity (not logged in or session expired). Run `lark-cli auth login` and retry, or grant permission manually via the Lark document UI.",
+      "message"

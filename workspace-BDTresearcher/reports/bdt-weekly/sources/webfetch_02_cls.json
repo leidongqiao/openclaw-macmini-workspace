@@ -1,0 +1,9 @@
+{
+  "source_id": 2,
+  "source_name": "财联社电报",
+  "url_or_query": "https://www.cls.cn/telegraph",
+  "fetched_at": "2026-05-29T06:06:06.713054+00:00",
+  "ok": true,
+  "status_or_error": "ok",
+  "content_or_results": "财联社电报页面可访问但正文为动态加载，审计记录为首页文本，半导体有效信息不足，依赖SearXNG与垂直源补位。"
+}

@@ -1,0 +1,339 @@
+{
+  "query": "\u5de5\u4e1a\u8f6f\u4ef6 MES PLM SCADA \u5de5\u4e1a\u4e92\u8054\u7f51 \u6570\u5b57\u5b6a\u751f 2026",
+  "number_of_results": 0,
+  "results": [
+    {
+      "url": "https://cloud.tencent.com/developer/article/2671060?policyId=1003",
+      "title": "\u534e\u4e3a\u7684AI+\u5236\u9020\u7b54\u5377\uff1a\u6253\u7834\u70df\u56f1\uff0c\u8ba9\u5de5\u5382\u5316\u8eab\u201c\u6570\u667a\u751f\u547d\u4f53\u201d - \u817e\u8baf\u4e91",
+      "content": "4 days ago \u00b7 2026\u5e74\u6570\u5b57\u5b6a\u751f\u5de5\u4e1a\u53d1\u5c55\u8d8b\u52bf\uff1a\u4ece\u201c\u53ef\u89c6\u201d\u5230\u201c\u53ef\u61c2\u201d\uff0c\u7a7a\u95f4\u667a\u80fd\u91cd\u5851\u5236\u9020\u672a\u6765 \u00b7 \u6570\u5b57\u5b6a\u751f \u00b7 \u7ad9\u57282026\u5e74\u7684\u8282\u70b9\u56de\u671b\uff0c\u5de5\u4e1a\u6570\u5b57\u5b6a\u751f\uff08Industrial Digital Twin\uff09\u5df2\u7ecf\u8d70\u8fc7\u4e86\u5355\u7eaf\u8ffd\u6c42 ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "cloud.tencent.com",
+        "/developer/article/2671060",
+        "",
+        "policyId=1003",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "2026\u5e74\u5236\u9020\u4e1a\u6570\u5b57\u5316\u8f6c\u578b\u4e2dplm\u7cfb\u7edf\u7684\u5b9a\u4f4d\u518d\u5ba1\u89c6 - \u641c\u72d0",
+      "content": "2026\u5e74\u4e2d\u56fd\u5236\u9020\u4e1aPLM\u7cfb\u7edf\u9009\u578b\uff1a\u544a\u522b\u5382\u5546PPT\uff0c\u56de\u5f52\u771f\u5b9e\u5339\u914d\u903b\u8f91 \u5728\u5e2e\u591a\u5bb6\u5236\u9020\u4f01\u4e1a\u505a\u5b8c\u4fe1\u606f\u5316\u54a8\u8be2\u540e\uff0c\u6211\u53d1\u73b0\u4e00\u4e2a\u6709\u610f\u601d\u7684\u73b0\u8c61\uff1a\u4e0d\u5c11\u6280\u672f\u8d1f\u8d23\u4eba\u7684\u6d4f\u89c8\u5668\u6536\u85cf\u5939\u91cc\uff0c\u8eba\u7740\u81f3\u5c11\u5341\u51e0\u7bc7PLM\u9009\u578b\u6587\u7ae0\uff0c\u4f46\u4f9d\u7136\u8fdf\u8fdf\u65e0\u6cd5\u505a\u51b3\u5b9a\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        1
+      ],
+      "score": 1.0,
+      "category": "general",
+      "url": "https://www.sohu.com/a/1023450373_122480605",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "www.sohu.com",
+        "/a/1023450373_122480605",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://blog.csdn.net/Ggsddu111222333/article/details/161208622",
+      "title": "2026\u4e2d\u578b\u5236\u9020\u4f01\u4e1aMES\u7cfb\u7edf\u9009\u578b\u6307\u5357\uff1a\u907f\u5751\u3001\u5bf9\u6bd4\u4e0e\u6700\u4f18\u843d\u5730\u65b9\u6848\u539f\u521b",
+      "content": "3 days ago \u00b7 \u5bf9\u4e8e\u5e74\u4ea7\u503c1-10\u4ebf\u7684\u6210\u957f\u578b\u3001\u4e2d\u578b\u5236\u9020\u4f01\u4e1a\u800c\u8a00\uff0cMES\u7cfb\u7edf\u9009\u578b\u843d\u5730\u7684\u6838\u5fc3\u96be\u9898\u96c6\u4e2d\u5728\u4e09\u5927\u75db\u70b9\uff1a\u5404\u7cfb\u7edf\u4fe1\u606f\u5b64\u5c9b\u6797\u7acb\u3001\u9879\u76ee\u5b9e\u65bd\u5468\u671f\u8fc7\u957f\u3001\u552e\u540e\u8fd0\u7ef4\u54cd\u5e94\u6ede\u540e\u3002",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "blog.csdn.net",
+        "/Ggsddu111222333/article/details/161208622",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "\u8d76\u7d27\u770b!2026\u5e74plm\u7cfb\u7edf\u524d\u5341\u6392\u540d\u51fa\u7089 - \u7f51\u6613",
+      "content": "2026\u5e74\uff0c\u5168\u7403\u5236\u9020\u4e1a\u6b63\u7ecf\u5386\u524d\u6240\u672a\u6709\u7684\u6df1\u523b\u53d8\u9769\u3002\u5728\u6570\u5b57\u7ecf\u6d4e\u4e0e\u667a\u80fd\u5236\u9020\u6df1\u5ea6\u878d\u5408\u7684\u65f6\u4ee3\u80cc\u666f\u4e0b\uff0c\u4ea7\u54c1\u751f\u547d\u5468\u671f\u7ba1\u7406\uff08PLM\uff09\u7cfb\u7edf\u5df2\u4ece\u5355\u7eaf\u7684\u6280\u672f\u5de5\u5177\u6f14\u8fdb\u4e3a\u4f01\u4e1a\u6838\u5fc3\u7ade\u4e89\u529b\u7684\u6218\u7565\u57fa\u77f3\u3002\u968f\u7740\u56fd\u4ea7\u5316\u66ff\u4ee3\u8fdb\u7a0b\u7684\u52a0\u901f\u63a8\u8fdb\uff0c\u4ee5\u53ca\u4f01\u4e1a ...",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        2
+      ],
+      "score": 0.5,
+      "category": "general",
+      "url": "https://www.163.com/dy/article/KT9GNGMB0556GLHX.html",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "www.163.com",
+        "/dy/article/KT9GNGMB0556GLHX.html",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://cloud.tencent.com/developer/article/2671060",
+      "title": "\u534e\u4e3a\u7684AI+\u5236\u9020\u7b54\u5377\uff1a\u6253\u7834\u70df\u56f1\uff0c\u8ba9\u5de5\u5382\u5316\u8eab\u201c\u6570\u667a\u751f\u547d\u4f53\u201d - \u817e\u8baf\u4e91",
+      "content": "4 days ago \u00b7 2026\u5e74\u6570\u5b57\u5b6a\u751f\u5de5\u4e1a\u53d1\u5c55\u8d8b\u52bf\uff1a\u4ece\u201c\u53ef\u89c6\u201d\u5230\u201c\u53ef\u61c2\u201d\uff0c\u7a7a\u95f4\u667a\u80fd\u91cd\u5851\u5236\u9020\u672a\u6765 \u00b7 \u6570\u5b57\u5b6a\u751f \u00b7 \u7ad9\u57282026\u5e74\u7684\u8282\u70b9\u56de\u671b\uff0c\u5de5\u4e1a\u6570\u5b57\u5b6a\u751f\uff08Industrial Digital Twin\uff09\u5df2\u7ecf\u8d70\u8fc7\u4e86\u5355\u7eaf\u8ffd\u6c42 ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "cloud.tencent.com",
+        "/developer/article/2671060",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "2026\u5e74plm\u7cfb\u7edf\u9009\u578b\u6307\u5357\uff1a5\u6b3e\u4e3b\u6d41\u4ea7\u54c1\u529f\u80fd\u6df1\u5ea6\u5bf9\u6bd4 | Ones\u9886\u8854",
+      "content": "2026\u5e74PLM\u7cfb\u7edf\u600e\u4e48\u9009\uff1f\u672c\u6587\u5bf9\u6bd4ONES\u3001\u8c6a\u68eeNextPLM\u3001\u7528\u53cb\u667a\u77f3\u5f00\u3001\u8fbe\u7d223DE\u3001\u897f\u95e8\u5b50Teamcenter\u4e94\u6b3e\u4ea7\u54c1\uff0c\u4ece\u6570\u636e\u7ba1\u7406\u3001AI\u667a\u80fd\u5316\u3001\u7cfb\u7edf\u96c6\u6210\u7b49\u516d\u7ef4\u5ea6\u63d0\u4f9b\u9009\u578b\u53c2\u8003\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        3
+      ],
+      "score": 0.3333333333333333,
+      "category": "general",
+      "url": "https://ones.com.cn/tools/2026-plm-system-comparison-guide",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "ones.com.cn",
+        "/tools/2026-plm-system-comparison-guide",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://www.kunqujiuye.com/browse/49-2388902126/",
+      "title": "\u6f4d\u574a\u667a\u6539\u6570\u8f6cMOM-\u8d35\u5dde\u7701\u4ec1\u6000\u5e02\u6606\u66f2\u9152\u4e1a\u6709\u9650\u516c\u53f8",
+      "content": "5 days ago \u00b7 \u73b0\u5728MOM\u5e73\u53f0\u7684\u4e00\u5927\u8d8b\u52bf\u5c31\u662f\u5b9e\u73b0\u8f6f\u4ef6\u4e0e\u786c\u4ef6\u7684\u66f4\u6df1\u5ea6\u7684\u878d\u5408\uff0c\u501f\u52a9\u5de5\u4e1a\u7269\u8054\u7f51\u5e73\u53f0\uff0cMOM\u5e73\u53f0\u53ef\u4ee5\u66f4\u53ca\u65f6\u83b7\u53d6\u5b9e\u65f6\u7684\u751f\u4ea7\u3001\u8d28\u91cf\u3001\u7269\u6d41\u3001\u8bbe\u5907\u4fe1\u606f\uff0c\u5e76\u5bf9\u8fd9\u4e9b\u4fe1\u606f\u8fdb\u884c\u76d1\u63a7\uff0c\u4f9d\u636e\u72b6\u6001\u548c ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "www.kunqujiuye.com",
+        "/browse/49-2388902126/",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "2026 \u5e74 Plm \u7cfb\u7edf\u63a8\u8350\uff1a\u4ece\u7ba1\u7406\u5230\u51b3\u7b56\uff0c\u4e3b\u6d41\u5382\u5546\u63a8\u8350\u4e0e\u9009\u578b\u5b9e\u6218\u6307\u5357",
+      "content": "2026 \u5e74 PLM \u7cfb\u7edf\u63a8\u8350 5\u3001\u6570\u7801\u5927\u65b9 CAXA PLM \u7b2c\u4e00\u7ae0\uff1a\u8dc3\u8fc1\u8fdb\u884c\u65f6 \u2014\u2014PLM \u5982\u4f55\u4ece\u6587\u6863\u5e93\u53d8\u8eab\u667a\u80fd\u51b3\u7b56\u4e2d\u67a2 2026 \u5e74\u7684 PLM \u7cfb\u7edf\uff0c\u65e9\u5df2\u4e0d\u662f\u5341\u5e74\u524d\u90a3\u4e2a\"\u7535\u5b50\u56fe\u6587\u6863\u67dc\"\u3002 \u5728 AI \u4e0e\u4e91\u539f\u751f\u6280\u672f\u7684\u53cc\u91cd\u9a71\u52a8\u4e0b\uff0cPLM \u6b63\u7ecf\u5386\u4ece\"\u8bb0\u5f55\u7cfb\u7edf\"\u5230\"\u667a\u80fd\u51b3\u7b56\u7cfb\u7edf\"\u7684\u6839\u672c\u6027\u8dc3\u8fc1\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        4
+      ],
+      "score": 0.25,
+      "category": "general",
+      "url": "https://www.ithome.com/0/952/135.htm",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "www.ithome.com",
+        "/0/952/135.htm",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "url": "https://blog.csdn.net/xintai1999/article/details/161199946",
+      "title": "Siemens Xcelerator \u5e73\u53f0\u539f\u521b - CSDN\u535a\u5ba2",
+      "content": "4 days ago \u00b7 Xcelerator \u662f\u897f\u95e8\u5b50\u63a8\u51fa\u7684\u5f00\u653e\u5f0f\u6570\u5b57\u5546\u4e1a\u5e73\u53f0+ \u5de5\u4e1a\u8f6f\u4ef6/ \u786c\u4ef6/ \u670d\u52a1\u751f\u6001\uff0c\u5b9a\u4f4d\u4e3a\u5de5\u4e1a\u6570\u5b57\u5316\u8f6c\u578b\u7684\u201c\u5e94\u7528\u5546\u5e97+ \u6280\u672f\u5e95\u5ea7\u201d\uff0c\u6838\u5fc3\u662f\u6570\u5b57\u5b6a\u751f\u5168\u6808\u80fd\u529b+ \u751f\u6001\u5e02\u573a+ \u4e91\u8fb9\u534f\u540c ...",
+      "thumbnail": null,
+      "engine": "google",
+      "template": "default.html",
+      "parsed_url": [
+        "https",
+        "blog.csdn.net",
+        "/xintai1999/article/details/161199946",
+        "",
+        "",
+        ""
+      ],
+      "img_src": "",
+      "priority": "",
+      "engines": [
+        "google"
+      ],
+      "positions": [
+        5
+      ],
+      "score": 0.2,
+      "category": "general",
+      "publishedDate": null
+    },
+    {
+      "template": "default.html",
+      "title": "2026\u5e74PLM\u7cfb\u7edf\u9009\u578b\u6307\u5357\uff1a6\u6b3e\u4e3b\u6d41\u4ea7\u54c1\u529f\u80fd\u6df1\u5ea6\u5bf9\u6bd4",
+      "content": "2026\u5e74PLM\u7cfb\u7edf\u600e\u4e48\u9009\uff1f\u5bf9\u6bd4ONES\u3001\u8c6a\u68eeNextPLM\u3001\u667a\u77f3\u5f00\u3001\u8fbe\u7d223DE\u3001\u897f\u95e8\u5b50Teamcenter\u3001\u91d1\u8776\u661f\u7a7a6\u6b3e\u4ea7\u54c1\uff0c\u4eceBOM\u7ba1\u7406\u3001AI\u667a\u80fd\u5316\u3001\u7cfb\u7edf\u96c6\u6210\u7b49\u7ef4\u5ea6\u63d0\u4f9b\u9009\u578b\u53c2\u8003\u3002",
+      "img_src": "",
+      "iframe_src": "",
+      "audio_src": "",
+      "thumbnail": "",
+      "publishedDate": null,
+      "pubdate": "",
+      "length": null,
+      "views": "",
+      "author": "",
+      "metadata": "",
+      "priority": "",
+      "engines": [
+        "duckduckgo"
+      ],
+      "open_group": false,
+      "close_group": false,
+      "positions": [
+        5
+      ],
+      "score": 0.2,
+      "category": "general",
+      "url": "https://ones.cn/blog/tools/2026-plm-system-comparison-guide",
+      "engine": "duckduckgo",
+      "parsed_url": [
+        "https",
+        "ones.cn",
+        "/blog/tools/2026-plm-system-comparison-guide",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "answers": [],
+  "corrections": [],
+  "infoboxes": [],
+  "suggestions": [],
+  "unresponsive_engines": [
+    [
+      "brave",
+      "Suspended: too many requests"
+    ],
+    [
+      "karmasearch",
+      "Suspended: access denied"
+    ],
+    [
+      "startpage",
+      "Suspended: CAPTCHA"
+    ]
+  ]
+}

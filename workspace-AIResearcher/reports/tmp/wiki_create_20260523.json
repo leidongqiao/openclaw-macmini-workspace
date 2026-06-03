@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "has_child": false,
+    "node_token": "VKFrwFlwOi6PfEkSpgkcm4tpnnc",
+    "node_type": "origin",
+    "obj_token": "SonmdFjVpo2PhKxXBrBciUYrnxf",
+    "obj_type": "docx",
+    "origin_node_token": "VKFrwFlwOi6PfEkSpgkcm4tpnnc",
+    "parent_node_token": "O1fQwQ9ImiZUwNk6ahUco5x3nZg",
+    "permission_grant": {
+      "hint": "No current user identity (not logged in or session expired). Run `lark-cli auth login` and retry, or grant permission manually via the Lark document UI.",
+      "message": "Resource was created with bot identity, but no current CLI user open_id is configured, so current user full_access (可管理权限) was not granted. You can retry later or continue using bot identity.",
+      "perm": "full_access",
+      "status": "skipped"
+    },
+    "resolved_by": "explicit_space_id",
+    "resolved_space_id": "7630717889183534041",
+    "space_id": "7630717889183534041",
+    "title": "AI-weekly-20260523",
+    "url": "https://qcn8k445rrbc.feishu.cn/wiki/VKFrwFlwOi6PfEkSpgkcm4tpnnc"
+  }
+}

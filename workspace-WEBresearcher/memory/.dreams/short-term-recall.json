@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T19:00:09.487Z",
+  "updatedAt": "2026-05-29T19:00:03.445Z",
   "entries": {
     "memory:memory/2026-05-07.md:3:3": {
       "key": "memory:memory/2026-05-07.md:3:3",
@@ -12978,6 +12978,2671 @@
         "skill",
         "避免",
         "下次"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:58:58": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:58:58",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 58,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "Assistant: 可以，已更新到： `skills/web-weekly-report/SKILL.md` 我做了几类优化： 1. **加了“数据源健康度维护”规则** - 每次周报后记录 `fetch failed / 404 / 403 / 验证页 / 412 / 内容极少` - 连续不可用的源降级为「可选/搜索替代」 2. **把不可用源打标** - 财联社：`degraded`，只尝试 1 次，失败走 `site:cls.cn` 搜索 - 证券时报旧快讯页：`disabled-url`，不再直接抓旧 URL - 虎嗅：`search-only",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "可选/搜索替代",
+        "cls.cn",
+        "disabled-url",
+        "search-only",
+        "可以",
+        "更新",
+        "skills",
+        "web"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:59:59": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:59:59",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 59,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "User: iFinD 没配置成功 Node 调用提示 unknown server_type: search_notice，Python 调用缺 mcp_config.json。所以本次只能标注“iFinD 数据源未配置”，没有纳入公告/热点数据。 这个iFinD skill有啥问题啊别的agent调用的都好好的",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "server-type",
+        "search-notice",
+        "mcp-config.json",
+        "没有纳入公告/热点数据",
+        "ifind",
+        "配置",
+        "成功",
+        "node"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:60:60": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:60:60",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 60,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，不是 iFinD skill 坏了，是我调用方式错了。我刚按 iFinD skill 正确方式测了一下：`call(\"news\",\"search_notice\", ...)`，返回 `ok: true`。问题在 web-weekly-report 的执行说明写得/我理解得不够严谨。现在我把调用规范修进周报 skill。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "web-weekly-report",
+        "的执行说明写得/我理解得不够严谨",
+        "说得",
+        "不是",
+        "ifind",
+        "skill",
+        "方式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:61:61": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:61:61",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 61,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "Assistant: 你判断是对的：**iFinD skill 没问题，是我调用错了。** 我刚按 iFinD skill 正确方式测了： ```js call(\"news\", \"search_notice\", {...}) ``` 返回 `ok: true`。所以之前的两个报错原因是： 1. **Node 调用错了参数签名** 我写成了类似： ```js call(\"search_notice\", {...}) ``` 但 iFinD 的真实签名是： ```js call(server_type, tool_name, params) ``` 公告/新",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "search-notice",
+        "server-type",
+        "tool-name",
+        "公告/新",
+        "判断",
+        "ifind",
+        "skill",
+        "问题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:62:62": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:62:62",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 62,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "Assistant: 这次是我没严格读 iFinD skill 的调用接口，怪不到 iFinD。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "这次",
+        "我没",
+        "严格",
+        "ifind",
+        "skill",
+        "接口",
+        "不到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:63:63": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:63:63",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 63,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "User: 还有其他的坑把解决方案和需要注意的点都写到周报skill里，防止下次再犯",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "还有",
+        "其他",
+        "解决",
+        "方案",
+        "需要",
+        "注意",
+        "写到",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:64:64": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:64:64",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 64,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Assistant: 对，这种坑不能只靠“我记住了”。我把这次执行暴露的问题整理成可执行规则，直接写进周报 skill。重点补：表格写入防覆盖、Wiki/Docs 命令、Word/产品文件读取、iFinD、cron 推送、产物校验。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "wiki/docs",
+        "word/产品文件读取",
+        "这种",
+        "不能",
+        "只靠",
+        "记住",
+        "我把",
+        "这次"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:65:65": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:65:65",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 65,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "Assistant: 我再把“执行前/后检查清单”补到工作流开头，防止只写在经验里执行时漏看。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "执行前/后检查清单",
+        "再把",
+        "执行",
+        "检查",
+        "清单",
+        "工作",
+        "开头",
+        "防止"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:66:66": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:66:66",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 66,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "Assistant: 已写进 `web-weekly-report/SKILL.md`，这次不是口头记一下，我把它改成了执行约束。 新增/强化了这些内容： - **执行前硬性检查** - 先读完整 skill - 正确读同级 `config.json` - 建 `/tmp/web-weekly-YYYYMMDD/` - 产品库 docx 用 `python-docx` - 商机表先快照 - iFinD 先用 `call('news', ...)` 探测 - **执行后硬性检查** - Word 本地存在 + 已上传 - Wiki 已写入 + 移到根目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "web-weekly-report/skill.md",
+        "新增/强化了这些内容",
+        "config.json",
+        "tmp/web-weekly-yyyymmdd",
+        "python-docx",
+        "写进",
+        "web",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-21.txt:67:67": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-21.txt:67:67",
+      "path": "memory/.dreams/session-corpus/2026-05-21.txt",
+      "startLine": 67,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "Assistant: read，必须用 `python-docx` - 读不到产品库就不能虚构产品参数 - **cron 推送坑** - cron delivery 已负责发群，不要重复手动群发 - 最终回复写群摘要即可 - **数据源健康度** - 不可用源打标、降级、搜索替代都已经固化 我也把这次复盘写进 self-improving 了。下次再跑这个周报，应该会少很多低级返工。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "90ee39ac7cd8"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "python-docx",
+        "self-improving",
+        "read",
+        "必须",
+        "python",
+        "docx",
+        "不到",
+        "产品"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 【互联网】商机周报·浙江｜2026.05.15-05.22 🔥 主线：AI Token计费、算力网、SaaS Agent化 🏠 浙江机会：杭州冲刺AI创新发展第一城，Token结算枢纽、开源大模型和AI+制造是核心抓手。 🏢 优先跟进：阿里云、DeepSeek、网易杭州 🎯 切入方向：云资源预付/生态结算/跨境收款/科创融资 Word：https://qcn8k445rrbc.feishu.cn/file/J4HQbNabmoF9VdxSLUVcS4Ypnsh Wiki：https://www.feishu.cn/wi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2026.05.15-05.22",
+        "云资源预付/生态结算/跨境收款/科创融资",
+        "www.feishu.cn/wi",
+        "周报",
+        "浙江",
+        "2026.05.15",
+        "05.22",
+        "token"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 周报执行过程中踩了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "周报",
+        "执行",
+        "过程",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 这次主要踩了这些坑： 1. **Skill 全文读取有截断风险** - `read SKILL.md` 返回里有 “truncated/omitted” 提示。严格说，应该继续分页补读到文件末尾再执行。 - 后续我靠已读内容 + 实操经验完成了，但这是流程上最大的瑕疵。 2. **搜索结果噪声很高** - SearXNG 有些结果混入知乎、Instagram、LinkedIn 垃圾页，浙江专项里也有无关内容。 - 需要人工筛掉“非本周 / 非互联网商业化 / 非浙江机会”的结果。 3. **部分源可用但低质** - LatePost",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "truncated/omitted",
+        "这次",
+        "主要",
+        "这些",
+        "skill",
+        "全文",
+        "截断"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 要求又执行了 `wiki +move` 移到知识库根目录，这一步不能省。 8. **Wiki 校验不宜只看 CLI 输出** - `docs +fetch` 返回里看到 `data.length` 和实际 markdown 输出长度不完全直观。 - 更稳妥是：看 `docs +update ok:true` + 抽查关键字段 + 确认无“推荐等级/所属赛道”黏连。 9. **商机表读写有潜在风险** - 我读的是 `A1:J200`，这次原表刚好 200 行，新增后 204 行，没丢数据。 - 但更严谨做法应该先读 `row_cou",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "data.length",
+        "推荐等级/所属赛道",
+        "row-cou",
+        "要求",
+        "执行",
+        "wiki",
+        "移到",
+        "知识"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 这些问题很多都遇到过，看看skill里是否提到过，没有的话就加到skill里面，防止下次再踩坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "这些",
+        "问题",
+        "很多",
+        "遇到",
+        "看看",
+        "skill",
+        "是否",
+        "提到"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-22.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-22.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 已检查并补进 `skills/web-weekly-report/SKILL.md` 了。 这次新增/强化的避坑点： - `SKILL.md` 必须分页读完整，不能看到截断就开始执行 - iFinD 返回是多层 JSON，公告内容要逐层解析 - `fetch` 成功不代表内容有效，要过滤低质源/广告稿/非行业内容 - SearXNG 搜索结果要过滤垃圾页、社媒、招聘页、非本周内容 - 飞书文档校验应使用 `docs +fetch --doc`，不是 `docs +read --doc` - 商机表不能写死 `A1:J200`，要先读",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-22T19:00:14.740Z",
+      "lastRecalledAt": "2026-05-22T19:00:14.740Z",
+      "queryHashes": [
+        "91dce059e480"
+      ],
+      "recallDays": [
+        "2026-05-23",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "这次新增/强化的避坑点",
+        "skill.md",
+        "要过滤低质源/广告稿/非行业内容",
+        "检查",
+        "skills",
+        "web",
+        "weekly",
+        "report"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 商机周报·浙江｜2026.05.19-05.25 🔥 主线：Token套餐商品化、AI终端分级、AI应用价值验证 🏠 浙江机会：杭州加码“人工智能创新发展第一城”，大模型、AI SaaS、具身智能和游戏出海最值得扫客。 🏢 优先跟进：DeepSeek、阿里云、群核科技、宇树科技 🎯 切入方向：算力/API预付、云生态结算、订单融资、跨境收款和数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/JqPGbfsBuoELM2xxDDGcEHrSn5e Wiki：https://www",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "2026.05.19-05.25",
+        "算力/api预付",
+        "周报",
+        "浙江",
+        "2026.05.19",
+        "05.25",
+        "token",
+        "套餐"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 周报生成过程中踩了哪些坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "周报",
+        "生成",
+        "过程",
+        "哪些"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 已发。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": []
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 这次主要踩坑/风险点有这些： 1. **SearXNG 搜索质量不稳定** - 多个查询返回里 `number_of_results=0`，但实际 `results` 里有内容，不能只看计数字段。 - Brave / DuckDuckGo / Startpage 等引擎大量出现 `too many requests`、`CAPTCHA`、`access denied`。 - 结果：SaaS、财联社、LatePost、IT桔子等几组搜索几乎为空，只能靠其他搜索结果、站点替代源和已抓到的正文补足。 2. **垂直媒体源可用性差** -",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "这次主要踩坑/风险点有这些",
+        "number-of-results",
+        "这次",
+        "主要",
+        "风险",
+        "这些",
+        "searxng",
+        "搜索"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: `node_token/obj_token` 就能继续。 6. **Wiki 默认挂到子目录** - 创建 Wiki 后 `parent_node_token` 非空，说明不是根目录。 - 已经额外执行 `wiki move`，把节点移到知识库根目录。 7. **商机表写入风险最大** - 表格已有 204 行，不能直接从 `A2` 写新增行，否则会覆盖旧商机。 - 这次先保存 `sheet_before.json`，再合并、排序、整表写回 `A2:J205`，最后读回前 15 行校验。 - 实际更新了 204 行、2040 个单元",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "node-token/obj-token",
+        "parent-node-token",
+        "sheet-before.json",
+        "node-token",
+        "obj-token",
+        "继续",
+        "wiki",
+        "默认"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: 信息抓取的来源必须全部走一遍有什么问题可以备注； 商机表表格是默认200多行，但实际只有十几行其他都是空行，为啥要更新全部的空行呢； word表格的名称和Wiki要一致，而且保存本地后也不要有重名的文件：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "信息",
+        "抓取",
+        "来源",
+        "必须",
+        "全部",
+        "一遍",
+        "什么",
+        "问题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 已处理并发给你了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "处理",
+        "并发"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 收到。我会把这三条固化进 `web-weekly-report` skill：抓取源必须全量走完并备注状态；商机表只按有效行合并写入，不再把尾部空行当数据重写；Word/Wiki/本地文件名统一同一个标题，并做重名检测。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "web-weekly-report",
+        "word/wiki/本地文件名统一同一个标题",
+        "收到",
+        "三条",
+        "固化",
+        "web",
+        "weekly",
+        "report"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 已把这三条改进写进 `skills/web-weekly-report/SKILL.md` 了。 具体改动： 1. **信息抓取必须全量走完** - 核心源、SearXNG 查询、垂直源/替代源、本地专项、iFinD 查询都必须执行。 - 任何来源失败、空结果、低质、403/404、CAPTCHA、权限不足，都只做备注，不允许提前停止。 - 要生成 `source_status.md/json`，记录每个来源的状态、结果数量、失败原因和是否用了替代源。 2. **商机表不再重写 200+ 空行** - 之前更新 204 行的原因：表",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "垂直源/替代源",
+        "403/404",
+        "source-status.md/json",
+        "三条",
+        "改进",
+        "写进",
+        "skills",
+        "web"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: 还有周报里面不要出现”iFinD热点事件接口返回403无权限，本期以公告语义检索替代。“这种报错或者日志",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "还有",
+        "周报",
+        "里面",
+        "不要",
+        "出现",
+        "ifind",
+        "热点",
+        "事件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 已补进 `web-weekly-report` skill，并发给你了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "web-weekly-report",
+        "web",
+        "weekly",
+        "report",
+        "skill",
+        "并发"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 明白，这类是执行日志，不应该进客户经理看的周报正文。我要把规则改成：报错/权限/替代源只写进过程备注 `source_status`，正文和资料来源只保留正常来源概括。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "报错/权限/替代源只写进过程备注",
+        "source-status",
+        "明白",
+        "这类",
+        "执行",
+        "日志",
+        "应该",
+        "客户"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 已补进 skill 了。 现在规则是： - `403 / 无权限 / Tool not allowed / 抓取失败 / 替代源 / 跳过原因` 这类内容只能写进 `/tmp/web-weekly-YYYYMMDD/source_status.md/json`。 - Word 正文、Wiki 正文、资料来源、推送摘要里都禁止出现这些执行日志。 - 资料来源只保留正常口径，比如：`新华网科技、36氪、证券时报、浙江省政府公开信息、企业公开披露资料、iFinD公告语义检索等`。 - 我专门加了反例：不得写 `iFinD热点事件接口返回4",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "skill",
+        "现在",
+        "规则",
+        "权限",
+        "tool",
+        "not",
+        "allowed",
+        "抓取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: 其他的坑问题自己对比下skill,补充更新下skill,防止踩坑",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "其他",
+        "问题",
+        "自己",
+        "对比",
+        "skill",
+        "补充",
+        "更新",
+        "防止"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 已补充并发给你了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "补充",
+        "并发"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 📌 商机周报·浙江｜2026.05.19-05.25 🔥 主线：Token套餐商品化、AI终端分级、AI应用价值验证 🏠 浙江机会：杭州加码“人工智能创新发展第一城”，大模型、AI SaaS、具身智能和游戏出海最值得扫客。 🏢 优先跟进：DeepSeek、阿里云、群核科技、宇树科技 🎯 切入方向：算力/API预付、云生态结算、订单融资、跨境收款和数字财资 Word：https://qcn8k445rrbc.feishu.cn/file/JqPGbfsBuoELM2xxDDGcEHrSn5e Wiki：https://www",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "2026.05.19-05.25",
+        "算力/api预付",
+        "周报",
+        "浙江",
+        "2026.05.19",
+        "05.25",
+        "token",
+        "套餐"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 我会把这次复盘里剩下的执行坑也对照进 skill：重点补 SearXNG 结果解析、lark-cli JSON/notice 处理、权限提示误判、Wiki 校验和报告发布前的禁词检查。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "json/notice",
+        "这次",
+        "盘里",
+        "剩下",
+        "执行",
+        "对照",
+        "skill"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 我又补了一轮防踩坑规则，已经写进 `skills/web-weekly-report/SKILL.md`。 新增/强化的点： 1. **SearXNG 结果解析** - `number_of_results=0` 不再直接判空。 - 必须看 `len(results)` 和实际结果内容。 - `unresponsive_engines` 只表示部分搜索引擎挂了，不代表整次搜索失败。 2. **搜索源失败处理** - CAPTCHA / too many requests / access denied 只记入 `source_sta",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "新增/强化的点",
+        "number-of-results",
+        "unresponsive-engines",
+        "source-sta",
+        "我又",
+        "一轮",
+        "规则",
+        "已经"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-25.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-25.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-25.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 命中后先判断是不是后台日志，确认是日志就必须删掉或改写后再上传/推送。 6. **最终检查清单** - 最终不只检查 Word/Wiki/商机表链接，还要确认：iFinD 状态写进 `source_status`、数据源状态已记录、最终摘要不含执行日志。 我也跑了 `git diff --check`，没有格式错误。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T19:00:15.340Z",
+      "lastRecalledAt": "2026-05-25T19:00:15.340Z",
+      "queryHashes": [
+        "cd5aa3c5fc0e"
+      ],
+      "recallDays": [
+        "2026-05-26",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "确认是日志就必须删掉或改写后再上传/推送",
+        "word/wiki/商机表链接",
+        "source-status",
+        "命中",
+        "判断",
+        "是不是",
+        "后台",
+        "日志"
+      ]
+    },
+    "memory:memory/2026-05-11.md:1:34": {
+      "key": "memory:memory/2026-05-11.md:1:34",
+      "path": "memory/2026-05-11.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-05-11 周一 ## 周报生成（18:33 cron 触发） 生成本周互联网行业研究周报（2026.05.05-05.11，聚焦浙江） ### 抓取源情况 - ✅ 同花顺：成功，获取到A股收盘行情 - ✅ 财联社电报：成功，获取到多条新闻 - ❌ 36氪：失败（JS渲染返回空白，跳过） - ✅ 经济观察网：成功，获取到多条资讯 - ✅ web_search 多轮搜索：执行成功 ### TOP7 要闻 1. 央行等六部门供应链金融新规结束征求意见 2. XTransfer（杭州）冲刺港股IPO，全球最大B2B跨境支付平台 3. 顺丰拟全面启用钉钉悟空，或诞生中国SaaS史上最大单笔订单 4. 抖省省APP日活突破1000万，抖音本地生活GMV超8500亿 5. Snap Q1财报：Snapchat月活9.56亿 6. 嘀嗒顺风车用户兴趣标签增至334万 7. 长盈精密递表港交所 ### 浙江商机 - 新增：XTransfer（杭州），P0，IPO募集资金监管+跨境结算+供应链金融 - 商机表格更新：6条记录（按日期倒序排列） ### 知识库 - 文档创建：internet-weekly-20260511 - URL：https://www.feishu.cn/wiki/TeRiwuBieiS412k7ZkCc2hC5nXe - 已移至知识库根目录 ### 推送 - 群聊概要已发送（oc_c433a0976937d897acce12eb3820f049）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-28T15:11:08.092Z",
+      "lastRecalledAt": "2026-05-28T15:11:08.092Z",
+      "queryHashes": [
+        "18368c535ccd"
+      ],
+      "recallDays": [
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "2026.05.05-05.11",
+        "web-search",
+        "snapchat月活9.56亿",
+        "internet-weekly-20260511",
+        "周一",
+        "周报",
+        "生成",
+        "cron"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ 🛠️ run python3 inline script (heredoc) (agent) failed",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "run",
+        "python3",
+        "inline",
+        "script",
+        "heredoc",
+        "failed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 为什么摘要没有推送到群聊里面",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "为什么",
+        "摘要",
+        "没有",
+        "推送",
+        "里面"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 找到了原因。最近一次周报（今天 5/28 触发的）执行失败了，所以摘要没有推送到群聊。 **具体情况：** | 项目 | 详情 | |------|------| | 触发时间 | 2026-05-28（周五 13:33 cron） | | 运行状态 | ❌ **error** | | 错误信息 | `run python3 inline script (heredoc) (agent) failed` | | 耗时 | ~7.6 分钟 | | 推送状态 | `not-delivered`（因执行失败，delivery 没有执行）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "5/28",
+        "7.6",
+        "not-delivered",
+        "找到",
+        "原因",
+        "最近",
+        "一次",
+        "周报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: 为什么执行失败，我明明看到了摘要信息，但没有推送",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "为什么",
+        "执行",
+        "失败",
+        "明明",
+        "看到",
+        "摘要",
+        "信息",
+        "没有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 明白了，你说\"看到了摘要信息\"——这说明 agent 其实已经生成了摘要，但因为后续步骤的脚本失败了，导致整体状态被标记为 error，delivery 也就没有触发推送。 让我确认一下具体是哪个环节出了问题：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "明白",
+        "看到",
+        "摘要",
+        "信息",
+        "说明",
+        "其实",
+        "已经",
+        "生成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，这个情况我仔细看了一下： **问题在于：摘要生成了，但后续步骤的某个 python3 脚本报错了。** SKILL.md 的执行流程是这样的： 1. 抓取信息 → ✅ 2. 生成周报内容 → ✅（你看到了摘要） 3. 上传 Word 到飞书 Drive → ? 4. 创建 Wiki 节点 → ? 5. 写商机表格 → ? 6. 输出最终摘要 → ✅ 7. **由 cron delivery 自动推送到群聊** ← ❌ 因为这一步前面的某个脚本失败，整个 job 被标记为 error，delivery 就不触发了 **所以你",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "说得",
+        "这个",
+        "情况",
+        "仔细",
+        "看了",
+        "一下",
+        "问题"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: 这个脚本为啥报错，可以修复吗，明明生成成功了怎么还推送错误的日志，这种错误解决了就要忽略掉",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "这个",
+        "脚本",
+        "可以",
+        "修复",
+        "明明",
+        "生成",
+        "成功",
+        "怎么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！**Line 42** 有一个 bash 调用失败了 (`status: 'failed', 'isError': True, exitCode: 1`)。让我查看详细内容。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "找到",
+        "一个",
+        "bash",
+        "失败",
+        "status",
+        "failed",
+        "iserror",
+        "true"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！是 **Line 41** 的 python3 heredoc 脚本失败了（`exitCode: 1`，`durationMs: 0` 说明根本没执行）。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "找到",
+        "python3",
+        "heredoc",
+        "脚本",
+        "失败",
+        "exitcode",
+        "durationms",
+        "说明"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！根本原因很清楚： **`lark-cli wiki +node-create` 不支持 `--insert-after` 参数** 出错的命令（Line 41）： ```bash lark-cli wiki +node-create ... --insert-after \"CYTwwc93milpQPkiSOWcZLd3nqc\" ``` lark-cli 直接返回了 `Error: unknown flag: --insert-after`，导致 exit code 1。 **为什么你看到了摘要但没推送：** 1. ✅ 周报",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "node-create",
+        "insert-after",
+        "找到",
+        "根本",
+        "原因",
+        "清楚",
+        "lark"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 问题彻底搞清楚了。 ## 根因 Line 41 的 bash 命令用了 `lark-cli wiki +node-create`，带了一个 **lark-cli 不支持的参数 `--insert-after`**： ``` Error: unknown flag: --insert-after ``` lark-cli 直接报错了（exit code 1），所以 cron 把整个 job 标记为 `error`，delivery 就推送了错误日志而不是 agent 最终生成的摘要。 **后面 agent 自己重试成功了**（Line",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "node-create",
+        "insert-after",
+        "问题",
+        "彻底",
+        "搞清楚",
+        "根因",
+        "bash"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the complete picture. Let me fix both the SKILL.md and update MEMORY.md.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "memory.md",
+        "now",
+        "complete",
+        "picture",
+        "let",
+        "fix",
+        "both"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Now let me also check if there are other references to `--insert-after` or `insert_after` in the SKILL.md:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "insert-after",
+        "skill.md",
+        "now",
+        "let",
+        "check",
+        "other",
+        "references",
+        "insert"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "User: 周报skill第七步中 **Word 输出要求:** - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-WEBresearcher/reports/web-weekly/`(即 Web Researcher 工作空间的 `reports/web-weekly/`),不得保存到其他目录;如目录不存在先创建。 后加入先清空\"/Users/leidongqiao/Documents/ codex project/local-uploader/data/互联网\"这个目录下的文",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "users/leidongqiao",
+        "reports/web-weekly",
+        "users/leidongqiao/documents",
+        "project/local-uploader/data/互联网",
+        "周报",
+        "skill",
+        "第七",
+        "word"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: I need to update the SKILL.md with two changes. Let me apply both edits:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "need",
+        "update",
+        "two",
+        "changes",
+        "let",
+        "apply",
+        "both"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 已完成两处修改： 1. **Word 同步到 codex uploader 目录**：在第七步 Word 输出要求中新增一条规则——Word 文件生成后，先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/互联网` 下的文件（目录不动），再拷贝一份 Word 周报进去。 2. **Wiki 文档插入位置（时间倒序）**： - 第九步新增 **步骤 0**：创建周报前先列出知识库根目录节点，找到「商机挖掘表格」的 `node_token`。 - 创建新",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "project/local-uploader/data/互联网",
+        "node-token",
+        "完成",
+        "修改",
+        "word",
+        "同步",
+        "codex",
+        "uploader"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: 商机挖掘节点信息skill里面有的，而且默认就是第一个",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "挖掘",
+        "节点",
+        "信息",
+        "skill",
+        "里面",
+        "而且",
+        "默认",
+        "就是"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 明白。让我看下 SKILL.md 里商机挖掘节点的定义位置：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "明白",
+        "我看",
+        "挖掘",
+        "节点",
+        "定义",
+        "位置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Let me find where 商机挖掘 wiki node info is already defined:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "let",
+        "find",
+        "where",
+        "挖掘",
+        "wiki",
+        "node",
+        "info",
+        "already"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Joe 的意思是商机挖掘表格 wiki 节点的 `node_token` 已经在 skill 里有定义（且默认排在知识库根目录第一个），不需要步骤 0 去查。让我找到已有的定义：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "node-token",
+        "joe",
+        "意思",
+        "挖掘",
+        "表格",
+        "wiki",
+        "节点",
+        "已经"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 明白了。商机挖掘 wiki 节点就是知识库根目录列表的第一个，不需要额外查询变量，直接用 `wiki nodes list` 返回的第一个根节点 token 就行。让我简化步骤 0：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "明白",
+        "挖掘",
+        "wiki",
+        "节点",
+        "就是",
+        "知识",
+        "目录",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 已更新。步骤 0 改为：知识库根目录列表第一个节点就是商机挖掘表格，直接取它的 `node_token` 作为 `$BI_TABLE_NODE_TOKEN`，不需要额外搜索。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "node-token",
+        "bi-table-node-token",
+        "更新",
+        "步骤",
+        "知识",
+        "目录",
+        "列表",
+        "一个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 📌 【互联网】商机周报·浙江｜2026.05.22-05.28 🔥 主线：AI应用商业化、Token消费链、平台生态结算 🏠 浙江机会：杭州AI第一城叠加场景开放，云资源预付、SaaS回款、跨境数字贸易值得扫客 🏢 优先跟进：DeepSeek、群核科技、有赞 🎯 切入方向：科创贷/短贷/数字财资/慧收款/跨境结算 Word：https://qcn8k445rrbc.feishu.cn/file/DSBKb7hgZo8afVxFzXfcoV4enxj Wiki：https://www.feishu.cn/wiki/AbBgw",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.28",
+        "科创贷/短贷/数字财资/慧收款/跨境结算",
+        "www.feishu.cn/wiki/abbgw",
+        "周报",
+        "浙江",
+        "2026.05.22",
+        "05.28",
+        "应用"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "User: 为啥skill中的周报名字统一被改成了中文的，不应该是internet-weekly这个吗",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "不应该是internet-weekly这个吗",
+        "skill",
+        "中的",
+        "周报",
+        "名字",
+        "统一",
+        "改成",
+        "中文"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 已回复并修正 skill：后续会按 `weekly_title_prefix=internet-weekly` 生成统一 basename。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "weekly-title-prefix",
+        "internet-weekly",
+        "回复",
+        "修正",
+        "skill",
+        "internet",
+        "weekly",
+        "生成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: 原因找到了：`config.json` 里确实配置的是 `weekly_title_prefix: \"internet-weekly\"`，但 `SKILL.md` 后半段后来加了更强的硬性规则，把 `REPORT_BASENAME` 固定成了 `行业商机周报_互联网_YYYYMMDD`，并要求 Word、Drive、Wiki、Markdown 全部用同一个中文 basename。所以这次执行时配置被后面的中文命名规则覆盖了。 我已把 skill 改回以配置为准：默认 `REPORT_BASENAME=$WEEKLY_TITLE_PR",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "config.json",
+        "weekly-title-prefix",
+        "internet-weekly",
+        "skill.md",
+        "report-basename",
+        "行业商机周报-互联网-yyyymmdd",
+        "weekly-title-pr",
+        "原因"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: SKILL.md 已修复。现在让我手动把上周报摘要推送到群里，然后更新 memory 记录这个教训。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "修复",
+        "现在",
+        "周报",
+        "摘要",
+        "推送",
+        "然后",
+        "更新"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: Let me get the actual summary that was generated from the cron runs:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "let",
+        "get",
+        "actual",
+        "summary",
+        "was",
+        "generated",
+        "cron",
+        "runs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: Now I have the complete picture. Let me explain: ## 根因分析 从轨迹日志找到了： **Line 41 的 bash 命令：** ```bash lark-cli wiki +node-create --profile web_bot --as bot \\ --space-id \"7637062266134760425\" \\ --title \"$BASE\" \\ --obj-type docx \\ --insert-after \"$BI_TABLE_NODE_TOKEN\" # ← 这个",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "lark-cli",
+        "node-create",
+        "web-bot",
+        "space-id",
+        "obj-type",
+        "insert-after",
+        "bi-table-node-token",
+        "now"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 你提的这点很关键。但这里有个架构限制：cron 的 delivery 是根据 job 的最终 status 来决定推什么的，只要执行过程中有任何 tool 返回 error，整个 job 就会被标 error。 **根本解法是让 agent 不产生这个错误**（刚才已经修了 SKILL.md）。以后 `lark-cli wiki +node-create` 不再带 `--insert-after`，就不会报错了，delivery 自然就能推送正确的摘要。 如果你担心以后还有其他类似的非致命错误，也可以考虑： - 在 cron 配置里",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "lark-cli",
+        "node-create",
+        "insert-after",
+        "关键",
+        "这里",
+        "架构",
+        "限制"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "User: 哪里有这个设置",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "哪里",
+        "这个",
+        "设置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 在当前 cron job 的 `delivery` 里，就是 `bestEffort: false`：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "当前",
+        "cron",
+        "job",
+        "delivery",
+        "就是",
+        "besteffort",
+        "false"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 就是这里： ```json \"delivery\": { \"mode\": \"announce\", \"channel\": \"feishu\", \"to\": \"oc_c433a0976937d897acce12eb3820f049\", \"bestEffort\": false ← 就是这行 } ``` 设成 `true` 后，即使 job 中间出了错（只要 agent 有输出内容），delivery 也会尽力把摘要推送到群里，而不是只推错误日志。 要我改成 `true` 吗？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "就是",
+        "这里",
+        "delivery",
+        "mode",
+        "announce",
+        "channel",
+        "feishu",
+        "besteffort"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: 改成true把",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "改成",
+        "true"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 已改好。`bestEffort: false → true`。 总结这次排查和修复： | 操作 | 状态 | |------|------| | SKILL.md 删除 `--insert-after` 参数 | ✅ 已修复 | | `delivery.bestEffort` 改为 `true` | ✅ 已生效 | | 上周摘要补推 | ✅ 已推送 | 以后即使中间某个脚本报错，只要 agent 最终有输出摘要，就会推送到群里。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "insert-after",
+        "delivery.besteffort",
+        "besteffort",
+        "false",
+        "true",
+        "总结",
+        "这次"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "User: 这个配置文件写在哪了",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "这个",
+        "配置",
+        "文件",
+        "写在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: cron job 的配置不是存在普通文件里的，而是存在 OpenClaw 运行时的内部状态（Gateway 的 cron 存储）中。 如果你想看它的源定义，通常有两种方式： **1. 通过 `cron list` 查看（刚才就是用的这个）** ``` cron action=list → 返回所有 job 配置 ``` **2. 在 OpenClaw 配置文件中**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "gateway",
+        "cron",
+        "job",
+        "配置",
+        "不是",
+        "存在",
+        "普通",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 找到了，实际存在： ``` ~/.openclaw/cron/jobs.json ← 持久化存储 ~/.openclaw/cron/jobs-state.json ← 运行状态 ```",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T19:00:03.472Z",
+      "lastRecalledAt": "2026-05-28T19:00:03.472Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "openclaw/cron/jobs.json",
+        "openclaw/cron/jobs-state.json",
+        "找到",
+        "实际",
+        "存在",
+        "openclaw",
+        "cron",
+        "jobs.json"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📌 商机周报·浙江｜2026.05.22-05.29 🔥 主线：数据要素赋能AI、Token/算力运营、AI电商与跨境出海 🏠 浙江机会：杭州AI生态、AI外贸、电商SaaS和AI商拍继续释放结算与融资需求 🏢 优先跟进：DeepSeek、群核科技、有赞 🎯 切入方向：云资源预付/平台结算/跨境收款/项目回款 Word：https://qcn8k445rrbc.feishu.cn/file/RJ7ZbDPqzo9jGIx5uIBczuOOnDd Wiki：https://www.feishu.cn/wiki/WSHPwNy",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.05.22-05.29",
+        "token/算力运营",
+        "云资源预付/平台结算/跨境收款/项目回款",
+        "www.feishu.cn/wiki/wshpwny",
+        "周报",
+        "浙江",
+        "2026.05.22",
+        "05.29"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: ⚠️ 🛠️ LARK_CLI_NO_PROXY=1 ~/.npm-global/bin/lark-cli drive files patch --profile web_bot --as bot --params '… (agent) failed 翻译 ⚠️ Cron job \"web-weekly-research-report\" failed: ⚠️ 🛠️ LARK_CLI_NO_PROXY=1 ~/.npm-global/bin/lark-cli drive files patch --profile web_bot --as b",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli-no-proxy",
+        "npm-global/bin/lark-cli",
+        "web-bot",
+        "web-weekly-research-report",
+        "npm",
+        "global",
+        "bin",
+        "lark"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 已解释。核心意思：定时周报任务失败，失败点是调用飞书 CLI 执行 `drive files patch` 修改云空间文件时出错。周报文件看起来已经生成了，可能是最后的改名、移动、权限或文件属性更新步骤失败。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "解释",
+        "核心",
+        "意思",
+        "周报",
+        "任务",
+        "失败",
+        "cli",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 这是系统在说：定时任务 `web-weekly-research-report` 执行失败了，失败点是它调用飞书 CLI 去修改云空间文件时出错。 逐段翻译： - `Cron job \"web-weekly-research-report\" failed`：名为“web-weekly-research-report”的定时任务失败。 - `LARK_CLI_NO_PROXY=1`：运行命令时设置了环境变量，意思是让 lark-cli 不走代理。 - `~/.npm-global/bin/lark-cli drive files pa",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "web-weekly-research-report",
+        "lark-cli-no-proxy",
+        "lark-cli",
+        "npm-global/bin/lark-cli",
+        "系统",
+        "任务",
+        "web",
+        "weekly"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: 详细排查啊，不然下次不还是推送群聊到错误信息而不是正确的摘要信息",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "详细",
+        "不然",
+        "下次",
+        "还是",
+        "推送",
+        "聊到",
+        "错误",
+        "信息"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 已排查并修了两处： 1. 失败根因：最后清理重复 Wiki/旧节点时用了不支持的 `drive files patch` 参数。当前接口只支持改标题，不支持 `trash_type` 删除，所以非核心清理动作把整个 cron 标成失败。 2. 错误进群原因：cron 的失败告警投递到了同一个飞书群。 我已关闭该 cron 的 `failureAlert`，并更新 `web-weekly-report` skill，禁止这类非核心清理失败影响最终投递。下次成功会发摘要，失败不会再把错误日志推到群里。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "wiki/旧节点时用了不支持的",
+        "trash-type",
+        "web-weekly-report",
+        "修了",
+        "失败",
+        "根因",
+        "最后",
+        "清理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 我来查实际失败点：先看 `web-weekly-report` skill、cron 配置和最近运行日志，重点确认为什么已生成摘要后还被判定失败，以及失败通知为什么进了群聊。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "web-weekly-report",
+        "我来",
+        "实际",
+        "失败",
+        "先看",
+        "web",
+        "weekly",
+        "report"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 已看到两个问题叠在一起：1）cron 的 `delivery.mode=announce` 指向飞书群，所以任务一失败，系统把失败通知也投到了同一个群；2）这次失败来自 agent 执行了 `lark-cli drive files patch --params ...`，而 skill 里要求的格式是 `drive files +patch --type docx --file-token ... --body ...`，命令形态不一致。接下来我会把任务配置和 skill 都加上防护，避免下次把错误日志当周报推送。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "delivery.mode",
+        "lark-cli",
+        "file-token",
+        "看到",
+        "问题",
+        "在一起",
+        "cron",
+        "announce"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 我已经先把 cron 的失败告警关掉了：以后这条任务如果失败，不会再把错误堆栈自动发到周报群；正常成功时仍会按原来的 `delivery` 把摘要发群。现在继续修 skill 里的根因。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "已经",
+        "先把",
+        "cron",
+        "失败",
+        "告警",
+        "关掉",
+        "以后",
+        "任务"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 排查和修复结论： 1. 根因不是周报没生成，而是最后“处理重复 Wiki 文档/清理旧节点”时执行了错误的飞书命令：`drive files patch --params ...`。当前 lark-cli schema 显示 `drive.files.patch` 只支持改标题 `new_title`，不支持用 `trash_type` 删除/移入回收站，所以这个清理动作失败，导致整个 cron 被标记为 error。 2. 为什么错误进群：这个 cron 的 `delivery` 指向飞书群 `oc_c433a097...`，失败",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "文档/清理旧节点",
+        "lark-cli",
+        "drive.files.patch",
+        "new-title",
+        "trash-type",
+        "删除/移入回收站",
+        "oc-c433a097",
+        "修复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ 🛠️ LARK_CLI_NO_PROXY=1 ~/.npm-global/bin/lark-cli drive files patch --profile web_bot --as bot --params '… (agent) failed",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T19:00:03.399Z",
+      "lastRecalledAt": "2026-05-29T19:00:03.399Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "lark-cli-no-proxy",
+        "npm-global/bin/lark-cli",
+        "web-bot",
+        "npm",
+        "global",
+        "bin",
+        "lark",
+        "cli"
       ]
     }
   }

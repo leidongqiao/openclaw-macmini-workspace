@@ -1,0 +1,28 @@
+[lark-cli] [WARN] proxy detected: HTTPS_PROXY=http://127.0.0.1:7890 — requests (including credentials) will transit through this proxy. Set LARK_CLI_NO_PROXY=1 to disable proxy.
+Running wiki move (node)...
+{
+  "ok": true,
+  "identity": "bot",
+  "data": {
+    "has_child": false,
+    "mode": "node",
+    "node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "node_type": "origin",
+    "obj_token": "DQzkdliElojWzvxV6qTcGbaYnMg",
+    "obj_type": "docx",
+    "origin_node_token": "DdPHwC4KriLBtJkZcqFchaaOn3c",
+    "parent_node_token": "",
+    "source_space_id": "7637083944097270734",
+    "space_id": "7637083944097270734",
+    "target_space_id": "7637083944097270734",
+    "title": "biomed-weekly-20260529"
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.38",
+      "latest": "1.0.42",
+      "message": "lark-cli 1.0.42 available, current 1.0.38, run: lark-cli update"
+    }
+  }
+}

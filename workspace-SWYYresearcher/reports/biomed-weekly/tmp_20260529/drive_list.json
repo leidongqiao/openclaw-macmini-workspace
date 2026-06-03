@@ -1,0 +1,46 @@
+Usage:
+  lark-cli drive [flags]
+  lark-cli drive [command]
+
+Available Commands:
+  +add-comment                 Add a comment to doc/docx/file/sheet/slides; file targets support selected extensions and full comments only
+  +create-folder               Create a folder in Drive
+  +create-shortcut             Create a Drive shortcut in another folder
+  +delete                      Delete a file or folder in Drive
+  +download                    Download a file from Drive to local
+  +export                      Export a doc/docx/sheet/bitable to a local file with limited polling
+  +export-download             Download an exported file by file_token
+  +import                      Import a local file to Drive as a cloud document (docx, sheet, bitable)
+  +inspect                     Inspect a Lark document URL to get its type, title, and canonical token (with wiki unwrapping)
+  +move                        Move a file or folder to another location in Drive
+  +pull                        One-way file-level mirror of a Drive folder onto a local directory (Drive → local)
+  +push                        File-level mirror of a local directory onto a Drive folder (local → Drive; remote-only directories are not removed)
+  +status                      Compare a local directory with a Drive folder by exact hash or quick modified_time
+  +sync                        Two-way sync between a local directory and a Drive folder
+  +task_result                 Poll async task result for import, export, drive move/delete, wiki move, wiki delete-space, or wiki delete-node operations
+  +upload                      Upload a local file to Drive
+  +version-delete              Delete a specific historical version of a Drive file
+  +version-get                 Download a specific version of a Drive file
+  +version-history             List the version history of a Drive file
+  +version-revert              Revert a Drive file to a specific historical version
+  file.comment.reply.reactions file.comment.reply.reactions operations
+  file.comment.replys          file.comment.replys operations
+  file.comments                file.comments operations
+  file.statistics              file.statistics operations
+  file.view_records            file.view_records operations
+  files                        files operations
+  metas                        metas operations
+  permission.members           permission.members operations
+  permission.public            permission.public operations
+  quota_details                quota_details operations
+  user                         user operations
+
+Flags:
+  -h, --help   help for drive
+
+Global Flags:
+      --profile string   use a specific profile
+
+Use "lark-cli drive [command] --help" for more information about a command.
+
+Error: unknown flag: --as

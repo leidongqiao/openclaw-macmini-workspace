@@ -1,0 +1,172 @@
+URL: https://www.escn.com.cn/
+STATUS: 200
+
+中国储能网-www.escn.com.cn致力于推进储能产业数字化智能化高质量发展！储能网以“坚持正确舆论引导，推动储能产业可持续发展”，综合性的储能行业门户网站目标迈进。
+$(function () {
+            //图片延迟加载
+            $("img.pic").lazyload();
+            $("img.pic1").lazyload();
+            $("img.pic2").lazyload();
+
+            $(".c-changebox").each(function () {
+                $(this).find(".c-bigbox").width($(this).find(".c-bigbox").children().length * (45 + $(".c-gunbox").width()));
+            });
+
+
+
+            //左右滑动
+            $(".c-changebox .btn-left").click(function () {
+                var i = $(this).parent().attr("index");
+
+                if (i == undefined) {
+                    i = 0;
+                }
+                var num = $(this).parent().find(".c-gunbox").size();
+                if (num % 4 > 0) {
+                    num = (num / 4) + 1;
+                } else {
+                    num = num / 4;
+                }
+                i--;
+
+                if (i < 0) {
+                    i = num - 1;
+                }
+                $(this).parent().find(".c-gunbox").hide();
+
+                for (let l = 0; l < 4; l++) {
+                    $(this).parent().find(".c-gunbox").eq(i * 4 + l).fadeIn()
+                }
+
+                $(this).parent().attr("index", i);
+                $(window).triggerHandler("scroll")
+
+            });
+            $(".c-changebox .btn-right").click(function () {
+                var i = $(this).parent().attr("index");
+
+                if (i == undefined) {
+                    i = 0;
+                }
+                var num = $(this).parent().find(".c-gunbox").size();
+                if (num % 4 > 0) {
+                    num = (num / 4) + 1;
+                } else {
+                    num = num / 4;
+                }
+                i++;
+                if (i >= num) {
+                    i = 0;
+                }
+                $(this).parent().find(".c-gunbox").hide();
+
+                for (let l = 0; l < 4; l++) {
+                    $(this).parent().find(".c-gunbox").eq(i * 4 + l).fadeIn()
+                }
+
+                $(this).parent().attr("index", i);
+                $(window).triggerHandler("scroll")
+            });
+
+            $(".mlink-box .btn-left").click(function () {
+                var i = $(this).parent().attr("index");
+
+                if (i == undefined) {
+                    i = 0;
+                }
+                var num = $(this).parent().find(".c-max-box a").size();
+                if (num % 4 > 0) {
+                    num = (num / 4) + 1;
+                } else {
+                    num = num / 4;
+                }
+                i--;
+
+                if (i < 0) {
+                    i = num - 1;
+                }
+                $(this).parent().find(".c-max-box a").hide();
+
+                for (let l = 0; l < 4; l++) {
+                    $(this).parent().find(".c-max-box a").eq(i * 4 + l).fadeIn()
+                }
+
+                $(this).parent().attr("index", i);
+                $(window).triggerHandler("scroll")
+
+            });
+            $(".mlink-box .btn-right").click(function () {
+                var i = $(this).parent().attr("index");
+
+                if (i == undefined) {
+                    i = 0;
+                }
+                var num = $(this).parent().find(".c-max-box a").size();
+                if (num % 4 > 0) {
+                    num = (num / 4) + 1;
+                } else {
+                    num = num / 4;
+                }
+                i++;
+                if (i >= num) {
+                    i = 0;
+                }
+                $(this).parent().find(".c-max-box a").hide();
+
+                for (let l = 0; l < 4; l++) {
+                    $(this).parent().find(".c-max-box a").eq(i * 4 + l).fadeIn()
+                }
+
+                $(this).parent().attr("index", i);
+                $(window).triggerHandler("scroll")
+            });
+
+            $("#focus-box").flexslider({
+                directionNav: false,
+                pauseOnAction: false
+            });
+            $("#focus-box-t").flexslider({
+                directionNav: false,
+                pauseOnAction: false
+            });
+            $("#focus-box-r").flexslider({
+                directionNav: false,
+                pauseOnAction: false
+            });
+
+
+
+            $(".c-max-box").width($(".c-max-box a").length * ($(".c-max-box a").width() + 10));
+
+            $("#zhuban").kxbdMarquee({
+                direction: 'left',
+                eventA: 'mouseenter',
+                eventB: 'mouseleave'
+            });
+            var selli = 0;
+            $(".index_sBox_t .s_con > ul >li").mouseover(function () {
+                if (!$(this).hasClass("sel")) {
+                    $(".index_sBox_t .s_con > ul >li").removeClass("sel");
+                    $(this).addClass("sel")
+                }
+                var index = $(".index_sBox_t .s_con > ul >li").index($(this));
+                $(".index_sBox_t .s_left .sm_class").removeClass("sel");
+                $(".index_sBox_t .s_left .sm_class").eq(index).addClass("sel");
+                selli = index;
+            });
+            var seldiv = 0;
+            $(".sm_class_menu a").mouseover(function () {
+                var index = $(this).parent().find("a").index($(this));
+                $(this).parent().find("a").removeClass("sel");
+                $(this).addClass("sel");
+                $(this).parent().parent().find(".top_sm_con").removeClass("sel");
+                $(this).parent().parent().find(".top_sm_con").eq(index).addClass("sel");
+                seldiv = index;
+            });
+            $("#topBanner").mouseleave(function () {
+                $(".index_sBox_t .s_left .sm_class").removeClass("sel");
+                $(".index_sBox_t .s_con > ul >li").eq(selli).removeClass("sel");
+            });
+        });
+.right-260 {
+            display: inline-block;

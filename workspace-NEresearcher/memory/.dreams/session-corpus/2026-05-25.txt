@@ -1,0 +1,5 @@
+[neresearcher/sessions/neresearcher/64e5477c-cd0f-4e74-b0bd-009e13538ab1.jsonl#L5] User: 周报skill中生成word的名字和wiki一致，且同样检查同名文件就覆盖
+[neresearcher/sessions/neresearcher/64e5477c-cd0f-4e74-b0bd-009e13538ab1.jsonl#L10] Assistant: Looking at the SKILL.md, I see the issue: the Word file uses a different name format (`行业商机周报_新能源_YYYYMMDD.docx`) than the wiki node (`ne-weekly-YYYYMMDD`). The user wants them consistent, and wants the same overwrite-dedup logic for Word files.
+[neresearcher/sessions/neresearcher/64e5477c-cd0f-4e74-b0bd-009e13538ab1.jsonl#L12] Assistant: Now let me check if there are any other references to the old filename pattern that need updating:
+[neresearcher/sessions/neresearcher/64e5477c-cd0f-4e74-b0bd-009e13538ab1.jsonl#L16] Assistant: Now let me check for other references to the old Word filename pattern:
+[neresearcher/sessions/neresearcher/64e5477c-cd0f-4e74-b0bd-009e13538ab1.jsonl#L20] Assistant: 已修改完毕，做了两处更新： 1. **Word 文件名改为与 wiki 一致**：从 `行业商机周报_新能源_YYYYMMDD.docx` → `ne-weekly-YYYYMMDD.docx`，和 wiki 节点名 `ne-weekly-YYYYMMDD` 完全一致。 2. **同名 Word 文件覆盖**：生成前先检查 `reports/ne-weekly/` 目录下是否已存在 `ne-weekly-YYYYMMDD.docx`，若已存在则直接覆盖，不重复创建——和 wiki 同名覆盖逻辑

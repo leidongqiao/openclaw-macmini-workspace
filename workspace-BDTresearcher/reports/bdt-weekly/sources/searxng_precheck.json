@@ -1,0 +1,9 @@
+{
+  "source_id": "precheck",
+  "source_name": "SearXNG JSON API预检",
+  "url_or_query": "http://localhost:8080/search?q=半导体&format=json&categories=general",
+  "fetched_at": "2026-05-29T06:06:06.713520+00:00",
+  "ok": true,
+  "status_or_error": "HTTP 200 application/json",
+  "content_or_results": "本轮预检已确认JSON API可用。"
+}

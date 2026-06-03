@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "status_code": 403,
+  "error": {
+    "message": "Tool not allowed: search_trending_news",
+    "code": -32002
+  },
+  "raw": {
+    "id": 5,
+    "error": {
+      "message": "Tool not allowed: search_trending_news",
+      "code": -32002
+    },
+    "jsonrpc": "2.0"
+  }
+}
