@@ -1,0 +1,23 @@
+{
+  "date": "2026-06-11",
+  "scope": "project",
+  "lockFile": "/Users/leidongqiao/.openclaw/workspace/skills-lock.json",
+  "lockFound": true,
+  "command": "npx skills update wind-mcp-skill -y",
+  "method": "update",
+  "sourceType": "github",
+  "updatedAt": "2026-06-11T07:12:48.612Z",
+  "status": "success",
+  "finishedAt": "2026-06-11T07:12:48.612Z",
+  "exitCode": 0,
+  "usedFallback": false,
+  "fallbackReason": null,
+  "error": null,
+  "remoteHead": "5c7e827b86f1449eac4f5cd0dd558b5dab2bba86",
+  "remoteChanged": true,
+  "lastAppliedRemoteHead": "5c7e827b86f1449eac4f5cd0dd558b5dab2bba86",
+  "changed": true,
+  "beforeHash": "01c447207cbfccce36bd70d80a9341e132399d7f905d253f8e70bf0d5bbaf8bc",
+  "afterHash": "4258dca811b987d8a353a9dc26d118d5c6aed593bef6d2c073ecf0a526fe91a5",
+  "output": "\u001b[38;5;145mUpdating wind-mcp-skill...\u001b[0m\n\n\u001b[38;5;145mUpdating for: Universal, OpenClaw\u001b[0m\n\u001b[38;5;145mRefreshing 1 skill(s)...\u001b[0m\n\n\u001b[38;5;102m✗ Failed to check for deleted skills from Wind-Information-Co-Ltd/wind-skills\u001b[0m\n\u001b[38;5;145mUpdating wind-mcp-skill...\u001b[0m\n  \u001b[38;5;145m✓\u001b[0m Updated wind-mcp-skill\n\n\u001b[38;5;145m✓ Updated 1 skill(s)\u001b[0m"
+}

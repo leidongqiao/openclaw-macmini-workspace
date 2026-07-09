@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "wind-find-finance-skill": {
+      "source": "Wind-Information-Co-Ltd/wind-skills",
+      "sourceType": "github",
+      "skillPath": "skills/wind-find-finance-skill/SKILL.md",
+      "computedHash": "0d295327a404540d461e101377de562d7606e4314c3ee382808d1b16510fdfec"
+    },
+    "wind-mcp-skill": {
+      "source": "Wind-Information-Co-Ltd/wind-skills",
+      "sourceType": "github",
+      "skillPath": "skills/wind-mcp-skill/SKILL.md",
+      "computedHash": "680ac3782ebc687cb289735b562ed56a5cef7139b3dd96f5a7134009e844fbed"
+    }
+  }
+}

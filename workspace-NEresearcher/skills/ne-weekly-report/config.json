@@ -1,0 +1,23 @@
+{
+  "bot_profile": "ne_bot",
+  "wiki_space_id": "7637082931059706850",
+  "wiki_space_name": "新能源行研",
+  "spreadsheet_token": "C5ZgwhqJciryiTkGLH0cvlXzn5b",
+  "sheet_id": "f2ad53",
+  "opportunity_table_url": "https://qcn8k445rrbc.feishu.cn/wiki/C5ZgwhqJciryiTkGLH0cvlXzn5b?fromScene=spaceOverview",
+  "region": "浙江",
+  "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
+  "weekly_title_prefix": "新能源行业周报",
+  "excluded_companies": [
+    "南都电源",
+    "容百科技",
+    "正泰新能",
+    "浙江南都电源动力股份有限公司",
+    "南都电源科技股份有限公司",
+    "宁波容百新能源科技股份有限公司",
+    "容百科技股份有限公司",
+    "正泰集团股份有限公司",
+    "正泰新能源",
+    "正泰电器"
+  ]
+}
