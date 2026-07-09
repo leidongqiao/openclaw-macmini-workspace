@@ -1,5 +1,7 @@
 # Long-Term Memory
 
+- Joe 偏好：当他明确要求修改现有 skill / 工作流规则时，直接修改 live 文件并验证结果，不要先走“生成提案/等待应用”的弹框流程。只有在他明确要求创建可复用提案、审批、分享或不确定是否要落地时，才使用 proposal 方式。
+
 
 ## Promoted From Short-Term Memory (2026-06-06)
 

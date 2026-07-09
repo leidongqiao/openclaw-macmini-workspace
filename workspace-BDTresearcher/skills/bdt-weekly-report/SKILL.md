@@ -589,21 +589,21 @@ const { call } = require(process.env.HOME + '/.openclaw/skills/ifind-finance-dat
 - **双版本命名必须一致**:Word 文件名、Wiki Markdown 本地文件名使用同一个 basename:`半导体行业周报-YYYYMMDD`。
   - Word 文件名:`半导体行业周报-YYYYMMDD.docx`
   - Wiki 本地源稿:`半导体行业周报-YYYYMMDD.md`
+  - 若本地已存在同名 Word 或 Markdown 文件,必须直接覆盖写入,不得生成 `v2`、`v3`、`副本`、`copy`、时间戳后缀或任何变体文件。同名即同一期周报,只保留最新内容。
   - 不再使用 `bdt-weekly-YYYYMMDD` 或 `行业商机周报_半导体_YYYYMMDD.docx` 这类旧文件名,避免 Drive、Wiki、摘要里同一份周报名称不一致。
 - 字体使用华文楷体。
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
-- 生成后上传为飞书 Drive 文件,获取可下载链接;**飞书 wiki 知识库正文开头必须写入 Word 版下载链接**(放在标题下方、正文说明前),推送摘要中的"周报全文(Word)"也必须使用该下载链接,不要只放本地路径。
+- 生成后上传为飞书 Drive 文件,获取可下载链接;推送摘要中的"周报全文(Word)"必须使用该下载链接,不要只放本地路径。**飞书 wiki 知识库正文不得写入 Word 版下载链接**,保持为纯 Markdown 知识库存档正文。
 - ⚠️ **Drive 上传限制**:`$LARK_CLI drive +upload --file` 只接受**相对路径**,必须先 `cd` 到文件所在目录再执行,不可用绝对路径。
-- ⚠️ **Drive 链接生成坑**:上传结果通常只返回 `file_token`,不一定返回完整 URL。拿到 `file_token` 后按 `https://www.feishu.cn/file/<file_token>` 组装 Word 下载链接,并写入 wiki 开头和群聊摘要;不要把本地路径或裸 token 当作链接。
+- ⚠️ **Drive 链接生成坑**:上传结果通常只返回 `file_token`,不一定返回完整 URL。拿到 `file_token` 后按 `https://www.feishu.cn/file/<file_token>` 组装 Word 下载链接,并写入群聊摘要和 `reports/summary/BDT-summary.md`;不要写入 wiki 正文,也不要把本地路径或裸 token 当作链接。
 
 #### 版本B:飞书 wiki 版(知识库存档格式)
 
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`,不得保存到其他目录
-- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件;严禁生成 `v2`、`v3`、`副本`、`copy`、时间戳后缀等变体。
 - 通过第九步写入知识库
-- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** https://www.feishu.cn/file/<file_token>`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
+- wiki 正文不得写入 Word 版下载链接;Word 下载入口只保留在群聊摘要和 `reports/summary/BDT-summary.md` 中。
 - ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致"推荐等级/所属行业/所在地区/产业链位置/推荐方向"等字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**(`- 推荐等级:高`),不要用 `**推荐等级:** 高`(飞书 Markdown 会把连续行合并到一行,导致所有字段挤在一起),格式如下:
   ```markdown
@@ -738,13 +738,14 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**Word 下载链接位置要求:** Word 版生成后必须先上传飞书 Drive 获取 `file_token`,按 `https://www.feishu.cn/file/<file_token>` 组装下载链接;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** https://www.feishu.cn/file/<file_token>`,不得只在文末附链接。⚠️ 不要使用 `<url>` 尖括号格式;飞书 Markdown 可能吞掉尖括号链接。
+**Word 下载链接位置要求:** Word 版生成后必须先上传飞书 Drive 获取 `file_token`,按 `https://www.feishu.cn/file/<file_token>` 组装下载链接;该链接只写入群聊摘要和 `reports/summary/BDT-summary.md`,不得写入 wiki 正文。
 
 **Wiki 企业元数据格式要求:** 推荐等级、所属行业、所在地区、产业链位置、推荐方向等元数据必须用 Markdown 列表格式(`- 推荐等级:高`),不要用 `**key:** value` 格式。飞书 Markdown 解析器会把连续的同类型行合并到一个段落,导致所有字段挤在一行。
 
-**重要:每次生成都覆盖当前同名文件(半导体行业周报-YYYYMMDD),不要有重复日期的文档。Word/Wiki/本地 Markdown 三者必须同名同日期,只有扩展名不同。**
+**重要:每次生成都覆盖当前同名文件(半导体行业周报-YYYYMMDD),不要有重复日期的文档。Word/Wiki/本地 Markdown 三者必须同名同日期,只有扩展名不同。严禁用 `v2`、`v3`、`副本`、`copy`、时间戳后缀等方式规避覆盖。**
 
 **🔴 关键规则(必须严格遵守):**
+- **Wiki 节点名称必须与文档名称一致**:新建或更新的 wiki 节点 title 固定为 `半导体行业周报-YYYYMMDD`,与本地 Markdown 文件 basename、Word 文件 basename 完全一致。同名即同一期周报,发现同名节点必须覆盖更新该节点内容,不得新建 `半导体行业周报-YYYYMMDD-v2`、`半导体行业周报-YYYYMMDD(1)` 或其他变体节点。
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在"首页"或其他节点下面。
 - 创建新节点时必须显式传空父节点:`--parent-node-token ""`。不要省略该参数;部分 `lark-cli wiki +node-create` 版本在只传 `--space-id` 时仍可能落到"首页"或默认节点下。
 - 必须使用**机器人身份**(`--as bot`)创建,创建者显示为机器人。
@@ -842,7 +843,7 @@ PY
 "$LARK_CLI" docs +fetch --doc <obj_token> --profile "$BOT_PROFILE" --as bot > /tmp/wiki_fetch.json
 ```
 检查返回 Markdown:
-- 必须能看到 `**Word版下载:**` 和 Word file 链接;飞书 fetch 可能把纯 URL 转成 Markdown 链接,只要链接文本和目标 URL 都存在即视为通过;
+- 不得出现 `**Word版下载:**`、`Word版下载` 或 Word file 链接(`https://www.feishu.cn/file/...`);Wiki 正文不承载 Word 下载入口;
 - 必须保留企业元数据列表(`- **推荐等级:**` 等);
 - 不得出现 `推荐等级.*所属行业`、`所属行业.*所在地区`、`所在地区.*产业链位置`、`产业链位置.*推荐方向` 这类字段黏连;
 - 若发现黏连或格式丢失,使用 `docs +update --api-version v2 --command overwrite --doc-format markdown --content @./文件` 重新覆盖,不要改用底层 blocks API。
@@ -994,14 +995,14 @@ SUMMARY
 3. **地域限制**:本地行业动态、行动清单、企业推荐仅限浙江本地企业;全国龙头/外省大厂动态不纳入本地企业推荐。
 4. **禁止推荐不合规业务**。
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致。⚠️ Word 与 Wiki 格式必须分离:Word 去掉所有 Markdown 标记;Wiki 用标准 Markdown(标题、列表、加粗、分隔线)。Wiki 中企业元数据必须用列表格式(`- 推荐等级:高`),不要用 `**key:** value`。
-6. **知识库标题**:半导体行业周报-YYYYMMDD。
-7. **知识库写入**:必须使用 `"$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID --parent-node-token \"\"` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建。创建后立刻校验 `parent_node_token`,非空则立即用 `wiki +move --target-parent-token \"\"` 移回根目录。🔴 **Wiki 排序**:创建/更新完成后,若需排到「商机挖掘表格」之后,使用原生 Wiki move API 的 `after_node_token`,不要使用不存在的 `wiki +move --after-node-token`。
+6. **知识库标题/节点名称**:固定为 `半导体行业周报-YYYYMMDD`,必须与 Word 文件、Wiki Markdown 本地文件 basename 完全一致;同名即同一期周报,发现同名必须覆盖更新,不得生成 v2/v3/副本/copy/时间戳后缀。
+7. **知识库写入**:必须使用 `"$LARK_CLI" wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID --parent-node-token \"\"` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建。若搜索到 title 为 `半导体行业周报-YYYYMMDD` 的节点,必须用 `docs +update` 覆盖该节点,不得新建变体节点。创建后立刻校验 `parent_node_token`,非空则立即用 `wiki +move --target-parent-token \"\"` 移回根目录。🔴 **Wiki 排序**:创建/更新完成后,若需排到「商机挖掘表格」之后,使用原生 Wiki move API 的 `after_node_token`,不要使用不存在的 `wiki +move --after-node-token`。
 8. **群聊推送**:推送概要 + 链接,不是全文。
 9. **商机挖掘表格**:数据来源为周报"四、客户经理行动建议"中提及的浙江企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行。
 10. **表格写入/飞书操作统一使用 `$LARK_CLI`**:全部飞书操作(Drive 上传、wiki 创建/写入、表格读写/清理)均通过 `"$LARK_CLI" --profile $BOT_PROFILE --as bot` 执行。不要直接用 Python urllib 调 Sheets API(会遇 404/SSL 证书问题)。每个 agent 对应自己的 bot,不要混用。
 11. **搜索工具选择**:第一步保持本 skill 既有策略,优先使用 SearXNG(本地无限制),脚本路径 `~/.openclaw/skills/searxng/scripts/searxng.py`,环境变量 `SEARXNG_URL=${SEARXNG_URL:-http://localhost:8080}`。执行前必须预检 JSON API;仅在 SearXNG 不可用或 JSON API 无法修复时回退到 `web_search`(Brave 限流 1次/秒,需串行执行)。
 12. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。$LARK_CLI 会检测到代理变量并发出警告,不影响功能。
-13. **Word 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`,文件名必须与 Wiki 节点同 basename,格式为 `半导体行业周报-YYYYMMDD.docx`;生成后上传飞书 Drive,并将下载链接写在 wiki 正文开头及推送摘要中;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
+13. **Word 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-BDTresearcher/reports/bdt-weekly/`,文件名必须与 Wiki 节点同 basename,格式为 `半导体行业周报-YYYYMMDD.docx`;若同名文件已存在直接覆盖,不得生成 v2/v3/副本/copy/时间戳后缀;生成后上传飞书 Drive,并将下载链接写入推送摘要和 `reports/summary/BDT-summary.md`,但不得写入 wiki 正文;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
 14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 15. **源材料审计留痕**:每次抓取必须把必抓源、SearXNG、垂直源、浙江专项、非上市补充、iFinD 和回退搜索结果统一保存到 `reports/bdt-weekly/sources/`,文件内保留 source_id、来源、时间、ok 状态、错误或内容摘要,避免事后只能依赖运行上下文。
 16. **企业推荐轮换**:必须执行第1.5节「企业推荐轮换规则」--读取最近2期冷却名单,锚定企业最多保留1-2家,新标的优先推荐;完成后续接自检,重复率≤40%。每期完成后更新 `recommended_companies_latest.txt`。

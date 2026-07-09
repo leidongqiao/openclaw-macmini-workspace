@@ -44,7 +44,7 @@ description: |
 5. **iFinD 调用方式**:`call-node.js` 是模块,不是直接命令行工具。不要直接 `node call-node.js ...`;应创建临时 JS 脚本 `const {call}=require('.../call-node.js')` 后调用 `call(server_type, tool_name, params)`,检查 `ok` 字段,完成后删除临时脚本。
 6. **iFinD 工具权限失败**:`search_trending_news` 可能返回 `Tool not allowed`。这不是致命错误:在内部来源备注中记录失败,不超过 1 次重试;继续执行 `search_news`、`search_notice` 和 web 搜索补足,不要中断周报,也不要把该过程问题写入最终群聊推送。
 7. **飞书 Drive/Doc 文件路径必须用相对路径**:`lark-cli drive +upload --file`、`lark-cli docs +update --content @file.md` 不接受工作区外的绝对路径。上传或写入前先 `cd` 到文件所在目录,再用 `--file ./文件名.docx`、`--content @./人工智能行业周报-YYYYMMDD.md` 这类相对路径。
-8. **飞书 Drive 下载链接**:上传结果若只返回 `file_token`,需拼出完整 Drive 链接:`https://qcn8k445rrbc.feishu.cn/file/<file_token>`;该链接只用于 wiki 正文和最终摘要,不写入 Word 正文,不要只写 token 或本地路径。
+8. **飞书 Drive 下载链接**:上传结果若只返回 `file_token`,需拼出完整 Drive 链接:`https://qcn8k445rrbc.feishu.cn/file/<file_token>`;该链接只用于最终摘要/群聊推送等外部链接位置,不写入 Word 正文,也不写入 wiki 正文,不要只写 token 或本地路径。
 9. **wiki 创建位置**:目标是一次落到知识库根目录。当前 `lark-cli wiki +node-create --parent-node-token "" --dry-run` 会省略 `parent_node_token`,不能把空字符串 parent 当成可靠直达根目录方案。优先使用能明确落根的路径;若仍使用 `wiki +node-create --space-id`,创建后必须用 `wiki nodes list --as bot` 或返回值检查 `parent_node_token`;若不为空,立即 `wiki +move --as bot --node-token ... --target-space-id ... --target-parent-token ''` 移回根目录,并把这次异常写入内部备注。
 10. **wiki 抽查必须解析 JSON 后检查**:`docs +fetch --as bot` 输出是 JSON;检查字段黏连时必须先解析 `data.markdown`,不要在原始 stdout 字符串上做正则,否则 `\n` 转义会导致误判。
 11. **wiki 单换行黏连**:飞书会合并普通单换行。正文中"覆盖周期/资料来源"、企业元数据、连续短字段之间必须用空行或列表项;写入后检查 `覆盖周期.*资料来源` 以及 `推荐等级.*所属行业` 等黏连,发现即重写。
@@ -61,7 +61,7 @@ description: |
     - **绝对不要**在 grep 返回空后直接 fallback 到 lark-cli 默认 profile,因为默认 profile 可能是其他 bot(如 im_bot),会导致后续所有 wiki/sheet/drive 操作在错误的空间/表格上执行
     - **验证方法**:创建 wiki 节点前,先 `lark-cli wiki spaces list --as bot` 确认能看到目标空间(AI行研 space_id=7630717889183534041);如果看不到,说明 profile 错了,立即停止并修复
 19. **wiki 企业元数据用表格格式防黏连**:飞书文档对连续短字段(推荐等级/所属行业/所在地区/产业链位置/推荐方向)即使用双换行或列表格式仍可能黏连。最可靠方案是使用 Markdown 表格格式,写入后 fetch 回来检查 `<lark-table` 标签确认渲染正确。
-20. **Word 正文禁止写自身地址**:Word 版报告正文不写"Word版下载""本文链接""飞书 Drive 地址""本地路径"等自身引用。Word 上传后的 Drive 链接只写入 wiki 正文开头和最终推送摘要。
+20. **Word/wiki 正文禁止写 Word 下载链接**:Word 版报告正文不写"Word版下载""本文链接""飞书 Drive 地址""本地路径"等自身引用。wiki 正文也不写 Word 下载链接、飞书 Drive 地址或"周报全文(Word)"字段。Word 上传后的 Drive 链接只保留在最终摘要/群聊推送等外部链接位置。
 21. **Wiki 节点标题固定中文日期名**:飞书 wiki 节点/知识库文档标题必须固定为 `人工智能行业周报-YYYYMMDD`,用于去重和覆盖。不得再使用 `AI-weekly-YYYYMMDD` 或其他英文/旧标题作为 wiki 节点 title。
 22. **docs +update 后必须修正 wiki 标题**:`docs +update` 写入正文后,飞书可能把 wiki 节点 title 同步成正文 H1。每次更新正文后必须立刻执行 `drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"人工智能行业周报-YYYYMMDD"}'`,然后用 `wiki nodes list --as bot` 回查 title 是否恢复为固定中文日期名。
 23. **信息抓取禁止跳过任何源**:第一步定义的 18 个数据源(4个必抓源 + 5个搜索 + 3个垂直源 + 1个浙江搜索 + 5个 iFinD)全部必须尝试,一个都不能跳过。Token 优化原则是「搜索优先于爬取」「用 text 模式」「maxChars=6000」,但**不是跳过抓取的理由**。每个源必须有「尝试记录 + 结果备注」,哪怕预判该源会返回空白或 403,也要先发请求,失败后再在内部备注中记录「该源无有效正文」,然后继续下一个源。禁止在发出请求前就决定跳过。
@@ -510,22 +510,21 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
   find "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI" -type f -delete
   cp "/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/人工智能行业周报-YYYYMMDD.docx" "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI/"
   ```
-- 文件名格式:`人工智能行业周报-YYYYMMDD.docx`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
-- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
+- 文件名格式固定为:`人工智能行业周报-YYYYMMDD.docx`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件;禁止生成 `v2`、`v3`、`副本`、`copy`、追加时间戳等变体文件名。
 - 字体使用华文楷体
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 - Word 正文只写报告内容,不写自身下载地址、飞书 Drive 地址、本地路径或"Word版下载"字段。
-- 生成后上传为飞书 Drive 文件,获取可下载链接;该链接只写入飞书 wiki 知识库正文开头和最终推送摘要中的「周报全文(Word)」,不要写回 Word 正文。
+- 生成后上传为飞书 Drive 文件,获取可下载链接;该链接只写入最终推送摘要/群聊消息中的「Word版下载」,不要写回 Word 正文,也不要写入飞书 wiki 正文。
 
 #### 版本B:飞书 wiki 版(知识库存档格式)
 
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`(即当前工作空间的 `reports/ai-weekly/`),不得保存到其他目录
-- 文件名格式:`人工智能行业周报-YYYYMMDD.md`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
-- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
+- 文件名格式固定为:`人工智能行业周报-YYYYMMDD.md`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件;禁止生成 `v2`、`v3`、`副本`、`copy`、追加时间戳等变体文件名。
 - 通过第九步写入知识库
-- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
+- wiki 正文只写周报内容本身,不写 Word 下载链接、飞书 Drive 地址或"周报全文(Word)"字段;Word 下载链接仅保留在最终摘要/群聊推送中。
 - ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致"推荐等级/所属行业/所在地区/产业链位置/推荐方向"等字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**(`- 推荐等级:高`),不要用 `**推荐等级:** 高`(飞书 Markdown 会把连续行合并到一行,导致所有字段挤在一起),格式如下:
   ```markdown
@@ -643,14 +642,14 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**Word 下载链接位置要求:** Word 版生成后必须先上传飞书 Drive 获取下载链接;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** https://.../file/...`,不得只在文末附链接,不得使用尖括号 `<...>`。
+**链接规则:**写入 wiki 的 Markdown 不得包含 Word Drive 下载链接、"Word版下载"或"周报全文(Word)"字段。wiki 是知识库存档正文;Word 下载入口只在第十步群聊摘要/最终回复中保留。
 
-**重要:每次生成都覆盖当前同名文件(人工智能行业周报-YYYYMMDD),不要有重复日期的文档。Wiki 节点标题必须固定为 `人工智能行业周报-YYYYMMDD`,不得使用旧英文报告名。**
+**重要:每次生成都覆盖当前同名文件(人工智能行业周报-YYYYMMDD),不要有重复日期的文档。Wiki 新建节点名称、wiki 文档名称、Markdown 文件名和 Word 文件名必须统一为 `人工智能行业周报-YYYYMMDD`。同名即代表同一期周报,必须覆盖更新,不得另建 `v2`、`v3`、`副本`、`copy` 或追加时间戳的节点/文档。不得使用旧英文报告名。**
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
 - wiki 的创建、查询、移动、删除、正文写入和回读校验全部必须使用**机器人身份**(所有 `lark-cli wiki ...` 与 `lark-cli docs ...` 命令都显式带 `--as bot`),不得使用用户身份或省略身份参数
-- wiki 节点 title 必须是 `人工智能行业周报-YYYYMMDD`。搜索、创建、覆盖、去重全部按这个固定 title 执行,不得用 `AI-weekly-YYYYMMDD`、`行业商机周报_【目标行业】_YYYYMMDD` 或其他标题作为节点名
+- wiki 节点 title / 文档名称必须是 `人工智能行业周报-YYYYMMDD`。搜索、创建、覆盖、去重全部按这个固定 title 执行;找到同名即覆盖更新,不得新建变体。不得用 `AI-weekly-YYYYMMDD`、`行业商机周报_【目标行业】_YYYYMMDD`、`人工智能行业周报-YYYYMMDD-v2/v3` 或其他标题作为节点名
 - 空间名称是 `AI行研`(没有空格),不是 `AI 行研`
 
 **步骤:**
@@ -829,7 +828,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-AIResearcher/reports/sum
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索限流策略**:默认使用 SearXNG(`SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`);Brave `web_search` 仅作为备用。若回退 Brave,必须串行执行,避免免费套餐 1 次/秒限流导致 429。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能
-12. **Word 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`,文件名格式 `人工智能行业周报-YYYYMMDD.docx`(与 wiki 节点标题一致);生成前检查同名文件并覆盖;生成后上传飞书 Drive,并将下载链接写在 wiki 正文开头及推送摘要中;Word 正文不得写自身下载地址、飞书 Drive 地址或本地路径,且必须清理 Markdown 标记,推荐产品组合不用表格。
+12. **Word/Markdown 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`;Word 文件名固定为 `人工智能行业周报-YYYYMMDD.docx`,Markdown 文件名固定为 `人工智能行业周报-YYYYMMDD.md`,wiki 节点标题/文档名称固定为 `人工智能行业周报-YYYYMMDD`;生成前检查同名文件并覆盖,同名即为同一期周报,禁止生成 `v2`、`v3`、`副本`、`copy` 或追加时间戳的变体文件/节点;生成后上传飞书 Drive,并将下载链接写在最终推送摘要/群聊消息中;Word 正文和 wiki 正文均不得写 Word 下载链接、飞书 Drive 地址或本地路径,且必须清理 Markdown 标记,推荐产品组合不用表格。
 13. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 
 ## 文件路径

@@ -50,6 +50,12 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+### Skill Updates
+
+- When Joe clearly asks to modify an existing local skill or workflow rule, directly edit the live file and verify the result. Do not stop at a pending proposal or wait for an approval popup.
+- Skill Workshop may be used for recordkeeping/audit if required by runtime tooling, but it must not block the requested live-file change. If a proposal is unavoidable, immediately apply it when Joe's intent is direct execution, then verify the actual live skill contents.
+- Use proposal/approval flow only when Joe explicitly asks for a proposal, review, approval workflow, reusable shared skill package, or deferred install.
+
 ## Red Lines
 
 - Don't exfiltrate private data. Ever.

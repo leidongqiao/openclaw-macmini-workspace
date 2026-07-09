@@ -102,7 +102,7 @@ description: |
 
 - **Wiki 节点默认挂在「首页」下**: `wiki +node-create --space-id` 创建后默认挂在「首页」节点下（`parent_node_token` 不为空），不是根目录。不要传 `--parent-node-token ""`（无效）。创建后必须用模板检查 `parent_node_token`，如不为空立即 `wiki +move --node-token <token> --target-space-id <space>` 移回根目录。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式，标题和正文之间加空行。
-- **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
+- **Wiki 正文不写 Word 下载链接**: Word 文件仍需上传飞书 Drive 并生成下载链接，但该链接只用于群聊摘要/最终输出，不写入 wiki 正文开头或正文任意位置。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连。
 - **Wiki 链接统一用租户域名**: 输出 `https://<租户域名>.feishu.cn/wiki/<node_token>`，不要混用 `https://www.feishu.cn/wiki/...`。
 
@@ -601,7 +601,7 @@ NODE
   ls -la "$UPLOAD_DIR"
   ```
 - 文件名格式：`生物医药行业周报-YYYYMMDD.docx`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）
-- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
+- **同名覆盖硬规则**：生成前先检查该目录下是否已有同名 Word 文件，若存在则直接覆盖；禁止另存为 `v2`、`v3`、`final`、`补充版`、`更新版` 等变体文件名。
 - 字体使用华文楷体
 - **Word 样式优化**：Word 版必须是干净的报告排版，不要把 Markdown 原始符号带入正文；生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段，企业信息可用短段落或简洁项目符号，但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 
@@ -652,7 +652,7 @@ lark-cli drive +upload --profile "$BOT_PROFILE" \
 
 3. 从上传返回结果获取 `file_token`
 4. 拼接下载链接：`https://<租户域名>.feishu.cn/file/<file_token>`
-5. 将该链接写入 wiki 正文开头和推送摘要中
+5. 将该链接写入推送摘要/最终输出；不要写入 wiki 正文
 
 **租户域名获取方式：**
 - 从已有的飞书 wiki URL 中提取，例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
@@ -665,10 +665,10 @@ lark-cli drive +upload --profile "$BOT_PROFILE" \
 - 内容与 Word 版结构一致，适配飞书文档 Markdown 格式
 - **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`（即 SWYY Researcher 工作空间的 `reports/biomed-weekly/`），不得保存到其他目录
 - 文件名格式：`生物医药行业周报-YYYYMMDD.md`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）
-- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
+- **同名覆盖硬规则**：生成前先检查该目录下是否已有同名 Markdown 文件，若存在则直接覆盖；禁止另存为 `v2`、`v3`、`final`、`补充版`、`更新版` 等变体文件名。
 - 通过第九步写入知识库
-- wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入：`**Word版下载：** [点击下载Word版周报](飞书Drive下载链接)`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**，格式为 `**Word版下载：** https://.../file/...`，不要写成 `<https://...>`；飞书文档转换可能吞掉尖括号链接，导致 wiki 中只剩空的“Word版下载”。
+- wiki 正文开头不要写入 Word 下载链接；标题下方直接进入覆盖周期、资料来源或正文内容。
+- ⚠️ **wiki 正文禁止出现 Word 下载链接**，包括 `Word版下载`、飞书 Drive/file URL、Markdown 链接或裸 URL。Word 下载链接只保留在群聊摘要/最终输出中。
 - ⚠️ **飞书 wiki 排版硬规则：不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并，导致“推荐等级/所属行业/所在地区/产业链位置/推荐方向”等字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**（`- 推荐等级：高`），不要用 `**推荐等级：** 高`（飞书 Markdown 会把连续行合并到一行，导致所有字段挤在一起），格式如下：
   ```markdown
@@ -810,9 +810,9 @@ PYEOF
 
 **写入内容：第七步版本B（飞书 wiki 版），结构与 Word 版一致，适配飞书 Markdown 格式。**
 
-**重要：每次生成都覆盖当前同名文件（生物医药行业周报-YYYYMMDD），不要有重复日期的文档。**
+**重要：每次生成都覆盖当前同名文件/同名 wiki 节点（`生物医药行业周报-YYYYMMDD`），不要有重复日期的文档。禁止创建 `v2`、`v3`、`final`、`补充版`、`更新版` 等变体标题；同名即同一期，必须覆盖更新。**
 
-**Word 下载链接位置要求：** Word 版上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入 `**Word版下载：** <下载链接>`，推送摘要中的「周报全文（Word）」也必须使用该下载链接。
+**Word 下载链接位置要求：** Word 版上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；该链接只用于推送摘要/最终输出中的「周报全文（Word）」，不得写入 wiki 正文开头或正文任意位置。
 
 **🔴 输出链接格式强制规则（所有输出场景通用）：**
 - Word 版：只输出 `https://<租户域名>.feishu.cn/file/<file_token>` 下载链接，**禁止输出本地路径**（如 `/Users/.../reports/.../xxx.docx`）
@@ -822,6 +822,7 @@ PYEOF
 
 **🔴 关键规则（必须严格遵守）：**
 - 文档必须创建在知识库**根目录**（`parent_node_token` 为空字符串），**不能**创建在「首页」或其他节点下面
+- 新建 wiki 节点名称必须为 `生物医药行业周报-YYYYMMDD`，与 Word 文件名、Markdown 文件名、wiki 文档标题完全一致（仅扩展名不同）。如果知识库中已存在同名节点，视为同一期周报，必须用 `docs +update --command overwrite` 覆盖更新，禁止新建任何带后缀的重复节点。
 - **📅 时间倒序排列**：新周报 wiki 节点必须排在知识库根目录列表的「商机挖掘表格」节点**后面**，确保周报按**时间倒序**排列（最新周报在最前面，紧跟商机挖掘表格之后）。
 - 必须使用**机器人身份**（lark-cli profile 对应 bot 应用）。**`--profile $BOT_PROFILE` 已经指定了机器人身份，不需要额外 `--as bot`**。
 
@@ -832,16 +833,17 @@ PYEOF
    LARK="$HOME/.npm-global/bin/lark-cli"
    "$LARK" wiki nodes list --params '{"space_id":"'$WIKI_SPACE_ID'","page_size":50}' --profile "$BOT_PROFILE"
    ```
-   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD` 的节点（例：`生物医药行业周报-20260612`），提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 精确等于 `$WEEKLY_TITLE_PREFIX-YYYYMMDD` 的节点（例：`生物医药行业周报-20260612`），提取 `obj_token` 和 `node_token`。
    ⚠️ **必须搜索所有节点**（不限 `parent_node_token`），否则第一次创建时可能被放在「首页」下，第二次搜不到就重复创建了！
    ⚠️ **如果找到多个同名文档**，选 `obj_edit_time` 最新的那个，用 `docs +update` 覆盖；其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
+   ⚠️ **如果找到近似标题**（如 `生物医药行业周报-YYYYMMDD-v2`、`...final`、`...补充版`），不得沿用近似标题；应回到标准标题 `生物医药行业周报-YYYYMMDD`。标准同名节点存在则覆盖，不存在才创建标准标题节点。
 
 2. **如果找到同名文档**：
    - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md` 覆盖内容；**不要**用 `@/Users/.../wiki.md` 绝对路径
    - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`
 
 3. **如果未找到同名文档**：
-   - 使用以下命令以**机器人身份**创建（注意必须带 profile，输出先落盘再解析）：
+   - 使用以下命令以**机器人身份**创建（注意必须带 profile，输出先落盘再解析）。`--title` 必须使用标准标题 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`，与本地 Word/Markdown 文档名称一致，禁止添加任何版本后缀：
      ```bash
      LARK="$HOME/.npm-global/bin/lark-cli"
      "$LARK" wiki +node-create --profile "$BOT_PROFILE" \
@@ -1061,14 +1063,14 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 3. **地域限制**：本地行业动态、行动清单仅限浙江本地企业；非生物医药主业的大企业动态不纳入本地行业动态
 4. **禁止推荐不合规业务**
 5. **双版本输出**：Word 版用于详细报告（华文楷体），wiki 版用于知识库存档（飞书 Markdown 格式），内容结构一致
-6. **知识库标题**：生物医药行业周报-YYYYMMDD（实际日期格式为 yyyyMMdd，如 `生物医药行业周报-20260612`）
-7. **知识库写入**：必须使用 `"$HOME/.npm-global/bin/lark-cli" wiki +node-create --profile "$BOT_PROFILE" --space-id "$WIKI_SPACE_ID"` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
+6. **知识库标题**：生物医药行业周报-YYYYMMDD（实际日期格式为 yyyyMMdd，如 `生物医药行业周报-20260612`）。wiki 节点名称、wiki 文档标题、本地 Word 文件名、本地 Markdown 文件名必须完全一致（仅扩展名不同），禁止 `v2`、`v3`、`final`、`补充版`、`更新版` 等后缀。
+7. **知识库写入**：必须使用 `"$HOME/.npm-global/bin/lark-cli" wiki +node-create --profile "$BOT_PROFILE" --space-id "$WIKI_SPACE_ID"` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建；同名即同一期，存在同名节点就用 `docs +update --command overwrite` 覆盖更新，不得新建变体节点。
 8. **群聊推送**：推送概要 + 链接，不是全文
 9. **商机挖掘表格**：数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重，只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索优先 searxng**：searxng 无 API 限流、无布尔 OR 语法问题。查询近 14 天时用 `python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range month --format json` 拉宽后按发布日期/正文日期过滤近 14 天。Brave web_search 仅作为备用，且不用 OR 语法（Brave 不支持），改用空格分隔关键词并过滤近 14 天。
 11. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告，不影响功能。
-12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式 `生物医药行业周报-YYYYMMDD.docx`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）；生成后必须上传飞书 Drive 获取下载链接；**上传前检查 Drive 中同名旧文件并删除，确保只保留最新版本**；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
+12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写入推送摘要/最终输出，不写入 wiki 正文。
+13. **Word/Markdown 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式分别为 `生物医药行业周报-YYYYMMDD.docx` 和 `生物医药行业周报-YYYYMMDD.md`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）；若本地已有同名文件必须覆盖，禁止生成任何版本后缀文件。Word 生成后必须上传飞书 Drive 获取下载链接；**上传前检查 Drive 中同名旧文件并删除，确保只保留最新版本**；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
 14. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现"（日期，来源）""（来源：XXX）"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 公告检索必须执行**：不可跳过。先在循环外做一次快速探测确认环境可用，再执行 2 个 `search_notice` 查询；不要调用无权限的 `search_trending_news`。
 16. **所有飞书 API 统一走 lark-cli**：sheets/drive/docs/wiki 操作全部用 lark-cli，不用 Python urllib 直接调 API（HTTPS_PROXY 代理会导致 SSL 证书验证失败）。

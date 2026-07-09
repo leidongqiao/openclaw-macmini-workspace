@@ -120,9 +120,13 @@ done
 export PATH="$HOME/.npm-global/bin:$PATH"
 
 WORKSPACE_NAME=$(basename "/Users/leidongqiao/.openclaw/workspace/workspace-specialresearch")
-AGENT_PREFIX=$(echo "$WORKSPACE_NAME" | sed -E 's/^workspace-//; s/^([A-Za-z]+).*/\1/' | tr '[:upper:]' '[:lower:]')
-BOT_PROFILE=$(jq -r ".channels.feishu.accounts | to_entries[] | select(.value.appId != null) | .key" ~/.openclaw/openclaw.json 2>/dev/null | grep "^${AGENT_PREFIX}_" | head -1)
-[ -z "$BOT_PROFILE" ] && BOT_PROFILE=$(jq -r '.profile // empty' ~/.lark-cli/config.json 2>/dev/null)
+if [ "$WORKSPACE_NAME" = "workspace-specialresearch" ]; then
+  BOT_PROFILE="speres_bot"
+else
+  AGENT_PREFIX=$(echo "$WORKSPACE_NAME" | sed -E 's/^workspace-//; s/^([A-Za-z]+).*/\1/' | tr '[:upper:]' '[:lower:]')
+  BOT_PROFILE=$(jq -r ".channels.feishu.accounts | to_entries[] | select(.value.appId != null) | .key" ~/.openclaw/openclaw.json 2>/dev/null | grep "^${AGENT_PREFIX}_" | head -1)
+  [ -z "$BOT_PROFILE" ] && BOT_PROFILE=$(jq -r '.profile // empty' ~/.lark-cli/config.json 2>/dev/null)
+fi
 
 echo "🤖 BOT_PROFILE: ${BOT_PROFILE}"
 ```
@@ -152,77 +156,170 @@ WIKI_PARENTS[新能源]="VWPXwgUqyings6kRc8Ucbwlgnce"
 WIKI_PARENTS[生物医药]="IuvHw09upiUHuuk2cDYcSpiUn4g"
 WIKI_PARENTS[互联网]="JO90w8ahli2o9AkyX6fcDww7nWb"
 
-# 获取知识库 space_id
-SPACE_ID=$(curl -s -X GET "https://open.feishu.cn/open-apis/wiki/v2/spaces" \
-  -H "Authorization: Bearer ${TENANT_TOKEN}" | jq -r '.data.spaces[0].space_id')
+# 专班行研库 space_id（不要使用 spaces[0]，避免误发到其他知识库）
+SPACE_ID="7659307909225941978"
 
 echo "📚 Space ID: ${SPACE_ID}"
 
 TOTAL_CREATED=0
 TOTAL_SKIPPED=0
 
-# 按固定顺序遍历（保证创建顺序可预期）
+# 按固定顺序遍历行业目录
 for dir_name in "人工智能" "半导体" "智能制造" "新能源" "生物医药" "互联网"; do
-  PARENT_TOKEN="${WIKI_PARENTS[$dir_name]}"
-  SOURCE_DIR="${SYNWIKI}/${dir_name}"
+  parent_token="${WIKI_PARENTS[$dir_name]}"
+  source_dir="${SYNWIKI}/${dir_name}"
   
-  MD_FILES=()
-  for f in "${SOURCE_DIR}"/*.md; do
-    [ -f "$f" ] && MD_FILES+=("$f")
+  # 收集目录下所有 .md 文件
+  md_files=()
+  for f in "${source_dir}"/*.md; do
+    [ -f "$f" ] && md_files+=("$f")
   done
   
-  if [ ${#MD_FILES[@]} -eq 0 ]; then
+  if [ ${#md_files[@]} -eq 0 ]; then
     echo "⏭️  [${dir_name}] 无 .md 文件，跳过"
     TOTAL_SKIPPED=$((TOTAL_SKIPPED + 1))
     continue
   fi
   
-  # 按文件名倒序处理（最新文件最后创建，排在知识库最前）
-  IFS=$'\n' SORTED_FILES=($(printf '%s\n' "${MD_FILES[@]}" | sort -r))
-  unset IFS
+  echo "📤 [${dir_name}] 检查到 ${#md_files[@]} 个文件，准备发布..."
   
-  echo "📤 [${dir_name}] 发布 ${#SORTED_FILES[@]} 个文件..."
+  # 记录已创建的节点：node_token|filename（用于后续排序）
+  created_nodes=()
   
-  for md_file in "${SORTED_FILES[@]}"; do
-    FILENAME=$(basename "$md_file" .md)
+  for md_file in "${md_files[@]}"; do
+    filename=$(basename "$md_file" .md)
+    md_dir=$(dirname "$md_file")
+    md_name=$(basename "$md_file")
     
-    # 创建 wiki 节点
-    RESULT=$(curl -s -X POST "https://open.feishu.cn/open-apis/wiki/v2/spaces/${SPACE_ID}/nodes" \
-      -H "Authorization: Bearer ${TENANT_TOKEN}" \
-      -H "Content-Type: application/json" \
-      -d "{
-        \"parent_node_token\": \"${PARENT_TOKEN}\",
-        \"title\": \"${FILENAME}\",
-        \"obj_type\": \"docx\",
-        \"node_type\": \"origin\"
-      }")
+    # 如果同名节点已存在，则更新原节点内容；否则创建新节点
+    existing_row=$(lark-cli wiki +node-list \
+      --as bot \
+      --profile "${BOT_PROFILE}" \
+      --space-id "${SPACE_ID}" \
+      --parent-node-token "${parent_token}" \
+      --page-all \
+      --page-limit 10 \
+      -q '(.data.nodes // .data.items // [])[] | [.title, .node_token, .obj_token] | @tsv' 2>/dev/null | \
+      sed 's/^"//; s/"$//; s/\\t/\t/g' | \
+      awk -F'\t' -v title="$filename" '$1==title {print $2 "\t" $3; exit}')
     
-    OBJ_TOKEN=$(echo "$RESULT" | jq -r '.data.obj_token // empty')
-    
-    if [ -z "$OBJ_TOKEN" ]; then
-      echo "  ❌ 创建失败 [${FILENAME}]: $(echo "$RESULT" | jq -r '.msg // .code_msg // "unknown"')"
-      continue
+    if [ -n "$existing_row" ]; then
+      node_token=${existing_row%%$'\t'*}
+      obj_token=${existing_row#*$'\t'}
+      echo "  ↻ 已存在，更新内容: ${filename}"
+    else
+      # 创建 wiki 节点，标题与文件名一致
+      result=$(curl -s -X POST "https://open.feishu.cn/open-apis/wiki/v2/spaces/${SPACE_ID}/nodes" \
+        -H "Authorization: Bearer ${TENANT_TOKEN}" \
+        -H "Content-Type: application/json" \
+        -d '{"parent_node_token": "'"${parent_token}"'", "title": "'"${filename}"'", "obj_type": "docx", "node_type": "origin"}')
+      
+      obj_token=$(echo "$result" | jq -r '.data.obj_token // empty')
+      node_token=$(echo "$result" | jq -r '.data.node_token // empty')
+      
+      if [ -z "$obj_token" ] || [ -z "$node_token" ]; then
+        echo "  ❌ 创建失败 [${filename}]: $(echo "$result" | jq -r '.msg // .code_msg // "unknown"')"
+        continue
+      fi
     fi
     
     # 写入 markdown 内容（使用 lark-cli，机器人身份）
-    UPDATE_RESULT=$(lark-cli docs +update --api-version v2 \
-      --doc "${OBJ_TOKEN}" \
+    update_result=$(cd "$md_dir" && lark-cli docs +update --api-version v2 \
+      --doc "${obj_token}" \
       --profile "${BOT_PROFILE}" \
       --as bot \
       --command overwrite \
       --doc-format markdown \
-      --content @"${md_file}" 2>&1)
+      --content @"${md_name}" 2>&1)
     
-    if echo "$UPDATE_RESULT" | grep -q '"code": 0'; then
-      echo "  ✅ ${FILENAME}"
-      TOTAL_CREATED=$((TOTAL_CREATED + 1))
+    if echo "$update_result" | grep -q '"ok": true'; then
+      echo "  ✅ ${filename}"
     else
-      echo "  ⚠️  ${FILENAME} (内容写入: ${UPDATE_RESULT:0:80})"
-      TOTAL_CREATED=$((TOTAL_CREATED + 1))
+      echo "  ⚠️  ${filename} (内容写入: ${update_result:0:80})"
     fi
     
+    created_nodes+=("${node_token}|${filename}")
+    TOTAL_CREATED=$((TOTAL_CREATED + 1))
     sleep 0.5
   done
+  
+  # --- 按文件日期倒序重排节点（最新在前）---
+  if [ ${#created_nodes[@]} -gt 1 ]; then
+    echo "    🔄 按日期倒序重排 ${#created_nodes[@]} 个节点（最新→最旧）..."
+    
+    # 按日期正序排序（旧→新），依次 move 回父节点下
+    # 飞书 wiki 同父节点 move 后会把被移动节点放到末尾；旧→新 move 后，列表呈现最新→最旧
+    IFS=$'\n' sorted_nodes=($(printf '%s\n' "${created_nodes[@]}" | sort -t'|' -k2))
+    unset IFS
+    
+    for entry in "${sorted_nodes[@]}"; do
+      ntoken=${entry%%|*}
+      move_result=$(lark-cli wiki +move \
+        --as bot \
+        --profile "${BOT_PROFILE}" \
+        --node-token "${ntoken}" \
+        --source-space-id "${SPACE_ID}" \
+        --target-parent-token "${parent_token}" 2>&1)
+      
+      if ! echo "$move_result" | grep -q '"ok": true'; then
+        echo "    ⚠️  重排失败: ${move_result:0:120}"
+      fi
+      sleep 0.3
+    done
+    echo "    ✅ 重排完成"
+  fi
+
+  # --- 更新行业主节点目录页 ---
+  parent_obj_token=$(lark-cli wiki +node-get \
+    --as bot \
+    --profile "${BOT_PROFILE}" \
+    --token "https://ccn65szgfwm8.feishu.cn/wiki/${parent_token}" \
+    -q '.data.obj_token' 2>/dev/null | tail -1 | tr -d '"')
+  
+  directory_file=$(mktemp "${TMPDIR:-/tmp}/synwiki-directory.XXXXXX")
+  {
+    printf '# %s\n\n' "$dir_name"
+    printf '## 目录\n\n'
+    
+    child_rows=$(lark-cli wiki +node-list \
+      --as bot \
+      --profile "${BOT_PROFILE}" \
+      --space-id "${SPACE_ID}" \
+      --parent-node-token "${parent_token}" \
+      --page-all \
+      --page-limit 10 \
+      -q '(.data.nodes // .data.items // [])[] | [.title, .node_token] | @tsv' 2>/dev/null | \
+      sed 's/^"//; s/"$//; s/\\t/\t/g')
+    
+    sorted_child_rows=$(printf '%s\n' "$child_rows" | awk -F'\t' 'NF>=2 {date=""; if (match($1, /[0-9]{8}/)) date=substr($1, RSTART, RLENGTH); print date "\t" $1 "\t" $2}' | sort -r)
+    if [ -z "$sorted_child_rows" ]; then
+      printf -- '- 暂无子节点\n'
+    else
+      printf '%s\n' "$sorted_child_rows" | while IFS=$'\t' read -r _date title node; do
+        printf -- '- [%s](https://ccn65szgfwm8.feishu.cn/wiki/%s)\n' "$title" "$node"
+      done
+    fi
+  } > "$directory_file"
+  
+  if [ -n "$parent_obj_token" ]; then
+    directory_dir=$(dirname "$directory_file")
+    directory_name=$(basename "$directory_file")
+    directory_result=$(cd "$directory_dir" && lark-cli docs +update --api-version v2 \
+      --doc "${parent_obj_token}" \
+      --profile "${BOT_PROFILE}" \
+      --as bot \
+      --command overwrite \
+      --doc-format markdown \
+      --content @"${directory_name}" 2>&1)
+    
+    if echo "$directory_result" | grep -q '"ok": true'; then
+      echo "    ✅ 已更新主节点目录"
+    else
+      echo "    ⚠️  主节点目录更新失败: ${directory_result:0:120}"
+    fi
+  else
+    echo "    ⚠️  无法获取主节点 obj_token，跳过目录更新"
+  fi
 done
 
 echo ""
@@ -235,9 +332,17 @@ echo "========================================"
 
 ### 注意事项
 
-1. **权限**：确保机器人已添加为知识库管理员（使用 `feishu-wiki-add-bot-admin` skill）
-2. **文档创建时间倒序**：脚本按文件名倒序处理，最新文件最后创建，自然排在知识库最前面（飞书默认按创建时间正序展示）
-3. **日期范围**：本周定义为周一到周日。如果本周文件尚未生成，对应行业会被跳过
-4. **文件格式**：仅处理 `.md` 文件，`.docx` 文件不处理
-5. **限流**：每个节点创建后 sleep 0.5s
-6. **新能源/生物医药**：这两个行业当前没有 `.md` 格式周报（只有 `.docx`），会被优雅跳过
+1. **目标知识库固定是专班行研库**：入口 URL 为 `https://ccn65szgfwm8.feishu.cn/wiki/JQrjw9p5jiIEqGkDaUCcujaUnhd?fromScene=spaceOverview`，`space_id=7659307909225941978`。不要用 `spaces[0]`，否则可能误发到 `AI行研` 等其他知识库。
+2. **bot profile 固定优先 `speres_bot`**：不要裸用 `--as bot`，也不要依赖 lark-cli 默认 profile；默认 profile 可能是 `ai_bot`。
+3. **不要让用户做 OAuth 授权**：本流程应使用机器人身份和 tenant token。遇到读节点权限问题，先检查 bot profile、知识库成员权限和应用 Wiki scope，不要误走 user OAuth。
+4. **解析 wiki 节点要传完整 URL 或明确 wiki token**：`lark-cli wiki +node-get` 传裸 token 时可能被当成文档 obj_token，优先传 `https://ccn65szgfwm8.feishu.cn/wiki/<node_token>`。
+5. **lark-cli 输出可能混入代理 warning**：需要机器解析字段时优先使用 `-q`，或确保 stderr 不污染 JSON；不要直接把混有 warning 的输出喂给 `jq`。
+6. **`docs +update --content` 只能用当前目录下的相对路径**：写周报正文或目录页前先 `cd "$(dirname "$file")"`，然后用 `--content @"$(basename "$file")"`。
+7. **同名周报不要重复创建**：创建前先列父节点子节点；若标题已存在，更新原节点内容并参与排序。
+8. **节点排序用 `lark-cli wiki +move`**：不要调用旧的 `PUT /wiki/v2/spaces/{space_id}/nodes/{node_token}/move`，该路径会 404。对同父节点按旧→新依次 move，可得到新→旧的展示顺序。
+9. **主节点也要更新目录页**：发布/更新子节点后，必须覆盖更新每个行业主节点页面，内容为 `# 行业名` + `## 目录` + 按日期倒序排列的子节点链接。
+10. **节点标题**：wiki 节点标题与 `.md` 文件名（不含 `.md` 后缀）完全一致。
+11. **日期范围**：本周定义为周一到周日。如果本周文件尚未生成，对应行业会被跳过。
+12. **文件格式**：仅处理 `.md` 文件，`.docx` 文件不处理。
+13. **限流**：每个节点创建后 sleep 0.5s，重排 move 操作后 sleep 0.3s。
+14. **新能源/生物医药**：这两个行业当前没有 `.md` 格式周报（只有 `.docx`），会被优雅跳过。

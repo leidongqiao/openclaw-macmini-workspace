@@ -1,5 +1,9 @@
 # Long-Term Memory
 
+## Working Preferences
+
+- Joe prefers explicit skill changes to be executed directly on the live skill file. Skill Workshop may be used for record/audit, but should not block writing or require pending-proposal confirmation when the request is clear and safe.
+
 
 ## Promoted From Short-Term Memory (2026-05-12)
 

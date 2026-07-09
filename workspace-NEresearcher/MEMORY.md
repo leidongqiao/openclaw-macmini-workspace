@@ -1,5 +1,6 @@
 # Long-Term Memory
 
+- 2026-07-09: Joe 明确偏好：以后修改现有 skill 时先直接写 live 文件并验证，不要把 pending proposal 当作最终交付；Skill Workshop 只做记录/审计，不作为阻止写入的审批关卡，避免繁琐弹框。
 
 ## Promoted From Short-Term Memory (2026-06-06)
 

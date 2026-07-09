@@ -121,7 +121,7 @@ description: |
 
 - **Wiki 节点默认挂子目录**:`wiki +node-create --space-id` 创建后可能挂在某个 parent 下。如需根目录,创建后用 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。
 - **Wiki 单换行会黏行**:飞书 Markdown 会把单换行合并。企业元数据必须用列表格式,标题和正文之间加空行。
-- **Word 下载链接**:用纯 URL 文本 `**Word版下载:** https://...`,不要写 `<https://...>`,尖括号可能被吞。
+- **Wiki 正文不写 Word 下载链接**:Word 下载链接只用于最终群聊推送摘要等非 Wiki 场景;不得写入 Wiki 正文开头、资料来源、正文段落或本地 Wiki Markdown 副本。
 - **创建后必须 fetch 回来抽查**:检查是否有 `推荐等级.*所属赛道` 等同行黏连。
 - **docs 读取命令是 +fetch 不是 +read**:当前 lark-cli 版本没有 `docs +read --doc`;读取/校验文档正文使用 `docs +fetch --doc <obj_token或URL> --profile ... --as bot`。不要把 `docs +read` 失败误判为正文未写入。
 - **docs +update 文件参数**:`lark-cli docs +update` 没有 `--markdown-file`。必须使用 `--markdown "@./file.md"`,且 `@` 文件路径必须是当前工作目录下的相对路径;先 `cd /tmp/...` 再传 `@./wiki.md`。
@@ -147,10 +147,10 @@ description: |
 - 建议用脚本生成两份:docx(去 Markdown 符号) 和 md(保留 Markdown)。
 - Word 版用 python-docx 时,`- **` 等标记需去除,段落用纯文本。
 - **产品库 docx 不能直接 read**:`productFile.docx` 是二进制,直接 read 会显示乱码。必须用 `python-docx` 提取段落文本,再基于真实产品库推荐产品;如果未能读取产品库,不得虚构产品名称/额度/期限/费率。
-- **报告标题与文件名统一**:每期先生成唯一 `REPORT_BASENAME`,格式为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`(默认 `互联网行业周报-YYYYMMDD`);Word 文件名、飞书 Drive 上传名、Wiki 节点标题、本地 Markdown 副本文件名必须基于同一个 `REPORT_BASENAME`。不要出现 Word/Wiki/本地副本使用不同 basename 的不一致情况。
-- **本地文件不得重名覆盖**:保存 Word/Markdown 前必须检查目标路径是否已存在。若存在同名文件,不要覆盖;改用 `REPORT_BASENAME_v2`、`REPORT_BASENAME_v3` 递增后缀,并用最终确定的 basename 同步更新 Word 上传名和 Wiki 标题。
+- **报告标题与文件名统一**:每期先生成 `REPORT_BASENAME`,格式为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`(默认 `互联网行业周报-YYYYMMDD`);Word 文件名、飞书 Drive 上传名、Wiki 节点标题、本地 Markdown 副本文件名必须基于同一个 `REPORT_BASENAME`。不要出现 Word/Wiki/本地副本使用不同 basename 的不一致情况。
+- **本地文件同名覆盖**:保存 Word/Markdown 前检查目标路径是否已存在。若存在同名 `<REPORT_BASENAME>.docx` 或 `<REPORT_BASENAME>.md`,直接覆盖,不生成 `_v2`、`_v3` 或任何版本后缀。同名即同一期。
 - **报告产物统一归档**:临时抓取材料放 `/tmp/web-weekly-YYYYMMDD/`,正式 Word 放 `reports/web-weekly/<REPORT_BASENAME>.docx`,Wiki Markdown 本地副本放 `reports/web-weekly/<REPORT_BASENAME>.md` 便于复核。
-- **Word 上传后记录 token**:上传 Drive 后记录 `file_token`、文件名、大小;Wiki 文首 `Word版下载` 使用纯 URL 文本。若无法生成稳定下载链接,至少在最终摘要中标注 file_token 供人工定位。
+- **Word 上传后记录 token**:上传 Drive 后记录 `file_token`、文件名、大小和 `url`;该 Word 下载链接只用于最终群聊推送摘要等非 Wiki 场景,不得写入 Wiki 正文或本地 Wiki Markdown 副本。若无法生成稳定下载链接,至少在最终摘要中标注 file_token 供人工定位。
 - **Drive 上传权限提示**:bot 身份上传可能返回 `permission_grant.status=skipped`、提示没有 current CLI user open_id,这不代表上传失败;只要 `ok:true` 且有 `file_token/size/url` 即可继续。`permission_grant` 是后台权限提示,不得写进周报正文、资料来源或推送摘要。
 
 ### 6. 定时任务与最终推送
@@ -179,7 +179,7 @@ description: |
 3. 读取产品库 `~/.openclaw/workspace/file/productFile.docx` 时必须用 `python-docx`,不要直接 read 二进制。
 4. 先读商机表 `row_count`,再读取 `A1:J<row_count>` 原始快照并保存 `sheet_before.json`;随后只把 A 列非空行视为有效商机行,空白默认行不得参与合并、排序或写回。
 5. iFinD 必须按 `call('news', tool_name, params)` 快速探测,不要把工具名当 server_type。
-6. 生成唯一 `REPORT_BASENAME`;Word 文件名、Drive 上传名、Wiki 标题、本地 Markdown 副本必须一致,且不得覆盖已有本地同名文件。
+6. 生成 `REPORT_BASENAME`;Word 文件名、Drive 上传名、Wiki 标题、本地 Markdown 副本必须一致。本地若已有同名文件直接覆盖,不生成版本后缀。`REPORT_BASENAME` 必须包含 8 位日期后缀,默认格式为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`。若生成结果不匹配 `.*-[0-9]{8}$`,必须先修正变量,禁止创建 Wiki 节点。
 
 **执行后硬性检查(最终回复前必须确认):**
 
@@ -188,7 +188,7 @@ description: |
 3. 商机表已读回校验:新增、更新、旧记录保留、状态列保留、日期排序正确。
 4. 信息抓取清单已全量执行,每个必抓源、搜索查询、替代源、iFinD 查询都有状态备注:成功/空结果/低质/失败/权限受限/跳过原因。不能因为某源失败就不走后续来源。状态备注只能写入 `source_status.md/json`,不得进入周报正文、资料来源、Wiki正文或推送摘要。
 5. 数据源失败和替代源使用情况已写入本次过程备注;若出现新的稳定失败源,更新本 skill 的健康度记录。
-6. Word 文件名、Drive 文件名、Wiki 标题、本地 Markdown 副本 basename 一致;若发生重名,最终使用的 `_vN` 后缀也必须一致。
+6. Word 文件名、Drive 文件名、Wiki 标题、本地 Markdown 副本 basename 一致;若发生同名,视为同一期并覆盖更新,不得生成 `_vN` 后缀。
 7. Word/Wiki 正文、资料来源、本地 Markdown 和最终摘要已完成执行日志禁词扫描,不含 `403/无权限/Tool not allowed/接口失败/source_status/permission_grant/_notice/STDERR/WARN` 等后台过程词。
 8. 最终摘要包含核心主线、浙江机会、优先跟进企业、切入方向、Word/Wiki/商机表链接。
 9. 若第 1-3 项核心完成且第 8 项链接齐全,最终状态按成功处理;不得再执行任何可能抛错的非核心清理命令。仍需记录的问题只能追加到 `/tmp/web-weekly-YYYYMMDD/source_status.md/json`。
@@ -544,7 +544,7 @@ PY
 按以下完整结构生成详细行业分析报告,使用华文楷体:
 
 ```
-# 互联网行业商机周报
+# <REPORT_BASENAME>
 
 ## 一、行业动态与发展总结
 (仅全国/国家/互联网行业层面,不含浙江内容)
@@ -706,7 +706,7 @@ https://qcn8k445rrbc.feishu.cn/file/<file_token>
 **使用方法:**
 1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./文件名.docx" --name "文件名.docx"`
 2. **直接从返回结果中取 `url` 字段作为下载链接**,不要手动拼接,避免域名错误。
-3. 将该链接写入 wiki 正文开头和推送摘要中
+3. 将该链接写入最终群聊推送摘要中;不要写入 wiki 正文或本地 Wiki Markdown 副本
 
 #### 版本B:飞书 wiki 版(知识库存档格式)
 
@@ -717,8 +717,9 @@ https://qcn8k445rrbc.feishu.cn/file/<file_token>
 - 通过第九步写入知识库
 - Wiki 节点标题必须等于最终 `REPORT_BASENAME`;搜索/去重 Wiki 时也以最终 `REPORT_BASENAME` 为准。
 - 本地 Wiki Markdown 副本必须保存为 `reports/web-weekly/<REPORT_BASENAME>.md`,与 Word basename 完全一致。
-- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** https://.../file/...`
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,不要写成 `<https://...>`。
+- Wiki Markdown 第一行标题必须是 `# <REPORT_BASENAME>`,不得使用固定标题 `# 互联网行业商机周报`。飞书 Markdown 覆盖写入会把文档标题/知识库节点标题同步为第一个 H1;如果第一行是固定标题,会导致多期 Wiki 节点重名且丢失日期。
+- Wiki 正文开头直接进入覆盖周期、资料来源或正文结构;不得写入 `Word版下载`、Word URL、file_token 或任何 Word 下载入口。
+- 本地 Wiki Markdown 副本也不得包含 Word 下载链接;Word 下载链接只保留在最终群聊推送摘要等非 Wiki 场景。
 - ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**,固定格式如下:
   ```markdown
@@ -842,9 +843,9 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**重要:每次生成先确定唯一 `REPORT_BASENAME`,Wiki 标题与 Word/Markdown 文件 basename 一致。若本地已存在同名文件,使用 `_v2`、`_v3` 后缀,不要覆盖旧文件。**
+**重要:每次生成先确定 `REPORT_BASENAME`,Wiki 节点名称、飞书文档名称与 Word/Markdown 文件 basename 必须一致,均为 `<REPORT_BASENAME>`。若本地或 Wiki 已存在同名文件/节点,视为同一期,直接覆盖更新;不得生成 `_v2`、`_v3` 或任何版本后缀。**
 
-**Word 下载链接位置要求:**Word 版上传飞书 Drive 后直接从返回结果取 `url` 字段作为下载链接;wiki 正文开头必须写入 `**Word版下载:** <下载链接>`,推送摘要中的「Word」也必须使用该下载链接。
+**Word 下载链接位置要求:**Word 版上传飞书 Drive 后直接从返回结果取 `url` 字段作为下载链接;推送摘要中的「Word」必须使用该下载链接。Wiki 正文和本地 Wiki Markdown 副本不得写入 `Word版下载`、Word URL、file_token 或任何 Word 下载入口。
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
@@ -858,31 +859,18 @@ fi
 
 1. **列出知识库所有节点,查找是否已有同名文档(搜索全部节点,不限根目录!)**:
    ```bash
-   lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE
+   lark-cli wiki +node-list --profile $BOT_PROFILE --as bot --space-id "$WIKI_SPACE_ID" --page-all --page-limit 0 --page-size 50 --format json
    ```
-   从返回结果中搜索 title 为 `$REPORT_BASENAME` 的节点,提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 为 `$REPORT_BASENAME` 的节点,提取 `obj_token` 和 `node_token`。禁止只查第一页;飞书知识库允许同级节点重名,且单页结果可能漏掉旧周报,只查第一页会导致重复创建。
    ⚠️ **必须搜索所有节点**(不限 `parent_node_token`),否则第一次创建时可能被放在「首页」下,第二次搜不到就重复创建了!
-   ⚠️ **如果找到多个同名文档**,选 `obj_edit_time` 最新的那个,用 `docs +update` 覆盖;其余旧节点只记录到过程备注,不要在周报任务中尝试删除、改名或移动。当前 `lark-cli drive files patch` 对应飞书 `drive.files.patch` 仅支持改标题(`new_title`),不支持 `trash_type` 删除;误用会让 cron 标记 error 并把错误通知推到群里。
-   **周报定时任务中禁止自动清理重复节点。**如后续人工明确要求清理,只能在独立排障任务中先确认 schema,再用捕获退出码方式执行;该清理不得放在本周报 cron 主流程里:
-   ```bash
-   set +e
-   LARK_CLI_NO_PROXY=1 ~/.npm-global/bin/lark-cli drive files patch \
-     --profile "$BOT_PROFILE" --as bot \
-     --params "{\"file_token\":\"$OLD_OBJ_TOKEN\",\"type\":\"docx\"}" \
-     --data "{\"new_title\":\"${REPORT_BASENAME}_duplicate_${RUN_DATE}\"}"
-   PATCH_STATUS=$?
-   set -e
-   echo "duplicate_rename_status=$PATCH_STATUS" >> /tmp/web-weekly-${RUN_DATE}/source_status.md
-   ```
-   周报 cron 主流程遇到重复节点时,只写入:
-   `duplicate_nodes_found=<数量>; selected_node=<node_token>; cleanup_skipped=true`
-   然后继续写入最新节点并进入第十步摘要。
+   ⚠️ **如果找到同名文档**,同名即同一期,必须用 `docs +update` 覆盖更新已有文档,不得再创建新节点。若历史原因导致找到多个同名节点,选 `obj_edit_time` 最新的那个覆盖更新,其余旧节点只记录到过程备注;不要在周报主流程里尝试删除、改名或移动。
 
 2. **如果找到同名文档**:
    - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./<wiki文件名>.md` 覆盖内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
 
 3. **如果未找到同名文档**:
+   - 创建前再次校验:最终 Wiki Markdown 第一行必须等于 `# $REPORT_BASENAME`;`REPORT_BASENAME` 必须匹配 `.*-[0-9]{8}$`;若不满足,立即停止,不得创建节点。新建的 Wiki 节点名称必须为 `<REPORT_BASENAME>`,并与飞书文档名称、Word 文件名、本地 Markdown 文件名一致。
    - 使用以下命令以**机器人身份**创建(默认在知识库根目录):
      ```bash
      lark-cli wiki +node-create --profile $BOT_PROFILE --as bot \
@@ -1026,14 +1014,14 @@ echo "summary_clean_status=$SUMMARY_CLEAN_STATUS" >> /tmp/web-weekly-${RUN_DATE}
 3. **地域限制**:本地行业动态、行动清单、企业动态仅限浙江本地企业;非互联网/AI/平台经济/数字经济/跨境互联网相关企业动态不纳入本地行业动态
 4. **禁止推荐不合规业务**
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致
-6. **知识库标题**:必须等于最终 `REPORT_BASENAME`,默认 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`(如 `互联网行业周报-YYYYMMDD`);如果本地重名使用 `_vN`,Wiki 标题也同步使用同一个 `_vN`。
-7. **知识库写入**:必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建
+6. **知识库标题**:必须等于最终 `REPORT_BASENAME`,默认 `$WEEKLY_TITLE_PREFIX-YYYYMMDD`(如 `互联网行业周报-YYYYMMDD`);本地同名文件直接覆盖,不得使用 `_vN`。Wiki Markdown 第一行也必须是 `# <REPORT_BASENAME>`,否则飞书会把节点标题改成固定 H1。
+7. **知识库写入**:必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时必须用 `wiki +node-list --page-all --page-limit 0` 搜索全部节点(不限 parent_node_token),避免重复创建。
 8. **群聊推送**:推送概要 + 链接,不是全文
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后只对 A 列非空有效业务行按时间倒序重排,不要把默认 200+ 空行作为数据重写。
 10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range month --format json`。Brave web_search 仅作为备用,且不用 OR 语法。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能。
-12. **Word 下载链接**:Word 文件上传飞书 Drive 后直接从返回结果取 `url` 字段(如 `https://qcn8k445rrbc.feishu.cn/file/XXX`),不要手动拼接域名;将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-WEBresearcher/reports/web-weekly/`,文件名格式 `<REPORT_BASENAME>.docx`;保存前检查本地是否重名,不得覆盖。生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
+12. **Word 下载链接**:Word 文件上传飞书 Drive 后直接从返回结果取 `url` 字段(如 `https://qcn8k445rrbc.feishu.cn/file/XXX`),不要手动拼接域名;将该链接写在最终群聊推送摘要中。Wiki 正文和本地 Wiki Markdown 副本不得写入 Word 下载链接。
+13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-WEBresearcher/reports/web-weekly/`,文件名格式 `<REPORT_BASENAME>.docx`;保存前检查本地是否重名,若重名直接覆盖,不生成版本后缀。生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
 14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 15. **报告内禁止执行日志**:Word/Wiki 正文、资料来源、推送摘要中禁止出现接口报错、权限不足、抓取失败、替代源说明、调试过程。例如不得写"iFinD热点事件接口返回403无权限,本期以公告语义检索替代。"这类句子;只能写进 `source_status.md/json`。
 16. **iFinD 必须执行**:不可跳过。先在循环外做一次快速探测确认环境可用,再执行全部 3 个查询;权限不足或接口不可用时只记录到 `source_status.md/json`。
@@ -1052,7 +1040,7 @@ echo "summary_clean_status=$SUMMARY_CLEAN_STATUS" >> /tmp/web-weekly-${RUN_DATE}
 6. **Python urllib SSL 证书验证失败**。→ 全部改用 lark-cli。
 7. **lark-cli 上传文件要求相对路径**。→ 先 `cd` 到目录再用 `./文件名`。
 8. **wiki 创建后自动嵌套在子节点下**。→ 创建后需 `wiki +move` 移回根目录。
-9. **Word 下载链接格式**:`https://qcn8k445rrbc.feishu.cn/file/<file_token>`(租户域名 qcn8k445rrbc,不要用 open.feishu.cn)。
+9. **Word 下载链接格式**:`https://qcn8k445rrbc.feishu.cn/file/<file_token>`(租户域名 qcn8k445rrbc,不要用 open.feishu.cn);该链接只用于最终群聊推送摘要等非 Wiki 场景,不得写入 Wiki 正文。
 10. **未并行执行搜索**。→ searxng 支持并行,Brave 需串行。
 
 ## 文件路径

@@ -103,12 +103,11 @@ description: |
 
 - **Wiki 节点创建后可能挂在子目录**: `wiki +node-create` 不传 `parent-node-token` 时，API 默认会将节点挂在某个 parent 下（`parent_node_token` 不为空）。创建后必须检查返回的 `parent_node_token`，如不为空则执行 `wiki +move --node-token <token> --target-space-id <space>` 移到空间根级。**兜底检查流程**: 创建 wiki 节点 → 解析返回 JSON 的 `parent_node_token` → 如非空则执行 `+move` → 二次确认 `parent_node_token` 已为空。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式，标题和正文之间加空行。
-- **Wiki 开头元信息也会黏行**: `覆盖周期`、`资料来源`、`Word版下载` 等不要依赖两个空格换行；建议每项之间空一行或写成列表，创建后 fetch 抽查。
-- **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
+- **Wiki 开头元信息也会黏行**: `覆盖周期`、`资料来源` 等不要依赖两个空格换行；建议每项之间空一行或写成列表，创建后 fetch 抽查。Wiki 正文不得写入 `Word版下载`、`点击下载Word版` 或任何 Word Drive/file 下载链接。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连，同时检查是否出现乱码、Unicode 转义残留、空正文、正文被 JSON/XML 包裹、链接丢失等问题。只要 fetch 回来的内容不可读或与本地 wiki Markdown 明显不一致，必须重写/重传后再次 fetch，不能推送。
 - **乱码/转义错误是发布失败，不是小瑕疵**: Wiki 正文中出现 `\u4e2d\u56fd`、`&#x`、`&lt;`/`&gt;` 大量残留、`{ "content": ... }`、XML 标签正文化、连续问号/方块字符、中文大面积缺失，均判定为发布失败。必须回到本地 Markdown 源重新写入，必要时改用临时文件传参，避免 shell 转义污染。
-- **大段 Wiki Markdown 必须用文件传参**: 使用 `lark-cli docs +update --api-version v2 --command overwrite --doc-format markdown --content @reports/im-weekly/智能制造行业周报-yyyyMMdd.md`。不要把 Markdown 内容先 `json.dumps` 后作为字符串写入,否则会把正文变成带 `\uXXXX` 的 JSON 字符串。
-- **Word 链接一致性**: 上传 Word 后得到的 Drive file 链接，必须同时写入本地 Markdown、Wiki 正文、`reports/summary/IM-summary.md` 和最终推送摘要。推送前逐项比对，四处链接不一致时以最新上传且已在 Wiki fetch 中验证存在的链接为准，修正后再推送。
+- **大段 Wiki Markdown 必须用文件传参**: 使用 `lark-cli docs +update --api-version v2 --command overwrite --doc-format markdown --content @reports/im-weekly/智能制造行业周报-YYYYMMDD.md`。不要把 Markdown 内容先 `json.dumps` 后作为字符串写入,否则会把正文变成带 `\uXXXX` 的 JSON 字符串。
+- **Word 链接保留范围**: 上传 Word 后得到的 Drive file 链接，必须写入本地 Markdown、`reports/summary/IM-summary.md` 和最终推送摘要；**不得写入 Wiki 正文**。推送前比对上述三处链接一致；不一致时以最新上传的 Drive file 链接为准，修正后再推送。
 - **Wiki node-create 的 flag 差异**: 简写版 `+node-create` 不支持 `--space-id` 和 `--format json` 等 flag。正确用法是 `wiki +node-create --profile im_bot --as bot --space-id <space_id> --title <title> --obj-type docx`。如果遇到 `unknown flag` 错误，改用完整子命令 `wiki nodes create --params '{"space_id":"...","title":"..."}'` 并去掉不支持的 flag。
 - **lark-cli 简写 + 命令和完整子命令的参数不一致**: `wiki +node-create`、`wiki +move` 等简写命令使用独立的 flag 集（如 `--space-id`、`--title`），而完整子命令如 `wiki nodes list` 使用 `--params` JSON。混用时容易踩坑，建议统一使用简写 + 命令并只传它支持的 flag。
 
@@ -123,9 +122,9 @@ description: |
 
 ### 5. Word/Wiki 格式分离
 
-- 建议用脚本生成两份:docx(去 Markdown 符号) 和 md(保留 Markdown)。
+- 建议用脚本生成两份:Word 文件(去 Markdown 符号,文件名后缀 `.word`) 和 md(保留 Markdown)。
 - Word 版用 python-docx 时,`- **` 等标记需去除,段落用纯文本。
-- **推送前必须做发布链路自检**: 本地 docx 存在且大小正常、本地 md 存在且无执行日志、Drive file 链接可拼接、Wiki fetch 可读且无乱码、summary 链接与 Wiki 链接一致、商机表链接为 sheets URL。任一项失败都不得推送群聊摘要。
+- **推送前必须做发布链路自检**: 本地 `.word` 存在且大小正常、本地 `.md` 存在且无执行日志、Drive file 链接可拼接、Wiki fetch 可读且无乱码、Wiki 正文不含 Word Drive/file 下载链接、summary 链接与最终推送摘要链接一致、商机表链接为 sheets URL。任一项失败都不得推送群聊摘要。
 
 ## 工作流
 
@@ -588,11 +587,11 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 **Word 输出要求:**
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`(即 IM Researcher 工作空间的 `reports/im-weekly/`),不得保存到其他目录;如目录不存在先创建。
 - **同步拷贝**:生成并保存后,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/智能制造` 目录下的所有文件(目录结构保留,不要删除目录本身),然后将 Word 周报文件拷贝一份到该目录。注意该路径中 `Documents/` 后确实有一个空格,不要擅自改成无空格路径。
-- 文件名格式:`智能制造行业周报-yyyyMMdd.docx`(与 wiki 标题一致,其中 `yyyyMMdd` 为生成日日期,如 `20260619`)
-- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-yyyyMMdd.docx`,如存在则直接覆盖,不保留旧文件。
+- 文件名格式:`智能制造行业周报-YYYYMMDD.word`(与 wiki 节点名称、文档名称一致,其中 `YYYYMMDD` 为生成日日期,如 `20260619`)
+- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-YYYYMMDD.word`,如存在则直接覆盖,不保留旧文件,不得另存为 `v2`、`v3`、`副本` 或任何派生版本名。无论本地已有几个旧版本,本期标准 Word 文件只能是这一个文件名。
 - **⚠️ 同步后校验**:拷贝完成后必须读取源文件和目标文件的大小、mtime,确认一致；如发现同名文件同时存在于错误空格目录,不得引用错误目录文件。
 - 字体使用华文楷体
-- **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
+- **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 Word 文件时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 ##### Word 下载链接
 
 Word 文件上传飞书 Drive 后获取 `file_token`,拼接下载链接:
@@ -602,11 +601,11 @@ https://<租户域名>.feishu.cn/file/<file_token>
 例如:`https://qcn8k445rrbc.feishu.cn/file/DWMabuSB5og3PbxtC0OcY4kQnQg`
 
 **使用方法:**
-1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./智能制造行业周报-yyyyMMdd.docx" --name "智能制造行业周报-yyyyMMdd.docx"`
+1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./智能制造行业周报-YYYYMMDD.word" --name "智能制造行业周报-YYYYMMDD.word"`
 2. 从返回结果获取 `file_token`
 3. 拼接下载链接:`https://<租户域名>.feishu.cn/file/<file_token>`
-4. 将该链接写入 wiki 正文开头、`reports/summary/IM-summary.md` 和推送摘要中
-5. 推送前比对三处 Word 链接完全一致；不一致时先修正,不得推送。
+4. 将该链接写入本地 Markdown、`reports/summary/IM-summary.md` 和推送摘要中；不要写入 wiki 正文
+5. 推送前比对本地 Markdown、summary 文件、推送摘要三处 Word 链接完全一致；不一致时先修正,不得推送。
 
 **租户域名获取方式:**
 - 从已有的飞书 wiki URL 中提取,例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
@@ -618,11 +617,10 @@ https://<租户域名>.feishu.cn/file/<file_token>
 
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`(即 IM Researcher 工作空间的 `reports/im-weekly/`),不得保存到其他目录
-- 文件名格式:`智能制造行业周报-yyyyMMdd.md`(与 wiki 标题一致,其中 `yyyyMMdd` 为生成日日期,如 `20260619`)
-- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-yyyyMMdd.md`,如存在则直接覆盖,不保留旧文件。
+- 文件名格式:`智能制造行业周报-YYYYMMDD.md`(与 wiki 节点名称、文档名称一致,其中 `YYYYMMDD` 为生成日日期,如 `20260619`)
+- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-YYYYMMDD.md`,如存在则直接覆盖,不保留旧文件,不得另存为 `v2`、`v3`、`副本` 或任何派生版本名。无论本地已有几个旧版本,本期标准 Markdown 文件只能是这一个文件名。
 - 通过第九步写入知识库
-- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
+- wiki 正文不得写入 `Word版下载`、`点击下载Word版` 或任何 Word Drive/file 下载链接；Word 下载入口只保留在本地 Markdown、summary 文件和最终群聊推送摘要中。
 - ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致"推荐等级/所属行业/所在地区/产业链位置/推荐方向"等字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**(`- 推荐等级:高`),不要用 `**推荐等级:** 高`(飞书 Markdown 会把连续行合并到一行,导致所有字段挤在一起),格式如下:
   ```markdown
@@ -747,16 +745,17 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**重要:每次生成都覆盖当前同名文件(智能制造行业周报-yyyyMMdd),不要有重复日期的文档。**
+**重要:每次生成都覆盖当前同名文件/同名 wiki 文档(`智能制造行业周报-YYYYMMDD`),不要有重复日期的文档,不得创建 `v2`、`v3`、`副本` 或任何派生版本。**
 
-**Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** <下载链接>`,推送摘要中的「周报全文(Word)」也必须使用该下载链接。
+**Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;该链接必须写入本地 Markdown、`reports/summary/IM-summary.md` 和推送摘要中的「周报全文(Word)」；不得写入 wiki 正文。
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
+- wiki 节点名称必须为 `智能制造行业周报-YYYYMMDD`,与本地 Word 文件 `智能制造行业周报-YYYYMMDD.word` 和 Markdown 文件 `智能制造行业周报-YYYYMMDD.md` 的主文件名完全一致；同名即视为同一期,必须覆盖更新,不得新建派生版本。
 - 必须使用**机器人身份**(`--as bot`)创建,创建者显示为机器人
 - **⚠️ `--as bot` 默认使用 lark-cli 配置的默认应用(通常是 ai_bot),不是当前 agent 自己的 bot。必须使用 `--profile $BOT_PROFILE --as bot`**
 - **⚠️ 周报节点必须固定在知识库根目录的「商机挖掘表格」节点后面**,按时间倒序排列(最新周报紧跟在商机挖掘表格之后,旧周报依次排在后面)。也就是说,创建新周报后,必须通过 `wiki +move` 调整其在根目录的顺序,确保新周报紧跟在商机挖掘表格后面。
-- **⚠️ 写入后必须回读校验**: 使用 docs/wiki fetch 能力读取刚写入的正文,确认标题、Word 下载链接、覆盖周期、至少 3 个企业标题、行动建议均可读且中文正常。若出现乱码、Unicode 转义残留、正文为空、Markdown 被吞、JSON/XML 正文化或字段黏连,必须立即重写并再次回读,直到通过。
+- **⚠️ 写入后必须回读校验**: 使用 docs/wiki fetch 能力读取刚写入的正文,确认标题、覆盖周期、至少 3 个企业标题、行动建议均可读且中文正常,且正文不含 Word Drive/file 下载链接。若出现乱码、Unicode 转义残留、正文为空、Markdown 被吞、JSON/XML 正文化、字段黏连或误写 Word 下载链接,必须立即重写并再次回读,直到通过。
 
 **步骤:**
 
@@ -764,7 +763,7 @@ fi
    ```bash
    lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE
    ```
-   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-yyyyMMdd` 的节点,提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 为 `智能制造行业周报-YYYYMMDD` 的节点,提取 `obj_token` 和 `node_token`。该 title 必须与本地 `智能制造行业周报-YYYYMMDD.word` 和 `智能制造行业周报-YYYYMMDD.md` 的主文件名完全一致。
    ⚠️ **必须搜索所有节点**(不限 `parent_node_token`),否则第一次创建时可能被放在「首页」下,第二次搜不到就重复创建了!
    ⚠️ **如果找到多个同名文档**,选 `obj_edit_time` 最新的那个,用 `docs +update` 覆盖;其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
@@ -772,22 +771,23 @@ fi
    - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./<wiki文件名>.md` 覆盖内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ **位置排序**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将当前周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保最新周报紧跟在商机挖掘表格后面。
-   - ⚠️ **回读校验**: 覆盖后立即 fetch 文档正文,检查中文可读性、Word 下载链接、企业元数据列表、行动建议、乱码/转义/黏行问题。检查不通过时,不得进入群聊推送,必须修正文档后重试。
+   - ⚠️ **回读校验**: 覆盖后立即 fetch 文档正文,检查中文可读性、企业元数据列表、行动建议、乱码/转义/黏行问题,并确认不含 Word Drive/file 下载链接。检查不通过时,不得进入群聊推送,必须修正文档后重试。
 
 3. **如果未找到同名文档**:
    - 使用以下命令以**机器人身份**创建(注意必须带 profile):
      ```bash
      lark-cli wiki +node-create --profile $BOT_PROFILE --as bot \
        --space-id "$WIKI_SPACE_ID" \
-       --title "$WEEKLY_TITLE_PREFIX-yyyyMMdd" \
+       --title "智能制造行业周报-YYYYMMDD" \
        --obj-type "docx"
      ```
+   - 新建 wiki 节点名称必须为 `智能制造行业周报-YYYYMMDD`,与新建文档名称、本地 Word 文件名、本地 Markdown 文件名保持一致；同名即为同一期,后续再次生成必须覆盖更新该节点,不得创建 `v2`、`v3` 或副本节点。
    - 从返回结果提取 `obj_token`(用于内容更新)和 `node_token`(用于 URL)
    - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./<wiki文件名>.md` 写入内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`,如果不在根目录,用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
    - ⚠️ **位置排序(必须在根目录)**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将新周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <新周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保新周报紧跟在商机挖掘表格后面,所有旧周报自动依次后移。
-   - ⚠️ **回读校验**: 创建并写入后立即 fetch 文档正文,检查中文可读性、Word 下载链接、企业元数据列表、行动建议、乱码/转义/黏行问题。检查不通过时,不得进入群聊推送,必须修正文档后重试。
+   - ⚠️ **回读校验**: 创建并写入后立即 fetch 文档正文,检查中文可读性、企业元数据列表、行动建议、乱码/转义/黏行问题,并确认不含 Word Drive/file 下载链接。检查不通过时,不得进入群聊推送,必须修正文档后重试。
 
 **禁止**使用 `feishu_wiki_space_node` 工具(该工具可能将文档创建在首页下),必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id` 命令。
 
@@ -866,7 +866,8 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 4. 推送前必须追加自检 4 项,缺一不可:
    - Wiki fetch 回读内容中文正常,没有乱码、Unicode 转义残留、JSON/XML 正文化、空正文;
    - Wiki fetch 回读内容没有 `推荐等级.*所属行业`、`基本情况.*高层与团队背景` 等字段黏连;
-   - 本地 Markdown、Wiki fetch、summary 文件、推送摘要中的 Word Drive 链接完全一致;
+   - 本地 Markdown、summary 文件、推送摘要中的 Word Drive 链接完全一致;
+   - Wiki fetch 回读内容不得包含 Word Drive/file 下载链接、`Word版下载` 或 `点击下载Word版` 字样;
 5. 如果 Word Drive 链接、wiki 链接、sheets 链接任一缺失,或 Wiki 回读校验不通过,**不要推送群聊摘要**;先补齐/修复,再输出第十步模板。
 6. 若需要向用户说明执行状态,只能在非群聊/人工排查上下文说明;在群聊定时任务中,最终输出仍必须是第十步摘要模板。
 7. **cron 投递规则:** 智能制造周报定时任务的 cron delivery 应配置为 `mode:none`,避免 OpenClaw 将失败诊断自动推送到群聊。发布链路通过自检后,由 agent 使用 `message` 工具显式发送 `reports/summary/IM-summary.md` 的内容到目标飞书群；若运行失败,不得向群聊发送错误诊断或执行日志。
@@ -923,21 +924,21 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 3. **地域限制**:本地行业动态、行动清单仅限浙江本地企业;非智能制造主业的大企业动态不纳入本地行业动态
 4. **禁止推荐不合规业务**
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致
-6. **知识库标题**:智能制造行业周报-yyyyMMdd
+6. **知识库标题**:智能制造行业周报-YYYYMMDD,必须与新建文档名称、本地 `智能制造行业周报-YYYYMMDD.word` 和 `智能制造行业周报-YYYYMMDD.md` 的主文件名一致;同名即同一期,覆盖更新,不得创建 v2/v3/副本
 7. **知识库写入**:必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建
 8. **群聊推送**:推送概要 + 链接,不是全文；定时任务必须由 agent 显式调用 `message` 工具发送摘要,不要依赖 cron delivery 自动转发最终回复或失败诊断。
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range month --format json`,再按发布日期/正文日期过滤近14天。Brave web_search 仅作为备用,且不用 OR 语法(Brave 不支持),改用空格分隔关键词。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能。
-12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`,文件名格式 `智能制造行业周报-yyyyMMdd.docx`(与 wiki 标题一致);保存前先检查同名文件并覆盖;生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
+12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;将该链接写入本地 Markdown、summary 文件和推送摘要中，不写入 wiki 正文。
+13. **本地文件输出**:Word 文件固定为 `智能制造行业周报-YYYYMMDD.word`,Markdown 文件固定为 `智能制造行业周报-YYYYMMDD.md`;保存前先检查同名文件并覆盖,不得另存 `v2`/`v3`/`副本`;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
 14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 必须执行**:不可跳过。先在循环外做一次快速探测确认环境可用,再执行全部 3 个查询。
 16. **所有飞书 API 统一走 lark-cli**:sheets/drive/docs/wiki 操作全部用 lark-cli,不用 Python urllib 直接调 API(HTTPS_PROXY 代理会导致 SSL 证书验证失败)。
 17. **lark-cli 文件上传路径**:`--file` 必须是当前工作目录下的相对路径,不支持绝对路径。操作前先 `cd` 到文件所在目录。
 18. **lark-cli wiki 创建后需检查位置**:`wiki +node-create` 默认可能放在「首页」子节点下,创建后需检查 `parent_node_token`,如在子节点下需 `wiki +move` 移回根目录。
 19. **Wiki 回读校验**:写入知识库后必须 fetch 回来检查中文、链接、企业标题、行动建议、乱码/转义/黏行。检查失败不得推送。
-20. **Word 链接一致性**:本地 Markdown、Wiki fetch、summary 文件和推送摘要中的 Word Drive 链接必须一致;不一致时先修正。
+20. **Word 链接一致性**:本地 Markdown、summary 文件和推送摘要中的 Word Drive 链接必须一致;Wiki fetch 回读内容必须确认不含 Word Drive/file 下载链接。不一致或 Wiki 含 Word 链接时先修正。
 
 ## 踩坑记录(供后续优化参考)
 
@@ -957,7 +958,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 12. **未并行执行搜索**:skill 说"并行执行"但实际串行。→ searxng 支持并行,Brave 需串行。
 13. **执行日志混入周报正文**:探测状态、404 跳过、空结果、无权限等日志信息被写入 Word/Wiki 正文或群聊推送。→ 新增「报告正文纯净锁」规则,写入前自检关键词并清除。
 14. **Wiki 知识库乱码/转义未自检**:Markdown 写入后未 fetch 回读,可能出现 Unicode 转义、JSON/XML 正文化、中文乱码、字段黏连或链接丢失。→ 写入后必须 fetch 回读校验,失败则重写,不得推送。
-15. **Word 链接多处不一致**:重新上传 Word 后,本地 Markdown、Wiki、summary、推送摘要可能保留不同 file_token。→ 推送前四处比对,以最新上传且已在 Wiki fetch 中验证存在的链接为准。
+15. **Word 链接多处不一致**:重新上传 Word 后,本地 Markdown、summary、推送摘要可能保留不同 file_token，或 Wiki 正文误写入 Word 链接。→ 推送前三处比对,以最新上传的 Drive file 链接为准；同时确认 Wiki fetch 不含 Word Drive/file 下载链接。
 16. **cron failure 误推错误信息到群聊**:OpenClaw cron delivery 若保持 `announce`,运行中任一工具失败可能导致群聊收到失败诊断,即使本地 summary 已生成。→ 智能制造周报 cron 已改为 `delivery.mode=none` 且 `failureAlert=false`,由 agent 通过 `message` 工具只发送最终摘要。
 
 ## 文件路径
@@ -984,5 +985,5 @@ sheet_id: a39f2b
 # 智能制造行研知识库
 space_id: 7637086272351194069
 space_name: 智能制造行研
-节点标题: 智能制造行业周报-yyyyMMdd
+节点标题: 智能制造行业周报-YYYYMMDD
 ```

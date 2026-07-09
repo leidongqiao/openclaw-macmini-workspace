@@ -122,7 +122,7 @@ description: |
 
 - **Wiki 根目录校验**: `wiki +node-create --space-id` 通常直接创建在根目录。创建后用 `wiki +node-get --token "https://<tenant>.feishu.cn/wiki/<node_token>" --format json` 或 `wiki nodes list --space-id <space_id>` 检查新节点的 `parent_node_token` 是否为空字符串(空间层级)。若已为空,直接跳过移动。若挂在非根目录子节点下,执行 `wiki +move --node-token <token> --target-space-id <space>` 移到根目录。**移动/排序是非关键步骤**:失败时最多重试 1 次;仍失败只写内部日志,不能中断周报任务,必须继续写摘要并推送群聊。
 - **Wiki 单换行会黏行**: 飞书 Markdown 会把单换行合并。企业元数据必须用列表格式,标题和正文之间加空行。
-- **Word 下载链接**: 用纯 URL 文本 `**Word版下载:** https://...`,不要写 `<https://...>`,尖括号可能被吞。
+- **Wiki 正文不写 Word 下载链接**: Word 文件仍需生成并上传飞书 Drive,但 wiki 正文中不要写入 `Word版下载`、Word Drive URL 或指向 Word 的 Markdown 链接。Word 下载链接只保留在第十步群聊/cron/delivery 摘要和必要的本地摘要文件中。
 - **Wiki 文档标题必须匹配节点名**: wiki 内容 markdown 的第一个 `#` 标题**必须**是 `新能源行业周报-YYYYMMDD`,和 wiki 节点名一致。`docs +update --api-version v2 --command overwrite` 会把 markdown 第一个 `#` 标题设为文档标题,覆盖 wiki 节点原标题。如果 markdown 没有 `#` 标题,标题会变成 "Untitled"。
 - **Wiki 链接域名**: 最终推送必须使用租户域名链接,例如 `https://qcn8k445rrbc.feishu.cn/wiki/<node_token>`,不要写成 `https://www.feishu.cn/wiki/<node_token>`。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连。`lark-cli docs +fetch --format json` 的正文路径是 `.data.markdown`,不是 `.markdown`。
@@ -604,7 +604,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`(即 NE Researcher 工作空间的 `reports/ne-weekly/`),不得保存到其他目录;如目录不存在先创建。
 - **同步至 Codex 上传目录**:Word 文件生成后,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/新能源` 目录下的所有文件(目录本身不要删除),然后将生成的 Word 周报文件拷贝一份到该目录。
 - 文件名格式:`新能源行业周报-YYYYMMDD.docx`(与 wiki 节点名 `新能源行业周报-YYYYMMDD` 一致)
-- **同名 Word 文件覆盖**:生成前先检查保存目录下是否已存在 `新能源行业周报-YYYYMMDD.docx`;若已存在则直接覆盖更新,不重复创建。
+- **同名 Word 文件覆盖**:生成前先检查保存目录下是否已存在 `新能源行业周报-YYYYMMDD.docx`;若已存在则直接覆盖更新,不重复创建,不得生成 `v2`、`v3`、`副本`、`copy` 等版本文件。
 - 字体使用华文楷体
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 
@@ -620,7 +620,7 @@ https://<租户域名>.feishu.cn/file/<file_token>
 1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./文件名.docx" --name "文件名.docx"`
 2. 从返回结果获取 `file_token`
 3. 拼接下载链接:`https://<租户域名>.feishu.cn/file/<file_token>`
-4. 将该链接写入 wiki 正文开头和推送摘要中
+4. 将该链接写入第十步推送摘要中；不要写入 wiki 正文
 
 **租户域名获取方式:**
 - 从已有的飞书 wiki URL 中提取,例如 `https://qcn8k445rrbc.feishu.cn/wiki/...` 中的 `qcn8k445rrbc`
@@ -633,10 +633,10 @@ https://<租户域名>.feishu.cn/file/<file_token>
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`(即 NE Researcher 工作空间的 `reports/ne-weekly/`),不得保存到其他目录
 - 文件名格式:`新能源行业周报-YYYYMMDD.md`(与 wiki 节点名 `新能源行业周报-YYYYMMDD` 一致)
-- **同名 Word 文件覆盖**:生成前先检查保存目录下是否已存在 `新能源行业周报-YYYYMMDD.md`;若已存在则直接覆盖更新,不重复创建。
+- **同名 Markdown 文件覆盖**:生成前先检查保存目录下是否已存在 `新能源行业周报-YYYYMMDD.md`;若已存在则直接覆盖更新,不重复创建,不得生成 `v2`、`v3`、`副本`、`copy` 等版本文件。
 - 通过第九步写入知识库
-- wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
-- ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
+- wiki 正文开头只保留标题、覆盖周期、资料来源及正文内容；不要写入 Word 下载链接。
+- ⚠️ **wiki 正文禁止出现 Word 下载入口**:不要写 `Word版下载`、`点击下载Word版周报`、`https://.../file/...` 或指向 Word 文件的 Markdown 链接。Word 下载入口只出现在第十步推送摘要中。
 - ⚠️ **飞书 wiki 排版硬规则:不要依赖单换行。** 飞书文档会把普通 Markdown 单换行合并,导致"推荐等级/所属行业/所在地区/产业链位置/推荐方向"等字段黏在一行。
 - ⚠️ **企业元数据必须用列表格式**(`- 推荐等级:高`),不要用 `**推荐等级:** 高`(飞书 Markdown 会把连续行合并到一行,导致所有字段挤在一起),格式如下:
   ```markdown
@@ -757,14 +757,15 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**重要:每次生成都覆盖当前同名文件(新能源行业周报-YYYYMMDD),不要有重复日期的文档。**
+**重要:每次生成都覆盖当前同名文件和同名 wiki 文档(新能源行业周报-YYYYMMDD),不要有重复日期的文档,不得生成 `v2`、`v3`、`副本`、`copy` 等版本。**
 
-**Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** <下载链接>`,推送摘要中的「周报全文(Word)」也必须使用该下载链接。
+**Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;该链接只写入第十步推送摘要中的「周报全文(Word)」以及必要的本地摘要文件,不得写入 wiki 正文。
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
 - 必须使用**机器人身份**(`--as bot`)创建,创建者显示为机器人
 - **⚠️ `--as bot` 默认使用 lark-cli 配置的默认应用(通常是 ai_bot),不是当前 agent 自己的 bot。必须使用 `--profile $BOT_PROFILE --as bot`**
+- 新建 wiki 节点名称必须是 `新能源行业周报-YYYYMMDD`,并且与 wiki Markdown 首行文档标题 `# 新能源行业周报-YYYYMMDD` 完全一致;同名即视为同一期,必须覆盖更新,不得创建 `新能源行业周报-YYYYMMDD-v2`、`新能源行业周报-YYYYMMDD-v3` 或任何变体节点。
 
 **步骤:**
 
@@ -773,6 +774,7 @@ fi
    lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE
    ```
    从返回结果中搜索 title 为 `新能源行业周报-YYYYMMDD` 的节点,提取 `obj_token` 和 `node_token`。
+   ⚠️ **同名即同一期**:只要 title 等于 `新能源行业周报-YYYYMMDD`,就必须覆盖该节点对应文档内容;不要因为内容已存在、上传过 Word 或写入失败重试而创建带版本号的新节点。
    ⚠️ **必须搜索所有节点**(不限 `parent_node_token`),否则第一次创建时可能被放在「首页」下,第二次搜不到就重复创建了!
    ⚠️ **如果找到多个同名文档**,选 `obj_edit_time` 最新的那个,用 `docs +update` 覆盖;其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
@@ -922,7 +924,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-NEresearcher/reports/sum
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用,且不用 OR 语法(Brave 不支持),改用空格分隔关键词。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能。
-12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;将该链接写在 wiki 正文开头和推送摘要中。
+12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;该链接保留在第十步推送摘要中,不得写入 wiki 正文。
 13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-NEresearcher/reports/ne-weekly/`,文件名格式 `新能源行业周报-YYYYMMDD.docx`(与 wiki 节点名一致);生成前检查同名文件已存在则直接覆盖;生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
 14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 15. **反复出现的大企业排除**:以下企业在历史周报中反复出现、已形成固定印象,**不得再作为重点企业推荐写入周报或商机表**,除非出现全新的重大信号(跨省并购、重大资产重组、实控人变更、百亿级新产线落地等):`南都电源`(含浙江南都电源动力股份有限公司/南都电源科技股份有限公司等关联主体)、`容百科技`(含宁波容百新能源科技股份有限公司/容百科技股份有限公司等关联主体)、`正泰新能`(含正泰集团/正泰新能源/正泰电器相关主体)。执行时先对候选企业做排除过滤。排除名单可在 `config.json` 的 `excluded_companies` 字段中增减。
@@ -942,7 +944,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-NEresearcher/reports/sum
 5. **iFinD 被跳过或调用签名错误**:未先做环境探测就跳过,或把 `search_notice` 误当成 server_type。→ 必须先探测再执行;Node 调用签名固定为 `call('news','search_notice', params)` / `call('news','search_trending_news', params)`。
 6. **Python urllib SSL 证书验证失败**:HTTPS_PROXY 代理导致 `self-signed certificate in certificate chain`。→ 全部改用 lark-cli。
 7. **lark-cli 上传文件要求相对路径**:绝对路径直接报错。→ 先 `cd` 到目录再用 `./文件名`。
-8. **wiki 文档标题被内容覆盖**:`docs +update --api-version v2 --command overwrite` 会把 markdown 第一个 `#` 标题覆盖为文档标题。→ wiki 内容 markdown 首行**必须**是 `# ne-weekly-YYYYMMDD`,和 wiki 节点名一致。
+8. **wiki 文档标题被内容覆盖**:`docs +update --api-version v2 --command overwrite` 会把 markdown 第一个 `#` 标题覆盖为文档标题。→ wiki 内容 markdown 首行**必须**是 `# 新能源行业周报-YYYYMMDD`,和 wiki 节点名一致。
 9. **lark-cli 子命令语法不统一**:每个子命令 flag 风格不一致,需反复 `--help`。→ 在 skill 中预定义完整命令。
 10. **Word 下载链接格式**:`https://<租户域名>.feishu.cn/file/<file_token>`,上传文件后拼接。
 11. **未并行执行搜索**:skill 说"并行执行"但实际串行。→ searxng 支持并行,Brave 需串行。

@@ -122,6 +122,12 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### Skill Updates
+
+When the user explicitly asks to change/update a skill, apply it in the same turn. Use Skill Workshop for audit trail, validation, and rollback, but do not stop at a pending proposal unless the user specifically asks to review a proposal first.
+
+For existing large skills, never apply an abbreviated proposal as if it were the full skill body. Preserve the original skill content, make targeted changes only, and verify after applying that file size, frontmatter, major workflow sections, and requested rule changes are all intact. If a Skill Workshop apply corrupts a skill, restore from its rollback record immediately before making the narrow fix.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**

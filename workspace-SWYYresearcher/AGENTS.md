@@ -122,6 +122,12 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### Skill Workshop
+
+- Skill Workshop 只做记录/留痕，不要卡住实际执行流程。
+- 当 Joe 明确要求修改已有 skill、工作流、规则或文档时，直接修改 live 文件让变更生效；不要把事情停在 pending proposal，也不要要求 Joe 处理弹框后才继续。
+- 如果系统或工具链要求使用 Skill Workshop，就把它当作审计记录：先完成 live 修改，再做简短记录；不得让 proposal 阻止写入。
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
