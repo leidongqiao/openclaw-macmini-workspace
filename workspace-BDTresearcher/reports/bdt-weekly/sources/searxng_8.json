@@ -1,45 +1,18 @@
 {
-  "source_id": 8,
-  "source_name": "SearXNG 8",
+  "source_id": "8",
+  "source_name": "SearXNG",
   "url_or_query": "功率半导体 OR 碳化硅 OR 氮化镓 OR 车规芯片",
-  "fetched_at": "2026-05-28T19:42:02.388637+08:00",
+  "fetched_at": "2026-07-03T00:16:37.637803+00:00",
   "ok": true,
-  "status_or_error": "ok",
+  "status_or_error": "exit_0",
   "content_or_results": {
     "query": "功率半导体 OR 碳化硅 OR 氮化镓 OR 车规芯片",
     "number_of_results": 0,
     "results": [
       {
-        "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-introduces-new-3-3-kv-sic-power-modules-in-two-industry-standard-footprints-to-address-the-surging-demand-for-energy/zh-cn/",
-        "title": "Wolfspeed 新推出3.3 kV 碳化硅功率模块系列，采用两种行业标准封装",
-        "content": "7 days ago · 这两款3.3 kV 模块系列，使得设计工程师们能够减少功率级数，并转向用于2 kV 及以上直流母线架构的两电平拓扑— 同时提供带基板和不带基板的碳化硅(SiC) 功率模块供选择。 大 ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.wolfspeed.com",
-          "/company/news-events/news/wolfspeed-introduces-new-3-3-kv-sic-power-modules-in-two-industry-standard-footprints-to-address-the-surging-demand-for-energy/zh-cn/",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          1
-        ],
-        "score": 1.0,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "第三代半导体（碳化硅、氮化镓）产业链赛道报告-智库界（国声网）",
-        "content": "国声智库人工智能研究中心 经济窗编辑部 联合出品 摘要 本报告基于截至 2026 年 5 月的行业数据与政策动态，系统评估了全球及中国第三代半导体（碳化硅 SiC、氮化镓 GaN）产业链的发展现状与未来走向。",
+        "title": "产能紧缺+量价齐升!2026功率器件&MCU&碳化硅完整产业链梳理",
+        "content": "功率器件、MCU、碳化硅产业链核心标的梳理 2026年功率半导体、MCU、宽禁带器件进入持续性涨价周期。需求端AI服务器、 新能源车 、储能、工业自动化同步爆发，车规高压器件、高性能工控MCU缺口显著；供给端8英寸成熟晶圆产能持续紧缺，上游衬底、特种材料、封测成本抬升，海外大厂连续两...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -61,174 +34,93 @@
         ],
         "score": 1.0,
         "category": "general",
-        "url": "https://www.zhikujie.cn/2026/05/25/12163.html",
-        "engine": "duckduckgo",
-        "parsed_url": [
-          "https",
-          "www.zhikujie.cn",
-          "/2026/05/25/12163.html",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "https://www.hitachienergy.com/products-and-solutions/semiconductors",
-        "title": "Semiconductors - Hitachi Energy",
-        "content": "4 days ago · We offer one of the most diverse power semiconductor portfolios, including GTOs, IGBTs, IGCTs, Thyristors, and Diodes in the power range of 150 A up to 13500 A ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.hitachienergy.com",
-          "/products-and-solutions/semiconductors",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          2
-        ],
-        "score": 0.5,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "聚焦电动汽车与数据中心：SiC 与 GaN 的差异化发力之道 - 21ic电子网",
-        "content": "在全球 \"双碳\" 目标推进与数字经济爆发的双重驱动下，电动汽车 (EV)与 AI 数据中心已成为功率 半导体 的两大核心增长极。作为第三代半导体的核心材料， 碳化硅 (SiC)与 氮化镓 (GaN)凭借宽禁带、低损耗、高频化的特性，正逐步替代传统硅基器件，重塑功率电子产业链。面对两大主力市场，SiC 与 ...",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
-        "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          2
-        ],
-        "score": 0.5,
-        "category": "general",
-        "url": "https://www.21ic.com/a/1004021.html",
-        "engine": "duckduckgo",
-        "parsed_url": [
-          "https",
-          "www.21ic.com",
-          "/a/1004021.html",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "http://www2.flagstar.com/atumbleb/5HN2178/210526/packaging_of-high__power-semiconductor__lasers-micro__and-opto-electronic_materials_structures-and__systems.pdf",
-        "title": "[PDF] Packaging Of High Power Semiconductor Lasers Micro And ...",
-        "content": "7 days ago · Power Semiconductor Lasers Micro And Opto Electronic Materials Structures And Systems is its attention to user experience. An invitation to think, to feel ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "http",
-          "www2.flagstar.com",
-          "/atumbleb/5HN2178/210526/packaging_of-high__power-semiconductor__lasers-micro__and-opto-electronic_materials_structures-and__systems.pdf",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          3
-        ],
-        "score": 0.3333333333333333,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "碳化硅与氮化镓产业链全景及潜力分析：高PE回落空间决定成长弹性 第三代半导体碳化硅（SiC）与氮化镓（GaN）凭借宽禁带特性，在新能源汽车、光 ...",
-        "content": "第三代半导体碳化硅（SiC）与氮化镓（GaN）凭借宽禁带特性，在新能源汽车、光伏、5G、AI电源等领域快速渗透，成为半导体国产替代核心赛道。 当前产业链已形成上游材料设备、中游器件制造、下游应用封装的完整布局，A股及港股相关上市公司超20家。",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
-        "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          3
-        ],
-        "score": 0.3333333333333333,
-        "category": "general",
-        "url": "https://xueqiu.com/2479170034/390777631",
+        "url": "https://xueqiu.com/2423921688/397668615",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
           "xueqiu.com",
-          "/2479170034/390777631",
+          "/2423921688/397668615",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026",
-        "title": "UK SIC: 2026 - Office for National Statistics",
-        "content": "6 days ago · The Standard Industrial Classification (SIC) provides a framework for the collection, tabulation, presentation and analysis of data, and its use promotes ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "title": "瑞银功率半导体：一场被低估的供给侧革命 前言：全球都在涨，中国还在\"装睡\"瑞银这份研报的核心判断就一句话： 功率半导体的供给紧张不是周期性的 ...",
+        "content": "瑞银研报封面：中国功率半导体——长期供给收紧，碳化硅渗透率提升 更关键的是， 碳化硅（SiC）终于从\"贵得用不起\"变成了\"便宜得不得不用\"。 特斯拉 Model 3在2018年用上SiC时，车价43万；现在 零跑 的Lafa5，车价不到10万，照样配SiC。 价格降了77%，性能反而更好。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          2
+        ],
+        "score": 0.5,
+        "category": "general",
+        "url": "https://xueqiu.com/6247504423/392774780",
+        "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.ons.gov.uk",
-          "/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026",
+          "xueqiu.com",
+          "/6247504423/392774780",
           "",
           "",
           ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          4
-        ],
-        "score": 0.25,
-        "category": "general",
-        "publishedDate": null
+        ]
       },
       {
         "template": "default.html",
-        "title": "2026北京车展专题｜电控产品及技术全景解读：集成化、高压化、碳化硅成主流 - 技术栈",
-        "content": "2026北京车展专题｜电控产品及技术全景解读：集成化、高压化、碳化硅成主流 2026北京车展已落幕， 电控 作为新能源汽车的\"大脑与心脏\"，成为本届展会技术竞争的核心战场。从动力域控制器、多合一电驱、三电平拓扑、嵌入式封装到SiC功率模块，头部供应商集中亮出新一代方案， 高集成、高效率 ...",
+        "title": "瑞银：中国功率半导体可能正站在新一轮超级周期起点",
+        "content": "过去很多人认为碳化硅只会出现在高端车型，但瑞银发现情况已经变了，2026年已经出现售价低于10万元人民币的车型开始使用SiC模块，这意味着 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          3
+        ],
+        "score": 0.3333333333333333,
+        "category": "general",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-06-08/doc-iniarzfw5672103.shtml",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "finance.sina.com.cn",
+          "/stock/hkstock/marketalerts/2026-06-08/doc-iniarzfw5672103.shtml",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "AI算力引爆功率半导体，SiC与GaN迎来黄金窗口 - OFweek电子工程网",
+        "content": "?SiC（碳化硅）和GaN（氮化镓）无疑是这轮黄金周期中的\"主角\"。 文｜开蓉蓉 2026年盛夏，功率半导体行业迎来了一场多年未见的涨价潮。据21世纪 ...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -250,48 +142,21 @@
         ],
         "score": 0.25,
         "category": "general",
-        "url": "https://jishuzhan.net/article/2058408714689363969",
+        "url": "https://ee.ofweek.com/2026-07/ART-8420-2800-30692774.html",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "jishuzhan.net",
-          "/article/2058408714689363969",
+          "ee.ofweek.com",
+          "/2026-07/ART-8420-2800-30692774.html",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://community.infineon.com/t5/GaN%E6%B0%AE%E5%8C%96%E9%95%93/bd-p/cnhemt",
-        "title": "GaN氮化镓|半导体功率器件技术论坛",
-        "content": "3 days ago · GaN氮化镓. 英飞凌的CoolGaN™是一种高效的GaN（氮化镓）晶体管技术，适用于高达600V的电压范围内的功率转换。其引领潮流的质量确保了最高的标准，是市场上所有GaN HEMT中最可靠 ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "community.infineon.com",
-          "/t5/GaN%E6%B0%AE%E5%8C%96%E9%95%93/bd-p/cnhemt",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          5
-        ],
-        "score": 0.2,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "2026年SiC功率器件行业市场现状分析与发展趋势展望--手机中研网",
-        "content": "机电zengyan2026/5/24 SiC功率器件是指以碳化硅 (Silicon Carbide，SiC)为衬底材料制造的功率半导体器件，主要包括SiC MOSFET、SiC SBD (肖特基二极管)和SiC JBS等产品。相较于传统硅基 (Si)功率器件，SiC器件凭借更宽的禁带宽度、更高的热导率、更高的击穿电场强度和更低的导通损耗，在高温、高压、高频场景下 ...",
+        "title": "功率半导体市场规模、份额及 2035 年市场展望",
+        "content": "新产品开发 功率半导体市场的创新以碳化硅、氮化镓、高效模块和先进封装技术为中心。 碳化硅器件约占新推出的先进功率半导体产品的31%。 与传统硅解决方案相比，这些器件将开关效率提高了近 20%，并将能量损耗降低了约 15%。",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -313,12 +178,192 @@
         ],
         "score": 0.2,
         "category": "general",
-        "url": "https://m.chinairn.com/news/20260524/090209165.shtml",
+        "url": "https://www.businessresearchinsights.com/zh/market-reports/power-semiconductor-market-118460",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "m.chinairn.com",
-          "/news/20260524/090209165.shtml",
+          "www.businessresearchinsights.com",
+          "/zh/market-reports/power-semiconductor-market-118460",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "Wolfspeed 发布新一代技术，推出业界最低导通电阻的碳化硅 MOSFET",
+        "content": "Wolfspeed 第五代 (Gen 5) 碳化硅 (SiC) MOSFET 技术在比导通电阻方面实现重大突破，相较目前市面同类 1200 V 竞品方案，效率最高可提升27% 该项技术彰显 Wolfspeed 深耕碳化硅 (SiC) 功率器件、赋能实现真正耐久系统的坚定承诺 依托 Wolfspeed 已完成认证、可爬坡量产且高度自动化的 200 mm 制造平台，为汽车及 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          6
+        ],
+        "score": 0.16666666666666666,
+        "category": "general",
+        "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-gen-5-silicon-carbide-technology/zh-cn/",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.wolfspeed.com",
+          "/company/news-events/news/wolfspeed-announces-gen-5-silicon-carbide-technology/zh-cn/",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "功率半导体，最有潜力的两大方向|sic|氮化镓|igbt|mosfet_网易订阅",
+        "content": "韩国的动作最为激进。 前不久，韩国政府正式启动\"超级创新经济项目\"，计划投入5000亿韩元（约合22.3亿元人民币）国家资金，专项攻关以碳化硅（SiC）和氮化镓（GaN）为代表的下一代功率半导体技术。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          7
+        ],
+        "score": 0.14285714285714285,
+        "category": "general",
+        "url": "https://www.163.com/dy/article/L0N0BBQV05568W0A.html",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.163.com",
+          "/dy/article/L0N0BBQV05568W0A.html",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "英飞凌推出首款可在205°C运行的碳化硅功率模块，为电动汽车逆变器树立新标杆|电动|英飞凌|电动汽车_新浪科技_新浪网",
+        "content": "1300 V HybridPACK™ Drive 碳化硅 模块的工作温度可达 205°C 英飞凌 科技高级副总裁、汽车高压业务总经理 Stefan Obersriebnig 表示：\"我们致力于通过在高压 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          8
+        ],
+        "score": 0.125,
+        "category": "general",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-06-08/doc-iniasscq5471254.shtml",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "finance.sina.com.cn",
+          "/tech/roll/2026-06-08/doc-iniasscq5471254.shtml",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "碳化硅 (SiC) 半导体市场研究报告 2026-2035",
+        "content": "2026年全球碳化硅（sic）半导体市场价值为45.9亿美元，到2035年将稳步增长至157.3亿美元，2026年至2035年的复合年增长率为14.5%。 国际碳化硅（SiC）半导体市场目前正经历一个高速增长时期，其驱动力是对节能、高功率电力电子产品的需求不断增长。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          9
+        ],
+        "score": 0.1111111111111111,
+        "category": "general",
+        "url": "https://www.businessresearchinsights.com/zh/market-reports/silicon-carbide-sic-semiconductor-market-121041",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.businessresearchinsights.com",
+          "/zh/market-reports/silicon-carbide-sic-semiconductor-market-121041",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "氮化镓+碳化硅+磷化铟，核心公司梳理（附名单） 氮化镓 氮化镓属于第三代宽禁带半导体材料，耐压高、开关损耗小、高频性能优异，广泛应用于快充充电 ...",
+        "content": "散户研习社 (@sanhuyanxishe). 86 likes 59 replies. 氮化镓+碳化硅+磷化铟，核心公司梳理（附名单） 氮化镓 氮化镓属于第三代宽禁带半导体材料，耐压高、开关损耗小、高频性能优异，广泛应用于快充充电器、新能源车车载电源、AI服务器供电以及5G、卫星通信射频功放，是当下功率半导体与射频领域的核心 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          10
+        ],
+        "score": 0.1,
+        "category": "general",
+        "url": "https://x.com/sanhuyanxishe/status/2068554217254695157",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "x.com",
+          "/sanhuyanxishe/status/2068554217254695157",
           "",
           "",
           ""
@@ -332,7 +377,7 @@
     "unresponsive_engines": [
       [
         "brave",
-        "Suspended: too many requests"
+        "timeout"
       ],
       [
         "karmasearch",
@@ -343,6 +388,5 @@
         "Suspended: CAPTCHA"
       ]
     ]
-  },
-  "stderr": ""
+  }
 }

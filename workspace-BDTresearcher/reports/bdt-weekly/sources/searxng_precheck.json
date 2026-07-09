@@ -1,9 +1,7 @@
 {
-  "source_id": "precheck",
-  "source_name": "SearXNG JSON API预检",
-  "url_or_query": "http://localhost:8080/search?q=半导体&format=json&categories=general",
-  "fetched_at": "2026-05-29T06:06:06.713520+00:00",
   "ok": true,
-  "status_or_error": "HTTP 200 application/json",
-  "content_or_results": "本轮预检已确认JSON API可用。"
+  "status": 200,
+  "content_type": "application/json",
+  "sample": "{\"query\": \"\\u534a\\u5bfc\\u4f53\", \"number_of_results\": 0, \"results\": [{\"template\": \"default.html\", \"url\": \"https://zh.wikipedia.org/zh-hans/%E5%8D%8A%E5%AF%BC%E4%BD%93\", \"title\": \"\\u534a\\u5bfc\\u4f53 - \\u7ef4\\u57fa\\u767e\\u79d1\\uff0c\\u81ea\\u7531\\u7684\\u767e\\u79d1\\u5168\\u4e66\", \"content\": \"\\u534a\\u5bfc\\u4f53\\uff08\\u5fb7\\u8bed\\uff1aHalbleiter, \\u82f1\\u8bed\\uff1aSemiconductor, \\u6cd5\\u8bed\\uff1aSemi-conducteur\\uff09\\uff0c\\u662f\\u4e00\\u79cd\\u7535\\u5bfc\\u7387\\u5728\\u7edd\\u7f18\\u4f53\\u81f3\\u5bfc\\u4f53\\u4e",
+  "fetched_at": "2026-07-03T00:16:34.311532+00:00"
 }

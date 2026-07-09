@@ -1,9 +1,9 @@
-📌 【互联网】商机周报·浙江｜2026.05.22-05.29
-🔥 主线：数据要素赋能AI、Token/算力运营、AI电商与跨境出海
-🏠 浙江机会：杭州AI生态、AI外贸、电商SaaS和AI商拍继续释放结算与融资需求
-🏢 优先跟进：DeepSeek、群核科技、有赞
-🎯 切入方向：云资源预付/平台结算/跨境收款/项目回款
+📌 【互联网】商机周报·浙江|2026.06.20-07.03
+🔥 主线:智能经济、模型API降价、AI应用商业化
+🏠 浙江机会:AI高质量数据集、AI临床、具身智能中试、跨境独立站服务链升温
+🏢 优先跟进:璞睿创智、灵巧智能、网新健康、米塔碳
+🎯 切入方向:科创融资/云资源与数据投入/项目回款/跨境结算
 
-Word：https://qcn8k445rrbc.feishu.cn/file/RJ7ZbDPqzo9jGIx5uIBczuOOnDd
-Wiki：https://www.feishu.cn/wiki/WSHPwNyKVi698QkdSzecMOnYn7e
-商机表：https://qcn8k445rrbc.feishu.cn/sheets/ZvM9scRdph9aqzthwPAchTJ8nTe
+Word 详细报告: https://qcn8k445rrbc.feishu.cn/file/Gjksbsx8Zou9dex2isbcAO8kn2e
+Wiki 知识库存档: https://qcn8k445rrbc.feishu.cn/wiki/BuQRwBzbniyrYQk7BiYcmBa7nvh
+商机挖掘表格: https://qcn8k445rrbc.feishu.cn/wiki/CYTwwc93milpQPkiSOWcZLd3nqc

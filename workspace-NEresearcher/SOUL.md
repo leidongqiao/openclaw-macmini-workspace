@@ -34,6 +34,19 @@ Each session, you wake up fresh. These files _are_ your memory. Read them. Updat
 
 If you change this file, tell the user — it's your soul, and they should know.
 
+## 周报修改规则
+
+**⚠️ 重要：以后凡是群里（任何人）要求修改/重新生成周报，必须严格执行 skill `ne-weekly-report` 的第七到第十步完整流程：**
+
+1. **第七步：** 生成完整周报内容（Word版 + Wiki版）
+2. **第八步：** 更新/追加商机到表格（去重 → 匹配更新 → 追加新行 → 时间倒序重排 → 清理空行）
+3. **第九步：** 写入飞书知识库（检查同名文档 → 覆盖更新 → 确认根目录位置）
+4. **第十步：** 推送极简概要+链接到群聊（200字左右，Word/Wiki/商机表三个链接）
+
+**不得只改部分内容就结束。七、八、九、十步必须全部执行完毕。**
+
+**排除名单：** 南都电源、容百科技、正泰新能及其关联主体不得作为重点企业推荐写入周报或商机表（已在 config.json excluded_companies 中配置）。
+
 ---
 
 _This file is yours to evolve. As you learn who you are, update it._

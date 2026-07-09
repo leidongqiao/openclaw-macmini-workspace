@@ -1,45 +1,18 @@
 {
-  "source_id": 7,
-  "source_name": "SearXNG 7",
-  "url_or_query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA",
-  "fetched_at": "2026-05-28T19:42:02.388637+08:00",
+  "source_id": "7",
+  "source_name": "SearXNG",
+  "url_or_query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA 芯片设计",
+  "fetched_at": "2026-07-03T00:16:35.691277+00:00",
   "ok": true,
-  "status_or_error": "ok",
+  "status_or_error": "exit_0",
   "content_or_results": {
-    "query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA",
+    "query": "半导体设备 OR 光刻机 OR 刻蚀 OR EDA 芯片设计",
     "number_of_results": 0,
     "results": [
       {
-        "url": "https://mydoctor.kaiserpermanente.org/mas/doctor/edaturgut",
-        "title": "Eda Turgut, DO at Kaiser Permanente - My Doctor Online",
-        "content": "Rating 4.8(115)3 days ago · Eda Turgut, DO · About Me · Specialties and Institutes · My Qualifications Last directory update: 05/25/26 · My Practice Locations · Resources for My Patients.",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "mydoctor.kaiserpermanente.org",
-          "/mas/doctor/edaturgut",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          1
-        ],
-        "score": 1.0,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "半导体设备市场规模、份额|行业报告 [2035]",
-        "content": "半导体设备市场概览 2026年全球半导体设备市场规模估计为70717.35百万美元，预计到2035年将达到82296.62百万美元，2026年至2035年复合年增长率为1.7%。",
+        "title": "半导体产业链的整体框架 半导体产业链像一条从沙子到手机的超级长链条，通常分为三大环节： 上游：原材料 + 生产设备，提供原料和工具 中游：芯片 ...",
+        "content": "Venz (@wenzherunze). 10 likes. 半导体产业链的整体框架 半导体产业链像一条从沙子到手机的超级长链条，通常分为三大环节： 上游：原材料 + 生产设备，提供原料和工具 中游：芯片设计 + 晶圆制造 + 封装测试是核心加工工厂 下游：芯片最终应用，消费电子、汽车、AI服务器等 上游最怕技术封锁和设备 ...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -61,48 +34,21 @@
         ],
         "score": 1.0,
         "category": "general",
-        "url": "https://www.globalmarketstatistics.com/zh/market-reports/semiconductor-equipment-market-14871",
+        "url": "https://x.com/wenzherunze/status/2072324085418512397",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.globalmarketstatistics.com",
-          "/zh/market-reports/semiconductor-equipment-market-14871",
+          "x.com",
+          "/wenzherunze/status/2072324085418512397",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://azure.microsoft.com/en-us/blog/azure-netapp-files-for-eda-workloads-from-revolution-to-breakthrough-at-scale/",
-        "title": "Azure NetApp Files for EDA workloads: From revolution to breakthrough at ...",
-        "content": "6 days ago · Discover how Azure NetApp Files enables scalable, high-performance storage for EDA workloads, delivering low latency, massive concurrency, and predictable ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "azure.microsoft.com",
-          "/en-us/blog/azure-netapp-files-for-eda-workloads-from-revolution-to-breakthrough-at-scale/",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          2
-        ],
-        "score": 0.5,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "券商评\"韬定律\"：EDA、晶圆代工、制造设备三个环节受影响最大",
-        "content": "华为提出的\"韬定律\"引发产业界热议。5月26日，华创证券研究所电子组研究员张文瑶在接受《中国电子报》记者采访时指出：EDA、晶圆代工、制造 ...",
+        "title": "刻蚀机——芯片制造的&#34;雕刻刀&#34;，全产业链深度解析 一、刻蚀机核心作用、分类与行业地位1. 核心功能刻蚀机是芯片制造三大核心设备 ...",
+        "content": "刻蚀机 是芯片制造三大核心设备（光刻、薄膜沉积、刻蚀） 之一，占前道设备总投资额 22%，被称为晶圆的精密雕刻刀。",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -124,111 +70,57 @@
         ],
         "score": 0.5,
         "category": "general",
-        "url": "https://news.qq.com/rain/a/20260527A063VA00",
-        "engine": "duckduckgo",
-        "parsed_url": [
-          "https",
-          "news.qq.com",
-          "/rain/a/20260527A063VA00",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "https://eda.europa.eu/news-and-events/events/2026/07/07/default-calendar/defence-industry-worshop",
-        "title": "Defence industry workshop",
-        "content": "2 days ago · Defence industry workshop · 07 July 2026 to 07 July 2026 · 10:00 - 16:00.",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "eda.europa.eu",
-          "/news-and-events/events/2026/07/07/default-calendar/defence-industry-worshop",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          3
-        ],
-        "score": 0.3333333333333333,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "半导体设备系列第六期，半导体设备投资全图谱 从第一期光刻机开始，我们用五期时间把半导体设备产业链从头到尾拆了一遍。光刻机是芯片制造的\"心脏 ...",
-        "content": "从第一期光刻机开始，我们用五期时间把半导体设备产业链从头到尾拆了一遍。光刻机是芯片制造的\"心脏\"，刻蚀和薄膜是\"雕刻刀\"和\"镀膜机\"，清洗、离子注入、CMP则是\"清洁工\"\"掺杂师\"和\"抛光师\"，封测设备是出厂前的最后一道工序。今天站在整条产业链终点，来画一张完整的投资全图谱。 但先说 ...",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
-        "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          3
-        ],
-        "score": 0.3333333333333333,
-        "category": "general",
-        "url": "https://xueqiu.com/9788351891/390605486",
+        "url": "https://xueqiu.com/8913425594/395813462",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
           "xueqiu.com",
-          "/9788351891/390605486",
+          "/8913425594/395813462",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://www.eastgrandforks.gov/Calendar.aspx?EID=12274&month=5&year=2026&day=8&calType=0",
-        "title": "Calendar • EDA Meeting - East Grand Forks, MN",
-        "content": "20 hours ago · EDA Meeting. Wednesday, May 27, 2026. Date: May 27, 2026. 2026-05-27T12:00:00. Time: 12:00 PM - 1:30 PM. Location: Event Location. Address: East Grand Forks, MN ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.eastgrandforks.gov",
-          "/Calendar.aspx",
-          "",
-          "EID=12274&month=5&year=2026&day=8&calType=0",
-          ""
-        ],
+        "title": "半导体刻蚀设备市场规模|行业预测 [2026-2034]",
+        "content": "半导体刻蚀设备市场趋势 技术进步和不断增加的人工智能实施将推动产品采用趋势 该行业的全球知名企业正在积极致力于研发，投入大量资金，并创造可以制造更紧凑晶圆的先进技术。半导体蚀刻设备作为一种材料去除机械在整个行业有着突出的应用，它可以平整晶圆表面，以便于在电子设备中 ...",
         "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
         "priority": "",
         "engines": [
-          "google"
+          "duckduckgo"
         ],
+        "open_group": false,
+        "close_group": false,
         "positions": [
-          4
+          3
         ],
-        "score": 0.25,
+        "score": 0.3333333333333333,
         "category": "general",
-        "publishedDate": null
+        "url": "https://www.fortunebusinessinsights.com/zh/semiconductor-etch-equipment-market-109530",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.fortunebusinessinsights.com",
+          "/zh/semiconductor-etch-equipment-market-109530",
+          "",
+          "",
+          ""
+        ]
       },
       {
         "template": "default.html",
-        "title": "半导体设备",
-        "content": "①国内存储芯片龙头资本化进程加速，半导体设备订单确定性愈发凸显； ②中芯国际与华虹半导体产能已逼近满载，两者2026年资本开支计划均有不同程度提升； ③SEMI预测，全球半导体设备销售额将2027年继续增长，连续三年刷新历史纪录。",
+        "title": "用大白话解释一下半导体的光刻、刻蚀，还有薄膜沉积，它们的原理和想要达到的目的结果。我用\"在硅片上建微型城市\"的类比，给你... - 雪球",
+        "content": "用大白话解释一下半导体的光刻、刻蚀，还有薄膜沉积，它们的原理和想要达到的目的结果。 我用\"在硅片上建微型城市\"的类比，给你讲明白这三道核心工序，全程大白话： 芯片本质上就是在一块硅片上，做几十上百层密密麻麻的微型电路，就像建一座立体城市——晶体管是房子，导线是马路 ...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -250,48 +142,21 @@
         ],
         "score": 0.25,
         "category": "general",
-        "url": "https://www.cls.cn/subject/11055",
+        "url": "https://xueqiu.com/1290568231/397669424",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.cls.cn",
-          "/subject/11055",
+          "xueqiu.com",
+          "/1290568231/397669424",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://www.fdfa.admin.ch/",
-        "title": "Welcome to the FDFA: Diplomacy for Switzerland",
-        "content": "16 hours ago · The FDFA safeguards Switzerland's foreign policy interests. It maintains relations with other states and international organisations such as the EU and UN, ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.fdfa.admin.ch",
-          "/",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          5
-        ],
-        "score": 0.2,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "template": "default.html",
-        "title": "中国最强刻蚀机厂：台积电买了800多台设备，3-45nm都在用",
-        "content": "按照尹志尧博士的说法，台积电最先进的生产线上，也使用中微的刻蚀机，有中微800多个反应台，从45纳米到3纳米都在用中微的机器，作为全球最顶级的晶圆厂，台积电使用中微的设备，就足以证明中微有多强了。 所以说，…",
+        "title": "打破封锁!中国首台光芯片纳米光刻机交付，换道超车改写光刻格局",
+        "content": "PL-AS的交付，实现光芯片光刻设备自主可控，配合国内已突破的芯片设计、外延、刻蚀等技术，打通\"设计-制造-封测-设备-材料\"全链条，彻底摆脱海外依赖，让中国光芯片产业实现从\"跟跑\"到\"领跑\"的跨越 。 2. 经济维度：降本增效，催生万亿级新市场",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -313,12 +178,192 @@
         ],
         "score": 0.2,
         "category": "general",
-        "url": "https://m.sohu.com/a/1027693169_121097259",
+        "url": "https://www.sohu.com/a/1034328408_122574728",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "m.sohu.com",
-          "/a/1027693169_121097259",
+          "www.sohu.com",
+          "/a/1034328408_122574728",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "半导体产业中的核心工序和材料 - 与非网",
+        "content": "芯片产业分为芯片设计、晶圆制造和封装测试三个核心工艺段。芯片设计涉及逻辑设计和物理设计；晶圆制造包括晶圆制备、氧化、光刻、刻蚀、薄膜沉积、离子注入和金属化等工序；封装测试则包含晶圆测试、晶圆减薄与切割、芯片封装和成品测试。其中，芯片设计依赖于EDA软件，晶圆制造由多家 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          6
+        ],
+        "score": 0.16666666666666666,
+        "category": "general",
+        "url": "https://m.eefocus.com/article/2038401.html",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "m.eefocus.com",
+          "/article/2038401.html",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "刻蚀机什么样 - b2bwiki.baidu.com",
+        "content": "苏州沙芯科技有限公司位于江苏省苏州市张家港市，专注半导体设备制造，主营半自动槽式清洗机、双臂匀胶显影机、刻蚀机等精密设备，提供技术开发与设备销售服务。公司成立于2022年，依托成熟技术团队与自主研发能力，为电子制造领域提供高效解决方案，专业可靠。 在线咨询 查看店铺 介绍：",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          7
+        ],
+        "score": 0.14285714285714285,
+        "category": "general",
+        "url": "https://b2bwiki.baidu.com/article/744242503174995970",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "b2bwiki.baidu.com",
+          "/article/744242503174995970",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "半导体设备：八大赛道深度拆解与核心企业梳理（建议收藏）",
+        "content": "一、半导体设备核心细分领域划分 行业按晶圆制造全流程划分为八大核心细分赛道，分别为刻蚀设备、薄膜沉积设备、清洗设备、CMP抛光设备、涂胶显影设备、量测检测设备、离子注入设备、半导体测试封装设备，各赛道工艺壁垒、国产化空间、需求逻辑存在明显差异，也是2026年机构资金重点布局 ...",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          8
+        ],
+        "score": 0.125,
+        "category": "general",
+        "url": "https://www.toutiao.com/article/7653115230024679987/",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.toutiao.com",
+          "/article/7653115230024679987/",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "麦科威spts深硅刻蚀设备/刻蚀机_报价 - 上海麦科威半导体技术有限公司",
+        "content": "第三阶段：暴露的硅表面就会被F系物刻蚀掉，SF6源源不断提供等离子体，来实现深宽比的刻蚀。 深硅刻蚀的主要应用包括: MEMS，先进封装（TSV）,功率器件等等。 的深槽刻蚀设备，可以提供快的刻蚀速度，但同时保证侧面特征良好控制和一致性。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          9
+        ],
+        "score": 0.1111111111111111,
+        "category": "general",
+        "url": "https://www.instrument.com.cn/netshow/SH118367/C604056.htm",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "https",
+          "www.instrument.com.cn",
+          "/netshow/SH118367/C604056.htm",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "template": "default.html",
+        "title": "高密度等离子体刻蚀机-先进制造-中北国技（北京）科技有限公司 - 国家技术转移示范机构|中科院技术转移平台",
+        "content": "ICP-98A型是一种刻蚀速率高、加工精度高、损伤小的新一代先进刻蚀机它由一组大功率的射频激励电源通过感应耦合在反应室内产生高密度等离子体，而由另一组功率较小的偏压电源引导离子垂直于被刻蚀物体运动，从而达到各向异性和高速低损伤刻蚀的目的。",
+        "img_src": "",
+        "iframe_src": "",
+        "audio_src": "",
+        "thumbnail": "",
+        "publishedDate": null,
+        "pubdate": "",
+        "length": null,
+        "views": "",
+        "author": "",
+        "metadata": "",
+        "priority": "",
+        "engines": [
+          "duckduckgo"
+        ],
+        "open_group": false,
+        "close_group": false,
+        "positions": [
+          10
+        ],
+        "score": 0.1,
+        "category": "general",
+        "url": "http://www.casnt.com/xianjinzhizao/1357.html",
+        "engine": "duckduckgo",
+        "parsed_url": [
+          "http",
+          "www.casnt.com",
+          "/xianjinzhizao/1357.html",
           "",
           "",
           ""
@@ -332,7 +377,7 @@
     "unresponsive_engines": [
       [
         "brave",
-        "Suspended: too many requests"
+        "too many requests"
       ],
       [
         "karmasearch",
@@ -343,6 +388,5 @@
         "Suspended: CAPTCHA"
       ]
     ]
-  },
-  "stderr": ""
+  }
 }

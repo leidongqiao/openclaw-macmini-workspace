@@ -1,9 +1,9 @@
 {
-  "source_id": 3,
+  "source_id": "3",
   "source_name": "新华网科技",
   "url_or_query": "https://www.xinhuanet.com/tech/",
-  "fetched_at": "2026-05-29T06:06:06.713140+00:00",
-  "ok": true,
-  "status_or_error": "ok",
-  "content_or_results": "新华网科技本轮出现两部门布局人工智能计量能力建设、AI算力驱动国产光通信产品出海热销、1-4月全国规模以上工业企业利润增长等宏观与科技产业信息。"
+  "fetched_at": "2026-07-03T00:16:30.738905+00:00",
+  "ok": false,
+  "status_or_error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)'))",
+  "content_or_results": ""
 }

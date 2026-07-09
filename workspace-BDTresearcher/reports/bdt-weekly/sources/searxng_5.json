@@ -1,25 +1,26 @@
 {
-  "source_id": 5,
-  "source_name": "SearXNG 5",
+  "source_id": "5",
+  "source_name": "SearXNG",
   "url_or_query": "半导体 OR 芯片 OR 集成电路",
-  "fetched_at": "2026-05-28T19:42:02.388637+08:00",
+  "fetched_at": "2026-07-03T00:16:36.427950+00:00",
   "ok": true,
-  "status_or_error": "ok",
+  "status_or_error": "exit_0",
   "content_or_results": {
     "query": "半导体 OR 芯片 OR 集成电路",
     "number_of_results": 0,
     "results": [
       {
-        "url": "https://www.news.cn/tech/20260526/75603364bbae42bab67933d63d63e373/c.html",
-        "title": "华为推出“韬定律” 改写全球半导体规则 - 新华网",
-        "content": "2 days ago · 5月25日，华为正式发表“韬（τ）定律”，为半导体与电子系统演进提供全新指导原则。 ... 集成电路在单位面积内能够容纳更多的计算单元，从而实现芯片性能指数级攀升与单位计算成本 ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://zh.wikipedia.org/zh-sg/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF",
+        "title": "集成电路 - 维基百科，自由的百科全书",
+        "content": "前述将电路制造在半导体... integrated circuit）是由独立半导体装置和被动组件集成到衬底或线路板所构成的小型化电路。 · 集成电路的别称非常多，在中文和英文里可直接称它为“芯片（chip，中国大陆作芯片，港...",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "www.news.cn",
-          "/tech/20260526/75603364bbae42bab67933d63d63e373/c.html",
+          "zh.wikipedia.org",
+          "/zh-sg/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF",
           "",
           "",
           ""
@@ -27,64 +28,27 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google",
-          "duckduckgo"
+          "brave"
         ],
         "positions": [
           1,
-          4
+          21
         ],
-        "score": 2.5,
-        "category": "general",
-        "publishedDate": null
+        "score": 2.0952380952380953,
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "全球半导体观察-芯片、内存、闪存、Dram等半导体产业资讯与市场动态",
-        "content": "全球半导体观察丨DRAMeXchange是国际性半导体产业调研机构，提供芯片、内存、闪存、DRAM等半导体行业资讯与市场价格行情。",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
+        "url": "https://www.21jingji.com/article/20260620/herald/7c929615032e5e22af2a541faa3564eb.html",
+        "title": "美股多家半导体设备龙头，今年股价翻倍 - 21经济网",
+        "content": "交银国际证券认为，为AI基础设施需求持续强劲对半导体设备的正面影响向更深更广的范围发展， 全球主要逻辑和存储集成电路产能未来一段时间扩产进度或快于之前预期。 其上调2026E/27E全球半导体设备市场规模到1680/2010亿美元，上调国内半导体设备市场规模到572/650亿美元。",
         "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          1
-        ],
-        "score": 1.0,
-        "category": "general",
-        "url": "https://www.dramx.com/",
-        "engine": "duckduckgo",
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "www.dramx.com",
-          "/",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "https://ic.seu.edu.cn/",
-        "title": "集成电路（IC）学院",
-        "content": "8 hours ago · 导航. 首页 · 学院概况 · 学院简介 · 现任领导 · 历史沿革 · 学院治理 · 行政电话及分工 · 师资力量 · 全职教师 · 客座、兼职教授.",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "ic.seu.edu.cn",
-          "/",
+          "www.21jingji.com",
+          "/article/20260620/herald/7c929615032e5e22af2a541faa3564eb.html",
           "",
           "",
           ""
@@ -92,125 +56,53 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           2
         ],
         "score": 0.5,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "专题：2025半导体行业研究报告：从ai芯片到封测突围的生死局|附40+份政策/技术/资本报告pdf、数据下载 - 拓端",
-        "content": "半导体行业是现代信息社会的基石，涉及集成电路、分立器件、传感器等多个领域。全球半导体市场规模在2024年达到6270亿美元，预计2025年将突破6970亿美元。AI芯片、汽车电子和数据中心是当前增长最快的细分领域。中国在封测领域表现突出，市场规模十年增长138%，2025年将达到3551.9亿元。",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
+        "url": "https://www.caiwennews.com/article/1473617.shtml",
+        "title": "粤芯半导体、燧原科技同日上会，晶圆制造与AI芯片双线出击 - 财闻网",
+        "content": "官网显示，粤芯半导体是广东省本土自主创新的“国家高新技术企业”，也是粤港澳大湾区全面进入量产的12英寸芯片制造企业。公司以“定制化代工”为营运策略，以市场需求驱动、政府政策助推，坚持以产品应用为中心，定义差异化技术平台，专注于物联网、汽车电子、工业控制、5G等应用领域。粤芯半导体专注于服务中国市场，致力于满足国产模拟芯片制造需求，助力广东打造中国集成电路“第三极”。",
         "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          2
-        ],
-        "score": 0.5,
-        "category": "general",
-        "url": "https://tecdat.cn/%E4%B8%93%E9%A2%98%EF%BC%9A2025%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%A1%8C%E4%B8%9A%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%EF%BC%9A%E4%BB%8Eai%E8%8A%AF%E7%89%87%E5%88%B0%E5%B0%81%E6%B5%8B%E7%AA%81%E5%9B%B4/",
-        "engine": "duckduckgo",
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "tecdat.cn",
-          "/%E4%B8%93%E9%A2%98%EF%BC%9A2025%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%A1%8C%E4%B8%9A%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%EF%BC%9A%E4%BB%8Eai%E8%8A%AF%E7%89%87%E5%88%B0%E5%B0%81%E6%B5%8B%E7%AA%81%E5%9B%B4/",
+          "www.caiwennews.com",
+          "/article/1473617.shtml",
           "",
           "",
-          ""
-        ]
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=be1oTqIEy-M",
-        "title": "华为提出韬定律！逻辑折叠能否让中国芯片「弯道超车」？ - YouTube",
-        "content": "2 days ago · 直接炸裂同志们。华为冷不丁抛出了一个惊天概念：韬定律。简而言之，就是用时间微缩代替几何微缩，来作为半导体行业的指导原则，直接避开国际厂商主推的先进制程路线， ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.youtube.com",
-          "/watch",
-          "",
-          "v=be1oTqIEy-M",
           ""
         ],
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           3
         ],
         "score": 0.3333333333333333,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "半导体类型细分市场及代表公司全梳理 以下按半导体芯片类型划分，覆盖核心细分赛道，标注国际龙头与国内代表企业，并说明各类型的核心特点与主要应用 ...",
-        "content": "以下按半导体芯片类型划分，覆盖核心细分赛道，标注国际龙头与国内代表企业，并说明各类型的核心特点与主要应用领域，便于快速定位与对比。一、逻辑芯片（半导体核心，算力与控制核心）1. CPU（中央处理器，通用计算核心）应用领域：PC、服务器、智能手机、工业控制、汽车电子...",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
+        "url": "https://q.stock.sohu.com/cn/bk_5558.html",
+        "title": "半导体概念板块个股列表- 股票行情中心- 搜狐证券",
+        "content": "搜狐首页 · 新闻 · 体育 · 娱乐 · 财经 · 汽车 · 房产 · 家居 · 女人 · 视频",
         "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          3
-        ],
-        "score": 0.3333333333333333,
-        "category": "general",
-        "url": "https://xueqiu.com/7309834537/390821807",
-        "engine": "duckduckgo",
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "xueqiu.com",
-          "/7309834537/390821807",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "https://www.jos.ac.cn/",
-        "title": "Journal of Semiconductors",
-        "content": "2 days ago · This review systematically examines the mechanisms of cone-jet and electrostatic-attraction modes in EHD printing, highlighting recent advances in PeQD ink ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.jos.ac.cn",
-          "/",
+          "q.stock.sohu.com",
+          "/cn/bk_5558.html",
           "",
           "",
           ""
@@ -218,89 +110,26 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           4
         ],
         "score": 0.25,
-        "category": "general",
-        "publishedDate": null
-      },
-      {
-        "url": "https://developer.apple.com/forums/thread/827235",
-        "title": "M1 芯片的Mac mini 安装的Xcode 26.3 打包… | Apple Developer Forums",
-        "content": "6 days ago · 我发现在M1 芯片的MacMini上使用Xcode26.3打包出来的App 在iphone6设备ios 12.5.8 的系统下安装或者直接调试都会直接启动后立即崩溃，但是在intel 芯片的MacBook pro ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "developer.apple.com",
-          "/forums/thread/827235",
-          "",
-          "",
-          ""
-        ],
-        "img_src": "",
-        "priority": "",
-        "engines": [
-          "google"
-        ],
-        "positions": [
-          5
-        ],
-        "score": 0.2,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "《中国集成电路》官网_上海亚讯-中国集成电路",
-        "content": "《中国集成电路》是由国家工业和信息化部主管，中国半导体行业协会主办的官方专业期刊，中国学术期刊、中国核心期刊数据来源期刊，万方数据-数字化期刊群上网期刊、电子科技文摘数据库期刊。杂志自1992年创刊以来，一直致力于IC市场应用分析，介绍先进的IC设计与应用、制造工艺、封装 ...",
-        "img_src": "",
-        "iframe_src": "",
-        "audio_src": "",
-        "thumbnail": "",
+        "url": "https://www.tgb.cn/a/2t2Hljxa23O-1",
+        "title": "别再乱换赛道！当前唯一持续主线就是半导体，高低龙头清晰_严定登峰_淘股吧",
+        "content": "6.30早盘市场早评 一、隔夜盘面+大盘全局判断 隔夜纳指大涨，海外科技标的集体走强，给A股科技成长带来情绪溢价窗口。今日是上半年收官最后一个交易日，机构调仓、资金高低切换逻辑明确：高位光模块、算力硬件持续百亿级流出兑现收益，而半导体设备、存储、先进封装连续两日承接大额主力资金，存量资金集体抱团低位科技赛道。 大盘今日整体维持震荡分化格局，指数受外围利好大概率高开，但高位题材易冲高回落，资金重心彻底转移至半导",
         "publishedDate": null,
-        "pubdate": "",
-        "length": null,
-        "views": "",
-        "author": "",
-        "metadata": "",
-        "priority": "",
-        "engines": [
-          "duckduckgo"
-        ],
-        "open_group": false,
-        "close_group": false,
-        "positions": [
-          5
-        ],
-        "score": 0.2,
-        "category": "general",
-        "url": "https://cicmag.com/",
-        "engine": "duckduckgo",
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "cicmag.com",
-          "/",
-          "",
-          "",
-          ""
-        ]
-      },
-      {
-        "url": "https://www.igwfmc.com/main/jjcp/product/501225/detail.html",
-        "title": "景顺长城全球半导体芯片股票A（QDII-LOF）（人民币）（基金代码",
-        "content": "3 hours ago · 晨星风险评级：中高，适合激进型、积极型投资者。 本基金投资于ETF的比例不低于本基金资产的80%，投资于本基金界定的半导体芯片产业主题的权益类 ...",
-        "thumbnail": null,
-        "engine": "google",
-        "template": "default.html",
-        "parsed_url": [
-          "https",
-          "www.igwfmc.com",
-          "/main/jjcp/product/501225/detail.html",
+          "www.tgb.cn",
+          "/a/2t2Hljxa23O-1",
           "",
           "",
           ""
@@ -308,14 +137,148 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
+        ],
+        "positions": [
+          5
+        ],
+        "score": 0.2,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.stcn.com/article/detail/3943372.html",
+        "title": "一年涨超136%！万亿半导体超级周期来了，还能上车吗？",
+        "content": "第一把钥匙，是上证科创板芯片指数。它将目光锁定在科创板，成份股几乎是国产芯片自主可控“硬核”力量的集大成者，纯度高。其行业分布呈现三足鼎立：数字芯片设计约50%，半导体设备约18%，集成电路制造约14%。相...",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.stcn.com",
+          "/article/detail/3943372.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
         ],
         "positions": [
           6
         ],
         "score": 0.16666666666666666,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.21jingji.com/article/20260613/herald/3a394bf4175a36269ce0b3add2260d87.html",
+        "title": "长鑫上市：构建硬科技“价值锚点”新维度 - 21经济网",
+        "content": "市场人士告诉记者，公司上市将很大程度加快创新要素集聚，也有利于发挥其链主作用引领我国集成电路产业向全链自主、集群发展跨越，切实提升我国在半导体产业格局中的话语权和定价权。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.21jingji.com",
+          "/article/20260613/herald/3a394bf4175a36269ce0b3add2260d87.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          7
+        ],
+        "score": 0.14285714285714285,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://caifuhao.eastmoney.com/news/20260603090615221532360",
+        "title": "芯片最新预测，暴增90%_财富号_东方财富网",
+        "content": "半导体器件需求增长的主要驱动力来自服务器CPU、人工智能加速芯片、数据中心交换机IC、固态硬盘控制器以及各种类型的内存，包括高带宽内存（HBM）。尤其值得注意的是，预计2026年的需求量将比上一年增长60%以上，部分原因是内存价格飙升。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "caifuhao.eastmoney.com",
+          "/news/20260603090615221532360",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          10
+        ],
+        "score": 0.1,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.esmchina.com/marketnews/58538.html",
+        "title": "英特尔展示最新制程节点进展，预告未来技术走向-国际电子商情",
+        "content": "此外，通过材料和设计层面的创新，热阻降低了20%至40%；借助几何与材料优化，芯片各层间垂直连接的过孔电阻降低了10%至30%。应变工程的应用则有效提升了PMOS的载流子迁移率，使电流通过晶体管时更为高效。w3Oesmc",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.esmchina.com",
+          "/marketnews/58538.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          11
+        ],
+        "score": 0.09090909090909091,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://zh.wikipedia.org/zh-hans/%E6%99%B6%E4%BD%93%E7%AE%A1",
+        "title": "晶体管 - 维基百科，自由的百科全书",
+        "content": "虽然数以百万计的单体晶...对每个芯片价格的影响就不大。一个逻辑门包含20个晶体管，而2012年一个高级的微处理器使用的晶体管数量达14亿个。 · 晶体管的成本、灵活性和可靠性使得其成为非机械任务的通用器件，例如数字计算。晶体管电路在控制电器和机械的应用上，也正在取代电机设备，因为它通常是更便宜而有效，使用电子控制时，可以使用标准集成电路并编写计...",
+        "publishedDate": null,
+        "thumbnail": "https://imgs.search.brave.com/CVx6CcigBBXPruMi4fN9sFr9j652nF0LlE-1HEAReow/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8y/LzIxL1RyYW5zaXN0/b3Jlcl8lMjhjcm9w/cGVkJTI5LmpwZw",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "zh.wikipedia.org",
+          "/zh-hans/%E6%99%B6%E4%BD%93%E7%AE%A1",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          8
+        ],
+        "score": 0.125,
+        "category": "general"
       }
     ],
     "answers": [],
@@ -324,8 +287,8 @@
     "suggestions": [],
     "unresponsive_engines": [
       [
-        "brave",
-        "Suspended: too many requests"
+        "duckduckgo",
+        "CAPTCHA"
       ],
       [
         "karmasearch",
@@ -336,6 +299,5 @@
         "Suspended: CAPTCHA"
       ]
     ]
-  },
-  "stderr": ""
+  }
 }

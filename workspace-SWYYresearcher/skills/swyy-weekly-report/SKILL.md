@@ -1,13 +1,13 @@
 ---
 name: swyy-weekly-report
 description: |
-  生成生物医药行业研究周报（聚焦浙江），每周爬取多源行业研究内容，去重筛选、
-  转化为银行商机清单，推送至飞书群。每周五执行，商机/行动清单/企业动态仅限浙江本地。
+  生成生物医药行业研究周报（聚焦浙江），每两周爬取近 14 天多源行业研究内容，
+  去重筛选并转化为银行商机清单。每两周周五执行，商机/行动清单/企业动态仅限浙江本地。
 ---
 
 # 生物医药行业研究周报生成 Skill
 
-每周直接爬取多源行业研究内容，生成双版本周报（Word详细报告 + 飞书wiki知识库存档），推送至飞书群。
+每两周直接爬取近 14 天多源行业研究内容，生成双版本周报（Word详细报告 + 飞书wiki知识库存档）。
 
 ## 复用说明
 
@@ -25,7 +25,7 @@ description: |
 | `SHEET_ID` | 商机挖掘表格的 sheet_id | 从飞书表格 URL 提取 |
 | `REGION` | 地域聚焦（如「浙江」「江苏」「广东」） | 根据 agent 定位 |
 | `REGION_CITIES` | 地域下属城市列表 | 根据 agent 定位 |
-| `WEEKLY_TITLE_PREFIX` | 周报文档标题前缀（如 `biomed-weekly`） | 自定义 |
+| `WEEKLY_TITLE_PREFIX` | 周报文档标题前缀（如 `生物医药行业周报`） | 自定义 |
 
 ### 配置示例（在 agent 的 SKILL.md 同级创建 `config.json`）
 
@@ -38,7 +38,7 @@ description: |
   "sheet_id": "cfde3f",
   "region": "浙江",
   "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
-  "weekly_title_prefix": "biomed-weekly"
+  "weekly_title_prefix": "生物医药行业周报"
 }
 ```
 
@@ -55,7 +55,7 @@ description: |
 
 ## 核心原则
 
-1. **直接爬取**：每周从多源爬取行业研究内容（行业报告、市场分析、技术趋势、政策动态）
+1. **直接爬取**：每两周从多源爬取近 14 天行业研究内容（行业报告、市场分析、技术趋势、政策动态）
 2. **地域聚焦**：**商机地图、行动清单、企业动态仅限目标区域**（如浙江：杭州/宁波/温州/绍兴/嘉兴/湖州/金华/台州/丽水/衢州/舟山）；长三角异动作为补充参考
 3. **TOP5-8精选**：本周最具实质影响的5-8条事件
 4. **商机汇总**：按企业维度汇总本周可介入的商机
@@ -66,11 +66,11 @@ description: |
 
 ## Token 优化原则
 
-- **搜索优先用 searxng**（本地 SearXNG 实例），Brave web_search 作为备用；searxng 无 API 限流、无布尔 OR 语法问题、无需逐条串行。用法：`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`；时间范围用 `--time-range day`（近1天）或 `--time-range week`（近7天）
+- **搜索优先用 searxng**（本地 SearXNG 实例），Brave web_search 作为备用；searxng 无 API 限流、无布尔 OR 语法问题、无需逐条串行。统一查询近 14 天；如工具仅支持 day/week/month 档位，用 `--time-range month` 拉宽后按发布日期或正文日期过滤近 14 天内容。
 - **web_fetch 用 text 模式**（`extractMode: "text"`），比 markdown 模式更精简
 - **maxChars=6000**，够提取文章摘要，不需要更大
 - **iFinD 查询聚焦行业**：query 中必须限定生物医药相关关键词，避免返回宽泛金融数据；只保留已授权且稳定的 `search_notice`，不要再调用无权限的热点事件接口
-- **iFinD 时间精确到近7天**：time_start/time_end 必须用实际日期，size 控制在 5-10
+- **iFinD 时间精确到近14天**：time_start/time_end 必须用实际日期，size 控制在 5-10
 - **表格去重优先查 A 列**；写入后为排序/清空残留可读取 A:J 的有效范围
 - **所有飞书 API 统一走 lark-cli**（sheets/drive/docs/wiki），不用 Python urllib 直接调 API，避免 SSL 代理问题
 - **lark-cli 路径**:在 PATH 中可能不可用，实测位置为 `~/.npm-global/bin/lark-cli`。所有脚本中应优先使用绝对路径 `~/.npm-global/bin/lark-cli`。
@@ -84,12 +84,14 @@ description: |
 
 - **lark-cli 不在 PATH**: 实测路径为 `~/.npm-global/bin/lark-cli`。所有脚本用绝对路径，别依赖 PATH。
 - **lark-cli 输出混入 proxy warning**: 所有 lark-cli 命令 stderr 输出 `[lark-cli] [WARN] proxy detected: HTTPS_PROXY=...`，`| python3` 管道会 JSONDecodeError。lark-cli 输出必须先写文件（`> /tmp/xxx.json 2>&1`），再用 Python 跳过 warning 行找到 `{` 开头解析，不能直接管道。
+- **lark-cli 收尾命令必须用绝对路径并显式验收**: cron/agent 的 PATH 不稳定，Wiki 创建、移动、更新、fetch 验证统一使用 `LARK="$HOME/.npm-global/bin/lark-cli"`。命令输出必须落盘，解析 JSON 后判断 `ok` 或关键 token；不要只看 stdout 文本。任何验证命令失败前，禁止先推送群聊摘要。
+- **shell 收尾片段禁止写成 `set -e VAR=...`**: `set -e BASE=... LARK=...` 不会给 `BASE`/`LARK` 赋值，只会把它们当作 `set` 参数，后续 `cat "$BASE/..."` 会读错路径并导致 cron 失败。必须写成多行或分号分隔：`set -e; BASE="..."; LARK="..."; ...`。
 - **searxng 截断**: 搜索结果 JSON 较大，直接 echo 会被截断。必须先写文件再解析。
 - **iFinD search_trending_news 已停用**: 该接口受权限限制，返回 `Tool not allowed`。不要调用；如历史流程中出现，仅记录到执行日志，绝不写入周报正文/wiki/群聊摘要。
 - **iFinD search_notice 可能为空**: 语义检索对时间范围和 query 要求严格，可能返回空。为空时正常标注，不影响报告。
 - **iFinD 调用方式**: 不能直接向 `call-node.js` 喂 JSON，必须按 skill 要求用 Node `require` 方式调用 `call()` 函数。
 - **Brave web_search 严禁并行**: 免费套餐 1 req/s，并行会触发 429。只有 searxng 可并行；Brave 作为兜底时必须串行、每次间隔 ≥1 秒，且不用 OR 语法。**Brave 对中文地域/工业术语索引极差**，宽泛搜索（如「生物医药 浙江 杭州 宁波 产业 2026」）返回 80% 不相关结果。Brave 仅适合精准搜索（具体企业名+融资/公告/一季报等），不要用于地域+行业的宽泛组合搜索。
-- **lark-cli docs +update 的 `--markdown @file` 必须用相对路径**: 先 `cd` 到 Markdown 所在目录，再用 `--markdown '@./wiki_YYYYMMDD.md'`，不要传绝对路径。
+- **lark-cli docs +update 的 `--content @./file` 必须用相对路径**: 先 `cd` 到 Markdown 所在目录，再用 `--api-version v2 --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md`，不要传绝对路径。
 
 ### 2. 数据抓取
 
@@ -178,21 +180,23 @@ SEARXNG_SCRIPT="~/.openclaw/skills/searxng/scripts/searxng.py"
 SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 # 5个查询并行执行
-1. $SEARXNG_CMD "创新药 新药获批 IND NDA CDE审评 临床试验 2026" -n 10 --time-range week --format json
-2. $SEARXNG_CMD "CXO CRO CDMO 药物研发 医药外包 2026" -n 10 --time-range week --format json
-3. $SEARXNG_CMD "医疗器械 IVD 高值耗材 影像设备 手术机器人 三类器械 2026" -n 10 --time-range week --format json
-4. $SEARXNG_CMD "集采 医保谈判 医保目录 带量采购 DRG DIP 2026" -n 10 --time-range week --format json
-5. $SEARXNG_CMD "生物医药 细胞治疗 基因治疗 ADC 双抗 融资 上市 2026" -n 10 --time-range week --format json
+1. $SEARXNG_CMD "创新药 新药获批 IND NDA CDE审评 临床试验 2026" -n 10 --time-range month --format json
+2. $SEARXNG_CMD "CXO CRO CDMO 药物研发 医药外包 2026" -n 10 --time-range month --format json
+3. $SEARXNG_CMD "医疗器械 IVD 高值耗材 影像设备 手术机器人 三类器械 2026" -n 10 --time-range month --format json
+4. $SEARXNG_CMD "集采 医保谈判 医保目录 带量采购 DRG DIP 2026" -n 10 --time-range month --format json
+5. $SEARXNG_CMD "生物医药 细胞治疗 基因治疗 ADC 双抗 融资 上市 2026" -n 10 --time-range month --format json
 ```
+执行后必须按发布日期/正文日期过滤，只保留近 14 天内容；无法确认日期的结果，只有在正文明确属于本期周期时才采用。
 
 **如果 searxng 实例不可用（返回空或连接失败），回退到 Brave web_search，但此时不用 OR 语法，改用空格分隔关键词：**
 ```
-1. web_search("创新药 新药获批 IND NDA CDE审评", freshness="week", count=10)
-2. web_search("CXO CRO CDMO 药物研发 医药外包", freshness="week", count=10)
-3. web_search("医疗器械 IVD 高值耗材 影像设备", freshness="week", count=10)
-4. web_search("集采 医保谈判 医保目录 带量采购", freshness="week", count=10)
-5. web_search("生物医药 细胞治疗 基因治疗 ADC 双抗", freshness="week", count=10)
+1. web_search("创新药 新药获批 IND NDA CDE审评", freshness="month", count=10)
+2. web_search("CXO CRO CDMO 药物研发 医药外包", freshness="month", count=10)
+3. web_search("医疗器械 IVD 高值耗材 影像设备", freshness="month", count=10)
+4. web_search("集采 医保谈判 医保目录 带量采购", freshness="month", count=10)
+5. web_search("生物医药 细胞治疗 基因治疗 ADC 双抗", freshness="month", count=10)
 ```
+Brave 结果同样必须过滤到近 14 天。
 
 ⚠️ **Brave web_search 串行执行**（免费套餐限流1次/秒），每次间隔1秒。searxng 可并行执行。
 
@@ -213,10 +217,11 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 **第四轮：本地生物医药专项搜索（1个，searxng）：**
 
 ```
-10. $SEARXNG_CMD "生物医药 [地域名] 创新药 [核心城市] CXO 医疗器械" -n 10 --time-range week --format json
+10. $SEARXNG_CMD "生物医药 [地域名] 创新药 [核心城市] CXO 医疗器械" -n 10 --time-range month --format json
 ```
+本地专项搜索同样只采用近 14 天内的有效线索。
 
-**第五轮：iFinD 金融数据补充（2个公告查询，聚焦近7天生物医药行业）：**
+**第五轮：iFinD 金融数据补充（2个公告查询，聚焦近14天生物医药行业）：**
 
 ⚠️ **iFinD 执行说明：**
 - **必须执行公告语义检索**，不可跳过。iFinD 能提供上市公司公告语义检索，是其他源无法替代的。
@@ -228,13 +233,13 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 ```
 11. search_notice（公告语义检索）：
     query="创新药 OR 新药获批 OR CXO OR CRO OR CDMO OR 医疗器械 OR IVD OR 疫苗 OR 细胞治疗 OR 基因治疗",
-    time_start="近7天前日期（YYYY-MM-DD）", time_end="今天日期（YYYY-MM-DD）", size=10
-    → 精准抓取近7天生物医药相关上市公司公告（融资/定增/产能/中标/重大合同/新药获批）
+    time_start="近14天前日期（YYYY-MM-DD）", time_end="今天日期（YYYY-MM-DD）", size=10
+    → 精准抓取近14天生物医药相关上市公司公告（融资/定增/产能/中标/重大合同/新药获批）
 
 12. search_notice（公告语义检索）：
     query="集采 OR 医保谈判 OR 医保目录 OR 带量采购 OR NDA OR IND OR CDE OR 临床试验 OR 三类器械 OR 注册证",
-    time_start="近7天前日期（YYYY-MM-DD）", time_end="今天日期（YYYY-MM-DD）", size=10
-    → 精准抓取近7天集采/医保/审评相关上市公司公告
+    time_start="近14天前日期（YYYY-MM-DD）", time_end="今天日期（YYYY-MM-DD）", size=10
+    → 精准抓取近14天集采/医保/审评相关上市公司公告
 
 ```
 
@@ -249,7 +254,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 node - <<'NODE' > "$BASE/ifind_notices.json" 2> "$BASE/ifind_notices.err"
 const { call } = require('/Users/leidongqiao/.openclaw/skills/ifind-finance-data/call-node.js');
 (async()=>{
-  const time_start = 'YYYY-MM-DD'; // 近7天前实际日期
+  const time_start = 'YYYY-MM-DD'; // 近14天前实际日期
   const time_end = 'YYYY-MM-DD';   // 今天实际日期
   const probe = await call('news','search_notice',{query:'创新药 生物医药',time_start,time_end,size:1});
   if (!probe.ok) { console.log(JSON.stringify({probe}, null, 2)); return; }
@@ -261,7 +266,7 @@ NODE
 ```
 - 每次调用后检查 `ok` 字段确认是否成功，失败则跳过该查询
 - **`ok:true` 只代表接口调用成功，不代表有有效公告**；还必须解析返回正文是否包含“查询结果为空”。为空只记执行日志，不写入周报正文/wiki/群聊摘要。
-- **时间参数必须用近 7 天的实际日期（YYYY-MM-DD 格式），不可用模糊描述**
+- **时间参数必须用近 14 天的实际日期（YYYY-MM-DD 格式），不可用模糊描述**
 - **行业限定**：query 中必须包含生物医药相关关键词（创新药/CXO/医疗器械/集采等），避免返回无关公告
 - 如果 iFinD 密钥未配置或调用全部失败，跳过本轮，继续后续步骤；相关失败原因只记执行日志，不写入周报正文/wiki/群聊摘要
 
@@ -273,7 +278,7 @@ NODE
 - 必抓源不可跳过，即使返回空白/JS 渲染失败也要记录并继续
 - web_search + 垂直源并行执行
 - 如果 web_fetch 返回空白/JS 渲染失败，跳过该源，不要重试
-- 关注 **近 7 天内** 发生的事件（周报覆盖一周范围）
+- 关注 **近 14 天内** 发生的事件（周报覆盖两周范围）
 - 关注目标区域及周边的生物医药企业动态优先
 
 ### 第二步：信息跟踪范围
@@ -595,7 +600,8 @@ NODE
   cp "$WORD_FILE" "$UPLOAD_DIR/"
   ls -la "$UPLOAD_DIR"
   ```
-- 文件名格式：`biomed-weekly-YYYYMMDD.docx`（与 wiki 节点标题一致）
+- 文件名格式：`生物医药行业周报-YYYYMMDD.docx`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
 - 字体使用华文楷体
 - **Word 样式优化**：Word 版必须是干净的报告排版，不要把 Markdown 原始符号带入正文；生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段，企业信息可用短段落或简洁项目符号，但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
 
@@ -613,7 +619,7 @@ https://<租户域名>.feishu.cn/file/<file_token>
 
 ```bash
 export BOT_PROFILE
-WEEKLY="biomed-weekly-YYYYMMDD.docx"
+WEEKLY="生物医药行业周报-YYYYMMDD.docx"
 
 # 1. 先列出根目录，查找同名旧文件并删除
 lark-cli drive +list --profile "$BOT_PROFILE" > /tmp/drive_list.json 2>&1
@@ -657,6 +663,9 @@ lark-cli drive +upload --profile "$BOT_PROFILE" \
 #### 版本B：飞书 wiki 版（知识库存档格式）
 
 - 内容与 Word 版结构一致，适配飞书文档 Markdown 格式
+- **固定保存目录**：`/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`（即 SWYY Researcher 工作空间的 `reports/biomed-weekly/`），不得保存到其他目录
+- 文件名格式：`生物医药行业周报-YYYYMMDD.md`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
 - 通过第九步写入知识库
 - wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入：`**Word版下载：** [点击下载Word版周报](飞书Drive下载链接)`。
 - ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**，格式为 `**Word版下载：** https://.../file/...`，不要写成 `<https://...>`；飞书文档转换可能吞掉尖括号链接，导致 wiki 中只剩空的“Word版下载”。
@@ -801,7 +810,7 @@ PYEOF
 
 **写入内容：第七步版本B（飞书 wiki 版），结构与 Word 版一致，适配飞书 Markdown 格式。**
 
-**重要：每次生成都覆盖当前同名文件（biomed-weekly-YYYYMMDD），不要有重复日期的文档。**
+**重要：每次生成都覆盖当前同名文件（生物医药行业周报-YYYYMMDD），不要有重复日期的文档。**
 
 **Word 下载链接位置要求：** Word 版上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；wiki 正文开头（标题下方、覆盖周期/资料来源前）必须写入 `**Word版下载：** <下载链接>`，推送摘要中的「周报全文（Word）」也必须使用该下载链接。
 
@@ -820,20 +829,22 @@ PYEOF
 
 1. **列出知识库所有节点，查找是否已有同名文档（搜索全部节点，不限根目录！）**：
    ```bash
-   lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE
+   LARK="$HOME/.npm-global/bin/lark-cli"
+   "$LARK" wiki nodes list --params '{"space_id":"'$WIKI_SPACE_ID'","page_size":50}' --profile "$BOT_PROFILE"
    ```
-   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD` 的节点，提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD` 的节点（例：`生物医药行业周报-20260612`），提取 `obj_token` 和 `node_token`。
    ⚠️ **必须搜索所有节点**（不限 `parent_node_token`），否则第一次创建时可能被放在「首页」下，第二次搜不到就重复创建了！
    ⚠️ **如果找到多个同名文档**，选 `obj_edit_time` 最新的那个，用 `docs +update` 覆盖；其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
 2. **如果找到同名文档**：
-   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 覆盖内容；**不要**用 `@/Users/.../wiki.md` 绝对路径
+   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md` 覆盖内容；**不要**用 `@/Users/.../wiki.md` 绝对路径
    - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`
 
 3. **如果未找到同名文档**：
    - 使用以下命令以**机器人身份**创建（注意必须带 profile，输出先落盘再解析）：
      ```bash
-     lark-cli wiki +node-create --profile $BOT_PROFILE \
+     LARK="$HOME/.npm-global/bin/lark-cli"
+     "$LARK" wiki +node-create --profile "$BOT_PROFILE" \
        --space-id "$WIKI_SPACE_ID" \
        --title "$WEEKLY_TITLE_PREFIX-YYYYMMDD" \
        --obj-type "docx" > /tmp/wiki_create.json 2>&1
@@ -842,45 +853,72 @@ PYEOF
      ```bash
      # 解析创建结果的 parent_node_token（注意 lark-cli 输出混入 proxy warning，必须先落盘解析）
      PARENT_TOKEN=$(python3 -c "
-     import json
+     import json, sys
      text = open('/tmp/wiki_create.json').read()
      idx = text.find('{')
+     if idx < 0:
+         print('wiki_create output has no JSON object', file=sys.stderr); sys.exit(1)
      data = json.loads(text[idx:])
+     if not data.get('ok', True):
+         print(data, file=sys.stderr); sys.exit(1)
      print(data['data'].get('parent_node_token',''))
      ")
      NODE_TOKEN=$(python3 -c "
-     import json
+     import json, sys
      text = open('/tmp/wiki_create.json').read()
      idx = text.find('{')
+     if idx < 0:
+         sys.exit(1)
      data = json.loads(text[idx:])
-     print(data['data'].get('node_token',''))
+     token = data['data'].get('node_token','')
+     if not token:
+         print('node_token missing', file=sys.stderr); sys.exit(1)
+     print(token)
      ")
      OBJ_TOKEN=$(python3 -c "
-     import json
+     import json, sys
      text = open('/tmp/wiki_create.json').read()
      idx = text.find('{')
+     if idx < 0:
+         sys.exit(1)
      data = json.loads(text[idx:])
-     print(data['data'].get('obj_token',''))
+     token = data['data'].get('obj_token','')
+     if not token:
+         print('obj_token missing', file=sys.stderr); sys.exit(1)
+     print(token)
      ")
 
      if [ -n "$PARENT_TOKEN" ]; then
        echo "⚠️ Node created under parent '$PARENT_TOKEN', moving to root..."
-       lark-cli wiki +move --profile $BOT_PROFILE \
+       "$LARK" wiki +move --profile "$BOT_PROFILE" \
          --node-token "$NODE_TOKEN" \
-         --target-space-id "$WIKI_SPACE_ID"
+         --target-space-id "$WIKI_SPACE_ID" > /tmp/wiki_move_root.json 2>&1
+       python3 - <<'PY'
+import json, pathlib, sys
+text = pathlib.Path('/tmp/wiki_move_root.json').read_text(errors='ignore')
+idx = text.find('{')
+if idx < 0:
+    print(text[-1000:], file=sys.stderr)
+    sys.exit(1)
+data = json.loads(text[idx:])
+if not data.get('ok', True):
+    print(data, file=sys.stderr)
+    sys.exit(1)
+PY
      else
        echo "✅ Node already at root"
      fi
      ```
    - 从返回结果提取 `obj_token`（用于内容更新）和 `node_token`（用于 URL）
-   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --mode overwrite --markdown '@./wiki_YYYYMMDD.md'` 写入内容；**不要**用绝对路径
+   - 将 wiki Markdown 写入本地文件（如 `wiki_YYYYMMDD.md`），先 `cd` 到该文件所在目录，再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md` 写入内容；**不要**用绝对路径
    - 输出文档链接：`https://<租户域名>.feishu.cn/wiki/<node_token>`
 
 4. **Wiki 节点排序调整（新建节点时必须执行）：**
    - 新周报节点创建并移到根目录后，需要确保其排在「商机挖掘表格」节点**后面**（实现时间倒序：最新周报紧跟表格之后）。
    - 先获取根目录节点列表，找到「商机挖掘表格」的 `node_token`：
      ```bash
-     lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE > /tmp/wiki_root_nodes.json 2>&1
+     LARK="$HOME/.npm-global/bin/lark-cli"
+     "$LARK" wiki nodes list --params '{"space_id":"'$WIKI_SPACE_ID'","page_size":50}' --profile "$BOT_PROFILE" > /tmp/wiki_root_nodes.json 2>&1
      ```
    - 解析返回结果，找到 title 包含「商机挖掘」的节点 `node_token`，记为 `$TABLE_NODE_TOKEN`。
    - ⚠️ **`lark-cli wiki +move` 不支持 `--insert-after` 参数**，无法在 wiki 内指定兄弟节点的插入顺序。飞书 wiki 根目录节点默认按创建时间倒序排列，新节点自然排在旧节点前面，**跳过此步骤即可**。
@@ -890,10 +928,21 @@ PYEOF
    - 格式验证：执行 `docs +fetch` 抽查字段是否黏连。注意 `docs +fetch` 可能把换行以字面量 `\n` 输出，检查前必须先把 `\\n` 还原成真实换行；正则必须按行检查，**禁止用会跨行误报的全文 `.*` 检查**。可复制：
 
 ```bash
-lark-cli docs +fetch --doc "$OBJ_TOKEN" --profile $BOT_PROFILE > wiki_fetch_YYYYMMDD.md
+LARK="$HOME/.npm-global/bin/lark-cli"
+"$LARK" docs +fetch --doc "$OBJ_TOKEN" --profile "$BOT_PROFILE" > wiki_fetch_YYYYMMDD.md 2>&1
 python3 - <<'PY'
-import pathlib, re, sys
+import json, pathlib, re, sys
 text = pathlib.Path('wiki_fetch_YYYYMMDD.md').read_text(errors='ignore')
+idx = text.find('{')
+if idx < 0:
+    print('docs fetch output has no JSON object', file=sys.stderr)
+    print(text[-1000:], file=sys.stderr)
+    sys.exit(1)
+data = json.loads(text[idx:])
+if not data.get('ok', False):
+    print(data, file=sys.stderr)
+    sys.exit(1)
+text = data.get('data', {}).get('markdown', text)
 text = text.replace('\\n', '\n')  # 避免 fetch 输出转义换行导致误报
 bad = []
 for line in text.splitlines():
@@ -924,9 +973,9 @@ PY
 🏢 优先跟进：XXX、XXX、XXX
 🎯 切入方向：XXX/XXX/XXX
 
-Word：<飞书Drive下载链接>
-Wiki：<https://<租户域名>.feishu.cn/wiki/XXXX>
-商机表：<https://<租户域名>.feishu.cn/sheets/<spreadsheet_token>>
+Word:<a href="飞书Drive下载链接">Word版下载</a>
+Wiki:<a href="https://www.feishu.cn/wiki/XXXX">知识库存档</a>
+商机表:<a href="https://xxx.feishu.cn/wiki/XXXX">商机挖掘</a>
 ```
 
 #### 10.1 同步至工作空间
@@ -954,6 +1003,8 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 - Word 周报飞书 Drive 下载链接（不要只放本地路径）
 - 周报 wiki 存档链接
 - 商机挖掘表格链接（sheets URL）
+- 链接格式要求：群聊摘要必须使用 **飞书 post 富文本消息** 格式发送（`msg_type=post`），Word/Wiki/商机表三个链接必须用 `<a>` 标签包裹（`{"tag":"a","text":"点击打开","href":"URL"}`），**禁止使用裸 URL 或 Markdown 链接格式**；飞书 post 富文本中裸 URL 不一定会被自动识别成可点击链接。
+- 群聊摘要发送方式：优先使用 `feishu_im_user_message`（或对应身份的消息工具），`msg_type=post`，`content` 为飞书富文本 JSON 数组，每个链接独立用 `a` tag 包裹。
 - **不要**输出周报全文内容
 - **不要**使用长分隔线、长清单、TOP5-8逐条新闻、企业推荐理由、执行日志
 
@@ -962,9 +1013,9 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 2. **禁止**把以下内容作为最终群聊推送：执行日志、完成情况清单、工具调用结果、文件本地路径、Markdown/wiki 源稿、Word 正文全文、调试说明。
 3. 推送前必须自检 4 项，缺一不可：
    - 已压缩为 2-3 个主线关键词，不是 TOP 新闻长清单；
-   - Word 链接是飞书 Drive/file 下载链接，不是本地路径；
-   - wiki 链接是 `https://<租户域名>.feishu.cn/wiki/...`；
-   - 商机表格链接是 sheets URL。
+   - Word 链接是飞书 Drive/file 下载链接,不是本地路径,且使用 `<a href="URL">标签文本</a>` 格式;
+   - wiki 链接是 `https://www.feishu.cn/wiki/...`,且使用 `<a href="URL">标签文本</a>` 格式;
+   - 商机表格链接是 sheets URL,且使用 `<a href="URL">标签文本</a>` 格式。
 4. 如果 Word Drive 链接、wiki 链接或 sheets 链接任一缺失，**不要推送群聊摘要**；先补齐链接，再输出第十步模板。
 5. 若需要向用户说明执行状态，只能在非群聊/人工排查上下文说明；在群聊定时任务中，最终输出仍必须是第十步摘要模板。
 
@@ -984,6 +1035,11 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 ### 第十二步：输出完成
 
 输出完成后，由调用方（定时任务等）通过 delivery 配置推送到飞书群，无需在 skill 内执行推送。
+
+**cron 执行硬规则：**
+- 在定时任务中不要调用 `message` 工具手动推送群聊摘要；最终 assistant 回复必须就是第十步的极简摘要，交给 cron `delivery.mode=announce` 投递。
+- 群聊摘要只能在 Word 上传、Wiki 写入/位置/格式验证、商机表写入全部成功后作为最终回复输出。
+- 如果最后任一命令失败，停止并输出排查摘要，不能先发群消息再继续执行会失败的命令；否则会出现“周报已发 + cron 又发失败告警”的双消息问题。
 
 ## 特殊场景
 
@@ -1005,19 +1061,19 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 3. **地域限制**：本地行业动态、行动清单仅限浙江本地企业；非生物医药主业的大企业动态不纳入本地行业动态
 4. **禁止推荐不合规业务**
 5. **双版本输出**：Word 版用于详细报告（华文楷体），wiki 版用于知识库存档（飞书 Markdown 格式），内容结构一致
-6. **知识库标题**：biomed-weekly-YYYYMMDD
-7. **知识库写入**：必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --space-id $WIKI_SPACE_ID` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
+6. **知识库标题**：生物医药行业周报-YYYYMMDD（实际日期格式为 yyyyMMdd，如 `生物医药行业周报-20260612`）
+7. **知识库写入**：必须使用 `"$HOME/.npm-global/bin/lark-cli" wiki +node-create --profile "$BOT_PROFILE" --space-id "$WIKI_SPACE_ID"` 创建，禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**（不限 parent_node_token），避免重复创建
 8. **群聊推送**：推送概要 + 链接，不是全文
 9. **商机挖掘表格**：数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重，只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
-10. **搜索优先 searxng**：searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用，且不用 OR 语法（Brave 不支持），改用空格分隔关键词。
+10. **搜索优先 searxng**：searxng 无 API 限流、无布尔 OR 语法问题。查询近 14 天时用 `python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range month --format json` 拉宽后按发布日期/正文日期过滤近 14 天。Brave web_search 仅作为备用，且不用 OR 语法（Brave 不支持），改用空格分隔关键词并过滤近 14 天。
 11. **代理配置**：Gateway 进程需配置代理环境变量（`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`），否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告，不影响功能。
 12. **Word 下载链接**：Word 文件上传飞书 Drive 后获取 file_token，拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`；将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式 `biomed-weekly-YYYYMMDD.docx`（与 wiki 节点标题一致）；生成后必须上传飞书 Drive 获取下载链接；**上传前检查 Drive 中同名旧文件并删除，确保只保留最新版本**；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
+13. **Word 输出**：字体使用华文楷体，固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-SWYYresearcher/reports/biomed-weekly/`，文件名格式 `生物医药行业周报-YYYYMMDD.docx`（与 wiki 节点标题一致；实际日期格式为 yyyyMMdd）；生成后必须上传飞书 Drive 获取下载链接；**上传前检查 Drive 中同名旧文件并删除，确保只保留最新版本**；**向用户输出时只提供飞书 Drive 下载链接，禁止输出本地文件路径**；Word 正文必须清理 Markdown 标记，推荐产品组合不用表格。
 14. **正文来源格式**：周报正文去掉媒体/网站来源括注；不要出现"（日期，来源）""（来源：XXX）"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 公告检索必须执行**：不可跳过。先在循环外做一次快速探测确认环境可用，再执行 2 个 `search_notice` 查询；不要调用无权限的 `search_trending_news`。
 16. **所有飞书 API 统一走 lark-cli**：sheets/drive/docs/wiki 操作全部用 lark-cli，不用 Python urllib 直接调 API（HTTPS_PROXY 代理会导致 SSL 证书验证失败）。
-17. **lark-cli 本地文件路径**：`drive +upload --file` 和 `docs +update --markdown @file` 都优先使用当前工作目录下的相对路径。操作前先 `cd` 到文件所在目录，使用 `./文件名` 或 `@./文件名`，不要传绝对路径。
-18. **lark-cli wiki 创建后需检查位置**：`wiki +node-create` 默认可能放在「首页」子节点下，创建后需检查 `parent_node_token`，如在子节点下需 `wiki +move` 移回根目录。
+17. **lark-cli 本地文件路径**：`drive +upload --file` 和 `docs +update --content @./file` 都优先使用当前工作目录下的相对路径。操作前先 `cd` 到文件所在目录，使用 `./文件名` 或 `@./文件名`，不要传绝对路径。
+18. **lark-cli wiki 创建后需检查位置**：`wiki +node-create` 默认可能放在「首页」子节点下，创建后需检查 `parent_node_token`，如在子节点下需 `wiki +move` 移回根目录。所有收尾命令都必须用 `LARK="$HOME/.npm-global/bin/lark-cli"` 绝对路径，并先完成验证再输出最终摘要。
 
 ## 踩坑记录（供后续优化参考）
 
@@ -1037,7 +1093,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 12. **2026-05-21 复盘：证券时报旧快讯 404**：`https://www.stcn.com/article/newsflash.html` 已失效；替代 `https://news.stcn.com/` 内容陈旧，不适合周报。→ 已从必抓源移除，不再抓取。
 13. **2026-05-21 复盘：Brave 并行触发 429**：并行调用 web_search 会触发免费套餐限流。→ 只允许 searxng 并行；Brave 兜底必须串行且间隔 ≥1 秒。
 14. **2026-05-21 复盘：iFinD 热点接口无权限**：`search_trending_news` 返回 403。→ 固定流程只保留 `search_notice` 两个公告查询，热点接口不再调用。
-15. **2026-05-21 复盘：docs +update 绝对路径失败**：`--markdown @/Users/...` 会被拒。→ 先 `cd` 到目录，用 `--markdown '@./wiki_YYYYMMDD.md'`。
+15. **2026-05-21 复盘：docs +update 绝对路径失败**：`--content @/Users/...` 会被拒。→ 先 `cd` 到目录，用 `--api-version v2 --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md`。
 16. **2026-05-21 复盘：飞书 wiki 单换行黏连**：连续单换行会把字段挤到一行。→ wiki md 写入前每个非空行后加空行；写入后 `docs +fetch`，按行检查 `推荐等级.*所属行业` 等模式。
 17. **2026-05-21 复盘：商机表同企不同名重复**：如 `浙江拱东医疗` vs `浙江拱东医疗器械股份有限公司`。→ 去重 key 必须去括号、去公司后缀、过别名映射，再精确匹配。
 18. **2026-05-21 复盘：表格空行残留**：删除维度后仍可能看到空白行。→ 先覆盖空值，再删除多余行，最后用 `sheets +info` 验证 `row_count`。
@@ -1045,7 +1101,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 20. **2026-05-21 复盘：searxng 本地查询会返回无关结果**：浙江本地检索可能混入展会、招标、博彩/钢铁等无关页，或某些 query 结果极少。→ searxng 结果必须落盘后抽样标题/摘要；本地企业线索不足时，用 Brave 串行补充精准查询（企业名 + 2026 一季报/公告/融资/扩产），但不要并行。
 21. **2026-05-21 复盘：iFinD `ok:true` 不代表有有效公告**：环境探测可能成功，但正式 `search_notice` 返回“查询结果为空”。→ 执行并检查 `ok` 与正文内容；为空只记执行日志，不写入周报/wiki/群聊摘要；用上市公司公告、年报/一季报和公开报道补足企业信号。
 22. **2026-05-21 复盘：必抓源不等于有效信息源**：财联社、36氪快讯可能与生物医药弱相关；医药魔方首页可能只抓到产品介绍。→ 必抓源仍按流程抓取，但资料来源只列实际采用的信息源；无效抓取状态、空白、报错不要进入正文。
-23. **2026-05-21 复盘：同名 wiki 节点已存在时不要重复创建**：如已存在 `biomed-weekly-YYYYMMDD`，新建会造成重复存档。→ 先 `wiki nodes list` 全量查重；存在同名节点则使用其 `obj_token` 执行 `docs +update --mode overwrite`，不存在才创建新节点。
+23. **2026-05-21 复盘：同名 wiki 节点已存在时不要重复创建**：如已存在 `生物医药行业周报-YYYYMMDD`，新建会造成重复存档。→ 先 `wiki nodes list` 全量查重；存在同名节点则使用其 `obj_token` 执行 `docs +update --api-version v2 --command overwrite --doc-format markdown --content @./wiki_YYYYMMDD.md`，不存在才创建新节点。
 24. **2026-05-21 复盘：Drive 上传成功但可能没有当前用户管理权限**：bot 上传 Word 后 lark-cli 可能提示未给当前 CLI 用户 `full_access`，但 `file_token` 和下载链接可用。→ 不因该 warning 中断流程；如 Joe 后续打不开，再单独处理权限授权。
 25. **2026-05-21 复盘：zsh 空 glob 会失败**：`rm -f reports/summary/*` 在目录为空时会触发 `zsh: no matches found`。→ 清理目录用 `find reports/summary -type f -delete`，不要用未匹配的通配符。
 26. **2026-05-22 复盘：iFinD 调用签名再次写错**：`call-node.js` 不是 `call('search_notice', params)`，而是 `call('news','search_notice', params)`。→ 第五轮固定复制 iFinD 模板，不要手写调用签名。
@@ -1053,7 +1109,9 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-SWYYresearcher/reports/s
 28. **2026-05-22 复盘：已有经验没有转成强制模板会重复踩坑**：仅写“注意/经验”不够。→ 对 iFinD、wiki 验证、商机表清理这类脆弱步骤，必须在流程正文提供可复制命令模板，并在执行时优先复制模板而非临场重写。
 29. **2026-05-23 复盘：Brave 对中文地域/工业术语索引极差**：`web_search("生物医药 浙江 杭州 宁波 产业 2026", freshness="week")` 返回10条中8条不相关（B站视频、社保缴费、摩托车、长鑫半导体等）。→ Brave 补充搜索应使用更精准的关键词组合（如具体企业名+融资/公告/一季报），不要用宽泛的地域+行业组合搜索；优先依赖 searxng 和必抓源。
 30. **2026-05-23 复盘：lark-cli proxy warning 混入输出**：所有 lark-cli 命令 stderr 输出 `[lark-cli] [WARN] proxy detected: HTTPS_PROXY=...`，`| python3` 管道会 JSONDecodeError。→ lark-cli 输出必须先写文件，再用 Python 跳过 warning 行找到 `{` 开头解析，不能直接管道。
-31. **2026-05-25 复盘：Word 与 Wiki 同名一致 + Drive 同名覆盖**：Word 文件名和 wiki 节点标题统一为 `biomed-weekly-YYYYMMDD`。Drive 不会自动覆盖同名文件，上传前必须先 `drive +list` 查找同名旧文件并 `drive +delete`，再上传新版本。
+31. **2026-05-25 复盘：Word 与 Wiki 同名一致 + Drive 同名覆盖**：Word 文件名和 wiki 节点标题统一为 `生物医药行业周报-YYYYMMDD`。Drive 不会自动覆盖同名文件，上传前必须先 `drive +list` 查找同名旧文件并 `drive +delete`，再上传新版本。
+32. **2026-06-05 复盘：周报摘要已发但 cron 仍失败**：原因是 agent 在最后命令成功收口前先把摘要推到群，随后某条 `export BOT_PROFILE=... WIKI_SPACE_ID=... NODE_TOKEN=... OBJ_TOKEN=...` 收尾命令失败，cron 最终判定 error 并推送失败告警。→ 修复为：定时任务内禁止手动 `message` 推群；必须先完成 Word/Wiki/表格全部验证，最终 assistant 回复只输出第十步摘要，由 cron delivery 投递。
+33. **2026-06-26 复盘：产物已生成但 cron 最后失败**：最后排查命令写成 `set -e BASE="$PWD/reports/biomed-weekly/tmp_20260626" LARK=...`，`BASE` 未真正赋值，后续 `cat "$BASE/final_links_20260626.env"` 读错路径，cron 判定 agent failed 并向群聊投递失败告警。→ 修复为：所有收尾 shell 用 `set -e; BASE="..."; LARK="...";` 或多行赋值；最终输出前不要再运行临时拼接的验收命令，必须先用独立命令确认链接文件存在且三项链接齐全。
 
 ## 文件路径
 
@@ -1079,5 +1137,5 @@ sheet_id: cfde3f
 # 生物医药行研知识库
 space_id: 7637083944097270734
 space_name: 生物医药行研
-节点标题: biomed-weekly-YYYYMMDD
+节点标题: 生物医药行业周报-YYYYMMDD
 ```

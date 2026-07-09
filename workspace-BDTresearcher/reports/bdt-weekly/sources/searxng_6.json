@@ -1,25 +1,26 @@
 {
-  "source_id": 6,
-  "source_name": "SearXNG 6",
+  "source_id": "6",
+  "source_name": "SearXNG",
   "url_or_query": "晶圆制造 OR 先进封装 OR Chiplet OR HBM",
-  "fetched_at": "2026-05-28T19:42:02.388637+08:00",
+  "fetched_at": "2026-07-03T00:16:35.690090+00:00",
   "ok": true,
-  "status_or_error": "ok",
+  "status_or_error": "exit_0",
   "content_or_results": {
     "query": "晶圆制造 OR 先进封装 OR Chiplet OR HBM",
     "number_of_results": 0,
     "results": [
       {
-        "url": "https://finance.yahoo.com/quote/HBM/",
-        "title": "Hudbay Minerals Inc. (HBM) Stock Price, News, Quote & History",
-        "content": "21 hours ago · Find the latest Hudbay Minerals Inc. (HBM) stock quote, history, news and other vital information to help you with your stock trading and investing.",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://caifuhao.eastmoney.com/news/20260625174506803987310",
+        "title": "先进封装是后摩尔时代半导体最核心、确定性最强的受益赛道_财富号_东方财富网",
+        "content": "唯一解法：2.5D Chiplet、3D垂直堆叠、HBM集成封装，把算力芯粒、存储芯粒高密度贴在一起，传输距离缩短90%、带宽数倍提升，这是全球所有AI芯片厂商统一路线。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "finance.yahoo.com",
-          "/quote/HBM/",
+          "caifuhao.eastmoney.com",
+          "/news/20260625174506803987310",
           "",
           "",
           ""
@@ -27,19 +28,18 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           1
         ],
         "score": 1.0,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "Chiplet崛起 台廠啖AI紅利 - 產業．科技 - 工商時報",
-        "content": "Chiplet崛起 台廠啖AI紅利 晶片生產走向異質整合與多晶粒封裝；M31、乾瞻、巨有、聯發科等受惠",
+        "title": "集成电路先进封装技术研究进展综述_Chiplet_工艺_系统",
+        "content": "本文通过国内外相关文献等资料研究，系统梳理了 2.5D/3D 封装、晶圆级封装、芯粒（Chiplet）技术等领域的创新进展，分析了高密度互连材料、焊料优化及检测技术的突破，探讨了产业化进程中面临的国际竞争、国…",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -61,48 +61,48 @@
         ],
         "score": 1.0,
         "category": "general",
-        "url": "https://www.chinatimes.com/newspapers/20260526000258-260204",
+        "url": "https://www.sohu.com/a/1044057621_120498874",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.chinatimes.com",
-          "/newspapers/20260526000258-260204",
+          "www.sohu.com",
+          "/a/1044057621_120498874",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://money.tmx.com/en/quote/HBM",
-        "title": "Hudbay Minerals Inc. (HBM) | TSX Stock Price | TMX Money",
-        "content": "3 days ago · Hudbay (TSX, NYSE: HBM) is a copper-focused critical minerals mining company with three long-life operations and a world-class pipeline of copper growth ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://caifuhao.eastmoney.com/news/20260619075740981953560?from=guba&name=5Y2O5aSp56eR5oqA5ZCn&gubaurl=aHR0cDovL2d1YmFwb3N0LmVhc3Rtb25leS5jb20vbGlzdCwwMDIxODUuaHRtbA%3D%3D",
+        "title": "【独立产业投研 第101篇】芯粒堆叠颠覆产业！先进封装Chiplet+HBM深度拆解，国产半导体终极弯道超车赛道_财富号_东方财富网",
+        "content": "平面排列、带宽有限、延... Chiplet重构芯片设计生态、HBM绑定AI超级景气、三维堆叠引领技术革命， 先进封装是半导体板块同时具备：政策突破+技术迭代+AI高景气+国产替代四重逻辑的黄金赛道。 至此！半导体中游板块完结、全部闭环 IC设计总论（全赛道归类） 晶圆制造三部曲（总论+...",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "money.tmx.com",
-          "/en/quote/HBM",
+          "caifuhao.eastmoney.com",
+          "/news/20260619075740981953560",
           "",
-          "",
+          "from=guba&name=5Y2O5aSp56eR5oqA5ZCn&gubaurl=aHR0cDovL2d1YmFwb3N0LmVhc3Rtb25leS5jb20vbGlzdCwwMDIxODUuaHRtbA%3D%3D",
           ""
         ],
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           2
         ],
         "score": 0.5,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "力成、京元電、威剛…HBM顆粒被韓廠壟斷，台廠靠「3題材」吃補，10檔受惠股曝光，長短線怎麼布局？",
-        "content": "目前HBM顆粒市場主要由美光（Micron）、SK海力士（SK Hynix）與三星電子（Samsung）壟斷。 雖然台廠並未直接生產HBM晶片，但仍可透過三大方向受惠AI浪潮。 首先是先進封裝與晶圓代工需求大增，受惠廠商包括台積電（2330）、力成（6239）、京元電子（2449）等。",
+        "title": "Hbm+先进封装+Cpo，10家全产业链龙头深度复盘 前言：Ai算力迭代，重构半导体封装产业新格局当下ai大模型持续迭代、人工智能算力需求爆发 ...",
+        "content": "前言：AI算力迭代，重构半导体封装产业新格局当下AI大模型持续迭代、人工智能算力需求爆发式增长，传统半导体芯片的单晶体管性能提升已逐步触及物理极限。行业发展逻辑正式从\"单核制程精进\"转向\"三维封装集成+高速互联升级\"，HBM高带宽内存、先进Chiplet封装、CPO共封装光学三大赛道，已...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -124,28 +124,29 @@
         ],
         "score": 0.5,
         "category": "general",
-        "url": "https://www.businesstoday.com.tw/article/category/183008/post/202605260031/",
+        "url": "https://xueqiu.com/9057196330/396909138",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.businesstoday.com.tw",
-          "/article/category/183008/post/202605260031/",
+          "xueqiu.com",
+          "/9057196330/396909138",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://technews.tw/2026/05/22/optical-interconnects-emerge-in-gpu-hbm-packaging/",
-        "title": "記憶體堆疊達極限！傳HBM 不再緊貼GPU，改走「光學互連、分離封裝 ...",
-        "content": "6 days ago · 市場消息傳出，為了解決「記憶體牆」問題，全球記憶體與封裝產業正評估一種全新架構，即將GPU 與HBM 拆開、分別封裝。 根據韓媒zdnet 報導，這個核心概念是，將原本緊鄰GPU ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://caifuhao2.eastmoney.com/news/20260626112223824132120",
+        "title": "HBM+先进封装+CPO，10家全产业链龙头深度复盘_财富号_东方财富网",
+        "content": "HBM赛道上，公司重点深耕HBM3、HBM3e主流高端封装工艺，搭建了完整的多层堆叠封装专用产线，产品主要适配AI服务器、高性能计算设备的高端存储芯片封装场景。依托西安、南京两大核心生产基地，公司持续加码高端封装产能扩建，HBM封装产能处于快速爬坡阶段，逐步实现批量供货。 · 先进封装领域，公司深耕TSV硅通孔、2.5D/3D堆叠、Chiplet芯粒集成核心工艺，已实现多款高端AI算力芯片、服务器芯片的封装量产，车规级高可靠封装产品成功导入头部终端客户。公司百亿级产能扩张规划分阶段落地，单阶段30亿级扩产项目持续释放先进封装产能，产业化落地节奏稳健。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "technews.tw",
-          "/2026/05/22/optical-interconnects-emerge-in-gpu-hbm-packaging/",
+          "caifuhao2.eastmoney.com",
+          "/news/20260626112223824132120",
           "",
           "",
           ""
@@ -153,19 +154,18 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           3
         ],
         "score": 0.3333333333333333,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "AI算力爆發背後：先進封裝、Chiplet與異構整合為何突然成為核心？ | 科技 | 鉅亨號 | Anue鉅亨",
-        "content": "從2.5D、3D，到Hybrid Bonding、3.5D架構，再到HBM、UCIe、Co-Packaged Optics，整個AI時代的算力競爭，已經開始從\"電晶體縮放\"，全面轉向\"系統級整合能力\"。 未來真正決定AI晶片上限的，可能不再只是先進製程，而是誰更懂Chiplet、誰更懂異構整合、誰更懂先進封裝。",
+        "title": "Ectc 2026 | 速览emib-t 等技术的最新进展-电子头条-eeworld电子工程世界",
+        "content": "AI需要算力，而提升算力的路径，不只是让晶体管变得更小，还可以通过先进封装在单个设备中集成越来越多的芯粒（chiplet ...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -187,28 +187,29 @@
         ],
         "score": 0.3333333333333333,
         "category": "general",
-        "url": "https://hao.cnyes.com/post/249420",
+        "url": "https://www.eeworld.com.cn/emp/Intel/a431186.jspx",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "hao.cnyes.com",
-          "/post/249420",
+          "www.eeworld.com.cn",
+          "/emp/Intel/a431186.jspx",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/HBM-ENGINEERING-TECHNICIAN_JR93740",
-        "title": "HBM 招募專區｜加入MTB，站上AI 與先進記憶體最前線",
-        "content": "2 days ago · 關於HBM 技術｜你將接觸的未來關鍵領域 ... HBM 是專為AI、GPU、HPC 打造的高效能記憶體， 透過3D 堆疊與先進封裝技術（TSV、2.5D／3D 封裝）， 大幅提升資料傳輸頻寬與能源效率 ...",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://caifuhao.eastmoney.com/news/20260603222112832381000",
+        "title": "还好看了这篇产业链吃到了_财富号_东方财富网",
+        "content": "三、中游：封测代工（先进封装主战场） ... 长电科技——国内第一、全球第三。XDFOI高密度Chiplet、HBM量产，英伟达、华为核心供应商。2026年百亿扩产主攻2.5D/3D、共封装光学。Chiplet良率99.5%+，这是硬实力。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "micron.wd1.myworkdayjobs.com",
-          "/en-US/External/job/HBM-ENGINEERING-TECHNICIAN_JR93740",
+          "caifuhao.eastmoney.com",
+          "/news/20260603222112832381000",
           "",
           "",
           ""
@@ -216,19 +217,18 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           4
         ],
         "score": 0.25,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "[News] SK hynix Introduces iHBM Solution, Targets HBM5 Adoption with 30 ...",
-        "content": "As thermal management emerges as a key challenge for HBM, SK hynix has unveiled its iHBM solution, which integrates cooling elements (ICEs) directly into the HBM package. The company plans to adopt the technology in next-generation products, including HBM5, according to its press release.",
+        "title": "How advanced packaging, HBM, chiplets, and AI are reshaping ... - LinkedIn",
+        "content": "Discover the latest semiconductor packaging technologies shaping AI in 2026, including HBM, chiplets, co-packaged optics, hybrid bonding, and advanced substrates. Advanced packaging is rapidly ...",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -250,28 +250,29 @@
         ],
         "score": 0.25,
         "category": "general",
-        "url": "https://www.trendforce.com/news/2026/05/26/news-sk-hynix-introduces-ihbm-solution-targets-hbm5-adoption-with-30-thermal-resistance-reduction/",
+        "url": "https://www.linkedin.com/pulse/how-advanced-packaging-hbm-chiplets-ai-reshaping-future-kam-wjltc",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.trendforce.com",
-          "/news/2026/05/26/news-sk-hynix-introduces-ihbm-solution-targets-hbm5-adoption-with-30-thermal-resistance-reduction/",
+          "www.linkedin.com",
+          "/pulse/how-advanced-packaging-hbm-chiplets-ai-reshaping-future-kam-wjltc",
           "",
           "",
           ""
         ]
       },
       {
-        "url": "https://x.com/chontang/status/2059578408619970580",
-        "title": "叠加之后提高频率的听说过吗？ Clock tree的确是这次突破的核心",
-        "content": "1 day ago · 再问哪些拿着HBM做对比的- 叠加起来增加容量我听说过，叠加之后提高频率的听说过吗？ Clock tree的确是这次突破的核心，别的都可以理解为它带来的果实。(Pun intended).",
-        "thumbnail": null,
-        "engine": "google",
         "template": "default.html",
+        "url": "https://caifuhao.eastmoney.com/news/20260618062150865829690",
+        "title": "【独立产业投研第100篇】从低端代工到AI核心基建！封测全链格局拆解：传统封装打底，先进封装弯道超车_财富号_东方财富网",
+        "content": "三大龙头全部以传统封测... 3.1 先进封装诞生的底层逻辑 全球半导体产业当下最大瓶颈： 单芯片物理制程已逼近物理极限，3nm/2nm往下迭代成本天价、良率极低、提升有限，且国内被彻底封锁。 产业唯一破局路径： 不追求单颗芯片无限缩小，转而追求多颗芯片无限堆叠、集成、互联。 · 由此诞生四大先进封装核心技术： Chiplet芯粒封装、HBM高带宽内存封装、2.5D/3D...",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
         "parsed_url": [
           "https",
-          "x.com",
-          "/chontang/status/2059578408619970580",
+          "caifuhao.eastmoney.com",
+          "/news/20260618062150865829690",
           "",
           "",
           ""
@@ -279,19 +280,18 @@
         "img_src": "",
         "priority": "",
         "engines": [
-          "google"
+          "brave"
         ],
         "positions": [
           5
         ],
         "score": 0.2,
-        "category": "general",
-        "publishedDate": null
+        "category": "general"
       },
       {
         "template": "default.html",
-        "title": "先进封装 - Cls.cn",
-        "content": "①SK海力士正在进行测试，以将HBM和系统半导体与英特尔提供的EMIB嵌入式基板结合使用； ②目前，SK海力士正在寻找适用于实际量产的材料和组件； ③相比CoWoS，EMIB具有更低的功耗、更低的封装成本以及对大型混合节点系统的更可扩展支持。",
+        "title": "Qualcomm's HBC Stacks Compute Beneath DRAM To Smash The AI ... - Wccftech",
+        "content": "Currently, HBM is the go-to solution for AI Compute accelerators, but it is becoming inefficient due to higher token costs as power continues to climb, which in turn leads to higher TCO.",
         "img_src": "",
         "iframe_src": "",
         "audio_src": "",
@@ -313,12 +313,12 @@
         ],
         "score": 0.2,
         "category": "general",
-        "url": "https://www.cls.cn/subject/9833",
+        "url": "https://wccftech.com/qualcomm-hbc-stacks-compute-beneath-dram-to-smash-the-ai-memory-wall/",
         "engine": "duckduckgo",
         "parsed_url": [
           "https",
-          "www.cls.cn",
-          "/subject/9833",
+          "wccftech.com",
+          "/qualcomm-hbc-stacks-compute-beneath-dram-to-smash-the-ai-memory-wall/",
           "",
           "",
           ""
@@ -331,10 +331,6 @@
     "suggestions": [],
     "unresponsive_engines": [
       [
-        "brave",
-        "Suspended: too many requests"
-      ],
-      [
         "karmasearch",
         "Suspended: access denied"
       ],
@@ -343,6 +339,5 @@
         "Suspended: CAPTCHA"
       ]
     ]
-  },
-  "stderr": ""
+  }
 }

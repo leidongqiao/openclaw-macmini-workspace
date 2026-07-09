@@ -1,9 +1,9 @@
-📌 人工智能商机周报·浙江｜2026.05.22-05.29
-🔥 主线：具身智能中试基地挂牌、AI计量监管体系升级、算力与光通信景气延续
-🏠 浙江机会：杭州具身智能产业链+宁波AI+制造场景落地
-🏢 优先跟进：宇树科技、DeepSeek、群核信息
-🎯 切入方向：平安租赁/科创贷/订单融资/数字财资/跨境结算
+📌 人工智能行业周报|2026.06.12-2026.06.26
+🔥 主线:智能经济、AI+消费、具身智能资本分化
+🏠 浙江机会:杭州开放四大AI场景，芯片/封装材料/智能装备/智慧康养更适合扫客
+🏢 优先跟进:光梓科技、浙江科讯未来、道宜半导体
+🎯 切入方向:科创贷/票据贴现/数字财资/平安结算通
 
-Word：https://qcn8k445rrbc.feishu.cn/file/UJ7ybI9AuomrsPxjkeicgAn5nZf
-Wiki：https://qcn8k445rrbc.feishu.cn/wiki/GttNwX1u1i8MyJkO7LFcxoZonhc
-商机表：https://qcn8k445rrbc.feishu.cn/sheets/FwBOsiErhh5U9Qtr5pvclx9Zncl
+Word:<a href="https://qcn8k445rrbc.feishu.cn/file/OqxSbztB2oX2rOxMTwrcOT6wnSh">Word版下载</a>
+Wiki:<a href="https://www.feishu.cn/wiki/EcmmwmaC9i2oQqk8O2ucAKDgnub">知识库存档</a>
+商机表:<a href="https://www.feishu.cn/wiki/S7hHwXWOAitQTCkw1e3cDAicncf">商机挖掘</a>

@@ -1,13 +1,13 @@
 ---
 name: ai-weekly-report
 description: |
- 生成行业研究周报(双版本:Word详细报告 + 飞书wiki),每周爬取多源行业研究内容,
- 去重筛选、转化为银行商机清单,推送至飞书群。每周五执行,商机/行动清单/企业动态仅限浙江本地。
+ 生成行业研究周报(双版本:Word详细报告 + 飞书wiki),每 14 天爬取多源行业研究内容,
+ 去重筛选、转化为银行商机清单,推送至飞书群。每两周周五执行,商机/行动清单/企业动态仅限浙江本地。
 ---
 
 # AI 行业研究周报生成 Skill
 
-每周直接爬取多源行业研究内容,生成双版本周报(Word详细报告 + 飞书wiki知识库存档),推送至飞书群。
+每 14 天直接爬取多源行业研究内容,生成双版本周报(Word详细报告 + 飞书wiki知识库存档),推送至飞书群。
 
 ## 何时使用
 
@@ -17,10 +17,10 @@ description: |
 
 ## 核心原则
 
-1. **直接爬取**:每周从多源爬取行业研究内容(行业报告、市场分析、技术趋势、政策动态)
+1. **直接爬取**:每 14 天从多源爬取行业研究内容(行业报告、市场分析、技术趋势、政策动态)
 2. **地域聚焦**:**本地行业动态、行动清单仅限浙江本地**(杭州/宁波/温州/绍兴/嘉兴/湖州/金华/台州/丽水/衢州/舟山);长三角异动作为补充参考
-3. **TOP5-8精选**:本周最具实质影响的5-8条要闻
-4. **商机汇总**:按企业维度汇总本周可介入的商机
+3. **TOP5-8精选**:近 14 天最具实质影响的5-8条要闻
+4. **商机汇总**:按企业维度汇总近 14 天可介入的商机
 5. **双版本输出**:Word 版(详细报告) + wiki 版(知识库存档),内容结构一致
 6. **独立运行**:周报由本 skill 独立负责
 
@@ -39,11 +39,11 @@ description: |
 
 1. **必须读完整个 skill**:如果 `read` 返回提示 `truncated`、`more lines` 或内容未到文件末尾,必须继续按 offset 读取到完整结束后再执行;不要只读前半段就开跑。
 2. **Brave 限流**:只有 SearXNG 不可用或结果明显不足时才回退 `web_search`;回退 Brave 时必须串行,两个 Brave 请求之间至少间隔 1.2 秒,禁止并行触发 429。
-3. **SearXNG 结果质量检查**:SearXNG 可用不等于结果可用。若前 10 条主要是官网、百科、旧文、无日期内容,视为"结果明显不足",必须改写更具体查询(加年份/月/浙江/政策/融资/中试基地等)或串行回退 Brave;不要把泛化结果当作近 7 天证据。
+3. **SearXNG 结果质量检查**:SearXNG 可用不等于结果可用。若前 10 条主要是官网、百科、旧文、无日期内容,视为"结果明显不足",必须改写更具体查询(加年份/月/浙江/政策/融资/中试基地等)或串行回退 Brave;不要把泛化结果当作近 14 天证据。
 4. **垂直源失败处理**:机器之心、量子位、36氪等垂直源经常 403、JS 渲染失败或只返回页脚/广告/数据服务页。遇到这种情况按"该源无有效正文"在内部来源备注中记录并跳过,不要反复重试;用新华网、财联社、人民网/杭州网、iFinD、精准搜索补足。抓取源失败属于过程备注,不写入最终群聊推送,除非全部信息源失败。
 5. **iFinD 调用方式**:`call-node.js` 是模块,不是直接命令行工具。不要直接 `node call-node.js ...`;应创建临时 JS 脚本 `const {call}=require('.../call-node.js')` 后调用 `call(server_type, tool_name, params)`,检查 `ok` 字段,完成后删除临时脚本。
 6. **iFinD 工具权限失败**:`search_trending_news` 可能返回 `Tool not allowed`。这不是致命错误:在内部来源备注中记录失败,不超过 1 次重试;继续执行 `search_news`、`search_notice` 和 web 搜索补足,不要中断周报,也不要把该过程问题写入最终群聊推送。
-7. **飞书 Drive/Doc 文件路径必须用相对路径**:`lark-cli drive +upload --file`、`lark-cli docs +update --content @file.md` 不接受工作区外的绝对路径。上传或写入前先 `cd` 到文件所在目录,再用 `--file ./文件名.docx`、`--content @./AI-weekly-YYYYMMDD-wiki.md` 这类相对路径。
+7. **飞书 Drive/Doc 文件路径必须用相对路径**:`lark-cli drive +upload --file`、`lark-cli docs +update --content @file.md` 不接受工作区外的绝对路径。上传或写入前先 `cd` 到文件所在目录,再用 `--file ./文件名.docx`、`--content @./人工智能行业周报-YYYYMMDD.md` 这类相对路径。
 8. **飞书 Drive 下载链接**:上传结果若只返回 `file_token`,需拼出完整 Drive 链接:`https://qcn8k445rrbc.feishu.cn/file/<file_token>`;该链接只用于 wiki 正文和最终摘要,不写入 Word 正文,不要只写 token 或本地路径。
 9. **wiki 创建位置**:目标是一次落到知识库根目录。当前 `lark-cli wiki +node-create --parent-node-token "" --dry-run` 会省略 `parent_node_token`,不能把空字符串 parent 当成可靠直达根目录方案。优先使用能明确落根的路径;若仍使用 `wiki +node-create --space-id`,创建后必须用 `wiki nodes list --as bot` 或返回值检查 `parent_node_token`;若不为空,立即 `wiki +move --as bot --node-token ... --target-space-id ... --target-parent-token ''` 移回根目录,并把这次异常写入内部备注。
 10. **wiki 抽查必须解析 JSON 后检查**:`docs +fetch --as bot` 输出是 JSON;检查字段黏连时必须先解析 `data.markdown`,不要在原始 stdout 字符串上做正则,否则 `\n` 转义会导致误判。
@@ -62,16 +62,18 @@ description: |
     - **验证方法**:创建 wiki 节点前,先 `lark-cli wiki spaces list --as bot` 确认能看到目标空间(AI行研 space_id=7630717889183534041);如果看不到,说明 profile 错了,立即停止并修复
 19. **wiki 企业元数据用表格格式防黏连**:飞书文档对连续短字段(推荐等级/所属行业/所在地区/产业链位置/推荐方向)即使用双换行或列表格式仍可能黏连。最可靠方案是使用 Markdown 表格格式,写入后 fetch 回来检查 `<lark-table` 标签确认渲染正确。
 20. **Word 正文禁止写自身地址**:Word 版报告正文不写"Word版下载""本文链接""飞书 Drive 地址""本地路径"等自身引用。Word 上传后的 Drive 链接只写入 wiki 正文开头和最终推送摘要。
-21. **Wiki 节点标题固定英文日期名**:飞书 wiki 节点/知识库文档标题必须固定为 `AI-weekly-YYYYMMDD`,用于去重和覆盖。中文标题(如"行业商机周报_人工智能_YYYYMMDD"或"人工智能行业商机周报")只允许用于 Word 文件名和正文 H1 展示,不得作为 wiki 节点 title。
-22. **docs +update 后必须修正 wiki 标题**:`docs +update` 写入带中文 H1 的正文后,飞书可能把 wiki 节点 title 同步成中文标题。每次更新正文后必须立刻执行 `drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"AI-weekly-YYYYMMDD"}'`,然后用 `wiki nodes list --as bot` 回查 title 是否恢复为固定英文日期名。
+21. **Wiki 节点标题固定中文日期名**:飞书 wiki 节点/知识库文档标题必须固定为 `人工智能行业周报-YYYYMMDD`,用于去重和覆盖。不得再使用 `AI-weekly-YYYYMMDD` 或其他英文/旧标题作为 wiki 节点 title。
+22. **docs +update 后必须修正 wiki 标题**:`docs +update` 写入正文后,飞书可能把 wiki 节点 title 同步成正文 H1。每次更新正文后必须立刻执行 `drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"人工智能行业周报-YYYYMMDD"}'`,然后用 `wiki nodes list --as bot` 回查 title 是否恢复为固定中文日期名。
 23. **信息抓取禁止跳过任何源**:第一步定义的 18 个数据源(4个必抓源 + 5个搜索 + 3个垂直源 + 1个浙江搜索 + 5个 iFinD)全部必须尝试,一个都不能跳过。Token 优化原则是「搜索优先于爬取」「用 text 模式」「maxChars=6000」,但**不是跳过抓取的理由**。每个源必须有「尝试记录 + 结果备注」,哪怕预判该源会返回空白或 403,也要先发请求,失败后再在内部备注中记录「该源无有效正文」,然后继续下一个源。禁止在发出请求前就决定跳过。
 24. **SearXNG 回退 Brave 前必须先改写查询**:当 SearXNG 前 10 条结果主要是官网、百科、旧文、无日期内容时,按坑 #3 视为"结果明显不足"。此时**必须先改写查询词**(加年份/月份/浙江/政策/融资/中试基地等更具体关键词)再试一次 SearXNG;改写后仍然不足,才串行回退 Brave。禁止在 SearXNG 首次结果不佳后直接跳到 Brave。
 25. **iFinD 查询禁止跳过**:第五轮的 5 个 iFinD 查询(search_trending_news、search_news、search_notice、search_stocks、get_stock_events)必须全部发出请求,即使 search_trending_news 可能返回 `Tool not allowed`(坑 #6)。每个查询的返回结果(或失败信息)必须在内部备注中记录。禁止因为某一次查询失败就跳过剩余查询。
 26. **进入报告生成前必须完成全部 18 个数据源尝试**:只有当第一步的 18 个数据源全部尝试过(不管成功或失败),才能进入第二步信息分类和第七步报告生成。如果为了省 token 或赶时间而跳过部分信息源直接生成报告,属于违反 skill 流程,必须返工重新抓取。
-27. **wiki 根目录顺序必须固定为商机表后按日期倒序**:AI 行研知识库根目录第一项是「商机挖掘」表格,周报节点必须排在其后,并按 `AI-weekly-YYYYMMDD` 日期倒序。飞书公开 API 只能移动到父节点,不能指定 sibling 位置;当前已验证 `wiki +move --target-space-id <space_id>` 会把节点追加到根目录末尾。因此每次新建或更新周报后,必须执行根目录重排:列出根目录节点,识别 `AI-weekly-*` 节点,保留最新周报不动,把其余旧周报按日期倒序依次 `wiki +move --as bot --node-token <old_node> --target-space-id "7630717889183534041"` 追加到末尾,最终校验顺序为 `商机挖掘`、最新周报、次新周报......。若移动行为变化或校验不通过,停止并提示人工处理,不要声称已排序。
-28. **docs +update 使用当前新版参数**:当前 lark-cli 1.0.38 的 `docs +update` 必须使用 `--command overwrite --doc-format markdown --content @./file.md`;旧写法 `--mode overwrite --markdown @file.md` 会报 `--command is required`。写入前先 `cd` 到 Markdown 文件目录,避免绝对路径报错。
+27. **wiki 根目录顺序必须固定为商机表后按日期倒序**:AI 行研知识库根目录第一项是「商机挖掘」表格,周报节点必须排在其后,并按 `人工智能行业周报-YYYYMMDD` 日期倒序。飞书公开 API 只能移动到父节点,不能指定 sibling 位置;当前已验证 `wiki +move --target-space-id <space_id>` 会把节点追加到根目录末尾。因此每次新建或更新周报后,必须执行根目录重排:列出根目录节点,识别 `人工智能行业周报-*` 节点,保留最新周报不动,把其余旧周报按日期倒序依次 `wiki +move --as bot --node-token <old_node> --target-space-id "7630717889183534041"` 追加到末尾,最终校验顺序为 `商机挖掘`、最新周报、次新周报......。若移动行为变化或校验不通过,停止并提示人工处理,不要声称已排序。
+28. **docs +update 使用当前新版参数**:当前 lark-cli 1.0.38 的 `docs +update` 必须使用 `--api-version v2 --command overwrite --doc-format markdown --content @./file.md`;旧版 mode/markdown 参数会报 `--command is required`。写入前先 `cd` 到 Markdown 文件目录,避免绝对路径报错。
 29. **docs +fetch 校验不要用 `--format markdown` 或 `str(data)`**:当前 lark-cli 1.0.38 会提示 `unknown format "markdown", falling back to json`。校验 wiki 黏连时必须解析 JSON 后读取 `data.document.content` 或明确存在的正文内容字段;不要对 `str(data)` 做正则,否则 HTML/XML 标签在同一行会造成 `推荐等级.*所属行业` 这类误报。
 30. **cron 运行中禁止"先失败再重试"**:OpenClaw cron 会把任意中途 tool failure 记入 diagnostics;即使后续修复成功并产出最终摘要,整次 run 仍可能被标记为 `error`,并把失败通知推送到群聊。执行 `lark-cli` 前必须先确认参数和路径,探索性命令要用不会产生非零退出码的方式隔离;已知可恢复问题不要先触发失败再补救。
+31. **双周报银行展业机会必须有具体产品和推荐原因**:「二、浙江地区动态与区域机会 → 4. 银行展业机会」和「四、银行展业机会（合并版）」每条必须写清楚：具体产品名称 + 为什么推荐这家企业/这个场景；禁止只写业务方向或空泛描述。
+32. **商机清单已有企业不再推荐**:第八步写入商机表格前,必须先用去重逻辑(坑 #32 核心简称精确匹配)检查 A 列全量数据;核心简称已存在的企业一律跳过,不得重复追加或更新。即:本周报只推荐商机表中尚未出现的新企业,已在表中的企业即使本周有新动态也不再重复推送。
 
 ## 产品资料
 
@@ -110,7 +112,7 @@ description: |
 8. 平安银行产品推荐必须基于本地产品资料(`~/.openclaw/workspace/file/productFile.docx`),**不得虚构产品名称、额度、期限、费率或准入条件**。如果产品资料中没有明确参数,写"待沟通"。
 9. 内容要清晰明了,不要写成长篇研究报告。
 10. 无法确认的信息写"待核实"或"未披露"。
-11. 每条重要判断都要形成闭环:事实信号 → 经营含义 → 金融需求 → 产品匹配 → 营销动作;但「近期政策变动」板块不要每条政策都单独写闭环,应先把政策内容写充分,最后统一写一段综合影响闭环。
+11. 每条重要判断都要形成闭环:事实信号 → 经营含义 → 金融需求 → 产品匹配 → 营销动作;但「行业动态与发展总结」板块不要每条政策都单独写闭环,应先把政策内容写充分,最后统一写一段综合影响闭环(注意:此综合影响闭环在最终输出时需删除,见第七步)。
 12. 周报正文不要在句中写来源括注,例如"(5月14日吹风会,杭州网/人民网浙江)""(来源:XXX)"。如需保留依据,可在文末或开头"资料来源"统一概括,不要影响客户经理阅读。
 
 ### 第一步:信息抓取(必抓源 + 搜索为主 + 垂直源补充)
@@ -144,11 +146,11 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 如 SearXNG 不可用、返回异常或结果明显不足,再回退到 `web_search`(Brave)。使用 Brave 时必须串行执行,不要并行调用。
 
 ```
-1. "AI 行业" OR "人工智能" → SearXNG(近7天,count=10;Brave备用)
-2. "大模型" OR "LLM" OR "GPT" OR "Claude" → SearXNG(近7天,count=10;Brave备用)
-3. "AI 芯片" OR "GPU" OR "算力" → SearXNG(近7天,count=10;Brave备用)
-4. "机器人" OR "具身智能" OR "自动驾驶" → SearXNG(近7天,count=10;Brave备用)
-5. "AI 融资" OR "AI 上市" OR "AI 政策" OR "AI 投资" → SearXNG(近7天,count=10;Brave备用)
+1. "AI 行业" OR "人工智能" → SearXNG(近14天,count=10;Brave备用)
+2. "大模型" OR "LLM" OR "GPT" OR "Claude" → SearXNG(近14天,count=10;Brave备用)
+3. "AI 芯片" OR "GPU" OR "算力" → SearXNG(近14天,count=10;Brave备用)
+4. "机器人" OR "具身智能" OR "自动驾驶" → SearXNG(近14天,count=10;Brave备用)
+5. "AI 融资" OR "AI 上市" OR "AI 政策" OR "AI 投资" → SearXNG(近14天,count=10;Brave备用)
 ```
 
 **第三轮:AI 垂直源补充(并行,3个):**
@@ -162,7 +164,7 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 **第四轮:浙江本地 AI 专项搜索(1个):**
 
 ```
-9. "AI 浙江" OR "人工智能 杭州" OR "AI 宁波" OR "大模型 浙江" → SearXNG(近7天,count=10;Brave备用)
+9. "AI 浙江" OR "人工智能 杭州" OR "AI 宁波" OR "大模型 浙江" → SearXNG(近14天,count=10;Brave备用)
 ```
 
 **第五轮:iFinD 金融新闻公告专项(3个并行):**
@@ -174,26 +176,26 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 ```
 10. search_trending_news(热点事件,注重时效性,size 不超过 10)
     server_type="news", tool_name="search_trending_news"
-    params: {"keyword": "人工智能", "industry_name": "计算机", "time_scope": "近7天", "size": 10}
-    → 抓取 AI 行业热点事件(如 time_scope 不支持"近7天"则回退到"近3天"或去掉 time_scope)
+    params: {"keyword": "人工智能", "industry_name": "计算机", "time_scope": "近14天", "size": 10}
+    → 抓取 AI 行业热点事件(如 time_scope 不支持"近14天",则去掉 time_scope 并在内部备注中记录,不得主动缩短为 7 天)
     ⚠️ 此查询必须发出请求,不能跳过;失败时在内部备注记录。
 
-11. search_news(新闻语义检索,严格 7 天)
+11. search_news(新闻语义检索,严格 14 天)
     server_type="news", tool_name="search_news"
-    params: {"query": "AI 大模型 算力 机器人", "time_start": "YYYY-MM-DD(= 今天往前推7天)", "time_end": "YYYY-MM-DD(= 今天)", "size": 10}
-    → AI 行业新闻深度检索,不得超过7天范围
+    params: {"query": "AI 大模型 算力 机器人", "time_start": "YYYY-MM-DD(= 今天往前推14天)", "time_end": "YYYY-MM-DD(= 今天)", "size": 10}
+    → AI 行业新闻深度检索,不得超过14天范围
     ⚠️ 此查询必须发出请求,不能跳过;失败时在内部备注记录。
 
-12. search_notice(公告语义检索,严格 7 天)
+12. search_notice(公告语义检索,严格 14 天)
     server_type="news", tool_name="search_notice"
-    params: {"query": "人工智能 融资 定增 投产 订单", "time_start": "YYYY-MM-DD(= 今天往前推7天)", "time_end": "YYYY-MM-DD(= 今天)", "size": 10}
-    → AI 相关上市公司公告(定增/订单/投产→直接对应银行商机),不得超过7天范围
+    params: {"query": "人工智能 融资 定增 投产 订单", "time_start": "YYYY-MM-DD(= 今天往前推14天)", "time_end": "YYYY-MM-DD(= 今天)", "size": 10}
+    → AI 相关上市公司公告(定增/订单/投产→直接对应银行商机),不得超过14天范围
     ⚠️ 此查询必须发出请求,不能跳过;失败时在内部备注记录。
 ```
 
-⚠️ **iFinD 时间范围严格控制为 7 天**:time_start/time_end 必须用实际日期(YYYY-MM-DD),计算为周报覆盖周的起始日到结束日,不得扩大范围。
+⚠️ **iFinD 时间范围严格控制为 14 天**:time_start/time_end 必须用实际日期(YYYY-MM-DD),计算为周报覆盖期的起始日到结束日,不得扩大范围。
 
-**iFinD 补充查询(按需,前12轮完成后,同样限制7天范围):**
+**iFinD 补充查询(按需,前12轮完成后,同样限制14天范围):**
 ```
 13. search_stocks(AI 板块上市公司筛选)
     server_type="stock", tool_name="search_stocks"
@@ -201,10 +203,10 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
     → 发现 AI 板块上市公司名单,用于后续事件关联
     ⚠️ 此查询必须发出请求,不能跳过;失败时在内部备注记录。
 
-14. get_stock_events(上市公司重大事件,近7天)
+14. get_stock_events(上市公司重大事件,近14天)
     server_type="stock", tool_name="get_stock_events"
     params: {"query": "浙江AI相关股票重大事件"}
-    → 抓取浙江 AI 上市公司的 IPO/定增/订单等事件(时间范围不超过7天)
+    → 抓取浙江 AI 上市公司的 IPO/定增/订单等事件(时间范围不超过14天)
     ⚠️ 此查询必须发出请求,不能跳过;失败时在内部备注记录。
 ```
 
@@ -212,7 +214,7 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 - iFinD 只覆盖上市公司及公开金融市场数据,**不覆盖非上市 AI 初创企业**,不能替代 web_search
 - 新闻/公告返回的是语义检索片段,不是全文;发现重要线索后再用 web_fetch 点入正文
 - 每次请求后必须检查 `ok` 字段,失败时不重试超过 1 次
-- **所有查询严格限制 7 天时间范围**,time_start/time_end 用 YYYY-MM-DD 格式的实际日期
+- **所有查询严格限制 14 天时间范围**,time_start/time_end 用 YYYY-MM-DD 格式的实际日期
 - 查询完成后清理临时生成的脚本文件
 
 **按需补充:**
@@ -223,7 +225,7 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 - 4个必抓源优先并行执行
 - 必抓源完成后,web_search 搜索 + 垂直源并行执行
 - 如果 web_fetch 返回空白/JS 渲染失败,跳过该源,不要重试
-- 关注 **近 7 天内** 发生的事件(周报覆盖一周范围)
+- 关注 **近 14 天内** 发生的事件(周报覆盖两周范围)
 - 关注浙江/长三角地区的 AI 企业动态优先
 
 ### 第二步:信息跟踪范围
@@ -392,12 +394,12 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 按以下完整结构生成详细行业分析报告,使用华文楷体:
 
 ```
-# 【目标行业】行业商机周报
+# 人工智能行业周报-YYYYMMDD
 
 ## 一、行业动态与发展总结
 (仅全国/国家/行业层面,不含浙江内容)
 
-⚠️ **本板块不分子项，统一以 2-4 段话总结本周全国层面行业动态即可**，涵盖政策信号、产业规划方向、行业景气趋势和产业链核心变化，最后附一段综合影响闭环（事实信号 → 行业影响 → 金融需求 → 产品匹配 → 营销动作）。不要出现"近期政策变动""政府规划""发展趋势""上下游"等子标题。
+⚠️ **本板块不分子项，统一以 2-4 段话总结近 14 天全国层面行业动态即可**，涵盖政策信号、产业规划方向、行业景气趋势和产业链核心变化。**不要出现**"近期政策变动""政府规划""发展趋势""上下游"等子标题，**不要写综合影响闭环**（即使分析过程中形成闭环，最终输出时也不要写入）。
 
 要求:
 - 不要简单罗列政策标题，提炼核心信号。
@@ -429,7 +431,7 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 - 哪些区域更值得客户经理重点扫客
 - 哪些企业类型更可能产生融资、供应链、跨境或现金管理需求
 
-### 3. 浙江上下游产业链动态
+### 4. 浙江上下游产业链动态
 
 分析浙江本地产业链上下游变化:
 - 上游原材料、设备、零部件供应
@@ -445,8 +447,12 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 
 要求:
 - 必须结合浙江本地政策、产业集群、企业动态和产业链变化。
+- 必须结合具体的企业名称和实际动向/资讯来讲，不能空泛地写业务方向。
 - 必须说明对应的银行业务机会。
 - 尽量落到具体产品方向,如授信融资、票据、保理、供应链金融、跨境结算、现金管理、代发、财富管理等。
+- **每条必须写明具体产品名称 + 推荐原因**：为什么这家企业/这个场景需要这个产品；禁止只写业务方向或空泛描述。
+- **与大企业/大厂（如阿里、云深处、DeepSeek、腾讯等）相关的动态不纳入本地行业动态，也不在展业机会中重复推送。**
+- **已在商机清单中的企业不再推荐**：写展业机会前，先读取商机表格 A 列全量数据，按核心简称精确匹配；已在表中的企业跳过，只推荐尚未入库的新企业。
 
 ## 三、重点企业推荐
 
@@ -482,25 +488,29 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 **风险提示：**
 诉讼、负债率、应收账款、客户集中度、行业波动、政策依赖、核心团队稳定性等;无明显风险写"暂无明显公开风险,仍需结合征信、流水、财报、合同、客户结构和实地尽调确认"。
 
-## 四、客户经理行动建议
+## 四、银行展业机会（合并版）
 
-用3-5条给出当天或近期最值得执行的动作,例如:
-- 优先拜访哪些企业
-- 从哪个业务场景切入
-- 先聊哪些经营问题
-- 准备哪些产品方案或材料
-- 需要内部联动哪些产品经理或审批资源
+将「银行展业机会」与「客户经理行动建议」合并为本板块。用3-5条给出浙江地区最值得关注的展业机会及可执行动作。
+
+要求:
+- **每条必须结合具体企业名称和实际动向/资讯来写**，不能空泛地写业务方向或话术。
+- **每条必须写明具体产品名称 + 推荐原因**：为什么这家企业/这个场景需要这个产品；禁止只写业务方向或空泛描述。
+- 说明优先跟进哪些企业、从哪个业务场景切入。
+- 落到具体产品方向:授信融资、票据、保理、供应链金融、跨境结算、现金管理、代发、财富管理等。
+- **不要写「客户经理切入话术」。**
+- **与大企业/大厂（如阿里、云深处、DeepSeek、腾讯等）相关的动态不纳入，不反复推送已在商机表中存在的大企业。**
+- **已在商机清单中的企业不再推荐**：写入前先读取商机表格 A 列全量数据，按核心简称精确匹配；已在表中的企业跳过，只推荐尚未入库的新企业。
 ```
 
 **Word 输出要求:**
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`(即当前工作空间的 `reports/ai-weekly/`),不得保存到其他目录;如目录不存在先创建。
-- **本地上传目录同步**:生成 Word 前,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/AI/` 目录下的文件,但保留该目录本身。生成 `AI-weekly-YYYYMMDD.docx` 后,必须复制一份同名 Word 文件到该目录,供 local-uploader 使用。推荐命令:
+- **本地上传目录同步**:生成 Word 前,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/AI/` 目录下的文件,但保留该目录本身。生成 `人工智能行业周报-YYYYMMDD.docx` 后,必须复制一份同名 Word 文件到该目录,供 local-uploader 使用。推荐命令:
   ```bash
   mkdir -p "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI"
   find "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI" -type f -delete
-  cp "/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/AI-weekly-YYYYMMDD.docx" "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI/"
+  cp "/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/人工智能行业周报-YYYYMMDD.docx" "/Users/leidongqiao/Documents/codex project/local-uploader/data/AI/"
   ```
-- 文件名格式:`AI-weekly-YYYYMMDD.docx`(与 wiki 节点标题 `AI-weekly-YYYYMMDD` 保持一致)
+- 文件名格式:`人工智能行业周报-YYYYMMDD.docx`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
 - **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
 - 字体使用华文楷体
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
@@ -510,6 +520,9 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 #### 版本B:飞书 wiki 版(知识库存档格式)
 
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
+- **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`(即当前工作空间的 `reports/ai-weekly/`),不得保存到其他目录
+- 文件名格式:`人工智能行业周报-YYYYMMDD.md`(与 wiki 节点标题 `人工智能行业周报-YYYYMMDD` 保持一致)
+- **同名覆盖检查**:生成前先检查该目录下是否已有同名文件,若存在则直接覆盖,不保留重复文件。
 - 通过第九步写入知识库
 - wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
 - ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
@@ -527,12 +540,13 @@ SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/sea
 
 ### 第八步:更新/追加商机到表格
 
-从第七步周报的「四、客户经理行动建议」中提取需要跟进的浙江企业,写入「商机挖掘」电子表格。
+从第七步周报的「四、银行展业机会（合并版）」中提取需要跟进的浙江企业,写入「商机挖掘」电子表格。
 
 **🔴 关键规则(必须严格遵守):**
-- **从行动建议提取**:从周报「四、客户经理行动建议」中提取明确提及的浙江企业,这些是需要客户经理优先跟进的商机
+- **从银行展业机会提取**:从周报「四、银行展业机会（合并版）」中提取明确提及的浙江企业,这些是需要客户经理优先跟进的商机
 - **写入前必须去重**:先读取 A 列,用「规范化核心简称精确匹配」判断是否已存在
 - **禁止重复写入同一企业**:同一核心简称只保留一行,已有行则更新,无则追加
+- **已在商机清单中的企业不再推荐**:第八步写入商机表格前,必须先读取 A 列全量数据,对每个拟写入的企业做核心简称精确匹配;核心简称已存在的企业一律跳过,不得追加新行,也不得更新已有行。即:本周报只写入商机表中尚未出现的新企业。
 
 **去重逻辑(严格执行):**
 
@@ -631,12 +645,12 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
 
 **Word 下载链接位置要求:** Word 版生成后必须先上传飞书 Drive 获取下载链接;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** https://.../file/...`,不得只在文末附链接,不得使用尖括号 `<...>`。
 
-**重要:每次生成都覆盖当前同名文件(AI-weekly-YYYYMMDD),不要有重复日期的文档。Wiki 节点标题必须固定为 `AI-weekly-YYYYMMDD`,不得使用中文报告名;中文报告名只用于 Word 文件名和正文展示标题。**
+**重要:每次生成都覆盖当前同名文件(人工智能行业周报-YYYYMMDD),不要有重复日期的文档。Wiki 节点标题必须固定为 `人工智能行业周报-YYYYMMDD`,不得使用旧英文报告名。**
 
 **🔴 关键规则(必须严格遵守):**
 - 文档必须创建在知识库**根目录**(`parent_node_token` 为空字符串),**不能**创建在「首页」或其他节点下面
 - wiki 的创建、查询、移动、删除、正文写入和回读校验全部必须使用**机器人身份**(所有 `lark-cli wiki ...` 与 `lark-cli docs ...` 命令都显式带 `--as bot`),不得使用用户身份或省略身份参数
-- wiki 节点 title 必须是 `AI-weekly-YYYYMMDD`。搜索、创建、覆盖、去重全部按这个固定 title 执行,不得用 `行业商机周报_【目标行业】_YYYYMMDD` 或其他中文标题作为节点名
+- wiki 节点 title 必须是 `人工智能行业周报-YYYYMMDD`。搜索、创建、覆盖、去重全部按这个固定 title 执行,不得用 `AI-weekly-YYYYMMDD`、`行业商机周报_【目标行业】_YYYYMMDD` 或其他标题作为节点名
 - 空间名称是 `AI行研`(没有空格),不是 `AI 行研`
 
 **步骤:**
@@ -645,7 +659,7 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
    ```bash
    lark-cli wiki nodes list --as bot --params '{"space_id":"7630717889183534041","page_size":50}'
    ```
-   从返回结果中搜索 title 为 `AI-weekly-YYYYMMDD` 的节点,提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 为 `人工智能行业周报-YYYYMMDD` 的节点,提取 `obj_token` 和 `node_token`。
    ⚠️ **必须搜索所有节点**(不限 `parent_node_token`),否则第一次创建时可能被放在「首页」下,第二次搜不到就重复创建了!
    ⚠️ **如果找到多个同名文档**,选 `obj_edit_time` 最新的那个,用 `docs +update` 覆盖;其余重复 wiki 节点用下面命令删除,禁止使用 `drive files patch` 删除:
    ```bash
@@ -658,8 +672,8 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
    说明:`drive files patch` 新版只支持 `new_title` 等文件元数据更新,不能设置 `trash_type`。
 
 2. **如果找到同名文档**:
-   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --as bot --command overwrite --doc-format markdown --content @./AI-weekly-YYYYMMDD-wiki.md` 覆盖内容
-   - 立刻用 `lark-cli drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"AI-weekly-YYYYMMDD"}'` 把文档/节点标题修回固定英文日期名,防止正文中文 H1 覆盖节点标题
+   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --as bot --command overwrite --doc-format markdown --content @./人工智能行业周报-YYYYMMDD.md` 覆盖内容
+   - 立刻用 `lark-cli drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"人工智能行业周报-YYYYMMDD"}'` 把文档/节点标题修回固定中文日期名,防止正文 H1 覆盖节点标题
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - 执行「根目录周报倒序重排」(见下方第 4 步),确保该节点排在「商机挖掘」后面。
 
@@ -675,12 +689,12 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
      ```bash
      lark-cli wiki +node-create --as bot \
        --space-id "7630717889183534041" \
-       --title "AI-weekly-YYYYMMDD" \
+       --title "人工智能行业周报-YYYYMMDD" \
        --obj-type "docx"
      ```
    - 从返回结果提取 `obj_token`(用于内容更新)和 `node_token`(用于 URL)
-   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --as bot --command overwrite --doc-format markdown --content @./AI-weekly-YYYYMMDD-wiki.md` 写入内容
-   - 立刻用 `lark-cli drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"AI-weekly-YYYYMMDD"}'` 把文档/节点标题修回固定英文日期名,防止正文中文 H1 覆盖节点标题
+   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --as bot --command overwrite --doc-format markdown --content @./人工智能行业周报-YYYYMMDD.md` 写入内容
+   - 立刻用 `lark-cli drive files patch --as bot --params '{"file_token":"<obj_token>","type":"docx"}' --data '{"new_title":"人工智能行业周报-YYYYMMDD"}'` 把文档/节点标题修回固定中文日期名,防止正文 H1 覆盖节点标题
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ 创建后用 `wiki nodes list --as bot` 确认 `parent_node_token`。如果不在根目录,说明直接根节点创建失败,必须立刻用 `wiki +move --as bot --target-parent-token ""` 移回根目录,并在内部备注记录异常。
    - 执行「根目录周报倒序重排」(见下方第 4 步),确保新周报排在「商机挖掘」后面。
@@ -693,7 +707,7 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
        --page-all \
        --format json
      ```
-   - 从根目录节点中筛选标题匹配 `AI-weekly-YYYYMMDD` 的周报节点,按日期降序排序。
+   - 从根目录节点中筛选标题匹配 `人工智能行业周报-YYYYMMDD` 的周报节点,按日期降序排序。
    - 设本次最新周报为排序后的第一个节点。由于飞书 API 不支持"插入到某节点后",用已验证的追加行为完成排序:保持「商机挖掘」和最新周报不动,把其余旧周报按日期降序依次移动到根目录末尾:
      ```bash
      lark-cli wiki +move --as bot \
@@ -702,8 +716,8 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
      ```
    - 重新执行 `wiki +node-list --as bot --space-id "7630717889183534041" --page-all --format json` 校验根目录前几项。必须满足:
      1. 第 1 项标题为 `商机挖掘`
-     2. 第 2 项为最新 `AI-weekly-YYYYMMDD`
-     3. 后续 `AI-weekly-*` 按日期倒序排列
+     2. 第 2 项为最新 `人工智能行业周报-YYYYMMDD`
+     3. 后续 `人工智能行业周报-*` 按日期倒序排列
    - 如果校验失败,不要继续群聊推送,先报告失败原因和当前顺序。
 
 **禁止**使用 `feishu_wiki_space_node` 工具(该工具可能将文档创建在首页下)。必须使用 bot 身份的 `lark-cli wiki` / `lark-cli docs` 命令,并以根目录位置校验为准。
@@ -717,16 +731,18 @@ if sheet_max_row_count is not None and end_row < sheet_max_row_count:
 推送至群聊的消息格式如下:
 
 ```markdown
-📌 【目标行业】商机周报·浙江|YYYY.MM.DD-MM.DD
+📌 人工智能行业周报|YYYY.MM.DD-YYYY.MM.DD
 🔥 主线:XXX、XXX、XXX
 🏠 浙江机会:XXX
 🏢 优先跟进:XXX、XXX、XXX
 🎯 切入方向:XXX/XXX/XXX
 
-Word:<飞书Drive下载链接>
-Wiki:<https://www.feishu.cn/wiki/XXXX>
-商机表:<https://xxx.feishu.cn/wiki/XXXX>
+Word:<a href="飞书Drive下载链接">Word版下载</a>
+Wiki:<a href="https://www.feishu.cn/wiki/XXXX">知识库存档</a>
+商机表:<a href="https://xxx.feishu.cn/wiki/XXXX">商机挖掘</a>
 ```
+
+⚠️ **链接格式硬规则**:群聊摘要中的三个链接**必须使用 `<a href="URL">标签文本</a>` 格式**,禁止使用裸 URL 或 Markdown 链接 `[文本](URL)`,禁止使用尖括号 `<URL>` 包裹裸链接。
 
 ####  10.1 同步至工作空间
 
@@ -750,9 +766,9 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-AIResearcher/reports/sum
 - 企业推荐:只列重点 3 家以内,不写推荐理由
 - 行动建议:只写 1 句"优先跟进 + 切入方向"
 - 样式要求:正文四行呈现,固定为「🔥 主线 / 🏠 浙江机会 / 🏢 优先跟进 / 🎯 切入方向」,不要写成一大段话
-- Word 周报飞书 Drive 下载链接(不要只放本地路径)
-- 周报 wiki 存档链接
-- 商机挖掘表格链接(sheets URL)
+- Word 周报飞书 Drive 下载链接(必须使用 `<a href="URL">Word版下载</a>` 格式)
+- 周报 wiki 存档链接(必须使用 `<a href="URL">知识库存档</a>` 格式)
+- 商机挖掘表格链接(必须使用 `<a href="URL">商机挖掘</a>` 格式)
 - **不要**输出周报全文内容
 - **不要**使用长分隔线、长清单、TOP5-8逐条新闻、企业推荐理由、执行日志
 
@@ -761,11 +777,12 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-AIResearcher/reports/sum
 2. **禁止**把以下内容作为最终群聊推送:执行日志、完成情况清单、工具调用结果、文件本地路径、Markdown/wiki 源稿、Word 正文全文、调试说明。
 3. 推送前必须自检 4 项,缺一不可:
    - 已压缩为 2-3 个主线关键词,不是 TOP 新闻长清单;
-   - Word 链接是飞书 Drive/file 下载链接,不是本地路径;
-   - wiki 链接是 `https://www.feishu.cn/wiki/...`;
-   - 商机表格链接是 sheets URL。
+   - Word 链接是飞书 Drive/file 下载链接,不是本地路径,且使用 `<a href="URL">标签文本</a>` 格式;
+   - wiki 链接是 `https://www.feishu.cn/wiki/...`,且使用 `<a href="URL">标签文本</a>` 格式;
+   - 商机表格链接是 sheets URL,且使用 `<a href="URL">标签文本</a>` 格式。
 4. 如果 Word Drive 链接、wiki 链接或 sheets 链接任一缺失,**不要推送群聊摘要**;先补齐链接,再输出第十步模板。
 5. 若需要向用户说明执行状态,只能在非群聊/人工排查上下文说明;在群聊定时任务中,最终输出仍必须是第十步摘要模板。
+6. ⚠️ **链接格式自检**:三个链接必须全部使用 `<a href="URL">标签文本</a>` 格式;禁止出现裸 URL、禁止使用 `[文本](URL)` Markdown 链接、禁止使用 `<URL>` 尖括号包裹裸链接。
 
 ### 第十一步:表达风格
 
@@ -803,16 +820,16 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-AIResearcher/reports/sum
 
 1. **不编造数据**:所有企业、金额、日期必须来自爬取的实际信息
 2. **产品资料**:产品推荐必须基于 `~/.openclaw/workspace/file/productFile.docx`,不得虚构产品名称、额度、期限、费率或准入条件
-3. **地域限制**:本地行业动态、行动清单仅限浙江本地企业;大企业/大厂(阿里、腾讯等)动态不纳入本地行业动态
+3. **地域限制**:本地行业动态、行动清单仅限浙江本地企业;大企业/大厂(阿里、腾讯、云深处、DeepSeek等)动态不纳入本地行业动态,已在商机表中存在的大企业不要反复推送
 4. **禁止推荐不合规业务**
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致
-6. **知识库标题**:AI-weekly-YYYYMMDD。该标题是 wiki 节点名/去重键,禁止替换成中文报告名
-7. **知识库写入**:必须使用 bot 身份的 `lark-cli wiki` / `lark-cli docs` 命令写入 AI 行研知识库,禁止使用 `feishu_wiki_space_node` 工具。优先选择能明确落到根目录的路径;当前 `wiki +node-create --parent-node-token ""` dry-run 会省略空 parent,不能视为可靠直达根目录。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建。所有 wiki/docs 操作显式 `--as bot`,不得用用户身份。写入后必须执行根目录重排:`商机挖掘` 第一,`AI-weekly-*` 按日期倒序跟在其后
+6. **知识库标题**:人工智能行业周报-YYYYMMDD。该标题是 wiki 节点名/去重键,禁止替换成其他报告名
+7. **知识库写入**:必须使用 bot 身份的 `lark-cli wiki` / `lark-cli docs` 命令写入 AI 行研知识库,禁止使用 `feishu_wiki_space_node` 工具。优先选择能明确落到根目录的路径;当前 `wiki +node-create --parent-node-token ""` dry-run 会省略空 parent,不能视为可靠直达根目录。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建。所有 wiki/docs 操作显式 `--as bot`,不得用用户身份。写入后必须执行根目录重排:`商机挖掘` 第一,`人工智能行业周报-*` 按日期倒序跟在其后
 8. **群聊推送**:推送概要 + 链接,不是全文
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
 10. **搜索限流策略**:默认使用 SearXNG(`SEARXNG_URL=http://localhost:8080 python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`);Brave `web_search` 仅作为备用。若回退 Brave,必须串行执行,避免免费套餐 1 次/秒限流导致 429。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能
-12. **Word 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`,文件名格式 `AI-weekly-YYYYMMDD.docx`(与 wiki 节点标题一致);生成前检查同名文件并覆盖;生成后上传飞书 Drive,并将下载链接写在 wiki 正文开头及推送摘要中;Word 正文不得写自身下载地址、飞书 Drive 地址或本地路径,且必须清理 Markdown 标记,推荐产品组合不用表格。
+12. **Word 输出**:使用华文楷体字体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-AIResearcher/reports/ai-weekly/`,文件名格式 `人工智能行业周报-YYYYMMDD.docx`(与 wiki 节点标题一致);生成前检查同名文件并覆盖;生成后上传飞书 Drive,并将下载链接写在 wiki 正文开头及推送摘要中;Word 正文不得写自身下载地址、飞书 Drive 地址或本地路径,且必须清理 Markdown 标记,推荐产品组合不用表格。
 13. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 
 ## 文件路径
@@ -859,7 +876,7 @@ sheet_id: 28609d
 
 # AI 行研知识库(注意:空间名称是 AI行研,没有空格)
 space_id: 7630717889183534041
-节点标题 / Word 文件名: AI-weekly-YYYYMMDD(wiki 节点标题和 Word 文件名保持一致)
+节点标题 / Word 文件名: 人工智能行业周报-YYYYMMDD(wiki 节点标题和 Word 文件名保持一致)
 
 # 当前 bot 身份
 ai_bot: appId=cli_a96ca9994c795bb4

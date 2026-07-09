@@ -1,9 +1,9 @@
 {
-  "source_id": 10,
+  "source_id": "10",
   "source_name": "爱集微/集微网",
   "url_or_query": "https://www.ijiwei.com/",
-  "fetched_at": "2026-05-29T06:06:06.713270+00:00",
-  "ok": true,
-  "status_or_error": "ok",
-  "content_or_results": "爱集微本轮重点包括集微大会、英诺赛科全GaN技术适配NVIDIA MGX高密度AI供电、思特威CIS+SoC端侧视觉AI、盛美上海先进封装电镀、比亚迪4nm智驾芯片、瑞声科技MEMS主动散热芯片试产等。"
+  "fetched_at": "2026-07-03T00:16:31.019017+00:00",
+  "ok": false,
+  "status_or_error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)'))",
+  "content_or_results": ""
 }

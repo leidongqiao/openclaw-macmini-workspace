@@ -1,13 +1,13 @@
 ---
 name: im-weekly-report
 description: |
-  生成智能制造行业研究周报(聚焦浙江),每周爬取多源行业研究内容,去重筛选、
-  转化为银行商机清单,推送至飞书群。每周五执行,商机/行动清单/企业动态仅限浙江本地。
+  生成智能制造行业研究周报(聚焦浙江),每14天爬取近14天多源行业研究内容,去重筛选、
+  转化为银行商机清单,推送至飞书群。每两周执行,商机/行动清单/企业动态仅限浙江本地。
 ---
 
 # 智能制造行业研究周报生成 Skill
 
-每周直接爬取多源行业研究内容,生成双版本周报(Word详细报告 + 飞书wiki知识库存档),推送至飞书群。
+每14天直接爬取近14天多源行业研究内容,生成双版本周报(Word详细报告 + 飞书wiki知识库存档),推送至飞书群。
 
 ## 复用说明
 
@@ -25,7 +25,7 @@ description: |
 | `SHEET_ID` | 商机挖掘表格的 sheet_id | 从飞书表格 URL 提取 |
 | `REGION` | 地域聚焦(如「浙江」「江苏」「广东」) | 根据 agent 定位 |
 | `REGION_CITIES` | 地域下属城市列表 | 根据 agent 定位 |
-| `WEEKLY_TITLE_PREFIX` | 周报文档标题前缀(如 `im-weekly`) | 自定义 |
+| `WEEKLY_TITLE_PREFIX` | 周报文档标题前缀(如 `智能制造行业周报`) | 自定义 |
 
 ### 配置示例(在 agent 的 SKILL.md 同级创建 `config.json`)
 
@@ -38,7 +38,7 @@ description: |
   "sheet_id": "a39f2b",
   "region": "浙江",
   "region_cities": ["杭州","宁波","温州","绍兴","嘉兴","湖州","金华","台州","丽水","衢州","舟山"],
-  "weekly_title_prefix": "im-weekly"
+  "weekly_title_prefix": "智能制造行业周报"
 }
 ```
 
@@ -55,10 +55,10 @@ description: |
 
 ## 核心原则
 
-1. **直接爬取**:每周从多源爬取行业研究内容(行业报告、市场分析、技术趋势、政策动态)
+1. **直接爬取**:每14天从多源爬取近14天行业研究内容(行业报告、市场分析、技术趋势、政策动态)
 2. **地域聚焦**:**商机地图、行动清单、企业动态仅限目标区域**(如浙江:杭州/宁波/温州/绍兴/嘉兴/湖州/金华/台州/丽水/衢州/舟山);长三角异动作为补充参考
-3. **TOP5-8精选**:本周最具实质影响的5-8条事件
-4. **商机汇总**:按企业维度汇总本周可介入的商机
+3. **TOP5-8精选**:近14天最具实质影响的5-8条事件
+4. **商机汇总**:按企业维度汇总本周期可介入的商机
 5. **双版本输出**:Word 版(详细报告) + wiki 版(知识库存档),内容结构一致
 6. **独立运行**:周报由本 skill 独立负责
 
@@ -66,11 +66,11 @@ description: |
 
 ## Token 优化原则
 
-- **搜索优先用 searxng**(本地 SearXNG 实例),Brave web_search 作为备用;searxng 无 API 限流、无布尔 OR 语法问题、无需逐条串行。用法:`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`;时间范围用 `--time-range day`(近1天)或 `--time-range week`(近7天)
+- **搜索优先用 searxng**(本地 SearXNG 实例),Brave web_search 作为备用;searxng 无 API 限流、无布尔 OR 语法问题、无需逐条串行。用法:`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --format json`;近14天检索时用 `--time-range month` 扩大召回,再按发布日期/正文日期过滤到近14天
 - **web_fetch 用 text 模式**(`extractMode: "text"`),比 markdown 模式更精简
 - **maxChars=6000**,够提取文章摘要,不需要更大
 - **iFinD 查询聚焦行业**:query 中必须限定智能制造相关关键词,避免返回宽泛金融数据
-- **iFinD 时间精确到近7天**:time_start/time_end 必须用实际日期,size 控制在 5-10
+- **iFinD 时间精确到近14天**:time_start/time_end 必须用实际日期,size 控制在 5-10
 - **表格只查 A 列**去重,不查全表
 - **所有飞书 API 统一走 lark-cli**(sheets/drive/docs/wiki),不用 Python urllib 直接调 API,避免 SSL 代理问题
 - **lark-cli 路径**:在 PATH 中可能不可用,实测位置为 `~/.npm-global/bin/lark-cli`。所有脚本中应优先使用绝对路径 `~/.npm-global/bin/lark-cli`。
@@ -107,7 +107,7 @@ description: |
 - **Word 下载链接**: 用纯 URL 文本 `**Word版下载：** https://...`，不要写 `<https://...>`，尖括号可能被吞。
 - **创建后必须 fetch 回来抽查**: 检查是否有 `推荐等级.*所属行业` 等同行黏连，同时检查是否出现乱码、Unicode 转义残留、空正文、正文被 JSON/XML 包裹、链接丢失等问题。只要 fetch 回来的内容不可读或与本地 wiki Markdown 明显不一致，必须重写/重传后再次 fetch，不能推送。
 - **乱码/转义错误是发布失败，不是小瑕疵**: Wiki 正文中出现 `\u4e2d\u56fd`、`&#x`、`&lt;`/`&gt;` 大量残留、`{ "content": ... }`、XML 标签正文化、连续问号/方块字符、中文大面积缺失，均判定为发布失败。必须回到本地 Markdown 源重新写入，必要时改用临时文件传参，避免 shell 转义污染。
-- **大段 Wiki Markdown 必须用文件传参**: 使用 `lark-cli docs +update --api-version v2 --command overwrite --doc-format markdown --content @reports/im-weekly/im-weekly-YYYYMMDD.md`。不要把 Markdown 内容先 `json.dumps` 后作为字符串写入,否则会把正文变成带 `\uXXXX` 的 JSON 字符串。
+- **大段 Wiki Markdown 必须用文件传参**: 使用 `lark-cli docs +update --api-version v2 --command overwrite --doc-format markdown --content @reports/im-weekly/智能制造行业周报-yyyyMMdd.md`。不要把 Markdown 内容先 `json.dumps` 后作为字符串写入,否则会把正文变成带 `\uXXXX` 的 JSON 字符串。
 - **Word 链接一致性**: 上传 Word 后得到的 Drive file 链接，必须同时写入本地 Markdown、Wiki 正文、`reports/summary/IM-summary.md` 和最终推送摘要。推送前逐项比对，四处链接不一致时以最新上传且已在 Wiki fetch 中验证存在的链接为准，修正后再推送。
 - **Wiki node-create 的 flag 差异**: 简写版 `+node-create` 不支持 `--space-id` 和 `--format json` 等 flag。正确用法是 `wiki +node-create --profile im_bot --as bot --space-id <space_id> --title <title> --obj-type docx`。如果遇到 `unknown flag` 错误，改用完整子命令 `wiki nodes create --params '{"space_id":"...","title":"..."}'` 并去掉不支持的 flag。
 - **lark-cli 简写 + 命令和完整子命令的参数不一致**: `wiki +node-create`、`wiki +move` 等简写命令使用独立的 flag 集（如 `--space-id`、`--title`），而完整子命令如 `wiki nodes list` 使用 `--params` JSON。混用时容易踩坑，建议统一使用简写 + 命令并只传它支持的 flag。
@@ -187,20 +187,20 @@ SEARXNG_SCRIPT="~/.openclaw/skills/searxng/scripts/searxng.py"
 SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 # 5个查询并行执行
-1. $SEARXNG_CMD "工业机器人 协作机器人 人形机器人 AGV AMR 2026" -n 10 --time-range week --format json
-2. $SEARXNG_CMD "数控机床 CNC 加工中心 工业母机 五轴联动 2026" -n 10 --time-range week --format json
-3. $SEARXNG_CMD "工业软件 MES PLM SCADA 工业互联网 数字孪生 2026" -n 10 --time-range week --format json
-4. $SEARXNG_CMD "机器视觉 智能质检 AI制造 预测性维护 边缘计算 2026" -n 10 --time-range week --format json
-5. $SEARXNG_CMD "智能制造 融资 上市 政策 灯塔工厂 智能工厂 2026" -n 10 --time-range week --format json
+1. $SEARXNG_CMD "工业机器人 协作机器人 人形机器人 AGV AMR 2026" -n 10 --time-range month --format json
+2. $SEARXNG_CMD "数控机床 CNC 加工中心 工业母机 五轴联动 2026" -n 10 --time-range month --format json
+3. $SEARXNG_CMD "工业软件 MES PLM SCADA 工业互联网 数字孪生 2026" -n 10 --time-range month --format json
+4. $SEARXNG_CMD "机器视觉 智能质检 AI制造 预测性维护 边缘计算 2026" -n 10 --time-range month --format json
+5. $SEARXNG_CMD "智能制造 融资 上市 政策 灯塔工厂 智能工厂 2026" -n 10 --time-range month --format json
 ```
 
 **如果 searxng 实例不可用(返回空或连接失败),回退到 Brave web_search,但此时不用 OR 语法,改用空格分隔关键词:**
 ```
-1. web_search("工业机器人 协作机器人 人形机器人", freshness="week", count=10)
-2. web_search("数控机床 CNC 加工中心 工业母机", freshness="week", count=10)
-3. web_search("工业软件 MES PLM 工业互联网", freshness="week", count=10)
-4. web_search("机器视觉 智能质检 AI制造 预测性维护", freshness="week", count=10)
-5. web_search("智能制造 融资 上市 政策 灯塔工厂", freshness="week", count=10)
+1. web_search("工业机器人 协作机器人 人形机器人", freshness="month", count=10)
+2. web_search("数控机床 CNC 加工中心 工业母机", freshness="month", count=10)
+3. web_search("工业软件 MES PLM 工业互联网", freshness="month", count=10)
+4. web_search("机器视觉 智能质检 AI制造 预测性维护", freshness="month", count=10)
+5. web_search("智能制造 融资 上市 政策 灯塔工厂", freshness="month", count=10)
 ```
 
 ⚠️ **Brave web_search 串行执行**(免费套餐限流1次/秒),每次间隔1秒。searxng 可并行执行。
@@ -223,10 +223,10 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 **第四轮:本地智能制造专项搜索(1个,searxng):**
 
 ```
-10. $SEARXNG_CMD "智能制造 [地域名] 工业机器人 [核心城市] 工业互联网" -n 10 --time-range week --format json
+10. $SEARXNG_CMD "智能制造 [地域名] 工业机器人 [核心城市] 工业互联网" -n 10 --time-range month --format json
 ```
 
-**第五轮:iFinD 金融数据补充(3个查询,聚焦近7天智能制造行业):**
+**第五轮:iFinD 金融数据补充(3个查询,聚焦近14天智能制造行业):**
 
 ⚠️ **iFinD 执行说明:**
 - **必须执行**,不可跳过。iFinD 能提供上市公司公告语义检索和热点事件,是其他源无法替代的。
@@ -237,17 +237,17 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 ```
 11. search_notice(公告语义检索):
     query="工业机器人 OR 协作机器人 OR 人形机器人 OR AGV OR 数控机床 OR 工业母机",
-    time_start="近7天前日期(YYYY-MM-DD)", time_end="今天日期(YYYY-MM-DD)", size=10
-    → 精准抓取近7天智能制造相关上市公司公告(融资/定增/产能/中标/重大合同)
+    time_start="近14天前日期(YYYY-MM-DD)", time_end="今天日期(YYYY-MM-DD)", size=10
+    → 精准抓取近14天智能制造相关上市公司公告(融资/定增/产能/中标/重大合同)
 
 12. search_notice(公告语义检索):
     query="工业软件 OR MES OR PLM OR 工业互联网 OR 数字孪生 OR 机器视觉 OR 智能工厂 OR 灯塔工厂",
-    time_start="近7天前日期(YYYY-MM-DD)", time_end="今天日期(YYYY-MM-DD)", size=10
-    → 精准抓取近7天工业软件/智能工厂相关上市公司公告
+    time_start="近14天前日期(YYYY-MM-DD)", time_end="今天日期(YYYY-MM-DD)", size=10
+    → 精准抓取近14天工业软件/智能工厂相关上市公司公告
 
 13. search_trending_news(热点事件):
-    keyword="智能制造", industry_name="机械", time_scope="近7天", size=5
-    → 抓取近7天智能制造行业热点事件
+    keyword="智能制造", industry_name="机械", time_scope="近14天", size=5
+    → 抓取近14天智能制造行业热点事件
 ```
 
 **iFinD 调用说明:**
@@ -257,7 +257,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 - 每次调用后检查 `ok` 字段确认是否成功,失败则跳过该查询
 - **search_trending_news 可能 403 Tool not allowed**: 该接口受权限限制,返回 403 时跳过即可,**不要在报告正文中标注**。
 - **search_notice 可能返回空结果**: 语义检索对时间和 query 要求严格,为空时直接忽略,**不要在报告正文中标注**。
-- **时间参数必须用近 7 天的实际日期(YYYY-MM-DD 格式),不可用模糊描述**
+- **时间参数必须用近 14 天的实际日期(YYYY-MM-DD 格式),不可用模糊描述**
 - **行业限定**:query 中必须包含智能制造相关关键词(机器人/数控机床/工业软件/智能工厂等),避免返回无关公告
 - 如果 iFinD 密钥未配置或调用全部失败,跳过本轮,继续后续步骤
 
@@ -269,7 +269,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 - 必抓源不可跳过,即使返回空白/JS 渲染失败也要继续
 - web_search + 垂直源并行执行
 - 如果 web_fetch 返回空白/JS 渲染失败,跳过该源,不要重试
-- 关注 **近 7 天内** 发生的事件(周报覆盖一周范围)
+- 关注 **近 14 天内** 发生的事件(周报覆盖两周范围)
 - 关注目标区域及周边的智能制造企业动态优先
 
 
@@ -435,6 +435,11 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 **生成两种格式的周报,内容结构一致,输出方式不同:**
 
+⚠️ **企业推荐去重与轮换规则(2026-06-07 新增,2026-06-18 更新):**
+- **生成推荐前先读商机挖掘表**: 在筛选候选企业前,必须先读取商机挖掘表格 A~I 列全量数据,提取「客户名称」(A 列)和「创建日期」(I 列),按创建日期倒序排列,识别近 8 周内(以当前日期向前回溯)已有新增/更新记录的企业,这些企业视为近期已推荐过,本期原则上不再重复推荐。
+- **宇树科技、云深处科技不要频繁出镜。** 这两家如已在近 8 周内已推荐过的企业中出现过,本期原则上不再推荐,除非有重大新信号(如新一轮大额融资、重磅产品发布、重大订单中标等)。
+- 优先挖掘其他值得关注的浙江智能制造企业,保持推荐名单的新鲜度和多样性。
+
 #### 版本A:Word 版(行业分析指令格式)
 
 按以下完整结构生成详细行业分析报告,使用华文楷体:
@@ -535,7 +540,7 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 
 ## 三、重点企业推荐
 
-选择3-8家最值得客户经理跟进的浙江企业。每家企业按照以下模板输出。
+选择3-8家最值得客户经理跟进的浙江企业。⚠️ **轮换优先**:近期已推荐过的企业(尤其是宇树科技、云深处科技)不要频繁重复推荐;优先挖掘新企业,除非有重大新信号。每家企业按照以下模板输出。
 ⚠️ **硬性结构要求(不可压缩/不可省略)**:每一家企业必须严格保留下列字段和小标题;不得把"企业关键信息"合并成一段,也不得把"推荐理由""银行展业机会"改写成无结构长段。若资料不足,字段仍保留,并写"未披露/待核实"。生成完成后必须逐家自检:是否包含【推荐等级、所属行业、所在地区、产业链位置、推荐方向、企业关键信息-基本情况、企业关键信息-高层与团队背景、企业关键信息-银行关注点、推荐理由、银行展业机会、推荐产品组合、客户经理切入话术、风险提示】;缺一项必须返工。
 
 ### 企业名称:XXX公司
@@ -583,8 +588,8 @@ SEARXNG_CMD="python3 $SEARXNG_SCRIPT search"
 **Word 输出要求:**
 - **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`(即 IM Researcher 工作空间的 `reports/im-weekly/`),不得保存到其他目录;如目录不存在先创建。
 - **同步拷贝**:生成并保存后,先清空 `/Users/leidongqiao/Documents/codex project/local-uploader/data/智能制造` 目录下的所有文件(目录结构保留,不要删除目录本身),然后将 Word 周报文件拷贝一份到该目录。注意该路径中 `Documents/` 后确实有一个空格,不要擅自改成无空格路径。
-- 文件名格式:`im-weekly-YYYYMMDD.docx`(与 wiki 标题一致)
-- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `im-weekly-YYYYMMDD.docx`,如存在则直接覆盖,不保留旧文件。
+- 文件名格式:`智能制造行业周报-yyyyMMdd.docx`(与 wiki 标题一致,其中 `yyyyMMdd` 为生成日日期,如 `20260619`)
+- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-yyyyMMdd.docx`,如存在则直接覆盖,不保留旧文件。
 - **⚠️ 同步后校验**:拷贝完成后必须读取源文件和目标文件的大小、mtime,确认一致；如发现同名文件同时存在于错误空格目录,不得引用错误目录文件。
 - 字体使用华文楷体
 - **Word 样式优化**:Word 版必须是干净的报告排版,不要把 Markdown 原始符号带入正文;生成 docx 时需去掉 `- **`、`**`、表格竖线等 Markdown 标记。普通段落用自然段,企业信息可用短段落或简洁项目符号,但不要让每段前面都出现 `- **`。推荐产品组合不得用表格。
@@ -597,7 +602,7 @@ https://<租户域名>.feishu.cn/file/<file_token>
 例如:`https://qcn8k445rrbc.feishu.cn/file/DWMabuSB5og3PbxtC0OcY4kQnQg`
 
 **使用方法:**
-1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./im-weekly-YYYYMMDD.docx" --name "im-weekly-YYYYMMDD.docx"`
+1. 上传文件:`lark-cli drive +upload --profile $BOT_PROFILE --as bot --file "./智能制造行业周报-yyyyMMdd.docx" --name "智能制造行业周报-yyyyMMdd.docx"`
 2. 从返回结果获取 `file_token`
 3. 拼接下载链接:`https://<租户域名>.feishu.cn/file/<file_token>`
 4. 将该链接写入 wiki 正文开头、`reports/summary/IM-summary.md` 和推送摘要中
@@ -612,6 +617,9 @@ https://<租户域名>.feishu.cn/file/<file_token>
 #### 版本B:飞书 wiki 版(知识库存档格式)
 
 - 内容与 Word 版结构一致,适配飞书文档 Markdown 格式
+- **固定保存目录**:`/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`(即 IM Researcher 工作空间的 `reports/im-weekly/`),不得保存到其他目录
+- 文件名格式:`智能制造行业周报-yyyyMMdd.md`(与 wiki 标题一致,其中 `yyyyMMdd` 为生成日日期,如 `20260619`)
+- **⚠️ 同名文件覆盖**:保存前先检查该目录下是否已存在同名 `智能制造行业周报-yyyyMMdd.md`,如存在则直接覆盖,不保留旧文件。
 - 通过第九步写入知识库
 - wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入:`**Word版下载:** [点击下载Word版周报](飞书Drive下载链接)`。
 - ⚠️ **wiki 正文中的 Word 下载链接必须用纯 URL 文本**,格式为 `**Word版下载:** https://.../file/...`,不要写成 `<https://...>`;飞书文档转换可能吞掉尖括号链接,导致 wiki 中只剩空的"Word版下载"。
@@ -739,7 +747,7 @@ fi
 
 **写入内容:第七步版本B(飞书 wiki 版),结构与 Word 版一致,适配飞书 Markdown 格式。**
 
-**重要:每次生成都覆盖当前同名文件(im-weekly-YYYYMMDD),不要有重复日期的文档。**
+**重要:每次生成都覆盖当前同名文件(智能制造行业周报-yyyyMMdd),不要有重复日期的文档。**
 
 **Word 下载链接位置要求:** Word 版上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;wiki 正文开头(标题下方、覆盖周期/资料来源前)必须写入 `**Word版下载:** <下载链接>`,推送摘要中的「周报全文(Word)」也必须使用该下载链接。
 
@@ -756,12 +764,12 @@ fi
    ```bash
    lark-cli wiki nodes list --params '{"space_id":"$WIKI_SPACE_ID","page_size":50}' --profile $BOT_PROFILE
    ```
-   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-YYYYMMDD` 的节点,提取 `obj_token` 和 `node_token`。
+   从返回结果中搜索 title 为 `$WEEKLY_TITLE_PREFIX-yyyyMMdd` 的节点,提取 `obj_token` 和 `node_token`。
    ⚠️ **必须搜索所有节点**(不限 `parent_node_token`),否则第一次创建时可能被放在「首页」下,第二次搜不到就重复创建了!
    ⚠️ **如果找到多个同名文档**,选 `obj_edit_time` 最新的那个,用 `docs +update` 覆盖;其余用 `drive files +patch --type docx --file-token <obj_token> --body '{"trash_type":"doc_trash"}'` 删除。
 
 2. **如果找到同名文档**:
-   - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 覆盖内容
+   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./<wiki文件名>.md` 覆盖内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ **位置排序**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将当前周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保最新周报紧跟在商机挖掘表格后面。
    - ⚠️ **回读校验**: 覆盖后立即 fetch 文档正文,检查中文可读性、Word 下载链接、企业元数据列表、行动建议、乱码/转义/黏行问题。检查不通过时,不得进入群聊推送,必须修正文档后重试。
@@ -771,11 +779,11 @@ fi
      ```bash
      lark-cli wiki +node-create --profile $BOT_PROFILE --as bot \
        --space-id "$WIKI_SPACE_ID" \
-       --title "$WEEKLY_TITLE_PREFIX-YYYYMMDD" \
+       --title "$WEEKLY_TITLE_PREFIX-yyyyMMdd" \
        --obj-type "docx"
      ```
    - 从返回结果提取 `obj_token`(用于内容更新)和 `node_token`(用于 URL)
-   - 使用 `lark-cli docs +update --doc <obj_token> --profile $BOT_PROFILE --as bot --mode overwrite --markdown '<内容>'` 写入内容
+   - 先 `cd` 到 wiki Markdown 文件所在目录,再使用 `lark-cli docs +update --api-version v2 --doc <obj_token> --profile $BOT_PROFILE --as bot --command overwrite --doc-format markdown --content @./<wiki文件名>.md` 写入内容
    - 输出文档链接:`https://www.feishu.cn/wiki/<node_token>`
    - ⚠️ 创建后用 `wiki nodes list` 确认 `parent_node_token`,如果不在根目录,用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <node_token> --target-space-id "$WIKI_SPACE_ID"` 移回根目录。
    - ⚠️ **位置排序(必须在根目录)**:列出根目录所有节点,找到「商机挖掘表格」节点的 `node_token`(记为 `SHANGJI_TOKEN`),将新周报节点移动到商机挖掘表格之后。使用 `wiki +move --profile $BOT_PROFILE --as bot --node-token <新周报node_token> --target-space-id "$WIKI_SPACE_ID" --insert-after <SHANGJI_TOKEN>`。确保新周报紧跟在商机挖掘表格后面,所有旧周报自动依次后移。
@@ -790,19 +798,31 @@ fi
 
 **长度限制:正文控制在 200 字左右(不含链接 URL),最多不超过 300 字。**
 
-推送至群聊的消息格式如下:
+推送至群聊的消息必须使用 `msg_type=post` + 富文本链接 tag 格式,禁止使用裸 URL 或 Markdown 链接。
 
-```markdown
-📌 【目标行业】商机周报·浙江|YYYY.MM.DD-MM.DD
-🔥 主线:XXX、XXX、XXX
-🏠 浙江机会:XXX
-🏢 优先跟进:XXX、XXX、XXX
-🎯 切入方向:XXX/XXX/XXX
+消息格式如下(以下 JSON 为 `content` 字段):
 
-Word:<飞书Drive下载链接>
-Wiki:<https://www.feishu.cn/wiki/XXXX>
-商机表:<https://xxx.feishu.cn/wiki/XXXX>
+```json
+{
+  "zh_cn": {
+    "title": "📌 【目标行业】商机周报·浙江|YYYY.MM.DD-MM.DD",
+    "content": [
+      [{"tag": "text", "text": "🔥 主线:XXX、XXX、XXX"}],
+      [{"tag": "text", "text": "🏠 浙江机会:XXX"}],
+      [{"tag": "text", "text": "🏢 优先跟进:XXX、XXX、XXX"}],
+      [{"tag": "text", "text": "🎯 切入方向:XXX/XXX/XXX"}],
+      [{"tag": "text", "text": "Word:"}, {"tag": "a", "text": "点击下载Word版", "href": "<飞书Drive下载链接>"}],
+      [{"tag": "text", "text": "Wiki:"}, {"tag": "a", "text": "查看Wiki存档", "href": "https://www.feishu.cn/wiki/XXXX"}],
+      [{"tag": "text", "text": "商机表:"}, {"tag": "a", "text": "打开商机表", "href": "<商机表sheets URL>"}]
+    ]
+  }
+}
 ```
+
+⚠️ **硬性规则:**
+- 链接**必须**使用 `{"tag": "a", "text": "显示文本", "href": "URL"}` 格式,禁止写裸 URL 或 `[文本](URL)` Markdown 链接
+- `title` 放标题行,正文每行一个 `[{"tag": "text", ...}]` 元素
+- 链接行用 `[{"tag": "text", "text": "前缀:"}, {"tag": "a", ...}]` 拼接
 
 ####  10.1 同步至工作空间
 
@@ -861,7 +881,7 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
    - 「JS 渲染失败」「fetch failed」「返回空白」
    - 任何「已跳过」「已记录」「重试 N 次」「耗时 X 秒」等执行状态描述
 3. 如果某个数据源完全没有有效内容,**直接忽略该源**,不要在报告中写"XX源无数据"或"XX源抓取失败"。报告只呈现有实质内容的信息。
-4. 如果所有数据源都失败导致无法生成有效报告,输出最小化版本并标注"本周信息有限",但依然不要写具体的抓取失败细节。
+4. 如果所有数据源都失败导致无法生成有效报告,输出最小化版本并标注"本周期信息有限",但依然不要写具体的抓取失败细节。
 5. 写入 Word/Wiki 前必须自检:全文搜索「404」「跳过」「无权限」「空结果」「探测」「fetch failed」「JS 渲染」「重试」等关键词,如发现立即删除相关段落。
 
 
@@ -889,12 +909,12 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 如果所有 web_fetch 都失败或返回空白:
 1. 不要编造内容
 2. **不要在报告正文中写"XX源抓取失败""XX页面404"等执行日志**
-3. 基于已知信息生成最小化版本并标注"本周信息有限"
+3. 基于已知信息生成最小化版本并标注"本周期信息有限"
 4. 如需向 Joe 说明执行情况,在群聊推送之外单独说明(如私聊或执行日志文件)
 
 ### 用户要求手动生成
 
-用户说"生成上周周报"时,同样执行以上流程。
+用户说"生成上一期周报"或"补发历史周报"时,同样执行以上流程,覆盖周期按指定日期向前回溯14天。
 
 ## 注意事项
 
@@ -903,14 +923,14 @@ echo '<摘要内容>' > ~/.openclaw/workspace/workspace-IMresearcher/reports/sum
 3. **地域限制**:本地行业动态、行动清单仅限浙江本地企业;非智能制造主业的大企业动态不纳入本地行业动态
 4. **禁止推荐不合规业务**
 5. **双版本输出**:Word 版用于详细报告(华文楷体),wiki 版用于知识库存档(飞书 Markdown 格式),内容结构一致
-6. **知识库标题**:im-weekly-YYYYMMDD
+6. **知识库标题**:智能制造行业周报-yyyyMMdd
 7. **知识库写入**:必须使用 `lark-cli wiki +node-create --profile $BOT_PROFILE --as bot --space-id $WIKI_SPACE_ID` 创建,禁止使用 `feishu_wiki_space_node` 工具。去重时**搜索全部节点**(不限 parent_node_token),避免重复创建
 8. **群聊推送**:推送概要 + 链接,不是全文；定时任务必须由 agent 显式调用 `message` 工具发送摘要,不要依赖 cron delivery 自动转发最终回复或失败诊断。
 9. **商机挖掘表格**:数据来源为周报「四、客户经理行动建议」中提及的企业。写入前必须去重,只写浙江本地企业。更新已有商机时日期必须更新为当天。写入后必须按时间倒序重排并清理残留空行
-10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range week --format json`。Brave web_search 仅作为备用,且不用 OR 语法(Brave 不支持),改用空格分隔关键词。
+10. **搜索优先 searxng**:searxng 无 API 限流、无布尔 OR 语法问题。`python3 ~/.openclaw/skills/searxng/scripts/searxng.py search "query" -n 10 --time-range month --format json`,再按发布日期/正文日期过滤近14天。Brave web_search 仅作为备用,且不用 OR 语法(Brave 不支持),改用空格分隔关键词。
 11. **代理配置**:Gateway 进程需配置代理环境变量(`HTTP_PROXY`/`HTTPS_PROXY=http://127.0.0.1:7890`),否则 Brave API 连接超时。lark-cli 会检测到代理变量并发出警告,不影响功能。
 12. **Word 下载链接**:Word 文件上传飞书 Drive 后获取 file_token,拼接下载链接 `https://<租户域名>.feishu.cn/file/<file_token>`;将该链接写在 wiki 正文开头和推送摘要中。
-13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`,文件名格式 `im-weekly-YYYYMMDD.docx`(与 wiki 标题一致);保存前先检查同名文件并覆盖;生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
+13. **Word 输出**:字体使用华文楷体,固定保存到 `/Users/leidongqiao/.openclaw/workspace/workspace-IMresearcher/reports/im-weekly/`,文件名格式 `智能制造行业周报-yyyyMMdd.docx`(与 wiki 标题一致);保存前先检查同名文件并覆盖;生成后上传飞书 Drive;Word 正文必须清理 Markdown 标记,推荐产品组合不用表格。
 14. **正文来源格式**:周报正文去掉媒体/网站来源括注;不要出现"(日期,来源)""(来源:XXX)"。资料来源只在报告开头或文末统一概括。
 15. **iFinD 必须执行**:不可跳过。先在循环外做一次快速探测确认环境可用,再执行全部 3 个查询。
 16. **所有飞书 API 统一走 lark-cli**:sheets/drive/docs/wiki 操作全部用 lark-cli,不用 Python urllib 直接调 API(HTTPS_PROXY 代理会导致 SSL 证书验证失败)。
@@ -964,5 +984,5 @@ sheet_id: a39f2b
 # 智能制造行研知识库
 space_id: 7637086272351194069
 space_name: 智能制造行研
-节点标题: im-weekly-YYYYMMDD
+节点标题: 智能制造行业周报-yyyyMMdd
 ```

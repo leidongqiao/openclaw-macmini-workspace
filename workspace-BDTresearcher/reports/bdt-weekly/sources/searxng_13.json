@@ -1,9 +1,302 @@
 {
-  "source_id": 13,
-  "source_name": "SearXNG 13",
+  "source_id": "13",
+  "source_name": "SearXNG",
   "url_or_query": "半导体 浙江 OR 芯片 杭州 OR 半导体 宁波 OR 集成电路 浙江",
-  "fetched_at": "2026-05-29T06:06:06.714974+00:00",
+  "fetched_at": "2026-07-03T00:16:36.408664+00:00",
   "ok": true,
-  "status_or_error": "ok",
-  "content_or_results": "{\n  \"query\": \"\\u534a\\u5bfc\\u4f53 \\u6d59\\u6c5f OR \\u82af\\u7247 \\u676d\\u5dde OR \\u534a\\u5bfc\\u4f53 \\u5b81\\u6ce2 OR \\u96c6\\u6210\\u7535\\u8def \\u6d59\\u6c5f\",\n  \"number_of_results\": 0,\n  \"results\": [\n    {\n      \"url\": \"https://m.qcc.com/firm/7774d408eb7245e5cd0792fdf1991f9b.html\",\n      \"title\": \"\\u6d59\\u6c5f\\u521b\\u82af\\u96c6\\u6210\\u7535\\u8def\\u6709\\u9650\\u516c\\u53f8 - \\u4f01\\u67e5\\u67e5\",\n      \"content\": \"4 days ago \\u00b7 \\u6d59\\u6c5f\\u521b\\u82af\\u6210\\u7acb\\u4e8e2020\\u5e7411\\u6708\\uff0c\\u4f4d\\u4e8e\\u676d\\u5dde\\u5e02\\uff0c\\u81f4\\u529b\\u4e8e12\\u82f1\\u5bf8CMOS\\uff0855nm \\u5236\\u7a0b\\uff09\\u96c6\\u6210\\u7535\\u8def\\u8bbe\\u8ba1\\u4e0e\\u5236\\u9020\\u6210\\u5957\\u5de5\\u827a\\u6280\\u672f\\u7814\\u53d1\\u3001\\u96c6\\u6210\\u7535\\u8def\\u8bbe\\u5907\\u53ca\\u539f\\u6750\\u6599\\u56fd\\u4ea7\\u5316\\u5e94\\u7528\\u53ca\\u201c\\u667a\\u80fd\\u5236\\u9020\\u201d \\u63a2\\u7d22\\uff0c ...\",\n      \"thumbnail\": null,\n      \"engine\": \"google\",\n      \"template\": \"default.html\",\n      \"parsed_url\": [\n        \"https\",\n        \"m.qcc.com\",\n        \"/firm/7774d408eb7245e5cd0792fdf1991f9b.html\",\n        \"\",\n        \"\",\n        \"\"\n      ],\n      \"img_src\": \"\",\n      \"priority\": \"\",\n      \"engines\": [\n        \"google\"\n      ],\n      \"positions\": [\n        1\n      ],\n      \"score\": 1.0,\n      \"category\": \"general\",\n      \"publishedDate\": null\n    },\n    {\n      \"url\": \"https://hic.zju.edu.cn/\",\n      \"title\": \"\\u6d59\\u6c5f\\u5927\\u5b66\\u676d\\u5dde\\u56fd\\u9645\\u79d1\\u521b\\u4e2d\\u5fc3\",\n      \"content\": \"4 days ago \\u00b7 \\u6d59\\u6c5f\\u7701\\u7845\\u53ca\\u5148\\u8fdb\\u534a\\u5bfc\\u4f53\\u6982\\u5ff5\\u9a8c\\u8bc1\\u4e2d\\u5fc3\\u670d\\u52a1\\u80fd\\u529b\\u6e05\\u5355\\u6b63\\u5f0f\\u53d1\\u5e03 \\u00b7 \\u6253\\u901a\\u79d1\\u6280\\u6210\\u679c\\u8f6c\\u5316\\u7b2c\\u4e00\\u5173 ... \\u96c6\\u6210\\u7535\\u8def\\u3001\\u5408\\u6210\\u751f\\u7269\\u3001\\u5148\\u8fdb\\u6750"
+  "status_or_error": "exit_0",
+  "content_or_results": {
+    "query": "半导体 浙江 OR 芯片 杭州 OR 半导体 宁波 OR 集成电路 浙江",
+    "number_of_results": 0,
+    "results": [
+      {
+        "template": "default.html",
+        "url": "https://www.zhaopin.com/jobdetail/CC120143600J40950575415.htm",
+        "title": "结构设计工程师招聘_浪潮集团招聘 - 智联招聘",
+        "content": "7000-10000元 浙江长芯光电科技有限公司 · 大专 1-3年 非标设备 电气设备 精密设备 压力铸造工艺 钣金工艺 注塑工艺 AutoCAD SolidWorks UGNX 电气机械/电力设备 专用设备制造 半导体/芯片",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.zhaopin.com",
+          "/jobdetail/CC120143600J40950575415.htm",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          1
+        ],
+        "score": 1.0,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.zhaopin.com/jobdetail/CCL1500396150J40913789812.htm",
+        "title": "生产设备主管招聘_浙江长林新材料有限公司招聘 - 智联招聘",
+        "content": "6000-9000元 马丁科瑞电子科技(浙江)有限公司 · 本科 3-5年 维修保养 设备管理 机加工设备 电气机械/电力设备 半导体/芯片 通用设备制造 五险一金 交通补助 包午餐 提供低价住宿",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.zhaopin.com",
+          "/jobdetail/CCL1500396150J40913789812.htm",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          2
+        ],
+        "score": 0.5,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.stcn.com/article/detail/3982987.html",
+        "title": "芯片“大牛股”甬矽电子，突发公告！狂砸103亿元",
+        "content": "据公开资料，甬矽电子的主营业务是集成电路的封装和测试业务，为集成电路设计企业提供集成电路封装与测试解决方案。公司的主要产品包括，高密度细间距凸点倒装产品（FC类产品）、系统级封装产品（SiP）、晶圆级封装产品（Bumping及WLP）、扁平无引脚封装产品（QFN/DFN）、微机电系统传感器（MEMS）。 ... 当前，全球半导体产业链正处于新一轮上行周期，AI需求驱动的先进制程扩产与存储扩产形成共振，直接拉动了中高端封测领域的高景气度。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.stcn.com",
+          "/article/detail/3982987.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          3
+        ],
+        "score": 0.3333333333333333,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://list1.m.mysteel.com/zhishi/youjiguipifa.html",
+        "title": "有机硅批发_实时价格_历史价格行情 - 我的钢铁网 (Mysteel)",
+        "content": "附件：《浙江省扩大有效投资 “千项万亿”工程2024年重大建设项目实施计划项目表》 一、先进制造业基地领域（362个） （一）新一代信息技术（73个） 1、高端软件（2个） 1字节跳动杭州基地项目 2网易杭州软件生产基地三期 2、集成电路（31个） 1杭州富芯12英寸模拟集成电路芯片生产线项目(一期) 2杭州吉海半导体制造厂房项目 3杭州芯海半导体集成电路先进测试基地项目 4浙江科盛年产90台套半导体智能装备生产基地项目 5宁波江丰电子年产5.2万个超",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "list1.m.mysteel.com",
+          "/zhishi/youjiguipifa.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          4
+        ],
+        "score": 0.25,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://app.myzaker.com/news/article.php?pk=6a43a80a8e9f09563721a864",
+        "title": "15家集成电路相关新公司成立!_ZAKER新闻",
+        "content": "据悉，芯海科技的核心优势是 \" 模拟信号链 +MCU\" 双平台，AI 能力是叠加在 MCU 上的差异化功能。市场方面猜测，\" 时擎安芯 \" 的成立可能是将 AI 芯片业务独立品牌化，以更好地对接 AIPC、边缘计算、机器人等新兴市场的客户。 · 杰华特、昕原半导体等成立微电子新公司 · 企查查 APP 显示，近日杭州杰昕宸微电子有限公司成立，经营范围包含：电子元器件零售；集成电路设计；集成电路芯片设计及服务；集成电路芯片及产品销售；软件销售等。企查查股权穿透显示，该公司由杰华特、昕原半导体（上海）有限公司等共同持股。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "app.myzaker.com",
+          "/news/article.php",
+          "",
+          "pk=6a43a80a8e9f09563721a864",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          6
+        ],
+        "score": 0.16666666666666666,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://cn.chinadaily.com.cn/a/202606/12/WS6a2bab29a310942cc49b16f9.html",
+        "title": "清华系高温芯片独角兽谱析光晶：营收破2亿，创业板第四套标准打开资本化窗口 - 中国日报网",
+        "content": "在杭州萧山钱江电气智联科创园内，杭州谱析光晶半导体科技有限公司（下称“谱析光晶”）的产线上，年产十万台级的极限环境半导体芯片与系统正在批量下线。 · 外界对谱析光晶的标签多半是：清华同班创业、硬核、非常不好归类——它出的货是极限环境功率系统，但底座是自研的半导体特种功率芯片；它服务的场景是石油井下230℃高温、航天火箭、特种机器人，但它的行业代码挂在C39“半导体分立器件制造”。",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "cn.chinadaily.com.cn",
+          "/a/202606/12/WS6a2bab29a310942cc49b16f9.html",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          7
+        ],
+        "score": 0.14285714285714285,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.zhaopin.com/jobdetail/CCL1336761770J40868718409.htm",
+        "title": "业务跟单员招聘_浙江品恩泰克科技有限公司招聘 - 智联招聘",
+        "content": "6000-8000元 浙江品恩泰克科技有限公司 · 大专 1-3年 通用设备制造 半导体/芯片 光伏 · 5000-6000元 智联招聘 · 大专 1-3年 英语 外贸跟单 贸易/进出口 · 5000-7000元 宁波辉格休闲用品有限公司 · 大专 1-3年 外贸跟单 英语 鞋服箱包批发/零售/贸易 母婴玩具批发/零售/贸易 贸易/进出口 ·",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.zhaopin.com",
+          "/jobdetail/CCL1336761770J40868718409.htm",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          8
+        ],
+        "score": 0.125,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.zhaopin.com/jobdetail/CC182007610J40836243307.htm",
+        "title": "车间生产组长招聘_余姚市春江电器有限公司招聘 - 智联招聘",
+        "content": "浙江省宁波市余姚市泗门镇姚北大道泗门段5-6号 ... 大专 3-5年 现场管理 生产计划管理 安全管理 电子设备制造 半导体/芯片 五险 全勤奖 绩效奖金 加班费",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.zhaopin.com",
+          "/jobdetail/CC182007610J40836243307.htm",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          9
+        ],
+        "score": 0.1111111111111111,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://www.zhaopin.com/zhaopin/6bed96d121964867a462f6e6cfdfc639/",
+        "title": "无锡充电桩安装公司招聘 - 智联招聘",
+        "content": "半导体/芯片 · 差旅 · 五险一金 · 交通补助 · 岗位职责：1.制定并推进公司在欧美、东南亚、日韩等重点海外市场的销售战略，对海外销售目标达成、款项回收及市场份额增长负责，确保与公司全球业 · 无锡 滨湖 蠡园 · 浙江坤懋 ·",
+        "publishedDate": null,
+        "thumbnail": "",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "www.zhaopin.com",
+          "/zhaopin/6bed96d121964867a462f6e6cfdfc639/",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          11
+        ],
+        "score": 0.09090909090909091,
+        "category": "general"
+      },
+      {
+        "template": "default.html",
+        "url": "https://36kr.com/p/2605709767146375",
+        "title": "​江浙沪分工，长三角芯片的崛起-36氪",
+        "content": "设计产业销售收入规模首次迈上600亿元台阶，总规模达620.12亿元。其中，杭州市集成电路设计业贡献了全省约84%比重的份额，产业规模位列全国第四。制造业方面，浙江晶圆制造重点企业实现销售收入182.02亿元，同比增长40.06%，增速位居长三角地区第一。值得一提的是，半导体材料是浙江集成电路产业最大的单一细分领域，目前浙江的半导体材料品类较全、大硅片产能处于全国前列。 · 从产业布局来看，浙江已经建成了以杭州、宁波、绍兴、嘉兴为核心的环杭州湾集成电路先进制造业基地，衢州、丽水以半导体材料为重点的产业集聚区。",
+        "publishedDate": null,
+        "thumbnail": "https://imgs.search.brave.com/_LdLVxpB8FM8U9nUNzyPUBaecKacsnBxOPCxIENQURU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWcu/MzZrcmNkbi5jb20v/aHNvc3Ntcy8yMDI0/MDExNS92Ml9jZmFh/ZDRlYjdlY2I0MTQ1/YmJhN2E3ZWQxOWM0/MzhmY0A0Njk1OF9v/c3dnNzYxMDU5b3N3/ZzEwNTNvc3dnNDk1/X2ltZ19wbmc_eC1v/c3MtcHJvY2Vzcz1p/bWFnZS9yZXNpemUs/bV9tZml0LHdfNjAw/LGhfNDAwLGxpbWl0/XzAvY3JvcCx3XzYw/MCxoXzQwMCxnX2Nl/bnRlcg",
+        "engine": "brave",
+        "parsed_url": [
+          "https",
+          "36kr.com",
+          "/p/2605709767146375",
+          "",
+          "",
+          ""
+        ],
+        "img_src": "",
+        "priority": "",
+        "engines": [
+          "brave"
+        ],
+        "positions": [
+          5
+        ],
+        "score": 0.2,
+        "category": "general"
+      }
+    ],
+    "answers": [],
+    "corrections": [],
+    "infoboxes": [],
+    "suggestions": [],
+    "unresponsive_engines": [
+      [
+        "duckduckgo",
+        "CAPTCHA"
+      ],
+      [
+        "karmasearch",
+        "Suspended: access denied"
+      ],
+      [
+        "startpage",
+        "Suspended: CAPTCHA"
+      ]
+    ]
+  }
 }

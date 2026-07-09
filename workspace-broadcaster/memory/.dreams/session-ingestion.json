@@ -1,6 +1,69 @@
 {
   "version": 3,
   "files": {
+    "broadcaster:sessions/broadcaster/0c966e22-0a03-4e95-a6b4-d33328bb2175.jsonl": {
+      "mtimeMs": 1780996903618,
+      "size": 11164,
+      "contentHash": "f8e3972e80711caa50a8d51fd8cde66de437c2188de73a3c09eb9b1a8f7dd877",
+      "lineCount": 6,
+      "lastContentLine": 6
+    },
+    "broadcaster:sessions/broadcaster/1867de26-6f4c-4b97-849a-da598b286a04.jsonl": {
+      "mtimeMs": 1781974895902,
+      "size": 21342,
+      "contentHash": "8f797506e79be53370cf6ba0b254c02e2038ea21a4eba113939d3b2f7eabe9e1",
+      "lineCount": 3,
+      "lastContentLine": 3
+    },
+    "broadcaster:sessions/broadcaster/1be5d523-5d4f-439e-bba1-c871ff87858e.jsonl.reset.2026-06-09T07-18-06.087Z": {
+      "mtimeMs": 1780642901631,
+      "size": 41101,
+      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+      "lineCount": 0,
+      "lastContentLine": 0
+    },
+    "broadcaster:sessions/broadcaster/294731a4-fa8f-47a5-ad60-74408afc873f.jsonl": {
+      "mtimeMs": 1782476024251,
+      "size": 1797,
+      "contentHash": "db07422eb2e0a1cc285563c3654e427abbccb57e4cef0b453a52eacd9b054354",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/2ebd0087-51cc-4538-af12-7b80e79c6bc4.jsonl.reset.2026-06-18T11-11-33.102Z": {
+      "mtimeMs": 1781370032482,
+      "size": 8820,
+      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+      "lineCount": 0,
+      "lastContentLine": 0
+    },
+    "broadcaster:sessions/broadcaster/5961466d-a8d8-488a-9026-5200a61f17e5.jsonl": {
+      "mtimeMs": 1781233305575,
+      "size": 37057,
+      "contentHash": "da36be219723695f7e34c0f4eda714bcb0faa7332d66c645abf7e111d4f06959",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/5f1dc1c1-def8-4872-a8f7-aead3e68354a.jsonl": {
+      "mtimeMs": 1781779743394,
+      "size": 46222,
+      "contentHash": "61fd77f6bc71bcb468918988b79c22b0a7ec6f0d3fa30964971fd8831314b274",
+      "lineCount": 13,
+      "lastContentLine": 13
+    },
+    "broadcaster:sessions/broadcaster/6005e883-f710-4a97-b21e-d1aa971b4504.jsonl.reset.2026-06-09T08-37-25.226Z": {
+      "mtimeMs": 1780654236208,
+      "size": 1705,
+      "contentHash": "a06f2e6d43f151131c09202a3c40d738a57c08a6bff41fb69cb46a2e0f0614f8",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/61911750-5045-4945-a051-2b326c684c82.jsonl.reset.2026-06-12T17-51-08.906Z": {
+      "mtimeMs": 1780994261115,
+      "size": 6984,
+      "contentHash": "30171b5b3a2cbee50b328cbbec817ded928617d8247235a1858a23fdb4fbf5e5",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
     "broadcaster:sessions/broadcaster/67400c90-4058-44ac-a004-d3f956d1de1c.jsonl": {
       "mtimeMs": 1779417045244,
       "size": 11343,
@@ -8,19 +71,26 @@
       "lineCount": 2,
       "lastContentLine": 2
     },
-    "broadcaster:sessions/broadcaster/6dd76315-76c5-41ba-8b5c-599f1af6dab5.jsonl.reset.2026-05-25T02-09-52.449Z": {
-      "mtimeMs": 1779375659379,
-      "size": 9946,
-      "contentHash": "d3287f0d6aff06f9012963ee1da32d046b61ce594915945c2fc779bf99737c7f",
-      "lineCount": 5,
-      "lastContentLine": 5
-    },
-    "broadcaster:sessions/broadcaster/6f1e5ee1-65c6-4c2a-acb1-72c0310ab353.jsonl": {
-      "mtimeMs": 1779674996597,
-      "size": 1730,
-      "contentHash": "126fa460b0c02d03b45d455bf17f63594c6d067ff8ebab1857a10a0ba146b898",
+    "broadcaster:sessions/broadcaster/73de4bd7-7b8f-46ef-94bb-6347c1d09c9b.jsonl": {
+      "mtimeMs": 1781840729467,
+      "size": 23020,
+      "contentHash": "62071dcb43a185787929659fc5b4c96e1526ec92a0cfc828f1455e86daa26422",
       "lineCount": 2,
       "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/7607ba12-8272-4855-b3a7-a9312938ac99.jsonl": {
+      "mtimeMs": 1782442946193,
+      "size": 21396,
+      "contentHash": "fc7e66d581efab4b1fe9de0d072d6b6afc9848341a712d3b0d06954d5d2a0c54",
+      "lineCount": 3,
+      "lastContentLine": 3
+    },
+    "broadcaster:sessions/broadcaster/83a11641-aa3c-4b4f-813c-4f2691ee6144.jsonl": {
+      "mtimeMs": 1781781522202,
+      "size": 50660,
+      "contentHash": "72f789f30513db3777952cd00aedf4336ae0976e3e78937adceb7c8a20699407",
+      "lineCount": 10,
+      "lastContentLine": 10
     },
     "broadcaster:sessions/broadcaster/8aab690a-f4f0-4bdc-9ae9-425d40299a7e.jsonl": {
       "mtimeMs": 1779433244520,
@@ -29,19 +99,54 @@
       "lineCount": 2,
       "lastContentLine": 2
     },
-    "broadcaster:sessions/broadcaster/9ab929b2-3a9c-4714-a713-c324545f1909.jsonl": {
-      "mtimeMs": 1780038079416,
-      "size": 20759,
-      "contentHash": "33f623baf3ae5dfb1732e5ed45cf1ace77df7e73549d319d5718618707331046",
-      "lineCount": 18,
-      "lastContentLine": 18
+    "broadcaster:sessions/broadcaster/9a067466-25cc-4865-9edf-f6e98a01d837.jsonl": {
+      "mtimeMs": 1782979676851,
+      "size": 5018,
+      "contentHash": "5fd7b89578b6640b8d514d81aba65bcb1f2c72719f7b5ec03283d50630e28067",
+      "lineCount": 8,
+      "lastContentLine": 8
     },
-    "broadcaster:sessions/broadcaster/9e2b9b66-5431-4d08-9d71-3b70b04ae9a9.jsonl.reset.2026-05-21T10-09-57.499Z": {
-      "mtimeMs": 1779189817677,
-      "size": 56869,
-      "contentHash": "3663a947ba8e9e276be76c96a54eb798cd0f520a48aa7586ac2d5b603a3f8a0e",
-      "lineCount": 19,
-      "lastContentLine": 19
+    "broadcaster:sessions/broadcaster/9ab929b2-3a9c-4714-a713-c324545f1909.jsonl": {
+      "mtimeMs": 1783048392944,
+      "size": 48942,
+      "contentHash": "39c753e5bdb76b299499bb491c1e36c740aea4b742a435676050a99b6a7f295c",
+      "lineCount": 42,
+      "lastContentLine": 42
+    },
+    "broadcaster:sessions/broadcaster/9e5ab6c7-edb9-4cda-b99c-deed94766774.jsonl": {
+      "mtimeMs": 1780991358481,
+      "size": 107749,
+      "contentHash": "bdd87afb68e071b697629190c8120074cb2bc3e58df43375c03669f7c888a17c",
+      "lineCount": 23,
+      "lastContentLine": 23
+    },
+    "broadcaster:sessions/broadcaster/a4c548a6-f321-47f7-9dd3-c510c311f7a1.jsonl": {
+      "mtimeMs": 1782476023502,
+      "size": 3209,
+      "contentHash": "3f6edab15f3222cd221fc3954f2e769b3e8e090489251dc567b541b5d7059108",
+      "lineCount": 1,
+      "lastContentLine": 1
+    },
+    "broadcaster:sessions/broadcaster/ac37512f-2622-4324-92ea-ae1eba46728b.jsonl.reset.2026-07-02T07-46-05.954Z": {
+      "mtimeMs": 1781286675824,
+      "size": 2050,
+      "contentHash": "7edeafae150de058f5df9afac30523b7b288624fa63b4bafa3c3a057274775f9",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/b940c1ac-0e7e-4862-bf32-ce410cf48329.jsonl": {
+      "mtimeMs": 1781838229636,
+      "size": 30359,
+      "contentHash": "f9d26ca0ab92168027c41c94eab0ade7610f777cf2959ecfc8a0c3c99944281c",
+      "lineCount": 5,
+      "lastContentLine": 5
+    },
+    "broadcaster:sessions/broadcaster/bd1fa348-1772-4f37-9b34-8db51eb5a398.jsonl.reset.2026-06-18T10-40-32.899Z": {
+      "mtimeMs": 1780989657223,
+      "size": 40441,
+      "contentHash": "14c59fc6bcfa067fda7daa1112d9f5476697f98476a9400e3a5cbbcd0584dfd1",
+      "lineCount": 6,
+      "lastContentLine": 6
     },
     "broadcaster:sessions/broadcaster/bdd9f5a8-3925-42d0-9fd8-9259dee94dd3.jsonl": {
       "mtimeMs": 1779375869069,
@@ -50,12 +155,40 @@
       "lineCount": 1,
       "lastContentLine": 1
     },
-    "broadcaster:sessions/broadcaster/c5eb25c6-e19c-4fd5-b436-dbb1cf9778a5.jsonl": {
+    "broadcaster:sessions/broadcaster/c129c81f-2134-4871-bd40-6349edb90278.jsonl": {
+      "mtimeMs": 1783047648919,
+      "size": 3202,
+      "contentHash": "880940f866508960007e14a848a23ad2331319d1c0adf677b89fa8c6a9355a29",
+      "lineCount": 1,
+      "lastContentLine": 1
+    },
+    "broadcaster:sessions/broadcaster/c5eb25c6-e19c-4fd5-b436-dbb1cf9778a5.jsonl.deleted.2026-06-18T11-24-56.279Z": {
       "mtimeMs": 1779189744152,
       "size": 3041,
       "contentHash": "d2c76c192b5b274367e96622a2073b4aba3f678e8e7a00b8710d68f3b5c01e0e",
       "lineCount": 2,
       "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/c8bdf44d-e1e0-4216-9150-478ab1182e3b.jsonl.reset.2026-06-09T07-17-02.150Z": {
+      "mtimeMs": 1780626975253,
+      "size": 45627,
+      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+      "lineCount": 0,
+      "lastContentLine": 0
+    },
+    "broadcaster:sessions/broadcaster/d2eb9348-147f-4b33-bac8-165493d123e4.jsonl": {
+      "mtimeMs": 1783048461046,
+      "size": 21746,
+      "contentHash": "49f75e005aced0a1e3551065900ec1d42de774fa219cfc5fc343324eafccb77b",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "broadcaster:sessions/broadcaster/dd90686a-e3e0-4973-b798-a6ae1e08d8cd.jsonl": {
+      "mtimeMs": 1782579761954,
+      "size": 26354,
+      "contentHash": "f621ac1f680804440ebf0d993b1335636fa0151a038514c5ada2f36a83480975",
+      "lineCount": 5,
+      "lastContentLine": 5
     },
     "broadcaster:sessions/broadcaster/e107cd24-e9ec-494d-a8c6-f47941d2aaba.jsonl": {
       "mtimeMs": 1780038097921,
@@ -70,6 +203,20 @@
       "contentHash": "8ab7e9982244598128455fa5fda87bcb93b5f580a0d4dd367055bbdb0ff71807",
       "lineCount": 1,
       "lastContentLine": 1
+    },
+    "broadcaster:sessions/broadcaster/f628f1e6-6a8b-45b0-93c1-013e127a3080.jsonl": {
+      "mtimeMs": 1783184545321,
+      "size": 17230,
+      "contentHash": "57c9de778f8268b074bf8c6ced21e835216d77429083d022aaac288dad2fd4b1",
+      "lineCount": 4,
+      "lastContentLine": 4
+    },
+    "broadcaster:sessions/broadcaster/f629499c-4414-4a74-b480-e3fc2c34e296.jsonl": {
+      "mtimeMs": 1780994664045,
+      "size": 33389,
+      "contentHash": "aaa71e729f1293f36830411be6b24ed0317ef4b4784518d14737cc61969b82ee",
+      "lineCount": 11,
+      "lastContentLine": 11
     }
   },
   "seenMessages": {
@@ -120,7 +267,31 @@
       "ea80e6dc4a7a79f7a1b2294146e87eae18b05e5a",
       "2fcb9ae0b8e2a9e2dd2fc9106f74c9554d22419d",
       "6b6c18944cae631c57c6f806ffe8ac254cb5f277",
-      "6d6227da365d87f82229eda70eb2755f4df55cd1"
+      "6d6227da365d87f82229eda70eb2755f4df55cd1",
+      "a669f5c0868ce4b4bd64763260ba42167cc4d9d7",
+      "cc1c9c2a4a73a1241c25e9a1cf902d85cd4f3e67",
+      "ce8f54674038adc3f50e25d105ee5b8aadb812b9",
+      "6f09295c0860fd2d5111728a00871beccd5f38b9",
+      "a7f76ee62cd01d512e16d6db97946ef9b0aa6cb9",
+      "1e4411beda6ce10536c3351ad8e8ca675ac2a242",
+      "4d064d51002dea31788c916bca64cbc0520c04e2",
+      "4a2c666bd52acce3a0935f4dd9f327af899d3953",
+      "6dbf173b466fad9b6e6f19424f048700a6fdd0ee",
+      "1489b20de4aea03de93603fa1318d56d7c7aa693",
+      "079e27d4fb220151db8188067db4f8e2d30a1be4",
+      "cba7ee98797492d4c08097cd924d364fe6800c0f",
+      "a0240ea0dc81a8bdadaa18646380fd62f27551fd",
+      "71f407d5efc3511d3cd9581363497e87ac7241b6",
+      "6436bda76daa28388fd91ca218688ba67cc6f332",
+      "7edf32a6fec9feed3119efdb624ff97ac0d6e598",
+      "1ddb81e85396d9059c0cfd4c4c3e15b23a12fa25",
+      "6898dbf020927b7d2b64fb4c4361c562b3c0bd55",
+      "200f1d6e943df33c8dd67bedbde2e62ff55d82f2",
+      "53011a7ad1612ec36c619218d5c768e079b90e2f",
+      "3a9662479ff435e89ef782d50cc83beace228c70",
+      "8bd9e1bb50d410dd141d546991d0122389896e55",
+      "60caeaf22fcbcc319bce1fba521c2f09f8017aa6",
+      "97196871c5400b090cb94c17caa3743eef240afc"
     ],
     "broadcaster:bdd9f5a8-3925-42d0-9fd8-9259dee94dd3": [
       "6c82122f62e4ed5773886d6d64f4023e8448a086"
@@ -141,6 +312,173 @@
     ],
     "broadcaster:e6d73188-e51b-49fd-b937-2e0afd6b3600": [
       "cdd1c3bff1ac1303818488fa01ade07bd96c8c09"
+    ],
+    "broadcaster:1be5d523-5d4f-439e-bba1-c871ff87858e": [
+      "a621c2f0800e9e4f2ca925b27e1b592ed8f1f654",
+      "1ccbe4b1b5a7fb574803baa6885a7e91de5c132b",
+      "ff79bac70c2ffb328eaab07031793688aac07511"
+    ],
+    "broadcaster:6005e883-f710-4a97-b21e-d1aa971b4504": [
+      "0f76a82ee6777b6eba44aa444cde0ce4c1b8a2a7"
+    ],
+    "broadcaster:c8bdf44d-e1e0-4216-9150-478ab1182e3b": [
+      "038e07862ea58a36b9a69038c9dd8f19273339a8",
+      "dd9c684a40b2aa22078929e768a82c52cf5fc00a",
+      "2c196e54032cd86f1b45cf50ebdf2aada5dafab7",
+      "4ea3baf8f82b37c262c11eb7d1f8ebde3bfb8407",
+      "d0364c7b36821b873f340fe831b9aa5b230953e2"
+    ],
+    "broadcaster:0c966e22-0a03-4e95-a6b4-d33328bb2175": [
+      "adfd4b0929bd220b76a890506f844fc1f389cd98",
+      "bfd1be8ba3851db37ebd837c3f5984b251b79c3a",
+      "d7fff262cfcd6b1662c06c0811ff6df45f19db0b",
+      "1fa314c9d04d384c5c3c19ec87093a6a6667ba75",
+      "cc22f139b778570216d5d1e23bbe2827ef331b97",
+      "d3c84a85425e16a821b264e3c65c6e5a625fe1ce"
+    ],
+    "broadcaster:61911750-5045-4945-a051-2b326c684c82": [
+      "36bdd90563ac444c692f3475eafb3366346d3a23",
+      "8eb580bbf279f47ef751f92bafab9f01a5cfb345"
+    ],
+    "broadcaster:9e5ab6c7-edb9-4cda-b99c-deed94766774": [
+      "5346750605ee23d1f8edd3c3bd7986018f48f4c2",
+      "c36d38d4bc424cf7668ec1e96543d33545414e49",
+      "7f612cbd6668aca46a31942d44aeb5876edb81a6",
+      "73a14fc2bdc4146daba2d7b7a8406a16ebd4f83b",
+      "a749ef207a7ee708ca811de5641d1a5c1a82fb43",
+      "67fa01767f9b7bb55dee49e9833421ac3bcf90c3",
+      "ee3d0cfa6b52ca3f8f36af4fdbbd5a8e82945369",
+      "501093c4852bb16754f50e00b7ffcb38e3bec6cf",
+      "04b50aec89dddb76c72a5469340c3a6ed054d246",
+      "2054e95476e5c5b3db6eba5e472a0d027e22b705",
+      "8a1c5a07d4fea6d1bd2583cf8d8b29e3a6dd3726",
+      "d0568111e0789f908483adfd657e24b5ba090579",
+      "e5d5aecbbaeb55e3ced1f7f0d3d8c236a790fd6a",
+      "d36b6404f980dc80dca11a5b61917b48ab9b80e1",
+      "0dbece4c2f19ecdfce8fea44a20637e2d14083f3",
+      "44d2cdf6fba5f8a92a2c83ad92872599e979e47d",
+      "9ca6e0d6356235ad65b34219d034250d038dc390",
+      "040d7ec5f04c1dc996f0d6a33d072a3b6496bd12",
+      "7cd864540724f7e12f5677d04f20d2a8fda189c3",
+      "efc417009a62e4348f76d6b7e6a0c22030795cd9",
+      "35b71186dbb168875281267bfbf215cc5329d378",
+      "8ab997eac605f48899dda7c7c0f43d2af3a237ea",
+      "f4d7608ca5cd594627757d15e78ee5b5894f8fb9"
+    ],
+    "broadcaster:bd1fa348-1772-4f37-9b34-8db51eb5a398": [
+      "7aecbcce4fa802bd49627bc552925753bd076746",
+      "38d40b39cee252162ded090813a70a5d1c6f968c",
+      "8fc45404d51506c8e7b751df3cebd6bd1d5c26d1",
+      "b9ac4a641d51dd9176919f59ff89dddde9b2575e",
+      "2876d9f79e65c3515795b0775c95c94f6f9149de",
+      "49ae05cad501b0cb89c7377b3e55a445363e4079"
+    ],
+    "broadcaster:f629499c-4414-4a74-b480-e3fc2c34e296": [
+      "b5416395b15f4976491ad3369ec7575207431db6",
+      "186f5bbb8b55684514c11c63045d04f3c70480d2",
+      "176f3f95ffe0afee78aa9a7e963d52d32d682a20",
+      "443254add836ca81b990ac262950c0354d828817",
+      "20239cfc35de1e09aa767ef2fc78aabceed83ac9",
+      "05221d9d99e869250ea871e03e2c89333a07cee3",
+      "ba2b926d6deca58b3704e020d2799dbc4673eba8",
+      "eecea85f136eff28b57e179b37083edacdf3ef92",
+      "12f93fe2ffe808694a9a42e5668e5d306000743a",
+      "9793c51a39822d3bd0a97762ede51861632e811e",
+      "eb2b31acef144721d650d8b8d0a6e83a09a522bf"
+    ],
+    "broadcaster:5961466d-a8d8-488a-9026-5200a61f17e5": [
+      "73b526d6401b6ca2fd466e00345f479b5c0802b5",
+      "51f27c4b67e78cfc2e4e916976533b08185ffc17"
+    ],
+    "broadcaster:ac37512f-2622-4324-92ea-ae1eba46728b": [
+      "e80d93f78e9c155421daa0e7ccceae2b2b92badb",
+      "8ec959499d17a9e8a2894a7bdb15b78195a787ce"
+    ],
+    "broadcaster:2ebd0087-51cc-4538-af12-7b80e79c6bc4": [
+      "40caf20604fc2b3517f883fe6b5e0a5d9b4c5dad",
+      "35baf40e4f22da7c916c1197a206a0b0c858c309",
+      "d2be97ae1e7316f3d8ad8d0e8a782485f4d56f96"
+    ],
+    "broadcaster:5f1dc1c1-def8-4872-a8f7-aead3e68354a": [
+      "661c083bf85e9e7a530407ff3aa5019f7b77af67",
+      "b8cd7f57ec4e4dd4a6e7c20fd7f577d06dd0be8d",
+      "bda1306e457d6e672aad2a2e0b3a28602da1875c",
+      "3e6cbcb76a15a5387643f4d1440aa3e28ef9e241",
+      "d8ff0da859cc8b017e717a5912d2ce2fe15afb04",
+      "7f45e39bc921b99a389af173b22b48d41157cbe6",
+      "5e5b2769551a93d270b1ebc3284440fb81f906d8",
+      "d7f16260781d6ebf14e01cfcbfd4408f4c4754fa",
+      "48f125e1c12219f89f7fd3aa3af055d3ce4ab528",
+      "5cc39e81debc3a113c04b1d8e187b2a41f637078",
+      "a5776330c7042264351c23c8053b48bfbe643fa4",
+      "6340ac707c71a67659b96debc04f44bbd41c89c1",
+      "1fdf238d8dc950dfae5776c93236fabd6b4ec8d8"
+    ],
+    "broadcaster:83a11641-aa3c-4b4f-813c-4f2691ee6144": [
+      "62174c98bab2044ac1c870fc27acdee10ad9f3fb",
+      "1c9fde0e590c70319c75649d05fb2a7b35665388",
+      "e64cb977177b201ca6ed25da95208d2fbffdee9b",
+      "ca1c43123a59f46878703a422c0841abe2260707",
+      "51132c5fb49670c559e89fa3c622cd2dc494d02a",
+      "7a1ad15c820f780842475ecfee5414ca538564a2",
+      "f79d6c491f5c59bd26b08f1c7cd9d30ac76d9efd",
+      "e088156382f5d61e7c293213820c67d3ecea6c52",
+      "c73da0ac83cdefa212dbc0966e8025a4140d63fa"
+    ],
+    "broadcaster:294731a4-fa8f-47a5-ad60-74408afc873f": [
+      "df7f85973899131b459bf1669f600c943297f227",
+      "dca02e5c4bb0472343175b51cfedf5a02fe1ec78"
+    ],
+    "broadcaster:73de4bd7-7b8f-46ef-94bb-6347c1d09c9b": [
+      "94cb68a8d47382b7e0de9560189e71a616f35ce1",
+      "fce4995d23b159e157794e9864775cdb69074c22"
+    ],
+    "broadcaster:b940c1ac-0e7e-4862-bf32-ce410cf48329": [
+      "fdf064789d5257ada4569f4bf40f5d04f55a92e9",
+      "cb4fa7a957b10d2f7a25f366a54eed298cd96075",
+      "56450db2eeef999f5183146cb934486354042af0",
+      "c27180d7200ba74d0c3f189c4991fa76770ac5fc",
+      "16556baa873c5f28a311bd32dfe0db78dbf19a90"
+    ],
+    "broadcaster:1867de26-6f4c-4b97-849a-da598b286a04": [
+      "f0adcf9b603f1d0efe23fa409aab16cb062ef5fb",
+      "4df96cdb999b2f4e555533e49a3af01d30e98cd4",
+      "d41d3d62049c3b300e57e31b8203f06edec408cb"
+    ],
+    "broadcaster:7607ba12-8272-4855-b3a7-a9312938ac99": [
+      "24b66ca69593125d354764af895ebc780cbce9b6",
+      "f0d0fa0abeaa1c54f18df939e85c5dec61784057",
+      "c01c7b7e0a6e70bc1f3ef5136637ca7429319b0f"
+    ],
+    "broadcaster:a4c548a6-f321-47f7-9dd3-c510c311f7a1": [
+      "e013faa642b207281cc99ee816f44690a0ea5a61"
+    ],
+    "broadcaster:dd90686a-e3e0-4973-b798-a6ae1e08d8cd": [
+      "cccfd71303b9f7efff1301610911f85fe5db902c",
+      "ddec3550c7ff3f93448c441bf6a99ea44e390edc",
+      "0a7d96b9f58804639bd023843af47b99799a25c6",
+      "611fb9a8b55f5448a99ee9ef8b8962d3e1a447c9",
+      "b77b0fea0300eb5c4aec025b627cb6b40c5a009c"
+    ],
+    "broadcaster:9a067466-25cc-4865-9edf-f6e98a01d837": [
+      "d14a3e611b037a1190b309532d51264bc4c25f73",
+      "bc8fc7d723b4e4793b5edb0860288743a16da85c",
+      "b1f80851d8de7cd31469284e67e9496614538ef5",
+      "05d473a22c81bb3b4ad7f0e5aba8e2923d44b472",
+      "b4256080cd7760f0c763f5e333061d64bb8e8764"
+    ],
+    "broadcaster:c129c81f-2134-4871-bd40-6349edb90278": [
+      "e61d91cdb59148b885e7fe06ea0e5b7d0c93ea87"
+    ],
+    "broadcaster:d2eb9348-147f-4b33-bac8-165493d123e4": [
+      "7943b7002e5798da39ac35909a5168eb0f7284bb",
+      "68f74e60b6827e1c6315d693d7c694778cf3345c"
+    ],
+    "broadcaster:f628f1e6-6a8b-45b0-93c1-013e127a3080": [
+      "0abcaa1ae5858b0e209ac5df54aabf346c2c0fda",
+      "a94f90417044f02f9223ee68aa73ebf4aced6545",
+      "8988d90c8f1f9c4f06529dccfa4d0e1df42c5d4e",
+      "cdb7631e26c5a12ab32a5dea7011a41b920daea1"
     ]
   }
 }

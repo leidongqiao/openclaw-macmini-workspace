@@ -121,7 +121,19 @@ OBJ_TOKEN=$(echo "${RESULT}" | jq -r '.data.obj_token')
 **⚠️ 不要用裸调 Docx API。** 使用 `feishu_update_doc` 工具或 `lark-cli docs +update`：
 
 ```bash
-lark-cli docs +update --doc "${OBJ_TOKEN}" --profile "$BOT_PROFILE" --as bot --mode overwrite --markdown '# 标题\n\n正文...'
+cat > ./wiki-content.md <<'EOF'
+# 标题
+
+正文...
+EOF
+
+lark-cli docs +update --api-version v2 \
+  --doc "${OBJ_TOKEN}" \
+  --profile "$BOT_PROFILE" \
+  --as bot \
+  --command overwrite \
+  --doc-format markdown \
+  --content @./wiki-content.md
 ```
 
 ## 获取必要参数（全部自动化）
